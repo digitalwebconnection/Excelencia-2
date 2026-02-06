@@ -130,7 +130,7 @@ export default function HeroWithVideoAndSearchForm() {
 
                 {/* Search */}
                 <button className="ml-auto flex items-center gap-2 bg-blue-950 hover:bg-emerald-600 transition text-white px-8 py-4 rounded-full font-semibold">
-                  Submite 
+                  Submit
                 </button>
               </div>
             </motion.div>
