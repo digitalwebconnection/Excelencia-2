@@ -56,8 +56,8 @@ export default function HeroWithVideoAndSearchForm() {
 
             {/* CENTER CONTENT */}
             <div className="relative z-10 text-center px-6">
-              <p className="text-blue-950 font-semibold text-lg">
-                Welcome to Travlhub
+              <p className="text-white font-semibold text-lg">
+                Welcome to Excelenci
               </p>
 
               <h1 className="mt-4 text-5xl md:text-6xl xl:text-7xl font-extrabold text-white leading-tight">
