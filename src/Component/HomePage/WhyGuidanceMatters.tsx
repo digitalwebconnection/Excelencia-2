@@ -62,7 +62,7 @@ export default function WhyGuidanceMatters() {
               {/* Overlapping Arrow Action (Bottom Right) */}
               <motion.div
                 whileHover={{ scale: 1.1 }}
-                className="absolute -bottom-6 right-[0%] bg-blue-950 h-20 w-20 rounded-full border-8 border-white flex items-center justify-center shadow-lg cursor-pointer"
+                className="absolute -bottom-6 right-[0%] bg-linear-to-r from-[#c1972d]  to-blue-950 h-20 w-20 rounded-full border-8 border-white flex items-center justify-center shadow-lg cursor-pointer"
               >
                 <ArrowUpRight className="text-white" size={32} />
               </motion.div>
@@ -104,7 +104,7 @@ export default function WhyGuidanceMatters() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-blue-950 text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-emerald-200 transition-colors hover:bg-blue-600"
+                className="bg-linear-to-r from-[#c1972d]  to-blue-950 text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-emerald-200 transition-colors"
               >
                 Start Your Journey
               </motion.button>

@@ -34,7 +34,7 @@ export default function SplitTruthSection() {
           className="text-center mb-16"
         >
           <h2 className="text-white text-4xl md:text-5xl font-black tracking-tight mb-4">
-            Honest Guidance. <span className="text-blue-400">No Hidden Agendas.</span>
+            Honest Guidance. <span className="text-[#c1972d]">No Hidden Agendas.</span>
           </h2>
         </motion.div>
 
@@ -106,7 +106,7 @@ export default function SplitTruthSection() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <div className="inline-block px-8 py-4 rounded-full bg-blue-950 text-white font-semibold text-lg md:text-xl shadow-2xl shadow-blue-900/50">
+          <div className="inline-block px-8 py-4 rounded-full bg-linear-to-r from-[#c1972d]  to-blue-950 text-white font-semibold text-lg md:text-xl shadow-2xl shadow-blue-900/50">
             Our role is to help students choose wisely — not quickly.
           </div>
         </motion.div>

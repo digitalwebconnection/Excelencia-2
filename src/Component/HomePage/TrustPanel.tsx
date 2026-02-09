@@ -60,7 +60,7 @@ export default function ParentsPeaceOfMind() {
             <TrustPoint icon={<Handshake />} text="Continuous parent communication" />
           </ul>
 
-          <button className="rounded-full bg-blue-950 px-8 py-4 text-white font-semibold hover:bg-blue-700 transition">
+          <button className="rounded-full bg-linear-to-r from-[#c1972d]  to-blue-950 px-8 py-4 text-white font-semibold  transition">
             Talk to Our Counsellor →
           </button>
         </div>

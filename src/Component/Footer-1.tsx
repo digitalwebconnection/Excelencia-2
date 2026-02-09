@@ -21,7 +21,7 @@ const Footer = () => {
 
         {/* QUICK LINKS */}
         <div>
-          <h4 className="text-black font-semibold text-lg mb-4">
+          <h4 className="text-blue-950 font-semibold text-lg mb-4">
             Quick Links
           </h4>
           <ul className="space-y-2 text-black text-sm">
@@ -46,7 +46,7 @@ const Footer = () => {
 
         {/* SERVICES */}
         <div>
-          <h4 className="text-[#c1972d] font-semibold text-lg mb-4">
+          <h4 className="text-blue-950 font-semibold text-lg mb-4">
             Our Services
           </h4>
           <ul className="space-y-2 text-black text-sm">
@@ -69,7 +69,7 @@ const Footer = () => {
 
         {/* CONTACT INFO */}
         <div>
-          <h4 className="text-[#c1972d] font-semibold text-lg mb-4">
+          <h4 className="text-blue-950 font-semibold text-lg mb-4">
             Contact Us
           </h4>
 

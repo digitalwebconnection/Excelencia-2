@@ -17,22 +17,18 @@ const Header = () => {
 
   return (
     <header className="w-full fixed top-0 z-50">
-      
-    
 
       {/* MAIN NAVBAR */}
       <nav
-        className={`bg-white shadow-md transition-all duration-300 ${
-          scrolled ? "py-5" : "py-7"
-        }`}
+        className={`bg-white shadow-md transition-all duration-300 ${scrolled ? "py-5" : "py-7"
+          }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
 
           {/* LOGO */}
           <div
-            className={`flex items-center transition-all duration-300 ${
-              scrolled ? "h-8 w-64" : "h-10 w-80"
-            }`}
+            className={`flex items-center transition-all duration-300 ${scrolled ? "h-6 w-56" : "h-8 w-70"
+              }`}
           >
             <img src={logo} alt="Excelencia International Logo" className="w-full object-contain" />
           </div>

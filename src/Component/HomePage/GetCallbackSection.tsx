@@ -29,10 +29,10 @@ const QuietInvitationContactForm = () => {
   };
 
   return (
-    <section className="relative min-h-162.5 z-1 w-full flex flex-col lg:flex-row overflow-hidden font-sans">
+    <section className="relative  z-1 w-full flex flex-col lg:flex-row overflow-hidden font-sans">
       
       {/* LEFT SIDE: Red Diagonal Shape & Form */}
-      <div className="relative w-full lg:w-[55%] bg-blue-950 p-8 md:p-16 lg:p-24 z-10 lg:clip-path-right">
+      <div className="relative w-full lg:w-[55%] bg-blue-950 p-8 md:p-6 lg:p-15    max-w-7xl mx-auto z-10 lg:clip-path-right">
         {/* Background Overlay Image (The people working) */}
         <div 
           className="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-multiply"
@@ -91,7 +91,7 @@ const QuietInvitationContactForm = () => {
                 className="bg-white rounded-2xl p-4 outline-none w-full text-gray-800 placeholder:text-gray-400"
             ></textarea>
             
-            <button className="bg-[#1a1a1a] rounded-2xl text-white font-bold py-4 px-10 hover:bg-black transition-colors uppercase tracking-widest text-sm">
+            <button className="bg-linear-to-r from-[#c1972d]  to-blue-950 rounded-2xl text-white font-bold py-4 px-10 hover:bg-black transition-colors uppercase tracking-widest text-sm">
               Begin With a Conversation
             </button>
           </form>

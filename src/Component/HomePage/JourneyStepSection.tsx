@@ -27,13 +27,13 @@ export default function JourneyStepSection() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <p className="uppercase tracking-[0.2em] text-blue-600 text-sm font-bold mb-4 flex items-center gap-2">
-              <span className="w-8 h-px bg-blue-600"></span>
+            <p className="uppercase tracking-[0.2em] text-blue-950 text-sm font-bold mb-4 flex items-center gap-2">
+              <span className="w-8 h-px bg-blue-950"></span>
               The Journey
             </p>
 
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-[1.1] mb-6">
-              Step by <span className="text-blue-600">step.</span>
+              Step by <span className="text-blue-950">step.</span>
             </h2>
 
             <p className="text-slate-600 leading-relaxed max-w-xl mb-10 text-lg">
@@ -60,11 +60,11 @@ export default function JourneyStepSection() {
               >
                 <motion.span 
                   whileHover={{ scale: 1.2 }}
-                  className="shrink-0 flex items-center  justify-center w-6 h-6 rounded-full bg-blue-600 text-white shadow-md shadow-blue-200 transition-colors group-hover:bg-slate-900"
+                  className="shrink-0 flex items-center  justify-center w-6 h-6 rounded-full bg-blue-950 text-white shadow-md shadow-blue-200 transition-colors group-hover:bg-slate-900"
                 >
                   <Check size={14} strokeWidth={3} />
                 </motion.span>
-                <span className="text-slate-700 font-medium text-lg group-hover:text-blue-600 transition-colors duration-300">
+                <span className="text-slate-700 font-medium text-lg group-hover:text-blue-950 transition-colors duration-300">
                   {step}
                 </span>
               </motion.li>
@@ -79,7 +79,7 @@ export default function JourneyStepSection() {
             viewport={{ once: true }}
             className="mt-12"
           >
-            <button className="px-8 py-4 bg-slate-900 text-white font-bold rounded-sm  transition-all duration-300 shadow-lg hover:shadow-blue-200 hover:-translate-y-1">
+            <button className="px-8 py-4 bg-linear-to-r from-[#c1972d]  to-blue-950 text-white font-bold rounded-sm  transition-all duration-300 shadow-lg hover:shadow-blue-200 hover:-translate-y-1">
               LEARN MORE ABOUT PROCESS
             </button>
           </motion.div>

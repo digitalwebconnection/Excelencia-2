@@ -68,7 +68,7 @@ export default function EducationTurningPoint() {
             </div>
 
             {/* RIGHT IMAGE AREA - BREAKING THE BOUNDARIES */}
-            <div className="relative lg:absolute lg:right-4 lg:bottom-12 w-full lg:w-[45%] h-full flex justify-center items-end">
+            <div className="relative lg:absolute lg:right-18 lg:bottom-12 w-full lg:w-[45%] h-full flex justify-center items-end">
               
               {/* Professional Spokesperson - Transparent background PNG recommended */}
               <motion.img
@@ -86,7 +86,7 @@ export default function EducationTurningPoint() {
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6, type: "spring" }}
-                className="absolute left-0 lg:-left-16 top-1/2 -translate-y-1/2 z-30 bg-white rounded-2xl p-5 shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex items-center gap-4 border border-gray-50"
+                className="absolute left-0 lg:-left-8  z-30 bg-white rounded-2xl px-5 py-2 shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex items-center gap-4 border border-gray-50"
               >
                 <div className="relative">
                   <div className="bg-[#FF9C07] p-3 rounded-full">

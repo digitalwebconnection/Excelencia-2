@@ -6,7 +6,7 @@ import { CheckCircle, HeartHandshake, ShieldCheck } from "lucide-react";
 export default function HowWeDefineSuccess() {
   return (
     <section className="relative w-full bg-[#fdf1ea] overflow-hidden">
-      <div className=" py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className=" py-14 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
         {/* LEFT IMAGE AREA */}
         <motion.div
@@ -35,14 +35,14 @@ export default function HowWeDefineSuccess() {
           className="relative bg-[#1c1c1c] text-white rounded-[120px_0_0_120px] p-12 lg:p-16"
         >
           {/* Small label */}
-          <p className="text-orange-400 italic font-semibold mb-4">
+          <p className="text-[#c1972d] italic font-semibold mb-4">
             How We Define Success
           </p>
 
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl font-black leading-tight mb-8">
-            Success is not only an offer letter <br />
-            <span className="text-orange-400">or visa approval.</span>
+            Success is not only an offer letter  
+            <span className="text-[#c1972d]"> or visa approval.</span>
           </h2>
 
           {/* Feature list */}

@@ -125,7 +125,7 @@ export default function HeroWithVideoAndSearchForm() {
                 </div>
                 <div className="hidden lg:block h-8 w-px bg-gray-200" />
                 {/* Search */}
-                <button className="ml-auto flex items-center gap-2 bg-linear-to-r from-[#c1972d]  to-blue-950 hover:bg-emerald-600 transition text-white px-8 py-4 rounded-full font-semibold">
+                <button className="ml-auto flex items-center gap-2 bg-linear-to-r from-[#c1972d]  to-blue-950  transition text-white px-8 py-4 rounded-full font-semibold">
                   Submit
                 </button>
               </div>

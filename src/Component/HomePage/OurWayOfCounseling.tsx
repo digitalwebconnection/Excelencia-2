@@ -65,11 +65,11 @@ export default function OurWayOfCounseling() {
                  for that "Slow Motion" effect.
               */
               className="group relative overflow-hidden rounded-3xl p-8 bg-white border border-slate-900/40
-                         transition-all duration-1000 ease-in-out hover:-translate-y-3 hover:bg-blue-950 hover:shadow-2xl"
+                         transition-all duration-1000 ease-in-out hover:-translate-y-3 hover:bg-linear-to-r from-[#c1972d]  to-blue-950 hover:shadow-2xl"
             >
               {/* Slow Motion Gradient Overlay */}
-              <div className="absolute inset-0 bg-linear-to-b from-blue-900/60 to-blue-950 opacity-0 
-                              group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
+              {/* <div className="absolute inset-0 bg-linear-to-b from-blue-900/60 to-blue-950 opacity-0 
+                              group-hover:opacity-100 transition-opacity duration-700 ease-in-out" /> */}
 
               <div className="relative z-10">
                 {/* Icon Container with slow color swap */}

@@ -140,7 +140,7 @@ export default function ImmigrationHeroSection() {
                 stroke="currentColor" 
                 strokeWidth="4" 
                 fill="none" 
-                className="text-blue-600"
+                className="text-[#c1972d] "
                 strokeDasharray="180 360"
                 strokeLinecap="round"
               />
@@ -169,16 +169,16 @@ export default function ImmigrationHeroSection() {
         >
           <div className="flex items-center gap-2">
             <span className="text-blue-500 font-bold text-lg">//</span>
-            <span className="uppercase tracking-[0.3em] text-blue-500 text-xs font-bold">Our Benefits</span>
+            <span className="uppercase tracking-[0.3em] text-white text-xs font-bold">Our Benefits</span>
           </div>
 
           <h2 className="text-5xl md:text-5xl font-bold leading-[1.1]">
             Help You From <span className="font-light">Start</span> <br />
-            <span className="text-gray-400">End Immigration</span> <br />
+            <span className="text-gray-100">End Immigration</span> <br />
             Visa.
           </h2>
 
-          <p className="text-gray-400 text-lg leading-relaxed max-w-md">
+          <p className="text-gray-100 text-lg leading-relaxed max-w-md">
             Our team can assist you in transforming your business through 
             latest tech capabilities to stay ahead of the curve.
           </p>
