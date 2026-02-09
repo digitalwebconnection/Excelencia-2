@@ -1,10 +1,8 @@
 
-
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Bell, Search } from "lucide-react";
 import logo from "../assets/Rectangle.png";
-
 
 export default function BlueLuxuryHeader() {
   const [open, setOpen] = useState<number | null>(null);
@@ -36,9 +34,8 @@ export default function BlueLuxuryHeader() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-0">
         <div className="flex items-center justify-between">
-
           {/* 1. LOGO */}
-        
+
           <img src={logo} alt="Logo" className="h-20" />
 
           {/* 2. NAVIGATION */}
@@ -94,6 +91,7 @@ export default function BlueLuxuryHeader() {
 
             {isLoggedIn ? (
               <div className="flex items-center gap-3 border-l border-white/10 pl-4">
+
                 {/* Notification */}
                 <button className="relative p-2 text-blue-100/50 hover:text-white transition group">
                   <Bell size={20} />
@@ -113,8 +111,6 @@ export default function BlueLuxuryHeader() {
                     <span className="text-xs font-bold text-white hidden sm:block">Login</span>
                     <ChevronDown size={12} className="text-gray-500" />
                   </motion.div>
-
-
                 </div>
               </div>
             ) : (
@@ -128,4 +124,3 @@ export default function BlueLuxuryHeader() {
     </header>
   );
 }
-
