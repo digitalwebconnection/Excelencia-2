@@ -1,4 +1,3 @@
-'use client';
 
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 import logo from "../assets/image.png";

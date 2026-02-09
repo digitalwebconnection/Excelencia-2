@@ -1,4 +1,4 @@
-"use client";
+
 
 import { motion } from "framer-motion";
 import { CheckCircle, HeartHandshake, ShieldCheck } from "lucide-react";

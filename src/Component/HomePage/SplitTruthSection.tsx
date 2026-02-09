@@ -1,4 +1,4 @@
-"use client";
+
 
 import { motion } from "framer-motion";
 import { Check, X } from "lucide-react"; // npm install lucide-react

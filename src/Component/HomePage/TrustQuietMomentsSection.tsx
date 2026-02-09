@@ -1,4 +1,4 @@
-"use client";
+
 import image from "../../assets/imranji.png"
 import { motion} from "framer-motion";
 import { Check, MoveRight } from "lucide-react";

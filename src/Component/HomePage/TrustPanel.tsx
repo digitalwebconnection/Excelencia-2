@@ -1,4 +1,3 @@
-"use client";
 
 import { ShieldCheck, Wallet, BarChart3, Handshake } from "lucide-react";
 

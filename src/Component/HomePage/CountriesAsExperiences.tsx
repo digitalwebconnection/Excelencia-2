@@ -1,4 +1,4 @@
-"use client";
+
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Globe2 } from "lucide-react";

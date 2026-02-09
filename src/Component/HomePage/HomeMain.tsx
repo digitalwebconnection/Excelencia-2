@@ -18,22 +18,22 @@ import WhyGuidanceMatters from "./WhyGuidanceMatters"
 const HomeMain = () => {
   return (
     <>
-      <HeroSection/>
-      <TopDestinations/>
-      <WhyGuidanceMatters/>
-      <EducationTurningPoint/>
-      <OurWayOfCounseling/>
-       <VisionMissionSection/>
-      <StudentVisionSection/>
-      <ValuesWePractice/>
-     <JourneyStepSection/>
-     <TrustQuietMomentsSection/>
-     <CountriesAsExperiences/>
-     <HowWeDefineSuccess/>
-     <StudentVoicesChat/>
-     <TrustPanel/>
-     <SplitTruthSection/>
-<QuietInvitationSection/>
+      <HeroSection />
+      <TopDestinations />
+      <WhyGuidanceMatters />
+      <EducationTurningPoint />
+      <OurWayOfCounseling />
+      <VisionMissionSection />
+      <StudentVisionSection />
+      <ValuesWePractice />
+      <JourneyStepSection />
+      <TrustQuietMomentsSection />
+      <CountriesAsExperiences />
+      <HowWeDefineSuccess />
+      <StudentVoicesChat />
+      <TrustPanel />
+      <SplitTruthSection />
+      <QuietInvitationSection />
     </>
   )
 }

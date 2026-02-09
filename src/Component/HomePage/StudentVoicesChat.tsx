@@ -1,6 +1,5 @@
-"use client";
 
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const students = [
@@ -49,19 +48,19 @@ export default function AutoRotatingStudentVoices() {
   }, []);
 
   return (
-    <section className="relative w-full bg-white py-24 overflow-hidden">
+    <section className="relative w-full bg-white py-14 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        
+
         {/* Section Header */}
         <div className="text-center mb-16">
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="uppercase tracking-widest text-blue-600 font-bold text-xs mb-3"
           >
             Student Voices
           </motion.p>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -72,7 +71,7 @@ export default function AutoRotatingStudentVoices() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
+
           {/* Left: Interactive Faces */}
           <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
             {students.map((student, i) => (
@@ -100,16 +99,15 @@ export default function AutoRotatingStudentVoices() {
                 )}
 
                 <motion.div
-                  animate={{ 
+                  animate={{
                     scale: activeTab === i ? 1.1 : 1,
                     filter: activeTab === i ? "grayscale(0%)" : "grayscale(100%)",
                   }}
-                  className={`relative w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-2 transition-all duration-500 ${
-                    activeTab === i ? "border-transparent" : "border-slate-100 opacity-60 group-hover:opacity-100"
-                  }`}
+                  className={`relative w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-2 transition-all duration-500 ${activeTab === i ? "border-transparent" : "border-slate-100 opacity-60 group-hover:opacity-100"
+                    }`}
                 >
-                  <img 
-                    src={student.image} 
+                  <img
+                    src={student.image}
                     alt={student.name}
                     className="w-full h-full object-cover"
                   />
@@ -129,12 +127,11 @@ export default function AutoRotatingStudentVoices() {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
               >
                 <div className="mb-3">
-                   <span className="text-6xl text-blue-100 font-serif leading-none block h-8">“</span>
-                   <h3 className="text-3xl md:text-5xl font-medium text-slate-800 italic leading-tight">
+                  <span className="text-6xl text-blue-100 font-serif leading-none block h-8">“</span>
+                  <h3 className="text-3xl md:text-5xl font-medium text-slate-800 italic leading-tight">
                     {students[activeTab].quote}
-                   </h3>
+                  </h3>
                 </div>
-                
                 <div className="mt-2">
                   <p className="text-lg font-bold text-slate-900">
                     — {students[activeTab].name}
@@ -146,10 +143,7 @@ export default function AutoRotatingStudentVoices() {
               </motion.div>
             </AnimatePresence>
           </div>
-
         </div>
-
-       
       </div>
     </section>
   );

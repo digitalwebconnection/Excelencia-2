@@ -1,11 +1,11 @@
-"use client";
+
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, CheckCircle, Plus } from "lucide-react";
 
 export default function WhyGuidanceMatters() {
   return (
-    <section className="relative overflow-hidden bg-white py-24">
+    <section className="relative overflow-hidden bg-white py-14">
       <div className="container mx-auto px-6 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           

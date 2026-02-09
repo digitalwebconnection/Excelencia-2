@@ -1,4 +1,3 @@
-"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -12,7 +11,7 @@ export default function HeroWithVideoAndSearchForm() {
   const [showHero, setShowHero] = useState(false);
 
   const handleVideoEnd = () => {
-    setTimeout(() => setShowHero(true), 500);
+    setTimeout(() => setShowHero(true), 100);
   };
 
   return (
@@ -124,10 +123,7 @@ export default function HeroWithVideoAndSearchForm() {
                     />
                   </div>
                 </div>
-
                 <div className="hidden lg:block h-8 w-px bg-gray-200" />
-
-
                 {/* Search */}
                 <button className="ml-auto flex items-center gap-2 bg-blue-950 hover:bg-emerald-600 transition text-white px-8 py-4 rounded-full font-semibold">
                   Submit

@@ -1,4 +1,4 @@
-"use client";
+
 
 import { motion } from "framer-motion";
 import { Ear, UserCheck, Route } from "lucide-react";
@@ -99,7 +99,6 @@ export default function OurWayOfCounseling() {
           viewport={{ once: true }}
           className="mt-24 text-center"
         >
-        
         </motion.div>
       </div>
     </section>
