@@ -39,8 +39,8 @@ const StudentJourney = () => {
   };
 
   return (
-    <section className="bg-[#f9fafb] py-24 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-[#f9fafb] pb-24 pt-14  relative overflow-hidden">
+      <div className="max-w-7xl mx-auto">
         
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
@@ -78,22 +78,22 @@ const StudentJourney = () => {
               key={index}
               variants={itemVariants}
               className={`relative flex flex-col items-center  group ${
-                index % 2 !== 0 ? "md:translate-y-16" : ""
+                index % 2 !== 0 ? "md:translate-y-16 " : ""
               }`}
             >
               {/* NUMBER CIRCLE */}
               <div className="relative z-10 mb-8">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-bold text-[#c1972d] shadow-[0_10px_25px_-5px_rgba(193,151,45,0.3)] border-4 border-[#c1972d] transition-transform duration-300 group-hover:scale-110">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-bold text-[#c1972d] shadow-[0_10px_25px_-5px_rgba(193,151,45,0.3)] border-4 border-indigo-500 transition-transform duration-300 group-hover:scale-110">
                   {index + 1}
                 </div>
               </div>
 
               {/* CARD - flex-1 and h-full ensures fixed height parity across the row */}
-              <div className="bg-white p-8 rounded-4xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-500/60 text-center flex flex-col h-full min-h-70 transition-all duration-300 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] group-hover:-translate-y-2">
-                <h3 className="text-xl font-bold text-gray-800 mb-4 h-14 flex items-center justify-center">
+              <div className="bg-white hover:bg-linear-to-r from-[#c1972d]  to-blue-950 hover:text-white p-8 rounded-4xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-500/60 text-center flex flex-col h-full min-h-70 transition-all duration-300 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] group-hover:-translate-y-2">
+                <h3 className="text-xl font-bold  mb-4 h-14 flex items-center justify-center">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed grow">
+                <p className=" text-sm leading-relaxed grow">
                   {step.description}
                 </p>
                 

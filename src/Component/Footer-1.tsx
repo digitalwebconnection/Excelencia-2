@@ -5,7 +5,7 @@ import logo from "../assets/image.png";
 const Footer = () => {
   return (
     <footer className="bg-[#ffffff] border-t border-[#c1972d]">
-      
+
       {/* MAIN FOOTER */}
       <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
@@ -75,17 +75,17 @@ const Footer = () => {
 
           <div className="space-y-3 text-black text-sm">
             <p className="flex items-start gap-2">
-              <MapPin size={16} className="text-[#c1972d]" />
+              <MapPin size={16} className="text-indigo-600" />
               Office No. 402, Business Plaza, Mumbai, India
             </p>
 
             <p className="flex items-center gap-2">
-              <Phone size={16} className="text-[#c1972d]" />
+              <Phone size={16} className="text-indigo-600" />
               +91 97697 87211
             </p>
 
             <p className="flex items-center gap-2">
-              <Mail size={16} className="text-[#c1972d]" />
+              <Mail size={16} className="text-indigo-600" />
               queries@excelenciaint.com
             </p>
           </div>
@@ -95,12 +95,15 @@ const Footer = () => {
             {[Facebook, Instagram, Linkedin].map((Icon, i) => (
               <div
                 key={i}
-                className="w-9 h-9 flex items-center justify-center rounded-full border border-[#c1972d] text-black  hover:bg-[#c1972d] hover:text-[#0b1f3a] transition cursor-pointer"
+                className="bg-linear-to-r from-[#c1972d] to-blue-950 p-[1.5px] rounded-full hover:from-blue-950 hover:to-[#c1972d] transition"
               >
-                <Icon size={18} />
+                <div className="w-9 h-9 flex items-center justify-center rounded-full bg-white text-[#0b1f3a] hover:bg-[#c1972d] hover:text-[#0b1f3a] transition cursor-pointer">
+                  <Icon size={18} />
+                </div>
               </div>
             ))}
           </div>
+
         </div>
 
       </div>

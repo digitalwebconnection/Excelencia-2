@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -33,19 +32,22 @@ const students = [
   },
 ];
 
-const AUTO_PLAY_INTERVAL = 2000; // 3 seconds
+const AUTO_PLAY_INTERVAL = 2000; // 2 seconds
 
 export default function AutoRotatingStudentVoices() {
   const [activeTab, setActiveTab] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
-  // Auto-change logic
+  // Auto-rotate (pause on hover)
   useEffect(() => {
+    if (isHovered) return;
+
     const timer = setInterval(() => {
       setActiveTab((prev) => (prev + 1) % students.length);
     }, AUTO_PLAY_INTERVAL);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isHovered]);
 
   return (
     <section className="relative w-full bg-white py-14 overflow-hidden">
@@ -60,6 +62,7 @@ export default function AutoRotatingStudentVoices() {
           >
             Student Voices
           </motion.p>
+
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -72,16 +75,18 @@ export default function AutoRotatingStudentVoices() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-          {/* Left: Interactive Faces */}
+          {/* Left: Faces */}
           <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
             {students.map((student, i) => (
               <button
                 key={student.id}
                 onClick={() => setActiveTab(i)}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
                 className="relative group focus:outline-none"
               >
-                {/* SVG Progress Ring */}
-                {activeTab === i && (
+                {/* Progress Ring */}
+                {activeTab === i && !isHovered && (
                   <svg className="absolute -inset-2 w-[calc(100%+16px)] h-[calc(100%+16px)] -rotate-90">
                     <motion.circle
                       cx="50%"
@@ -93,7 +98,10 @@ export default function AutoRotatingStudentVoices() {
                       className="text-blue-600"
                       initial={{ pathLength: 0 }}
                       animate={{ pathLength: 1 }}
-                      transition={{ duration: AUTO_PLAY_INTERVAL / 1000, ease: "linear" }}
+                      transition={{
+                        duration: AUTO_PLAY_INTERVAL / 1000,
+                        ease: "linear",
+                      }}
                     />
                   </svg>
                 )}
@@ -101,9 +109,16 @@ export default function AutoRotatingStudentVoices() {
                 <motion.div
                   animate={{
                     scale: activeTab === i ? 1.1 : 1,
-                    filter: activeTab === i ? "grayscale(0%)" : "grayscale(100%)",
+                    filter: activeTab === i
+                      ? "grayscale(0%)"
+                      : "grayscale(100%)",
                   }}
-                  className={`relative w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-2 transition-all duration-500 ${activeTab === i ? "border-transparent" : "border-slate-100 opacity-60 group-hover:opacity-100"
+                  transition={{ duration: 0.4 }}
+                  className={`relative w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-2 transition-all
+                    ${
+                      activeTab === i
+                        ? "border-transparent"
+                        : "border-slate-100 opacity-60 group-hover:opacity-100"
                     }`}
                 >
                   <img
@@ -116,8 +131,12 @@ export default function AutoRotatingStudentVoices() {
             ))}
           </div>
 
-          {/* Right: Floating Quote Display */}
-          <div className="min-h-62.5 flex flex-col justify-center text-center lg:text-left">
+          {/* Right: Quote */}
+          <div
+            className="min-h-65 flex flex-col justify-center text-center lg:text-left"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
@@ -126,13 +145,15 @@ export default function AutoRotatingStudentVoices() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
               >
-                <div className="mb-3">
-                  <span className="text-6xl text-blue-100 font-serif leading-none block h-8">“</span>
-                  <h3 className="text-3xl md:text-5xl font-medium text-slate-800 italic leading-tight">
-                    {students[activeTab].quote}
-                  </h3>
-                </div>
-                <div className="mt-2">
+                <span className="text-6xl text-blue-100 font-serif leading-none block h-8">
+                  “
+                </span>
+
+                <h3 className="text-3xl md:text-5xl font-medium text-slate-800 italic leading-tight">
+                  {students[activeTab].quote}
+                </h3>
+
+                <div className="mt-4">
                   <p className="text-lg font-bold text-slate-900">
                     — {students[activeTab].name}
                   </p>
@@ -143,6 +164,7 @@ export default function AutoRotatingStudentVoices() {
               </motion.div>
             </AnimatePresence>
           </div>
+
         </div>
       </div>
     </section>

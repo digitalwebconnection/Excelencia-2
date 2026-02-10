@@ -1,5 +1,4 @@
 
-
 import { motion } from "framer-motion";
 import { Check, X } from "lucide-react"; // npm install lucide-react
 
@@ -46,7 +45,7 @@ export default function SplitTruthSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 flex flex-col"
+            className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-0 flex flex-col"
           >
             <h3 className="text-blue-400 text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-2">
               <span className="w-8 h-8 rounded-full bg-blue-400/20 flex items-center justify-center">✅</span>

@@ -1,5 +1,4 @@
 
-
 import { motion } from "framer-motion";
 import { Ear, UserCheck, Route } from "lucide-react";
 
@@ -26,7 +25,7 @@ export default function OurWayOfCounseling() {
   ];
 
   return (
-    <section className="relative w-full bg-white pt-6 overflow-hidden">
+    <section className="relative w-full bg-white  overflow-hidden">
       {/* Subtle Background Accent */}
       <div className="absolute top-1/2 left-1/2 w-175 h-175 bg-blue-50/60 rounded-full blur-[140px] -translate-x-1/2 -translate-y-1/2 -z-10" />
 
@@ -61,16 +60,10 @@ export default function OurWayOfCounseling() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: step.delay }}
               viewport={{ once: true }}
-              /* FIX: Increased duration to 700ms and added ease-in-out 
-                 for that "Slow Motion" effect.
-              */
               className="group relative overflow-hidden rounded-3xl p-8 bg-white border border-slate-900/40
                          transition-all duration-1000 ease-in-out hover:-translate-y-3 hover:bg-linear-to-r from-[#c1972d]  to-blue-950 hover:shadow-2xl"
             >
-              {/* Slow Motion Gradient Overlay */}
-              {/* <div className="absolute inset-0 bg-linear-to-b from-blue-900/60 to-blue-950 opacity-0 
-                              group-hover:opacity-100 transition-opacity duration-700 ease-in-out" /> */}
-
+            
               <div className="relative z-10">
                 {/* Icon Container with slow color swap */}
                 <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-950 text-white mb-6
