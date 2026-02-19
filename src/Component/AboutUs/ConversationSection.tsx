@@ -41,7 +41,6 @@ export default function ConversationSection() {
               Choose when you’re ready — we’ll support you throughout.
             </p>
           </div>
-
         </div>
 
         {/* CTA Buttons */}
