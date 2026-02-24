@@ -41,7 +41,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full fixed top-0 z-50">
+    <header className="w-full fixed font-serif top-0 z-50">
       <nav
         className={`bg-white shadow-md transition-all duration-300 ${
           scrolled ? "py-4" : "py-6"

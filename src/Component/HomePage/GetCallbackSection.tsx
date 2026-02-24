@@ -45,12 +45,13 @@ const QuietInvitationContactForm = () => {
           </p>
           
           <div className="mb-10">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">A Quiet Invitation</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">It All Begins With A Conversation</h2>
             <div className="text-white/90 space-y-1 text-lg leading-relaxed font-light">
-                <p>If you’re seeking clarity instead of pressure,</p>
-                <p>guidance instead of promises,</p>
-                <p>and honesty instead of shortcuts —</p>
-                <p className="font-bold mt-2 text-white">We’re here.</p>
+                <p>There is not one student who comes through our doors without a dream.</p>
+                <p>Our duty is to steer that dream in the right direction.</p>
+                <p>We celebrate the offer letter, the visa approval, and every student who takes that leap of faith
+towards a global future.</p>
+                <p className="font-bold mt-2 text-white">When students succeed, families feel secure, and dreams become reality.</p>
             </div>
           </div>
 
@@ -110,7 +111,7 @@ const QuietInvitationContactForm = () => {
         <div className="relative w-[90%] md:w-80 bg-white shadow-2xl z-30 animate-fadeIn">
           <div className="p-6 flex justify-between items-center border-b">
             <h3 className="text-xl font-bold flex items-center gap-2 text-slate-900">
-              Treck Offices
+              Track Offices
             </h3>
             <Building2 className="text-[#d91e36]" size={28} />
           </div>

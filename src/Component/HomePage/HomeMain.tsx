@@ -14,6 +14,7 @@ import TrustQuietMomentsSection from "./TrustQuietMomentsSection"
 import ValuesWePractice from "./ValuesWePractice"
 import VisionMissionSection from "./VisionMissionSection"
 import WhyGuidanceMatters from "./WhyGuidanceMatters"
+import StudyAbroadServices from "./StudyAbroadServices"
 
 const HomeMain = () => {
   return (
@@ -27,6 +28,7 @@ const HomeMain = () => {
       <StudentVisionSection />
       <ValuesWePractice />
       <JourneyStepSection />
+      <StudyAbroadServices/>
       <TrustQuietMomentsSection />
       <CountriesAsExperiences />
       <HowWeDefineSuccess />

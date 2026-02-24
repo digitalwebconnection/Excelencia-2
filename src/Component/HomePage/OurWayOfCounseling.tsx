@@ -43,7 +43,7 @@ export default function OurWayOfCounseling() {
 
   return (
     <section className="relative w-full bg-white pb-14 overflow-hidden">
-      
+
       {/* Soft Background Glow */}
       <div className="absolute top-1/2 left-1/2 w-175 h-175 bg-blue-50/60 rounded-full blur-[140px] -translate-x-1/2 -translate-y-1/2 -z-10" />
 
@@ -89,11 +89,11 @@ export default function OurWayOfCounseling() {
             >
               {/* Icon */}
               <div className="flex justify-around">
-              <div className="flex items-center  text-center justify-center w-14 h-14 rounded-2xl bg-blue-950 text-white mb-6
+                <div className="flex items-center  text-center justify-center w-14 h-14 rounded-2xl bg-blue-950 text-white mb-6
                               transition-all duration-700 group-hover:bg-white group-hover:text-blue-950">
-                {step.icon}
+                  {step.icon}
+                </div>
               </div>
-</div>
               {/* Title */}
               <h3 className="text-xl text-center font-bold mb-4 text-slate-900 transition-colors duration-700 group-hover:text-white">
                 {step.title}

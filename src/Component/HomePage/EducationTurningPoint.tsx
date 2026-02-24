@@ -30,9 +30,9 @@ export default function EducationTurningPoint() {
                 </span>
               </div>
 
-              <h2 className="text-4xl lg:text-6xl font-extrabold leading-[1.1] mb-8">
-                EDUCATION AS A <br />
-                <span className="text-blue-100">TURNING POINT.</span>
+              <h2 className="text-4xl lg:text-6xl font-serif font-extrabold leading-[1.1] mb-8">
+                More Than Consulting  <br />
+                <span className="text-[#c1972d]"> — Genuine Counselling.</span>
               </h2>
 
               <div className="space-y-4 mb-10 max-w-3xl">
