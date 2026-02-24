@@ -119,7 +119,6 @@ const WhyChooseUs = () => {
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );

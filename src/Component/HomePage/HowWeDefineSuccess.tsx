@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle, HeartHandshake, ShieldCheck } from "lucide-react";
 
-export default function HowWeDefineSuccess() {
+export default function   HowWeDefineSuccess() {
   return (
     <section className="relative w-full bg-[#fdf1ea] overflow-hidden">
       <div className=" py-14 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

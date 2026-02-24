@@ -34,22 +34,19 @@ export default function TopDestinations() {
         <section className="py-14 bg-white">
             <div className="max-w-7xl mx-auto px-6 md:px-0">
                 {/* Heading */}
-                <div className="text-center max-w-6xl mx-auto">
+                <div className="text-center max-w-7xl mx-auto">
                     <p className="text-blue-950 font-semibold tracking-wide mb-4 uppercase">
-                        The Moment Before The Decision
+                        The Right Destination Changes Everything
                     </p>
 
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
-                        Top <span className="text-blue-950">Destinations</span>
+                    <h2 className="text-4xl max-w-7xl font-serif mx-auto md:text-4xl font-extrabold text-gray-900">
+                        Choose the Right Country.  <span className="text-blue-950">Choose the Right Future.</span>
                     </h2>
 
                     <p className="mt-6 text-gray-600 leading-relaxed text-lg">
-                        Every international journey begins with a quiet moment of doubt.
-                        Questions surface. Possibilities feel exciting — yet overwhelming.
-                        Choosing to study abroad isn’t just about opportunity; it’s about
-                        responsibility, clarity, and timing. That moment deserves guidance — not noise.
+                        Each destination offers unique academic strengths, career pathways, and global exposure. we help you choose a country that aligns with your ambition, lifestyle, and professional future.
                     </p>
-                </div>
+                </div>      
 
                 {/* Cards */}
                 <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -83,7 +80,7 @@ export default function TopDestinations() {
 
                                 {/* Content Container */}
                                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                            
+
 
                                     {/* Title and Listings */}
                                     <div className="relative mt-2">
@@ -93,7 +90,7 @@ export default function TopDestinations() {
 
                                         <div className="flex items-center justify-between overflow-hidden">
                                             <p className="text-blue-200 font-medium transition-all duration-500 translate-y-8 group-hover:translate-y-0">
-                                                {item.listings} 
+                                                {item.listings}
                                             </p>
 
                                             {/* Minimalist Arrow */}

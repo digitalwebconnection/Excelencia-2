@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 
 export default function StudentVisionSection() {
   return (
-    <section className="relative w-full h-[90vh] overflow-hidden bg-blue-950">
+    <section className="relative w-full py-20 overflow-hidden bg-blue-950">
       
       {/* Background Image */}
       <motion.img
-        src="https://travelpro-wp.laralink.com/wp-content/uploads/2024/03/banner_bg.jpeg"
+        src="https://www.avanse.com/blogs/images/Untitled%20design%20(2).png"
         alt="Students journey"
         className="absolute inset-0 w-full h-full object-cover opacity-60"
         initial={{ scale: 1.1 }}
@@ -16,10 +16,10 @@ export default function StudentVisionSection() {
       />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-linear-to-r from-transparent via-black/40 to-black/50" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/50 to-transparent" />
 
       {/* Content */}
-      <div className="relative flex items-center justify-end z-10 h-full  ">
+      <div className="relative  flex items-center justify-start z-10 h-full  ">
 
         <div className="max-w-2xl   px-6 md:px-6">
           
@@ -27,7 +27,7 @@ export default function StudentVisionSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-sm w-55 tracking-widest bg-blue-950 px-5 py-1 rounded-2xl text-white uppercase mb-4"
+            className="text-sm w-55 tracking-widest bg-[#c1972d] px-5 py-1 rounded-2xl text-white uppercase mb-4"
           >
             How We See Students
           </motion.h2>
@@ -36,10 +36,10 @@ export default function StudentVisionSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.9 }}
-            className="text-4xl md:text-6xl font-serif font-semibold text-white leading-tight"
+            className="text-4xl  md:text-6xl font-serif font-semibold text-white leading-tight"
           >
             We don’t see applications. <br />
-            <span className="text-blue-950">We see people.</span>
+            <span className="text-[#c1972d]">We see people.</span>
           </motion.h1>
 
           <motion.p
@@ -66,7 +66,7 @@ export default function StudentVisionSection() {
             initial={{ width: 0 }}
             animate={{ width: "120px" }}
             transition={{ delay: 1.3, duration: 0.6 }}
-            className="mt-8 h-0.5 bg-blue-950"
+            className="mt-8 h-0.5 bg-[#c1972d]"
           />
         </div>
       </div>
