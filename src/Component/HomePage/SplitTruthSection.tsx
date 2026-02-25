@@ -7,10 +7,10 @@ const whatWeDont = ["We pressure", "We decide for students", "We sell dreams"];
 
 export default function SplitTruthSection() {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden py-10">
-      
+    <section className="relative w-full flex items-center justify-center overflow-hidden py-10">
+
       {/* Fixed Background Image */}
-      <div 
+      <div
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=2000')", // Educational/Nature background
@@ -24,21 +24,21 @@ export default function SplitTruthSection() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-        
+
         {/* Top Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8+"
         >
-          <h2 className="text-white text-4xl md:text-5xl font-black tracking-tight mb-4">
+          <h2 className="text-white text-4xl md:text-5xl font-black font-serif tracking-tight mb-4">
             Honest Guidance. <span className="text-[#c1972d]">No Hidden Agendas.</span>
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-          
+
           {/* LEFT: WHAT WE DO */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -53,7 +53,7 @@ export default function SplitTruthSection() {
             </h3>
             <ul className="space-y-6">
               {whatWeDo.map((item, i) => (
-                <motion.li 
+                <motion.li
                   key={i}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -81,7 +81,7 @@ export default function SplitTruthSection() {
             </h3>
             <ul className="space-y-6">
               {whatWeDont.map((item, i) => (
-                <motion.li 
+                <motion.li
                   key={i}
                   initial={{ opacity: 0, x: 10 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -94,11 +94,10 @@ export default function SplitTruthSection() {
               ))}
             </ul>
           </motion.div>
-
         </div>
 
         {/* Bottom Statement */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}

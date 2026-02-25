@@ -5,25 +5,25 @@ import { ArrowUpRight, Globe2 } from "lucide-react";
 
 const countries = [
   {
-    title: "UK – Global Prestige",
+    title: "UAE",
     desc: "Nurturing independence through tradition.",
     image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1000&auto=format&fit=crop",
     color: "from-blue-600 to-indigo-900"
   },
   {
-    title: "UAE – Emerging Hub",
+    title: "London",
     desc: "Global mobility and vibrant lifestyle.",
     image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=1000&auto=format&fit=crop",
     color: "from-orange-400 to-red-600"
   },
   {
-    title: "Europe – Cultural Depth",
+    title: "USA",
     desc: "Cultural exposure and inclusive growth.",
     image: "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop",
     color: "from-red-500 to-red-900"
   },
   {
-    title: "Australia – Practical Freedom",
+    title: "Paris",
     desc: "Emphasizing research and structure.",
     image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1000&auto=format&fit=crop",
     color: "from-yellow-500 to-orange-700"

@@ -1,7 +1,7 @@
 import CountriesAsExperiences from "./CountriesAsExperiences"
 import EducationTurningPoint from "./EducationTurningPoint"
 import HeroSection from "./HomeHero"
-import HowWeDefineSuccess from "./HowWeDefineSuccess"
+// import HowWeDefineSuccess from "./HowWeDefineSuccess"
 import JourneyStepSection from "./JourneyStepSection"
 import OurWayOfCounseling from "./OurWayOfCounseling"
 import QuietInvitationSection from "./GetCallbackSection"
@@ -31,7 +31,7 @@ const HomeMain = () => {
       <StudyAbroadServices/>
       <TrustQuietMomentsSection />
       <CountriesAsExperiences />
-      <HowWeDefineSuccess />
+      {/* <HowWeDefineSuccess /> */}
       <StudentVoicesChat />
       <TrustPanel />
       <SplitTruthSection />

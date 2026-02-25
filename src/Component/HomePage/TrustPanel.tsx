@@ -1,5 +1,9 @@
 
 import { ShieldCheck, Wallet, BarChart3, Handshake } from "lucide-react";
+import image1 from "../../assets/portrait-smiling-indian-female-graduate-her-teacher-park.jpg";
+import image2 from "../../assets/hispanic-heritage-month-concept.jpg";
+import image3 from "../../assets/young-adults-graduation-gowns-smiling-proudly-generated-by-ai.jpg";
+
 
 export default function ParentsPeaceOfMind() {
   return (
@@ -13,17 +17,17 @@ export default function ParentsPeaceOfMind() {
         {/* LEFT — IMAGE COLLAGE */}
         <div className="grid grid-cols-2 gap-4 relative">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsvZZmk0H_T_dEr7mKFJuKb2cwlr9jHAXplg&s"
+            src={image1}
             className="rounded-2xl object-cover w-full h-full"
             alt=""
           />
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7CUuV1X-RVgU8A0Jf6zKWrcceaqg3wXmbWw&s"
+            src={image2}
             className="rounded-2xl object-cover w-full h-full"
             alt=""
           />
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcF2AwnqfvpuGCvdtf2CEU1cdaj7wK20ReGQ&s"
+            src={image3}
             className="rounded-2xl col-span-2 object-cover w-full h-65"
             alt=""
           />

@@ -75,17 +75,17 @@ const Footer = () => {
 
           <div className="space-y-3 text-black text-sm">
             <p className="flex items-start gap-2">
-              <MapPin size={16} className="text-indigo-600" />
+              <MapPin size={20} className="text-[#c1972d]" />
               Office No. 402, Business Plaza, Mumbai, India
             </p>
 
             <p className="flex items-center gap-2">
-              <Phone size={16} className="text-indigo-600" />
+              <Phone size={16} className="text-[#c1972d]" />
               +91 97697 87211
             </p>
 
             <p className="flex items-center gap-2">
-              <Mail size={16} className="text-indigo-600" />
+              <Mail size={16} className="text-[#c1972d]" />
               queries@excelenciaint.com
             </p>
           </div>

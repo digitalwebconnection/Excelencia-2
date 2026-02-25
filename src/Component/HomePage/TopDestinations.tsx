@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const destinations = [
     {
-        name: "New York",
+        name: "UAE",
         listings: "Learning Capital",
         image:
             "https://images.unsplash.com/photo-1546436836-07a91091f160?q=80&w=1200",
@@ -16,7 +16,7 @@ const destinations = [
             "https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?q=80&w=1200",
     },
     {
-        name: "San Francisco",
+        name: "USA",
         listings: "Academic Excellence",
         image:
             "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=1200",
