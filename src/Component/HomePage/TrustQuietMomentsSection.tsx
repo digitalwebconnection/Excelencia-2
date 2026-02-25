@@ -165,8 +165,8 @@ export default function ImmigrationHeroSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   className="flex items-center gap-3 group"
                 >
-                  <div className="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center group-hover:bg-blue-600 transition">
-                    <Check className="w-3 h-3 text-blue-500 group-hover:text-white" />
+                  <div className="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center transition">
+                    <Check className="w-3 h-3 text-[#c1972d] group-hover:text-white" />
                   </div>
                   <span className="text-gray-300 font-medium">
                     {item}

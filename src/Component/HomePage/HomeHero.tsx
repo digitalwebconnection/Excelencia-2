@@ -48,7 +48,7 @@ export default function HeroWithVideoAndSearchForm() {
               onEnded={handleVideoEnd}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/70" />
+            <div className="absolute inset-0 bg-black/0" />
           </motion.div>
         )}
 
@@ -65,7 +65,7 @@ export default function HeroWithVideoAndSearchForm() {
               backgroundImage: "url('https://t4.ftcdn.net/jpg/07/53/16/87/360_F_753168793_UeLlYWN1PfAs57EgM9VTq1CepinQKjjI.jpg')",
             }}
           >
-            <div className="absolute inset-0 bg-black/80 z-0" />
+            <div className="absolute inset-0 bg-black/40 z-0" />
 
             <div className="relative z-10 text-center px-6">
               <p className="text-white font-semibold text-lg">Guidance That Puts Your Future First</p>
@@ -144,19 +144,20 @@ export default function HeroWithVideoAndSearchForm() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative h-full flex items-center justify-center bg-cover bg-center"
+            className="relative  h-full flex items-center justify-center bg-cover bg-center"
             style={{
               backgroundImage: "url('https://career-advice.jobs.ac.uk/wp-content/uploads/london-e1634207674493-1170x630.jpg.optimal.jpg')", // High quality study-themed background
             }}
           >
-            <div className="absolute inset-0 bg-black/80 z-0" />
+            <div className="absolute inset-0 bg-black/60 z-0" />
 
             <div className="relative z-10 max-w-6xl px-8 text-center md:text-left">
+
               <motion.h2
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="text-[#c1972d] text-3xl md:text-5xl text-center font-bold mb-8 leading-tight"
+                className="text-[#c1972d] text-3xl md:text-5xl font-serif text-center font-bold mb-8 leading-tight"
               >
                 Your Dream Deserves Honest Guidance
               </motion.h2>

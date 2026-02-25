@@ -6,13 +6,13 @@ import HomeMain from "./Component/HomePage/HomeMain";
 import WhatsAppWidget from "./Component/WhatsAppWidget";
 import AboutUsMain from "./Component/AboutUs/AboutUsMain";
 import ContactUsMain from "./Component/ContactUs/ContactUsMain";
-// import FlightAnimation from "./Component/FlightAnimation";
+import FlightAnimation from "./Component/FlightAnimation";
 import UkMain from "./Component/Destination/uk/UkMain";
 
 function App() {
   return (
     <>
-    {/* <FlightAnimation/> */}
+    <FlightAnimation/>
       <Header />
 
       <main className="pt-20">
