@@ -1,6 +1,8 @@
 
 import { motion } from "framer-motion";
 import { Check, X } from "lucide-react"; // npm install lucide-react
+import image from "../../assets/DO.png"
+import image1 from "../../assets/DON'T.png"
 
 const whatWeDo = ["We guide", "We advise", "We support"];
 const whatWeDont = ["We pressure", "We decide for students", "We sell dreams"];
@@ -23,7 +25,7 @@ export default function SplitTruthSection() {
         <div className="absolute inset-0 bg-black/85 mix-blend-multiply" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 w-full">
 
         {/* Top Header */}
         <motion.div
@@ -37,7 +39,7 @@ export default function SplitTruthSection() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-20 items-stretch">
 
           {/* LEFT: WHAT WE DO */}
           <motion.div
@@ -45,22 +47,35 @@ export default function SplitTruthSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 flex flex-col"
+            className="bg-slate-900/40 backdrop-blur-md border border-white/20 rounded-3xl px-8 pb-8  flex flex-col"
           >
-            <h3 className="text-blue-400 text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-2">
-              <span className="w-8 h-8 rounded-full bg-blue-400/20 flex items-center justify-center">✅</span>
-              What We Do
+            <h3 className="text-blue-400  justify-center -mt-16 text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-2">
+              <img src={image} alt="" className="w-40"/>
             </h3>
+
+            <svg width="0" height="0">
+              <defs>
+                <linearGradient id="goldBlueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#c1972d" />
+                  <stop offset="100%" stopColor="#172554" />
+                </linearGradient>
+              </defs>
+            </svg>
             <ul className="space-y-6">
               {whatWeDo.map((item, i) => (
                 <motion.li
                   key={i}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3 + (i * 0.1) }}
-                  className="flex items-center gap-4 text-white text-xl md:text-2xl font-medium"
+                  transition={{ delay: 0.3 + i * 0.1 }}
+                  className="flex items-center ps-30 gap-4 text-[#c1972d] text-xl md:text-2xl font-medium"
                 >
-                  <Check className="text-blue-400 w-6 h-6 shrink-0" />
+                  <Check
+                    className="w-6 h-6 text-green-600  shrink-0 "
+             
+                    strokeWidth={6}
+                  />
+
                   {item}
                 </motion.li>
               ))}
@@ -73,11 +88,10 @@ export default function SplitTruthSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="bg-slate-900/40 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col"
+            className="bg-slate-900/40 backdrop-blur-md border border-white/10 rounded-3xl px-8 pb-8 flex flex-col"
           >
-            <h3 className="text-slate-400 text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-2">
-              <span className="w-8 h-8 rounded-full bg-slate-400/20 flex items-center justify-center">❌</span>
-              What We Don't
+            <h3 className="text-blue-400  -mt-16 justify-center text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-2">
+              <img src={image1} alt="" className="w-40"/>
             </h3>
             <ul className="space-y-6">
               {whatWeDont.map((item, i) => (
@@ -86,9 +100,9 @@ export default function SplitTruthSection() {
                   initial={{ opacity: 0, x: 10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 + (i * 0.1) }}
-                  className="flex items-center gap-4 text-slate-300 text-xl md:text-2xl font-light italic"
+                  className="flex items-center ps-22 gap-4 text-[#c1972d] text-xl md:text-2xl font-medium "
                 >
-                  <X className="text-slate-500 w-6 h-6 shrink-0" />
+                  <X className="text-red-600  w-6 h-6 shrink-0" strokeWidth={6} />
                   {item}
                 </motion.li>
               ))}

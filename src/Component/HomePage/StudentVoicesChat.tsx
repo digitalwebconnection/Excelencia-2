@@ -4,31 +4,31 @@ import { motion, AnimatePresence } from "framer-motion";
 const students = [
   {
     id: 1,
-    name: "Ananya",
+    name: "   Vamshi Pottabatini",
     location: "UK",
-    quote: "I felt heard.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+    quote: "Excelencia International provided excellent guidance throughout my study abroad journey. From shortlisting universities to visa support, everything was handled professionally and smoothly. The team is very supportive, responsive, and genuinely cares about students’ futures. Highly recommended for anyone planning to study abroad.",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQEnabVbz5PS4w/profile-displayphoto-scale_200_200/B56ZlVT3YVG0AY-/0/1758072895764?e=2147483647&v=beta&t=ZGO4LLFYmDLxJ1jbhXhJQUzTsHGwwKbjj5doQkgXP9I",
   },
   {
     id: 2,
-    name: "Marcus",
+    name: "Ihita Kumar",
     location: "Canada",
-    quote: "They didn’t rush me.",
-    image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop",
+    quote: "Very helpful and supportive staff. I had a great experience while inquiring about study-abroad plans. Highly recommend this place.",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHUGbJmJGY8dw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1680289087526?e=2147483647&v=beta&t=cGO4dXHr4p1pNwKflnprRKX_LNHIjlzzq2P_dirld6A",
   },
   {
     id: 3,
-    name: "Sarah",
+    name: "Mohammed Uzair",
     location: "USA",
-    quote: "They explained everything honestly.",
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop",
+    quote: "Very professional and helpful agency. They made my study abroad journey smooth and stress-free. Thank you for the support!",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrRqGWhJpWfE-_JlS0hpIUfKm6mMnhKP00QQ&s",
   },
   {
     id: 4,
-    name: "David",
+    name: "Manav Gandhi",
     location: "Australia",
-    quote: "I knew I was making the right decision.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+    quote: "Highly recommend their personalised guidance and visa assistance — made the whole study abroad process smooth and stress-free.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSqrPUzmHN1BLkBlZWhYpYNIH1ydiruOK2sA&s",
   },
 ];
 
@@ -133,7 +133,7 @@ export default function AutoRotatingStudentVoices() {
 
           {/* Right: Quote */}
           <div
-            className="min-h-65 flex flex-col justify-center text-center lg:text-left"
+            className="min-h-30 flex flex-col justify-center text-center lg:text-left"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -149,7 +149,7 @@ export default function AutoRotatingStudentVoices() {
                   “
                 </span>
 
-                <h3 className="text-3xl md:text-5xl font-medium text-slate-800 italic leading-tight">
+                <h3 className="text-3xl md:text-lg font-medium text-slate-800 italic leading-tight">
                   {students[activeTab].quote}
                 </h3>
 

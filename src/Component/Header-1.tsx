@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/image.png";
+import logo from "../assets/image1.png";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -53,7 +53,7 @@ const Header = () => {
           <NavLink
             to="/"
             className={`flex items-center transition-all duration-300 ${
-              scrolled ? "h-6 w-52" : "h-8 w-64"
+              scrolled ? "h-6 w-62" : "h-8 w-74"
             }`}
           >
             <img

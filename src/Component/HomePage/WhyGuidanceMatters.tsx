@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, CheckCircle, Plus } from "lucide-react";
-
+import image from "../../assets/2.jpg"
+import im2 from "../../assets/3.jpg"
 export default function WhyGuidanceMatters() {
   const benefits = [
     "World-class universities",
@@ -29,7 +30,7 @@ export default function WhyGuidanceMatters() {
                 className="w-full rounded-[2.5rem] overflow-hidden shadow-2xl"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1502920514313-52581002a659"
+                  src={image}
                   alt="Traveller"
                   className="h-137.5 w-full object-cover"
                 />
@@ -44,7 +45,7 @@ export default function WhyGuidanceMatters() {
                 className="absolute -right-10 -top-10 w-48 h-48 rounded-full border-[6px] border-white shadow-xl overflow-hidden hidden md:block"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+                  src={im2}
                   alt="Students"
                   className="w-full h-full object-cover"
                 />

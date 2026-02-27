@@ -1,4 +1,4 @@
-import CountriesAsExperiences from "./CountriesAsExperiences"
+// import CountriesAsExperiences from "./CountriesAsExperiences"
 import EducationTurningPoint from "./EducationTurningPoint"
 import HeroSection from "./HomeHero"
 // import HowWeDefineSuccess from "./HowWeDefineSuccess"
@@ -12,7 +12,6 @@ import TopDestinations from "./TopDestinations"
 import TrustPanel from "./TrustPanel"
 import TrustQuietMomentsSection from "./TrustQuietMomentsSection"
 import ValuesWePractice from "./ValuesWePractice"
-import VisionMissionSection from "./VisionMissionSection"
 import WhyGuidanceMatters from "./WhyGuidanceMatters"
 import StudyAbroadServices from "./StudyAbroadServices"
 
@@ -24,13 +23,12 @@ const HomeMain = () => {
       <WhyGuidanceMatters />
       <EducationTurningPoint />
       <OurWayOfCounseling />
-      <VisionMissionSection />
       <StudentVisionSection />
       <ValuesWePractice />
       <JourneyStepSection />
       <StudyAbroadServices/>
       <TrustQuietMomentsSection />
-      <CountriesAsExperiences />
+      {/* <CountriesAsExperiences /> */}
       {/* <HowWeDefineSuccess /> */}
       <StudentVoicesChat />
       <TrustPanel />

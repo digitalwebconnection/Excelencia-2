@@ -1,3 +1,4 @@
+import VisionMissionSection from "../HomePage/VisionMissionSection"
 import AboutHero from "./AboutHero"
 import AboutSection from "./AboutSection"
 import ConversationSection from "./ConversationSection"
@@ -16,6 +17,7 @@ const AboutUsMain = () => {
       <AboutHero/>
       <WhyWeWorkWithStudents/>
       <WhatStudyingAbroadMeans/>
+         <VisionMissionSection />
       <AboutSection/>
       <HowWeGuideStudents/>
       <OurApproachToGuidance/>

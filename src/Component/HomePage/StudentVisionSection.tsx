@@ -1,13 +1,13 @@
-
+import image from "../../assets/1.jpg"
 import { motion } from "framer-motion";
 
 export default function StudentVisionSection() {
   return (
-    <section className="relative w-full py-20 overflow-hidden bg-blue-950">
+    <section className="relative w-full py-10 overflow-hidden bg-blue-950">
 
       {/* Background Image */}
       <motion.img
-        src="https://www.avanse.com/blogs/images/Untitled%20design%20(2).png"
+        src={image}
         alt="Students journey"
         className="absolute inset-0 w-full h-full object-cover opacity-60"
         initial={{ scale: 1.1 }}
@@ -16,7 +16,7 @@ export default function StudentVisionSection() {
       />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/50 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/20 to-transparent" />
 
       {/* Content */}
       <div className="relative  flex items-center justify-start z-10 h-full  ">
@@ -38,28 +38,40 @@ export default function StudentVisionSection() {
             transition={{ delay: 0.5, duration: 0.9 }}
             className="text-4xl  md:text-5xl font-serif font-semibold text-white leading-tight"
           >
-            Sometimes, Crossing Borders  <br />
-            <span className="text-[#c1972d]">Changes Everything.</span>
+            Your Dream Deserves  <br />
+            <span className="text-[#c1972d]">Honest Guidance.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="mt-6 max-w-2xl text-base md:text-lg text-blue-100 leading-relaxed"
+            className="mt-6 max-w-4xl text-base md:text-lg text-blue-100 leading-relaxed"
           >
-            That quiet feeling of wanting something bigger?
-            It might be waiting for you beyond familiar streets.
+         
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="text-gray-100 text-lg md:text-xl leading-relaxed space-y-6"
+              >
+                <p>
+                  Deciding to study abroad may be one of the most beneficial and life-changing decisions a student ever makes.
+                  It affects more than just the course of your education - it has its effects on your
+                  <strong> career advancement, international exposure, and long-term future opportunities.</strong>
+                </p>
+                <p>
+                  Right counselling not only helps you select the right course to match your career ambitions but also guides
+                  you in choosing universities that best suit your profile. Proper guidance will lead to a very good strategy
+                  that increases the chances of admission as well as visa success.
+                </p>
+                <p className="font-light italic text-gray-300">
+                  Studying abroad is not just about getting a degree; it is about securing a global future,
+                  and the right direction is all important.
+                </p>
+              </motion.div>
           </motion.p>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.1, duration: 0.8 }}
-            className="mt-4 text-base md:text-lg text-white"
-          >
-            Growth begins the moment you step outside comfort.
-          </motion.p>
 
           {/* Accent Line */}
           <motion.div

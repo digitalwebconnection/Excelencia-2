@@ -38,7 +38,7 @@ const cards = [
 
 export default function VisionMissionSection() {
   return (
-    <section className="relative w-full bg-[#fafafa] py-24 overflow-hidden">
+    <section className="relative w-full  py-4 overflow-hidden">
       {/* Background Aesthetic */}
       <div className="absolute top-0 left-0 w-full h-full opacity-40 pointer-events-none">
         <div className="absolute top-[-10%] right-[-5%] w-125 h-125 bg-blue-100 rounded-full blur-[120px]" />

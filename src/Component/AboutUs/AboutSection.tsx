@@ -74,8 +74,7 @@ const AboutSection = () => {
             >
               <div className="relative group">
                 {/* Decorative background element */}
-                <div className="absolute -inset-2 bg-blue-100 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                
+                <div className="absolute -inset-2 bg-blue-100 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>                
                 <img
                   src={`${section.image}?auto=format&fit=crop&w=800&q=80`}
                   alt={section.title}
