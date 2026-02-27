@@ -1,4 +1,5 @@
 import AboutHero from "./AboutHero"
+import AboutSection from "./AboutSection"
 import ConversationSection from "./ConversationSection"
 import ExcelenciaExperience from "./ExcelenciaExperience"
 import GlobalEducationPersonalAttention from "./GlobalEducationPersonalAttention"
@@ -15,6 +16,7 @@ const AboutUsMain = () => {
       <AboutHero/>
       <WhyWeWorkWithStudents/>
       <WhatStudyingAbroadMeans/>
+      <AboutSection/>
       <HowWeGuideStudents/>
       <OurApproachToGuidance/>
       <ExcelenciaExperience/>

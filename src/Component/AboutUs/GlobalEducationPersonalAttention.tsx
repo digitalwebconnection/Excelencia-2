@@ -64,21 +64,19 @@ export default function GlobalEducationPersonalAttention() {
           <div className="flex items-center gap-3 mb-4">
             <div className="h-0.5 w-10 bg-blue-950" />
             <p className="text-xs tracking-[0.3em] uppercase text-gray-900 font-bold">
-              About Treck Agency
+              Experience That Anticipates
             </p>
           </div>
 
           {/* Heading */}
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-[1.1] text-gray-900">
-            Providing the Best Visa <br />
-            <span className="text-blue-950">Services to Clients</span>
+            Decades of Insight.  <br />
+            <span className="text-blue-950">Not Just Experience.</span>
           </h2>
 
           {/* Description */}
           <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-            While universities and opportunities are global, the way we guide
-            students is always personal. There is no one-size-fits-all advice —
-            every decision is shaped around your goals.
+            With years of hands-on visa advisory experience, we’ve seen policies change, requirements tighten, and trends evolve. That experience allows us to anticipate challenges before they arise — not react after rejection.
           </p>
 
           {/* Feature List (Icon circles from image_f255f9) */}
@@ -88,7 +86,7 @@ export default function GlobalEducationPersonalAttention() {
                 <Check className="w-5 h-5 text-blue-950 group-hover:text-white" />
               </div>
               <p className="font-bold text-gray-800 text-sm">
-                Ready to Help <br /> You in Immigration
+                We don’t guess <br /> outcomes.
               </p>
             </div>
 
@@ -97,7 +95,7 @@ export default function GlobalEducationPersonalAttention() {
                 <Check className="w-5 h-5 text-blue-950 group-hover:text-white" />
               </div>
               <p className="font-bold text-gray-800 text-sm">
-                Works Fast & We're <br /> Cost Effective
+                We prepare for <br /> them.
               </p>
             </div>
           </div>

@@ -82,17 +82,19 @@ export default function WhyWeWorkWithStudents() {
           </span>
 
           <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6 uppercase">
-            Turning Study Abroad
-            <span className="text-[#c1972d]"> Dreams</span> <br /> <span className="text-blue-950">Into Reality</span>
+            Every Approval 
+            <span className="text-[#c1972d]"> Letter</span> <span className="text-blue-950"> Has A Journey Behind It</span>
           </h2>
 
           <p className="text-gray-600 text-lg mb-10 max-w-xl">
-            We Guide Students With Expert Visa Consulting, Ensuring A Smooth Process 
-            From Application To Approval, Turning Study Abroad Aspirations Into Life-Changing Opportunities.
+            What you see is a visa stamp.
+What we see is months of preparation, planning, clarity, and confidence.
+
+We work behind the scenes — refining SOPs, correcting documentation, preparing you for interviews, reviewing every detail twice — so that nothing is left to chance.
           </p>
 
           {/* Feature points */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
             {[
               {
                 title: "Global Reach-",
@@ -117,12 +119,12 @@ export default function WhyWeWorkWithStudents() {
             ))}
           </div>
 
-          <ul className="space-y-4 mb-12">
+          <ul className="space-y-4 mb-8">
             <li className="flex items-center gap-3 text-gray-600 font-medium">
-                <span className="text-blue-950">≫</span> Fastest Visa Form Processing With Skilled Immigration Agents
+                <span className="text-blue-950">≫</span> Success abroad isn’t luck.
             </li>
             <li className="flex items-center gap-3 text-gray-600 font-medium">
-                <span className="text-blue-950">≫</span> Partnership With International Educational Institutions
+                <span className="text-blue-950">≫</span>It’s preparation meeting the right guidance.
             </li>
           </ul>
 
