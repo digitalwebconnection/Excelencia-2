@@ -5,7 +5,7 @@ import {
   Plane, Home, GraduationCap 
 } from 'lucide-react';
 
-const StudyAbroadJourney = () => {
+const   StudyAbroadJourney = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const journeySteps = [
@@ -36,20 +36,19 @@ const StudyAbroadJourney = () => {
       <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-[#c1972d]/10 rounded-full blur-3xl opacity-50" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
+        <div className="flex flex-col lg:flex-row gap-2 items-start">
           
           {/* Left Side: Sticky Content */}
           <div className="lg:w-1/3 lg:sticky lg:top-24">
             <span className="inline-block px-4 py-1 rounded-full bg-[#c1972d]/10 text-[#c1972d] text-sm font-bold uppercase tracking-widest mb-4">
               Our Services
             </span>
-            <h2 className="text-blue-950 font-serif text-5xl font-black leading-tight mb-6">
-              Your Future <br /> 
-              <span className="text-[#c1972d]">Simplified.</span>
+            <h2 className="text-blue-950 font-serif text-4xl font-black leading-tight mb-6">
+              End-to-End Study  <br /> 
+              <span className="text-[#c1972d] text-5xl">Abroad Support.</span>
             </h2>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-              We make the entire process simple, clear, and stress-free. 
-              From your first question to your first day abroad — we’re with you every step of the way.
+           We make the entire process simple, clear, and stress-free.
             </p>
             <button className="group flex items-center gap-3 bg-linear-to-r from-[#c1972d] to-blue-950 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-xl shadow-blue-950/20">
               Get Started Now

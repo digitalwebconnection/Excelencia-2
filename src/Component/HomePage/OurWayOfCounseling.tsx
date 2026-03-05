@@ -12,31 +12,31 @@ export default function OurWayOfCounseling() {
     {
       icon: <Ear size={26} />,
       title: "Honest Counselling",
-      desc: "We provide transparent advice — even when the recommendation is not the option you initially considered.",
+      desc: "Even when that recommendation is not an option you’re considering.",
       delay: 0,
     },
     {
       icon: <Users size={26} />,
       title: "Student-First Approach",
-      desc: "Your goals, finances, and long-term future always come before institutional commissions.",
+      desc: "Never prioritize the commissions over your goals, finances, or long-term future.",
       delay: 0.1,
     },
     {
       icon: <GraduationCap size={26} />,
       title: "Personalized University Selection",
-      desc: "Every university recommendation is carefully matched to your academic profile and career aspirations.",
+      desc: "Each recommended school is matched to your academic profile and future aspirations.",
       delay: 0.2,
     },
     {
       icon: <FileCheck size={26} />,
       title: "Complete Visa Support",
-      desc: "Step-by-step assistance from application submission to successful visa approval.",
+      desc: "We guide you at each step from applications to visa success.",
       delay: 0.3,
     },
     {
       icon: <Compass size={26} />,
       title: "Long-Term Mentorship",
-      desc: "Support does not stop at admission — we guide you with clarity and direction toward a successful global career.",
+      desc: "We don’t stop at admission, but we are with you all the way. We replace confusion with clarity and help you to shape your career into a success story. ",
       delay: 0.4,
     },
   ];
@@ -61,14 +61,13 @@ export default function OurWayOfCounseling() {
             WHY EXCELENCIA INTERNATIONAL
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-serif font-black tracking-tight text-slate-900 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-serif  font-black tracking-tight text-slate-900 leading-tight">
             Not Just Admissions.
             <span className="text-blue-950"> Life Decisions.</span>
           </h2>
 
-          <p className="mt-6 text-lg md:text-xl text-slate-700 font-medium max-w-4xl mx-auto">
-            Every student’s journey is unique. Our guidance is built on honesty,
-            accountability, and a genuine commitment to your long-term success.
+          <p className="mt-6 text-lg md:text-xl text-slate-700 font-medium max-w-7xl mx-auto">
+       We also believe that each student’s path is unique and deserves individual attention on our part, founded on honesty and accountability.
           </p>
         </motion.div>
 

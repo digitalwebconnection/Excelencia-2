@@ -3,7 +3,7 @@ import  { useState } from 'react';
 import { Mail, Phone, MapPin, Plus, Minus, Building2 } from 'lucide-react';
 
 const QuietInvitationContactForm = () => {
-  const [openOffice, setOpenOffice] = useState('dubai');
+  const [openOffice, setOpenOffice] = useState<number | string>(1);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,17 +12,24 @@ const QuietInvitationContactForm = () => {
     message: "",
   });
 
-  const offices = [
-    {
-      id: 'dubai',
-      title: 'Dubai Office',
-      address: '30 Commercial Road Fratton, Australia',
-      email: 'needhelp@company.com',
-      phone: '+92 (8800) - 9850',
-    },
-    { id: 'australia', title: 'Australia Office' },
-    { id: 'canada', title: 'Canada Office' },
-  ];
+const offices = [
+  {
+    id: 1,
+    title: "India Office",
+    address:
+      "Elco Arcade, D Wing, Office No. 45, First Floor, Near Almeida Park, Bandra West, Mumbai 400050",
+    email: "queries@excelenciaint.com",
+    phone: "+91 97697 87211",
+  },
+  {
+    id: 2,
+    title: "UAE Office",
+    address:
+      "Building A1, Dubai Digital Park, Dubai Silicon Oasis, United Arab Emirates",
+    email: "queries@excelenciaint.com",
+    phone: "+91 97697 87211",
+  },
+];
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -107,49 +114,66 @@ towards a global future.</p>
           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80')` }}
         />
         
-        {/* Office Accordion Card */}
-        <div className="relative w-[90%] md:w-80 bg-white shadow-2xl z-30 animate-fadeIn">
-          <div className="p-6 flex justify-between items-center border-b">
-            <h3 className="text-xl font-bold flex items-center gap-2 text-slate-900">
-              Track Offices
-            </h3>
-            <Building2 className="text-[#d91e36]" size={28} />
-          </div>
+    {/* Office Accordion Card */}
+<div className="relative w-[90%] md:w-80 bg-white shadow-2xl z-30 animate-fadeIn">
+  <div className="p-6 flex justify-between items-center border-b">
+    <h3 className="text-xl font-bold flex items-center gap-2 text-slate-900">
+      Track Offices
+    </h3>
+    <Building2 className="text-[#d91e36]" size={28} />
+  </div>
 
-          <div className="divide-y divide-gray-100">
-            {offices.map((office) => (
-              <div key={office.id}>
-                <button 
-                  onClick={() => setOpenOffice(office.id)}
-                  className="w-full p-4 flex justify-between items-center font-bold text-slate-800 hover:bg-slate-50 transition-colors text-sm"
-                >
-                  {office.title}
-                  {openOffice === office.id ? 
-                    <Minus size={16} className="text-gray-400" /> : 
-                    <Plus size={16} className="text-[#d91e36]" />
-                  }
-                </button>
-                
-                {openOffice === office.id && office.address && (
-                  <div className="p-5 pt-0 space-y-4 text-xs text-slate-500 transition-all">
-                    <div className="flex gap-3">
-                      <MapPin size={16} className="text-[#d91e36] shrink-0" />
-                      <p>{office.address}</p>
-                    </div>
-                    <div className="flex gap-3">
-                      <Mail size={16} className="text-[#d91e36] shrink-0" />
-                      <p>{office.email}</p>
-                    </div>
-                    <div className="flex gap-3">
-                      <Phone size={16} className="text-[#d91e36] shrink-0" />
-                      <p>{office.phone}</p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
+  <div className="divide-y divide-gray-100">
+    {offices.map((office) => (
+      <div key={office.id}>
+        <button
+          onClick={() => setOpenOffice(office.id)}
+          className="w-full p-4 flex justify-between items-center font-bold text-slate-800 hover:bg-slate-50 transition-colors text-sm"
+        >
+          {office.title}
+          {openOffice === office.id ? (
+            <Minus size={16} className="text-gray-400" />
+          ) : (
+            <Plus size={16} className="text-[#d91e36]" />
+          )}
+        </button>
+
+        {openOffice === office.id && office.address && (
+          <div className="p-5 pt-0 space-y-4 text-xs text-slate-500 transition-all">
+
+            {/* Location */}
+            <div className="flex gap-3">
+              <MapPin size={16} className="text-[#d91e36] shrink-0" />
+              <p>
+                <span className="font-semibold text-slate-700">Location :</span>{" "}
+                {office.address}
+              </p>
+            </div>
+
+            {/* Email */}
+            <div className="flex gap-3">
+              <Mail size={16} className="text-[#d91e36] shrink-0" />
+              <p>
+                <span className="font-semibold text-slate-700">Email Us :</span>{" "}
+                {office.email}
+              </p>
+            </div>
+
+            {/* Phone */}
+            <div className="flex gap-3">
+              <Phone size={16} className="text-[#d91e36] shrink-0" />
+              <p>
+                <span className="font-semibold text-slate-700">Phone :</span>{" "}
+                {office.phone}
+              </p>
+            </div>
+
           </div>
-        </div>
+        )}
+      </div>
+    ))}
+  </div>
+</div>
       </div>
 
       <style >{`

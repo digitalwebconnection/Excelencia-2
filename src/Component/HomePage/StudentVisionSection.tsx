@@ -48,28 +48,29 @@ export default function StudentVisionSection() {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="mt-6 max-w-4xl text-base md:text-lg text-blue-100 leading-relaxed"
           >
-         
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="text-gray-100 text-lg md:text-xl leading-relaxed space-y-6"
-              >
-                <p>
-                  Deciding to study abroad may be one of the most beneficial and life-changing decisions a student ever makes.
-                  It affects more than just the course of your education - it has its effects on your
-                  <strong> career advancement, international exposure, and long-term future opportunities.</strong>
-                </p>
-                <p>
-                  Right counselling not only helps you select the right course to match your career ambitions but also guides
-                  you in choosing universities that best suit your profile. Proper guidance will lead to a very good strategy
-                  that increases the chances of admission as well as visa success.
-                </p>
-                <p className="font-light italic text-gray-300">
-                  Studying abroad is not just about getting a degree; it is about securing a global future,
-                  and the right direction is all important.
-                </p>
-              </motion.div>
+
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="text-gray-100 text-lg md:text-xl leading-relaxed space-y-6"
+            >
+              <p>
+                Deciding to study abroad may be one of the most beneficial and life-changing decisions a student ever makes.
+                It affects more than just the course of your education - it has its effects on your
+                <strong> career advancement, international exposure, and long-term future opportunities.</strong>
+              </p>
+              <p>
+                Right counselling not only helps you select the right course to match your career ambitions but also guides
+                you in choosing universities that best suit your profile. Proper guidance will lead to a very good strategy
+                that increases the chances of admission as well as visa success.
+              </p>
+              <p >
+                Studying abroad is not just about getting a degree; it is about securing a global future,
+                and the right direction is all important.
+              </p>
+              <p className="font-light italic text-gray-300">At Excelencia International, the best student visa consultancy service in Mumbai, India, we do not believe in pressure, quick fixes, or false promises. We listen first. This approach allows us to put your goals into action with clear and compassionate guidance. Our mission is straightforward; we are here to help you make the best decision for your future, not the easiest one.</p>
+            </motion.div>
           </motion.p>
 
 

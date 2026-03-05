@@ -6,6 +6,7 @@ import video from "../../assets/newvideo.mp4";
 const slides = [
   { title: "We guide. We don’t push." },
   { title: "We advise. We don’t manipulate." },
+  {title:"We pay attention to where your journey takes you."}
 ];
 
 export default function HeroWithVideoAndSearchForm() {

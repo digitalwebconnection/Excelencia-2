@@ -156,7 +156,7 @@ export default function HowWeGuideStudents() {
                             whileInView={{ opacity: 1 }}
                             transition={{ delay: (index * 0.4) + 1.2 }}
                             points="110,25 120,30 110,35" 
-                            fill="#ef4444" 
+                            fill="#c1972d" 
                           />
                        </svg>
                     </div>

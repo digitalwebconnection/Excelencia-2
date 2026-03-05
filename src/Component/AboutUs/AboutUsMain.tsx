@@ -14,18 +14,18 @@ import WhyWeWorkWithStudents from "./WhyWeWorkWithStudents"
 const AboutUsMain = () => {
   return (
     <>
-      <AboutHero/>
-      <WhyWeWorkWithStudents/>
-      <WhatStudyingAbroadMeans/>
-         <VisionMissionSection />
-      <AboutSection/>
-      <HowWeGuideStudents/>
-      <OurApproachToGuidance/>
-      <ExcelenciaExperience/>
-      <GlobalEducationPersonalAttention/>
-      <PeopleBehindExcelencia/>
-      <StudentsAndFamilies/>
-      <ConversationSection/>
+      <AboutHero />
+      <WhyWeWorkWithStudents />
+      <WhatStudyingAbroadMeans />
+      <VisionMissionSection />
+      <AboutSection />
+      <HowWeGuideStudents />
+      <OurApproachToGuidance />
+      <ExcelenciaExperience />
+      <GlobalEducationPersonalAttention />
+      <PeopleBehindExcelencia />
+      <StudentsAndFamilies />
+      <ConversationSection />
     </>
   )
 }

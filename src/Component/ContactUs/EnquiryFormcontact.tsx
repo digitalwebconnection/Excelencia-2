@@ -1,0 +1,269 @@
+import { easeOut, motion } from "framer-motion";
+import { Send, Globe, Target } from "lucide-react";
+import { ArrowUpRight, BookOpen, Newspaper, Trophy } from "lucide-react";
+import { useState, useEffect } from "react";
+
+const updates = [
+    {
+        category: "Immigration News",
+        title: "New 2026 Work Permit Regulations for UAE & GCC",
+        desc: "Detailed breakdown of the latest visa amendments for skilled professionals.",
+        date: "Mar 05, 2026",
+        icon: <Newspaper size={20} />,
+    },
+    {
+        category: "Expert Blog",
+        title: "Choosing Between Canada and Australia in 2026",
+        desc: "Which country offers better PR prospects for tech experts?",
+        date: "Mar 02, 2026",
+        icon: <BookOpen size={20} />,
+    },
+    {
+        category: "Success Stories",
+        title: "Excelenci reaches 5,000+ Successful Visa Grants",
+        desc: "Celebrating a milestone in global immigration excellence.",
+        date: "Feb 28, 2026",
+        icon: <Trophy size={20} />,
+    },
+    {
+        category: "Industry Update",
+        title: "Impact of AI on Student Visa Processing Times",
+        desc: "How automation is speeding up the approval process globally.",
+        date: "Feb 25, 2026",
+        icon: <Newspaper size={20} />,
+    }
+];
+
+export default function ExcelenciFormWhite() {
+
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveIndex((prev) => (prev + 1) % updates.length);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.3,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 15 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: easeOut } },
+    };
+
+    return (
+        <section className="relative py-14 px-6 bg-white overflow-hidden text-slate-900">
+
+            <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-start">
+
+                {/* LEFT CONTENT */}
+                <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="lg:col-span-5 lg:sticky lg:top-24 space-y-6 pt-2"
+                >
+                    <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-[#c1972d]/10 flex items-center justify-center text-[#c1972d]">
+                            <Globe size={20} />
+                        </div>
+                        <p className="uppercase tracking-[3px] text-sm text-[#c1972d] font-bold">
+                            Excelenci International
+                        </p>
+                    </div>
+
+                    <h2 className="text-4xl md:text-5xl font-serif font-extrabold leading-tight tracking-tight text-slate-950">
+                        Your Blueprint for <span className="text-[#c1972d]"> Global Success</span>
+                    </h2>
+
+                    <p className="text-slate-600 text-lg leading-relaxed max-w-md">
+                        Expert consultation tailored for study, work, and permanent residency visas.
+                    </p>
+
+                    <div className="border-t border-slate-100 pt-6 mt-8 space-y-4 text-sm text-slate-600">
+                        <p className="flex items-center gap-2">
+                            <Target className="text-[#c1972d]" size={16} />
+                            100% Case Assessment
+                        </p>
+                        <p className="flex items-center gap-2">
+                            <Target className="text-[#c1972d]" size={16} />
+                            Certified Immigration Specialists
+                        </p>
+                    </div>
+                </motion.div>
+
+                {/* FORM */}
+                <motion.form
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="show"
+                    className="lg:col-span-7 p-10 md:p-4"
+                >
+                    <motion.div variants={itemVariants} className="mb-5">
+                        <h3 className="text-4xl font-bold font-serif text-[#c1972d] mb-2">
+                            Request a Consultation
+                        </h3>
+                        <p className="text-slate-600">
+                            Provide your details, and our visa experts will connect shortly.
+                        </p>
+                    </motion.div>
+
+                    <div className="grid md:grid-cols-2 gap-x-6 gap-y-6">
+                        <FormInput variants={itemVariants} type="text" placeholder="Full Name" />
+                        <FormInput variants={itemVariants} type="tel" placeholder="Contact Number" />
+                        <FormInput variants={itemVariants} type="email" placeholder="Email ID" />
+                        <FormInput variants={itemVariants} type="text" placeholder="Current Location" />
+
+                        <motion.div variants={itemVariants} className="md:col-span-2">
+                            <textarea
+                                placeholder="Describe your visa requirements"
+                                rows={3}
+                                className="w-full bg-transparent border-b-2 border-slate-200 py-3 focus:border-[#c1972d] outline-none resize-none"
+                            />
+                        </motion.div>
+                    </div>
+
+                    <motion.div variants={itemVariants} className="mt-12">
+                        <motion.button
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="bg-linear-to-r from-[#c1972d] to-blue-950 text-white font-semibold px-10 py-4 rounded-xl flex items-center gap-3"
+                        >
+                            Submit Your Enquiry
+                            <Send size={18} />
+                        </motion.button>
+                    </motion.div>
+                </motion.form>
+            </div>
+
+            {/* UPDATES SECTION */}
+            <section className="bg-white border-t border-black/20 mt-10 py-14 px-6">
+                <div className="max-w-7xl mx-auto">
+
+                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+                        <div className="max-w-2xl">
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                className="flex items-center gap-2 text-[#c1972d] font-bold tracking-widest uppercase text-xs mb-3" >
+                                <span className="w-8 h-0.5 bg-[#c1972d]">
+                                </span> Knowledge Hub
+                            </motion.div>
+                            <h2 className="text-4xl md:text-5xl font-black font-serif text-slate-900 leading-tight">                    Latest <span className="text-[#c1972d]">Insights &</span> Updates </h2>
+                        </div>
+                        <button className="hidden bg-linear-to-r from-[#c1972d] to-blue-950 md:flex items-center gap-2 px-6 py-3 rounded-full border border-slate-200 text-white font-semibold transition-colors"> View All News <ArrowUpRight size={18} />
+                        </button>
+                    </div>
+
+                    <div className="grid lg:grid-cols-12 gap-6">
+
+                        {/* AUTO CHANGING FEATURED CARD */}
+                        <FeaturedCard item={updates[activeIndex]} />
+
+                        {/* OTHER CARDS */}
+                        <div className="lg:col-span-6 grid sm:grid-cols-2 gap-6">
+                            {updates.map((item, idx) => (
+                                <SecondaryCard key={idx} item={item} index={idx} />
+                            ))}
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+    );
+}
+
+function FormInput({ variants, ...props }: { variants: any;[key: string]: any }) {
+    return (
+        <motion.div variants={variants}>
+            <input
+                {...props}
+                className="w-full border-b-2 border-slate-200 py-3 focus:border-[#c1972d] outline-none"
+            />
+        </motion.div>
+    );
+}
+
+interface UpdateItem {
+    category: string;
+    title: string;
+    desc: string;
+    date: string;
+    icon: React.ReactNode;
+}
+
+function FeaturedCard({ item }: { item: UpdateItem }) {
+    return (
+        <motion.div
+            key={item.title}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-6 group relative bg-slate-900 rounded-[2.5rem] p-10 overflow-hidden flex flex-col justify-end min-h-112"
+        >
+            <div className="relative z-10">
+                <span className="bg-[#c1972d] text-white text-[10px] px-4 py-1 rounded-full">
+                    {item.category}
+                </span>
+
+                <h3 className="text-3xl font-bold text-white mt-6 mb-4">
+                    {item.title}
+                </h3>
+
+                <p className="text-slate-400 text-lg mb-8 max-w-md">
+                    {item.desc}
+                </p>
+
+                <div className="flex justify-between border-t border-white/10 pt-6">
+                    <span className="text-slate-500 text-sm">{item.date}</span>
+
+                    <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
+                        <ArrowUpRight size={22} />
+                    </button>
+                </div>
+            </div>
+        </motion.div>
+    );
+}
+
+function SecondaryCard({ item, index }: { item: UpdateItem; index: number }) {
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            className="group bg-slate-100 border border-[#c1972d] p-8 rounded-4xl hover:shadow-xl transition"
+        >
+            <div className="text-[#c1972d] mb-6 p-3 bg-white w-fit rounded-2xl shadow-sm">
+                {item.icon}
+            </div>
+
+            <h3 className="text-xl font-bold text-[#c1972d] leading-snug">
+                {item.title}
+            </h3>
+
+            <p className="text-slate-500 text-sm mt-4">
+                {item.desc}
+            </p>
+
+            <div className="mt-6 flex justify-between text-xs uppercase">
+                <span className="text-slate-400">{item.date}</span>
+                <span className="flex items-center gap-1">
+                    Read <ArrowUpRight size={14} />
+                </span>
+            </div>
+        </motion.div>
+    );
+}

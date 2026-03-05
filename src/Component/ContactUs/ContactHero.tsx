@@ -1,54 +1,192 @@
 
-const ContactHero = () => {
+import { easeOut, motion } from "framer-motion";
+import { MapPin, Mail, Phone, Globe, ArrowRight } from "lucide-react";
+
+export default function ContactHero() {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.1, duration: 0.6, ease: easeOut },
+    }),
+  };
+
   return (
-    <section className="relative bg-slate-900 py-20 px-6 overflow-hidden">
-      {/* Background Decorative Elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-10">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[70%] bg-blue-500 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[70%] bg-purple-500 rounded-full blur-[120px]"></div>
+    <section className="relative py-10 flex items-center justify-center overflow-hidden  text-white  px-6">
+
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://img.freepik.com/premium-photo/visa-application-form-travel-immigration-document_926199-3784068.jpg"
+          alt="background"
+          className="w-full h-full object-cover "
+        />
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
       </div>
 
-      <div className="relative max-w-5xl mx-auto text-center">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6">
-          Let’s build something <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-emerald-400">extraordinary</span> together.
-        </h1>
-        
-        <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Have a question, a project idea, or just want to say hello? Our team is 
-          ready to help you scale your next big thing.
-        </p>
+      <div className="relative z-10 max-w-7xl mx-auto w-full">
+        <div className="text-start max-w-3xl  mb-8">
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/25">
-            Get in Touch
-          </button>
-          <button className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg border border-slate-700 transition-all duration-300">
-            View Documentation
-          </button>
+          <motion.span
+            custom={0}
+            initial="hidden"
+            animate="visible"
+            variants={fadeIn}
+            className="inline-block  px-4 py-1.5 mb-4 text-xs font-semibold tracking-widest uppercase bg-[#c1972d]/10 border border-[#c1972d]/30 text-[#c1972d] rounded-full"
+          >
+            Get In Touch
+          </motion.span>
+
+          <motion.h1
+            custom={1}
+            initial="hidden"
+            animate="visible"
+            variants={fadeIn}
+            className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6"
+          >
+            Let’s build something{" "}
+            <span className="text-[#c1972d]">together.</span>
+          </motion.h1>
+
+          <motion.p
+            custom={2}
+            initial="hidden"
+            animate="visible"
+            variants={fadeIn}
+            className="text-lg text-slate-300 leading-relaxed"
+          >
+            Whether you're in Mumbai or Dubai, our global team is ready to provide
+            the guidance and technical solutions your business deserves.
+          </motion.p>
         </div>
 
-        {/* Trust Indicators / Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-slate-800">
-          <div>
-            <p className="text-3xl font-bold text-white">99%</p>
-            <p className="text-sm text-slate-400 uppercase tracking-wide">Satisfaction</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold text-white">24/7</p>
-            <p className="text-sm text-slate-400 uppercase tracking-wide">Support</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold text-white">150+</p>
-            <p className="text-sm text-slate-400 uppercase tracking-wide">Projects</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold text-white">2hr</p>
-            <p className="text-sm text-slate-400 uppercase tracking-wide">Response Time</p>
-          </div>
+        <div className="grid lg:grid-cols-3 gap-8">
+
+          {/* Contact Methods */}
+          <motion.div
+            custom={3}
+            initial="hidden"
+            animate="visible"
+            variants={fadeIn}
+            className="lg:col-span-1 space-y-4"
+          >
+            <ContactMethodCard
+              icon={<Mail size={24} />}
+              label="Email us at"
+              value="queries@excelenciaint.com"
+              href="mailto:queries@excelenciaint.com"
+            />
+
+            <ContactMethodCard
+              icon={<Phone size={24} />}
+              label="Call our experts"
+              value="+91 97697 87211"
+              href="tel:+919769787211"
+            />
+          </motion.div>
+
+          <LocationCard
+            index={4}
+            country="India"
+            address="Elco Arcade, D Wing, Office No. 45, First Floor, Bandra West, Mumbai 400050"
+            tag="Headquarters"
+          />
+
+          <LocationCard
+            index={5}
+            country="UAE"
+            address="Building A1, Dubai Digital Park, Dubai Silicon Oasis, United Arab Emirates"
+            tag="Regional Hub"
+          />
+
         </div>
       </div>
     </section>
   );
-};
+}
 
-export default ContactHero;
+interface ContactMethodProps {
+  icon: React.ReactNode;
+  label: string;
+  value: string;
+  href: string;
+}
+
+function ContactMethodCard({ icon, label, value, href }: ContactMethodProps) {
+  return (
+    <a
+      href={href}
+      className="flex items-center gap-5 p-8 rounded-2xl bg-black/30  backdrop-blur-md border border-white/10 hover:border-[#c1972d]/50 hover:bg-white/10 transition-all group"
+    >
+      <div className="p-3 rounded-xl bg-[#c1972d]/10 text-[#c1972d] group-hover:scale-110 transition-transform">
+        {icon}
+      </div>
+
+      <div>
+        <p className="text-sm text-slate-400">{label}</p>
+        <p className="font-medium text-white">{value}</p>
+      </div>
+    </a>
+  );
+}
+
+interface LocationCardProps {
+  country: string;
+  address: string;
+  tag: string;
+  index: number;
+}
+
+function LocationCard({ country, address, tag, index }: LocationCardProps) {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.1, duration: 0.6 },
+    }),
+  };
+
+  return (
+    <motion.div
+      custom={index}
+      initial="hidden"
+      animate="visible"
+      variants={fadeIn}
+      className="relative group overflow-hidden rounded-3xl bg-black/30 backdrop-blur-md border border-white/10 p-6 hover:border-[#c1972d]/60 transition-colors"
+    >
+      <div className="relative z-10">
+
+        <div className="flex justify-between items-start mb-4">
+          <div className="p-3 rounded-full bg-white/10 text-[#c1972d]">
+            <MapPin size={24} />
+          </div>
+
+          <span className="text-[10px] uppercase tracking-widest font-bold text-[#c1972d] bg-[#c1972d]/10 px-3 py-1 rounded-full">
+            {tag}
+          </span>
+        </div>
+
+        <h3 className="text-3xl font-bold mb-4">{country}</h3>
+
+        <p className="text-slate-300 text-sm leading-relaxed mb-4 italic">
+          "{address}"
+        </p>
+
+        <div className="flex items-center gap-2 text-sm font-semibold text-white group-hover:text-[#c1972d] transition-colors">
+          View on Map
+          <ArrowRight
+            size={16}
+            className="group-hover:translate-x-1 transition-transform"
+          />
+        </div>
+      </div>
+
+      <Globe className="absolute -bottom-10 -right-10 text-white/5 w-40 h-40 transition-transform group-hover:scale-110 duration-700" />
+    </motion.div>
+  );
+}
