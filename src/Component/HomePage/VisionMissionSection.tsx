@@ -1,25 +1,24 @@
 import { motion } from "framer-motion";
 import { Globe, Target, ShieldCheck, Users, Shield, Zap } from "lucide-react";
 
-
 export default function VisionMissionSection() {
   return (
     <>
-      <section className="relative py-28 bg-slate-950 overflow-hidden text-white">
+      <section className="relative py-8 bg-slate-950 overflow-hidden text-white">
 
         {/* background glow */}
         <div className="absolute -top-50 -left-50 w-125 h-125 bg-blue-600/20 blur-[160px] rounded-full" />
         <div className="absolute -bottom-50 -right-50 w-125 h-125 bg-[#c1972d]/20 blur-[160px] rounded-full" />
 
-        <div className="max-w-7xl mx-auto px-6 relative">
+        <div className="max-w-7xl mx-auto px-6 md:px-0 relative">
 
           {/* heading */}
-          <div className="text-center mb-24">
+          <div className="text-center mb-6">
             <p className="text-[#c1972d] tracking-[0.35em] text-xs uppercase font-bold">
               Excelencia International
             </p>
 
-            <h2 className="text-5xl md:text-7xl font-serif mt-6">
+            <h2 className="text-5xl md:text-7xl font-serif mt-4">
               Vision <span className="text-[#c1972d]">&</span> Mission
             </h2>
           </div>
@@ -35,25 +34,19 @@ export default function VisionMissionSection() {
 
               <img
                 src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80"
-                className="rounded-3xl shadow-2xl"
+                className="rounded-3xl mb-5  shadow-2xl"
               />
 
               {/* floating card */}
-              <div className="absolute -bottom-10 left-10 bg-white text-slate-900 p-8 rounded-2xl shadow-2xl max-w-md">
+              <div className="absolute -bottom-20  -right-10 bg-white text-slate-900 p-4 rounded-xl shadow-2xl max-w-xl">
 
-                <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center gap-3 mb-2">
                   <Globe className="text-blue-600" />
                   <h3 className="text-2xl font-serif">Our Vision</h3>
                 </div>
 
-                <p className="text-slate-600 mb-4">
-                  To become a globally recognized leader in international
-                  education and immigration services.
-                </p>
-
-                <p className="text-sm text-slate-500 italic">
-                  Helping students pursue global education with clarity,
-                  confidence and trusted guidance.
+                <p className="text-slate-600  mb-2">
+                  At Excelencia International, our vision is to be a globally recognized leader in international education and immigration services. We strive to simplify the complexities of studying abroad so that students can embark on their academic journeys with clarity and confidence. We envision a future where every student, regardless of background, has access to quality guidance, seamless processes, and the support they need to thrive in world-class universities and secure international opportunities.
                 </p>
 
               </div>
@@ -75,23 +68,21 @@ export default function VisionMissionSection() {
                   </h3>
                 </div>
 
-                <p className="text-slate-300 text-lg mb-10">
-                  Empower students with personalized, ethical and professional
-                  support for studying abroad.
+                <p className="text-slate-300 text-lg mb-6">
+                  Our mission at Excelencia International is to empower every student with personalized, ethical, and professional support as they pursue educational and career goals overseas. We are dedicated to:
                 </p>
               </div>
 
               {/* mission cards */}
 
-              <div className="space-y-6">
+              <div className="space-y-4">
 
                 <div className="flex gap-5 p-6 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl">
                   <div className="w-10 h-10 bg-[#c1972d] text-black rounded-full flex items-center justify-center font-bold">
                     1
                   </div>
                   <p className="text-slate-300">
-                    Provide transparent and accurate guidance throughout
-                    the entire study abroad journey.
+                    Providing accurate and transparent guidance through every stage of admissions and immigration.
                   </p>
                 </div>
 
@@ -100,8 +91,7 @@ export default function VisionMissionSection() {
                     2
                   </div>
                   <p className="text-slate-300">
-                    Help students choose the right countries, universities
-                    and visa pathways.
+                    Helping students make informed decisions about countries, universities, and visa pathways.
                   </p>
                 </div>
 
@@ -110,8 +100,7 @@ export default function VisionMissionSection() {
                     3
                   </div>
                   <p className="text-slate-300">
-                    Deliver exceptional service rooted in integrity,
-                    expertise and professional excellence.
+                    Delivering exceptional service rooted in integrity, expertise, and commitment.
                   </p>
                 </div>
 
@@ -171,7 +160,7 @@ export function CoreValuesSection() {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
-        <div className="text-center mb-28">
+        <div className="text-center mb-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -179,7 +168,7 @@ export function CoreValuesSection() {
           >
             Our <span className="text-[#c1972d]">Core Values</span>
           </motion.h2>
-          <p className="mt-6 max-w-3xl mx-auto text-slate-700">
+          <p className="mt-6 max-w-5xl mx-auto text-slate-700">
             At the heart of <b>Excelencia International</b> lie four core values that define how we serve our clients and operate as an organization.
           </p>
         </div>
@@ -199,7 +188,7 @@ export function CoreValuesSection() {
                 className={`relative flex w-full ${isLeft ? "justify-start" : "justify-end"}`}
               >
                 {/* The Card */}
-                <div className="relative w-full md:w-[85%] bg-white p-10 md:p-8 rounded-[2.5rem] shadow-xl shadow-slate-200 border border-slate-900/40">
+                <div className="relative w-full md:w-[90%] bg-white p-10 md:p-8 rounded-2xl shadow-xl shadow-slate-200 border border-slate-900/40">
 
                   {/* Floating Icon Holder */}
                   <div
@@ -207,15 +196,15 @@ export function CoreValuesSection() {
                       ${isLeft ? "-right-10 md:-right-18" : "-left-10 md:-left-18"}
                     `}
                   >
-                    <value.icon size={32} strokeWidth={1.5} />
+                    <value.icon size={102} strokeWidth={1.5} />
                   </div>
 
                   {/* Content */}
-                  <div className={`max-w-4xl ${isLeft ? "text-left" : "text-left md:ml-auto"}`}>
-                    <span className="text-[#c1972d] font-bold text-sm tracking-[0.2em] uppercase mb-4 block">
+                  <div className={`max-w-5xl ${isLeft ? "text-left" : "text-left md:ml-auto ps-6"}`}>
+                    <span className="text-[#c1972d] font-bold text-sm tracking-[0.2em] uppercase mb-2 block">
                       Value 0{index + 1}
                     </span>
-                    <h3 className="text-3xl font-bold text-slate-900 mb-4 font-serif">
+                    <h3 className="text-3xl font-bold text-slate-900 mb-2 font-serif ">
                       {value.title}
                     </h3>
                     <p className="text-slate-600 text-lg leading-relaxed">
