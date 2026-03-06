@@ -1,10 +1,11 @@
+"use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const students = [
   {
     id: 1,
-    name: "   Vamshi Pottabatini",
+    name: " Vamshi Pottabatini",
     location: "UK",
     quote: "Excelencia International provided excellent guidance throughout my study abroad journey. From shortlisting universities to visa support, everything was handled professionally and smoothly. The team is very supportive, responsive, and genuinely cares about students’ futures. Highly recommended for anyone planning to study abroad.",
     image: "https://media.licdn.com/dms/image/v2/D5603AQEnabVbz5PS4w/profile-displayphoto-scale_200_200/B56ZlVT3YVG0AY-/0/1758072895764?e=2147483647&v=beta&t=ZGO4LLFYmDLxJ1jbhXhJQUzTsHGwwKbjj5doQkgXP9I",
@@ -30,22 +31,55 @@ const students = [
     quote: "Highly recommend their personalised guidance and visa assistance — made the whole study abroad process smooth and stress-free.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSqrPUzmHN1BLkBlZWhYpYNIH1ydiruOK2sA&s",
   },
+  {
+    id: 5,
+    name: "Gajendra Thakre",
+    location: "Ireland",
+    quote: "I’m really thankful to Excelencia International for always being there to guide me step by step. At first, studying abroad felt difficult and confusing, but they made everything simple and possible for me👍👍",
+    image: "https://www.upsurge.club/api/image?url=https%3A%2F%2Fuser-data-cdn.upsurge.club%2Finstructors%2F66ed1c1b0b0f9f7b47683bb9%2Fprofile%2FUvB81Kqki3H6GTYLaOf7R.png&w=384&q=75",
+  },
+  {
+    id: 6,
+    name: "Drashti sadrani",
+    location: "Germany",
+    quote: "Excelencia International made my study abroad journey so much easier! They helped me choose the right university and took care of all the visa paperwork. What really stood out was their support after I arrived in the UK, they were there to help me settle in and answer all my questions. I truly felt cared for throughout the entire process.",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQHvftbnhKnnOg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718260618180?e=2147483647&v=beta&t=qbxKFtuwszhJKwjCRh3C83ngN7KH3u_rPwA0D986rI4",
+  },
+  {
+    id: 7,
+    name: "Abhi Thakkar",
+    location: "France",
+    quote: "I’m very thankful to Excelencia International for helping me achieve my dream of studying abroad in the USA. They guided me in managing applications, preparing for visa interviews, and provided constant support at every stage. Their guidance made everything simple and easy. Thank you to the Excelencia International team.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvI37cbTktCcVs3GdN9rQsGmV-XMC4kP0k7A&s",
+  },
+  {
+    id: 8,
+    name: "jinisha jain",
+    location: "New Zealand",
+    quote: "I applied for my Australia student visa through Excelencia International, and the experience was excellent.The team was professional, supportive, and guided me at every step. His timely advice, patience, and clear communication made the entire journey smooth and stress-free. Thank you for being such a reliable and knowledgeable guide",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQG7gd1MZKZFxQ/profile-displayphoto-shrink_200_200/B56ZdIXG.6G0AY-/0/1749265708996?e=2147483647&v=beta&t=p7xk08hipnV6dBT5yt2u4fwwHj2rdHTxrMU4yDjc_CI",
+  }
 ];
 
-const AUTO_PLAY_INTERVAL = 2000; // 2 seconds
+const AUTO_PLAY_INTERVAL = 2500;
 
 export default function AutoRotatingStudentVoices() {
-  const [activeTab, setActiveTab] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  // Auto-rotate (pause on hover)
+  // Logic to get exactly 4 students to show, starting from current index
+  const visibleStudents = [
+    students[currentIndex % students.length],
+    students[(currentIndex + 1) % students.length],
+    students[(currentIndex + 2) % students.length],
+    students[(currentIndex + 3) % students.length],
+  ];
+
   useEffect(() => {
     if (isHovered) return;
-
     const timer = setInterval(() => {
-      setActiveTab((prev) => (prev + 1) % students.length);
+      setCurrentIndex((prev) => (prev + 1) % students.length);
     }, AUTO_PLAY_INTERVAL);
-
     return () => clearInterval(timer);
   }, [isHovered]);
 
@@ -55,80 +89,61 @@ export default function AutoRotatingStudentVoices() {
 
         {/* Section Header */}
         <div className="text-center mb-16">
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="uppercase tracking-widest text-blue-600 font-bold text-xs mb-3"
-          >
+          <motion.p className="uppercase tracking-widest text-blue-600 font-bold text-xs mb-3">
             Student Voices
           </motion.p>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl md:text-4xl font-bold text-slate-900"
-          >
+          <motion.h2 className="text-3xl md:text-4xl font-bold text-slate-900">
             Real stories. Real trust.
           </motion.h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-          {/* Left: Faces */}
-          <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
-            {students.map((student, i) => (
-              <button
-                key={student.id}
-                onClick={() => setActiveTab(i)}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                className="relative group focus:outline-none"
-              >
-                {/* Progress Ring */}
-                {activeTab === i && !isHovered && (
-                  <svg className="absolute -inset-2 w-[calc(100%+16px)] h-[calc(100%+16px)] -rotate-90">
-                    <motion.circle
-                      cx="50%"
-                      cy="50%"
-                      r="48%"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      fill="transparent"
-                      className="text-blue-600"
-                      initial={{ pathLength: 0 }}
-                      animate={{ pathLength: 1 }}
-                      transition={{
-                        duration: AUTO_PLAY_INTERVAL / 1000,
-                        ease: "linear",
-                      }}
-                    />
-                  </svg>
-                )}
-
-                <motion.div
-                  animate={{
-                    scale: activeTab === i ? 1.1 : 1,
-                    filter: activeTab === i
-                      ? "grayscale(0%)"
-                      : "grayscale(100%)",
-                  }}
-                  transition={{ duration: 0.4 }}
-                  className={`relative w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-2 transition-all
-                    ${
-                      activeTab === i
-                        ? "border-transparent"
-                        : "border-slate-100 opacity-60 group-hover:opacity-100"
-                    }`}
+          {/* Left: Faces (Showing only 4 at a time with animation) */}
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-8 min-h-30">
+            <AnimatePresence mode="popLayout">
+              {visibleStudents.map((student, i) => (
+                <motion.button
+                  key={student.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5 }}
+                  transition={{ duration: 0.5 }}
+                  onClick={() => setCurrentIndex(students.findIndex(s => s.id === student.id))}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  className="relative group focus:outline-none"
                 >
-                  <img
-                    src={student.image}
-                    alt={student.name}
-                    className="w-full h-full object-cover"
-                  />
-                </motion.div>
-              </button>
-            ))}
+                  {/* Progress Ring - Only shows on the FIRST visible face (the active one) */}
+                  {i === 0 && !isHovered && (
+                    <svg className="absolute -inset-2 w-[calc(100%+16px)] h-[calc(100%+16px)] -rotate-90">
+                      <motion.circle
+                        cx="50%" cy="50%" r="48%"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        fill="transparent"
+                        className="text-blue-600"
+                        initial={{ pathLength: 0 }}
+                        animate={{ pathLength: 1 }}
+                        transition={{ duration: AUTO_PLAY_INTERVAL / 1000, ease: "linear" }}
+                      />
+                    </svg>
+                  )}
+
+                  <motion.div
+                    animate={{
+                      scale: i === 0 ? 1.1 : 1,
+                      filter: i === 0 ? "grayscale(0%)" : "grayscale(100%)",
+                    }}
+                    className={`relative w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-2 transition-all
+                      ${i === 0 ? "border-transparent" : "border-slate-100 opacity-60 group-hover:opacity-100"}`}
+                  >
+                    <img src={student.image} alt={student.name} className="w-full h-full object-cover" />
+                  </motion.div>
+                </motion.button>
+              ))}
+            </AnimatePresence>
           </div>
 
           {/* Right: Quote */}
@@ -139,26 +154,22 @@ export default function AutoRotatingStudentVoices() {
           >
             <AnimatePresence mode="wait">
               <motion.div
-                key={activeTab}
+                key={currentIndex}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
+                transition={{ duration: 0.5 }}
               >
-                <span className="text-6xl text-blue-100 font-serif leading-none block h-8">
-                  “
-                </span>
-
-                <h3 className="text-3xl md:text-lg font-medium text-slate-800 italic leading-tight">
-                  {students[activeTab].quote}
+                <span className="text-6xl text-blue-100 font-serif leading-none block h-8">“</span>
+                <h3 className="text-xl md:text-2xl font-medium text-slate-800 italic leading-tight">
+                  {students[currentIndex % students.length].quote}
                 </h3>
-
                 <div className="mt-4">
                   <p className="text-lg font-bold text-slate-900">
-                    — {students[activeTab].name}
+                    — {students[currentIndex % students.length].name}
                   </p>
                   <p className="text-slate-500 text-sm tracking-wide uppercase">
-                    Studying in {students[activeTab].location}
+                    Studying in {students[currentIndex % students.length].location}
                   </p>
                 </div>
               </motion.div>

@@ -28,10 +28,7 @@ export default function WhatsAppWidget() {
   const [messages, setMessages] = useState<string[]>([botFlow[0].question]);
   const chatEndRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setOpen(true), 3000);
-    return () => clearTimeout(timer);
-  }, []);
+
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -133,22 +130,22 @@ export default function WhatsAppWidget() {
 
       {/* Floating Button with Ping Effect */}
       <div className="fixed bottom-5 right-5 z-50">
-        {!open && (
+       
            <span className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-25"></span>
-        )}
+     
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setOpen(!open)}
           className="relative bg-green-500 hover:bg-green-600 text-white p-2 rounded-full shadow-2xl flex items-center justify-center"
         >
-          {open ? (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
-          ) : (
+         
+            
+        
             <svg viewBox="0 0 24 24" className="w-10 h-10 fill-current">
                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.109.004.253-.041.397.303.145.344.492 1.2.535 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.101-.177.211-.077.383a5.146 5.146 0 00.94 1.164c.548.478 1.012.785 1.272.912.259.127.41.106.561-.059.151-.165.644-.751.817-.996.174-.246.347-.203.586-.115.24.088 1.516.714 1.776.844.26.13.433.195.497.303.064.11.064.637-.08 1.042z"/>
             </svg>
-          )}
+        
         </motion.button>
       </div>
     </>

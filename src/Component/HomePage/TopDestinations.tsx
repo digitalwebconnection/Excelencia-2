@@ -1,113 +1,126 @@
-
+"use client";
 
 import { ArrowUpRight } from "lucide-react";
 
 const destinations = [
-    {
-        name: "UAE",
-        listings: "Learning Capital",
-        image:
-            "https://images.unsplash.com/photo-1546436836-07a91091f160?q=80&w=1200",
-    },
-    {
-        name: "London",
-        listings: "Knowledge Capital",
-        image:
-            "https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?q=80&w=1200",
-    },
-    {
-        name: "USA",
-        listings: "Academic Excellence",
-        image:
-            "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=1200",
-    },
-    {
-        name: "Paris",
-        listings: "Cultural Hub",
-        image:
-            "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200",
-    },
+  { name: "UK", listings: "Knowledge Capital", image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200" },
+  { name: "USA", listings: "Academic Excellence", image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=1200" },
+  { name: "UAE", listings: "Innovation Hub", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200" },
+  { name: "France", listings: "Cultural Excellence", image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200" },
+  { name: "Italy", listings: "Heritage & Design", image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1200" },
+  { name: "Germany", listings: "Engineering Powerhouse", image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200" },
+  { name: "Spain", listings: "Vibrant Learning", image: "https://img.freepik.com/free-photo/dawn-view-toledo_1398-2077.jpg?semt=ais_hybrid&w=740&q=80" },
+ { 
+  name: "New Zealand", 
+  listings: "World-Class Education", 
+  image: "https://www.newzealand.com/assets/Tourism-NZ/Auckland/img-1536065871-6217-4403-p-10D1D0BD-B88E-AAB3-AE3F2E903EF65717-2544003__aWxvdmVrZWxseQo_CropResizeWzE5MDAsMTAwMCw3NSwianBnIl0.jpg" 
+},
+
+{ 
+  name: "Malta", 
+  listings: "Mediterranean Learning Hub", 
+  image: "https://media.istockphoto.com/id/1487116739/photo/view-of-saint-julian-malta.jpg?s=612x612&w=0&k=20&c=6oNCD-Da8gJOd9Vhe8q7ahHTWNQr8EVJUqOb2OrgAU0=" 
+},
+
+{ 
+  name: "Latvia", 
+  listings: "Gateway to European Education", 
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEHOsWE62erqzj4Ac3oCTjrTvcJqd-JwiZbA&s" 
+},
+
+{ 
+  name: "Lithuania", 
+  listings: "Affordable European Studies", 
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1MVB62m8CjpKaZJcqfhFcgcFKpJEuDak0kQ&s" 
+},
+
+{ 
+  name: "Austria", 
+  listings: "Tradition Meets Innovation", 
+  image: "https://assets.vogue.com/photos/5aa18ec50ec45c7da912b925/master/w_2560%2Cc_limit/00-story-image-non-skiing-guide-to-tyrol-austria.jpg" 
+},
+  { name: "Canada", listings: "Quality of Life", image: "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1200" },
+  { name: "Australia", listings: "Global Opportunities", image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=1200" },
 ];
 
-export default function TopDestinations() {
-    return (
-        <section className="py-14 bg-white">
-            <div className="max-w-7xl mx-auto px-6 md:px-0">
-                {/* Heading */}
-                <div className="text-center max-w-7xl mx-auto">
-                    <p className="text-blue-950 font-semibold tracking-wide mb-4 uppercase">
-                        The Right Destination Changes Everything
-                    </p>
+export default function CountrySlider() {
+  return (
+    <section className="py-20 bg-white overflow-hidden">
 
-                    <h2 className="text-4xl max-w-7xl font-serif mx-auto md:text-4xl font-extrabold text-gray-900">
-                        Choose the Right Country.  <span className="text-blue-950">Choose the Right Future.</span>
-                    </h2>
+      {/* Heading */}
+      <div className="max-w-7xl mx-auto px-6 mb-14 text-center">
+        <p className="text-blue-600 font-bold tracking-widest mb-3 uppercase text-sm">
+          The World is Your Campus
+        </p>
 
-                    <p className="mt-6 text-gray-600 leading-relaxed text-lg">
-                        Each destination offers unique academic strengths, career pathways, and global exposure. we help you choose a country that aligns with your ambition, lifestyle, and professional future.
-                    </p>
-                </div>      
+        <h2 className="text-3xl md:text-4xl font-serif font-extrabold text-[#c1972d]">
+          Choose the Right Country. 
+          <span className="text-blue-950">Choose the Right Future.</span>
+        </h2>
+      </div>
 
-                {/* Cards */}
-                <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {destinations.map((item, index) => (
-                        <div
-                            key={index}
-                            className="group relative h-105 rounded-2xl overflow-hidden cursor-pointer shadow-lg"
-                        >
-                            <div className="group relative h-105 rounded-3xl overflow-hidden cursor-pointer shadow-xl bg-slate-900">
-                                {/* Background Image with subtle zoom */}
-                                <img
-                                    src={item.image}
-                                    alt={item.name}
-                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110 group-hover:rotate-1"
-                                />
+      {/* Slider */}
+      <div className="relative overflow-hidden">
 
-                                {/* Dynamic Overlay - Deepens on hover */}
-                                <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100" />
+        <div className="flex gap-6 w-max slider-track hover:[animation-play-state:paused]">
 
-                                {/* Animated SVG Path - "The Design Change" */}
-                                <svg
-                                    viewBox="0 0 200 200"
-                                    className="absolute -bottom-10 -left-10 w-64 h-64 text-blue-600/0 transition-all duration-700 ease-in-out group-hover:scale-150 group-hover:text-blue-500/40"
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M40,-62.1C53.3,-54.5,66.5,-45.1,73.6,-32.5C80.7,-19.9,81.7,-4.1,77.8,10.1C73.8,24.3,64.9,37,53.8,47.2C42.7,57.4,29.3,65.1,14.8,69.2C0.3,73.3,-15.3,73.7,-29.8,68.7C-44.3,63.7,-57.7,53.3,-66.1,40.1C-74.5,26.9,-77.9,10.9,-75.4,-4.1C-72.9,-19.1,-64.5,-33.1,-52.8,-41.2C-41.1,-49.3,-26.1,-51.5,-11.4,-57.8C3.3,-64.1,18.7,-74.6,32.4,-73.4C46.1,-72.2,58.2,-59.3,40,-62.1Z"
-                                        transform="translate(100 100)"
-                                    />
-                                </svg>
+          {[...destinations, ...destinations].map((item, index) => (
 
-                                {/* Content Container */}
-                                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+            <div
+              key={index}
+              className="min-w-75 h-105 rounded-3xl overflow-hidden relative group shrink-0"
+            >
 
+              <img
+                src={item.image}
+                alt={item.name}
+                className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
+              />
 
-                                    {/* Title and Listings */}
-                                    <div className="relative mt-2">
-                                        <h3 className="text-3xl font-bold text-white mb-2 leading-tight">
-                                            {item.name}
-                                        </h3>
+              <div className="absolute inset-0 bg-linear-to-t from-black/90 to-transparent" />
 
-                                        <div className="flex items-center justify-between overflow-hidden">
-                                            <p className="text-blue-200 font-medium transition-all duration-500 translate-y-8 group-hover:translate-y-0">
-                                                {item.listings}
-                                            </p>
+              <div className="absolute bottom-0 p-6 w-full">
 
-                                            {/* Minimalist Arrow */}
-                                            <div className="p-2 rounded-full border border-white/30 text-white translate-x-12 transition-all duration-500 group-hover:translate-x-0 group-hover:bg-white group-hover:text-blue-950">
-                                                <ArrowUpRight size={20} />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <h3 className="text-2xl font-bold text-white">
+                  {item.name}
+                </h3>
 
-                                {/* Subtle Top Border Glow */}
-                                <div className="absolute top-0 left-0 w-full h-0.5 bg-linear-to-r from-transparent via-blue-400/50 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                            </div>
-                        </div>
-                    ))}
+                <div className="flex justify-between items-center mt-2">
+
+                  <p className="text-blue-200 text-sm opacity-0 group-hover:opacity-100 transition">
+                    {item.listings}
+                  </p>
+
+                  <ArrowUpRight className="text-white" size={20} />
+
                 </div>
+
+              </div>
+
             </div>
-        </section>
-    );
+
+          ))}
+
+        </div>
+
+      </div>
+
+      {/* CSS INSIDE COMPONENT */}
+      <style>{`
+        .slider-track {
+          animation: scroll 55s linear infinite;
+        }
+
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
+
+    </section>
+  );
 }

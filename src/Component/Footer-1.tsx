@@ -1,5 +1,5 @@
 
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import logo from "../assets/image.png";
 
 const Footer = () => {
@@ -92,7 +92,7 @@ const Footer = () => {
 
           {/* SOCIAL ICONS */}
           <div className="flex gap-4 mt-5">
-            {[Facebook, Instagram, Linkedin].map((Icon, i) => (
+            {[Facebook, Instagram, Linkedin, Youtube].map((Icon, i) => (
               <div
                 key={i}
                 className="bg-linear-to-r from-[#c1972d] to-blue-950 p-[1.5px] rounded-full hover:from-blue-950 hover:to-[#c1972d] transition"

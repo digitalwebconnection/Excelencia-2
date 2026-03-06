@@ -15,7 +15,7 @@ export default function WhyGuidanceMatters() {
     <section className="relative overflow-hidden bg-white py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* IMAGE COMPOSITION SIDE */}
           <div className="relative">
             {/* Dotted Decorative Border */}
@@ -87,21 +87,10 @@ export default function WhyGuidanceMatters() {
               Education Beyond Borders
             </span>
 
-            <h2 className="mt-4 text-4xl font-serif lg:text-4xl font-extrabold text-gray-900 leading-tight">
+            <h2 className="mt-4 text-4xl font-serif lg:text-4xl font-extrabold text-gray-950 leading-tight">
               It’s not just a degree; <br />
               <span className="text-[#c1972d]">it’s an experience of a lifetime.</span>
             </h2>
-
-            {/* REFORMED POINTS SECTION */}
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="text-[#c1972d] shrink-0" size={20} />
-                  <span className="text-gray-900 font-semibold text-base">{benefit}</span>
-                </div>
-              ))}
-            </div>
-
             <div className="mt-6 space-y-6 text-gray-600 text-lg leading-relaxed max-w-xl">
               <p>
                 It fosters independence, self-assuredness, international immersion, and career advancement
@@ -112,6 +101,17 @@ export default function WhyGuidanceMatters() {
                 Your classroom becomes the world.
               </p>
             </div>
+            {/* REFORMED POINTS SECTION */}
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <CheckCircle className="text-[#c1972d] shrink-0" size={20} />
+                  <span className="text-gray-900 font-semibold text-base">{benefit}</span>
+                </div>
+              ))}
+            </div>
+
+
 
             {/* Bottom CTA & Stats Group */}
             <div className="mt-8 flex flex-wrap items-center gap-10">
