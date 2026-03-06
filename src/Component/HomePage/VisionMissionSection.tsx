@@ -48,7 +48,7 @@ export default function VisionMissionSection() {
                 <p className="text-slate-600  mb-2">
                   At Excelencia International, our vision is to be a globally recognized leader in international education and immigration services. We strive to simplify the complexities of studying abroad so that students can embark on their academic journeys with clarity and confidence. We envision a future where every student, regardless of background, has access to quality guidance, seamless processes, and the support they need to thrive in world-class universities and secure international opportunities.
                 </p>
-
+ 
               </div>
 
             </motion.div>
