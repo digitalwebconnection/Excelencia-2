@@ -123,48 +123,13 @@ export default function HowWeGuideStudents() {
                   </div>
 
                   {/* Curved Accent Tail */}
-                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2">
-                    <svg width="100" height="40" viewBox="0 0 100 40" fill="none">
-                      <motion.path 
-                        initial={{ pathLength: 0 }}
-                        whileInView={{ pathLength: 1 }}
-                        transition={{ duration: 1, delay: 0.5 + (index * 0.2) }}
-                        d="M0 0C0 20 20 40 50 40H100" 
-                        stroke="#c1972d" 
-                        strokeWidth="14" 
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </div>
+                  
 
-                  {/* Connection Line with Path Drawing Effect */}
-                  {index !== steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 left-full w-full -translate-y-1/2 -ml-6 pointer-events-none z-0">
-                       <svg width="120" height="60" viewBox="0 0 120 60">
-                          <motion.path 
-                            initial={{ pathLength: 0, opacity: 0 }}
-                            whileInView={{ pathLength: 1, opacity: 1 }}
-                            transition={{ duration: 1.5, delay: index * 0.4 }}
-                            d="M 0 30 Q 60 -10 120 30" 
-                            stroke="#d1d5db" 
-                            strokeWidth="2" 
-                            strokeDasharray="6 6" 
-                            fill="transparent" 
-                          />
-                          <motion.polygon 
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ delay: (index * 0.4) + 1.2 }}
-                            points="110,25 120,30 110,35" 
-                            fill="#c1972d" 
-                          />
-                       </svg>
-                    </div>
-                  )}
+                
                 </motion.div>
 
                 {/* Content with Hover Text Shift */}
-                <div className="mt-2 transition-transform duration-300 group-hover:-translate-y-1.25">
+                <div className=" transition-transform duration-300 group-hover:-translate-y-1.25">
                   <span className="text-blue-950 font-black text-xs uppercase tracking-widest bg-blue-50 px-2 py-1 rounded">
                     {item.step}
                   </span>

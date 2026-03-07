@@ -1,134 +1,111 @@
 import { motion } from "framer-motion";
-import { Globe, Target, ShieldCheck, Users, Shield, Zap } from "lucide-react";
+import { Globe, Target, ShieldCheck, Shield, Users, Zap } from "lucide-react";
 
 export default function VisionMissionSection() {
   return (
     <>
-      <section className="relative py-8 bg-slate-950 overflow-hidden text-white">
+      <section className="grid md:grid-cols-2">
 
-        {/* background glow */}
-        <div className="absolute -top-50 -left-50 w-125 h-125 bg-blue-600/20 blur-[160px] rounded-full" />
-        <div className="absolute -bottom-50 -right-50 w-125 h-125 bg-[#c1972d]/20 blur-[160px] rounded-full" />
+        {/* ================= VISION ================= */}
 
-        <div className="max-w-7xl mx-auto px-6 md:px-0 relative">
+        <motion.div
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="relative bg-white text-blue-950 flex  px-10 md:px-22 py-5"
+        >
+          <div className="max-w-xl">
 
-          {/* heading */}
-          <div className="text-center mb-6">
-            <p className="text-[#c1972d] tracking-[0.35em] text-xs uppercase font-bold">
+            <span className="text-sm tracking-[0.35em] uppercase font-bold text-[#c1972d]">
               Excelencia International
+            </span>
+
+            <div className="flex items-center gap-4 mt-6 mb-6">
+              <Globe size={34} className="text-blue-700" />
+              <h2 className="text-4xl md:text-5xl font-serif font-bold">
+                Our Vision
+              </h2>
+            </div>
+
+            <p className="text-lg leading-relaxed text-slate-700">
+              At Excelencia International, our vision is to be a globally recognized leader in international education and immigration services. 
+              We strive to simplify the complexities of studying abroad so that students can embark on their academic journeys with clarity and confidence. 
+              We envision a future where every student, regardless of background, has access to quality guidance, seamless processes, and the support they need to thrive in world-class universities and secure international opportunities.
             </p>
 
-            <h2 className="text-5xl md:text-7xl font-serif mt-4">
-              Vision <span className="text-[#c1972d]">&</span> Mission
-            </h2>
+            <div className="mt-10 w-24 h-0.75 bg-blue-700"></div>
           </div>
+        </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            {/* Vision side */}
-            <motion.div
-              initial={{ opacity: 0, x: -60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="relative"
-            >
+        {/* ================= MISSION ================= */}
 
-              <img
-                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80"
-                className="rounded-3xl mb-5  shadow-2xl"
-              />
+        <motion.div
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="relative bg-blue-950 text-white flex items-center px-7 md:px-15 py-10"
+        >
+          <div className="max-w-xl">
 
-              {/* floating card */}
-              <div className="absolute -bottom-20  -right-10 bg-white text-slate-900 p-4 rounded-xl shadow-2xl max-w-xl">
+            <div className="flex items-center gap-4 mb-6">
+              <Target size={34} className="text-[#c1972d]" />
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#c1972d]">
+                Our Mission
+              </h2>
+            </div>
 
-                <div className="flex items-center gap-3 mb-2">
-                  <Globe className="text-blue-600" />
-                  <h3 className="text-2xl font-serif">Our Vision</h3>
+            <p className="text-lg text-white/80 mb-8">
+              Our mission at Excelencia International is to empower every student with personalized, ethical, and professional support as they pursue educational and career goals overseas.
+            </p>
+
+            <div className="space-y-5">
+
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 bg-[#c1972d] text-black rounded-full flex items-center justify-center font-bold">
+                  1
                 </div>
-
-                <p className="text-slate-600  mb-2">
-                  At Excelencia International, our vision is to be a globally recognized leader in international education and immigration services. We strive to simplify the complexities of studying abroad so that students can embark on their academic journeys with clarity and confidence. We envision a future where every student, regardless of background, has access to quality guidance, seamless processes, and the support they need to thrive in world-class universities and secure international opportunities.
-                </p>
- 
-              </div>
-
-            </motion.div>
-
-            {/* Mission side */}
-            <motion.div
-              initial={{ opacity: 0, x: 60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="space-y-10"
-            >
-
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <Target className="text-[#c1972d]" />
-                  <h3 className="text-4xl font-serif">
-                    Our Mission
-                  </h3>
-                </div>
-
-                <p className="text-slate-300 text-lg mb-6">
-                  Our mission at Excelencia International is to empower every student with personalized, ethical, and professional support as they pursue educational and career goals overseas. We are dedicated to:
+                <p className="text-white/90">
+                  Providing accurate and transparent guidance through every stage of admissions and immigration.
                 </p>
               </div>
 
-              {/* mission cards */}
-
-              <div className="space-y-4">
-
-                <div className="flex gap-5 p-6 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl">
-                  <div className="w-10 h-10 bg-[#c1972d] text-black rounded-full flex items-center justify-center font-bold">
-                    1
-                  </div>
-                  <p className="text-slate-300">
-                    Providing accurate and transparent guidance through every stage of admissions and immigration.
-                  </p>
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 bg-[#c1972d] text-black rounded-full flex items-center justify-center font-bold">
+                  2
                 </div>
-
-                <div className="flex gap-5 p-6 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl">
-                  <div className="w-10 h-10 bg-[#c1972d] text-black rounded-full flex items-center justify-center font-bold">
-                    2
-                  </div>
-                  <p className="text-slate-300">
-                    Helping students make informed decisions about countries, universities, and visa pathways.
-                  </p>
-                </div>
-
-                <div className="flex gap-5 p-6 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl">
-                  <div className="w-10 h-10 bg-[#c1972d] text-black rounded-full flex items-center justify-center font-bold">
-                    3
-                  </div>
-                  <p className="text-slate-300">
-                    Delivering exceptional service rooted in integrity, expertise, and commitment.
-                  </p>
-                </div>
-
-              </div>
-
-              <div className="flex gap-3 pt-6 border-t border-white/10">
-                <ShieldCheck className="text-[#c1972d]" />
-                <p className="text-slate-400 text-sm italic">
-                  Turning global education dreams into real opportunities.
+                <p className="text-white/90">
+                  Helping students make informed decisions about countries, universities, and visa pathways.
                 </p>
               </div>
 
-            </motion.div>
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 bg-[#c1972d] text-black rounded-full flex items-center justify-center font-bold">
+                  3
+                </div>
+                <p className="text-white/90">
+                  Delivering exceptional service rooted in integrity, expertise, and commitment.
+                </p>
+              </div>
+
+            </div>
+
+            <div className="flex gap-3 pt-10 mt-10 border-t border-white/10">
+              <ShieldCheck className="text-[#c1972d]" />
+              <p className="italic text-white/70">
+                Turning global education dreams into real opportunities.
+              </p>
+            </div>
 
           </div>
+        </motion.div>
 
-        </div>
       </section>
+
       <CoreValuesSection />
     </>
   );
 }
-
-
-
-
-
-//******************************************/ CoreValuesSection**************************************************************
 
 
 const values = [

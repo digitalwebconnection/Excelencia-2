@@ -1,32 +1,32 @@
 import VisionMissionSection from "../HomePage/VisionMissionSection"
 import AboutHero from "./AboutHero"
 import AboutSection from "./AboutSection"
-import ConversationSection from "./ConversationSection"
+// import ConversationSection from "./ConversationSection"
 import ExcelenciaExperience from "./ExcelenciaExperience"
 import GlobalEducationPersonalAttention from "./GlobalEducationPersonalAttention"
-import HowWeGuideStudents from "./HowWeGuideStudents"
-import OurApproachToGuidance from "./OurApproachToGuidance"
+// import HowWeGuideStudents from "./HowWeGuideStudents"
+// import OurApproachToGuidance from "./OurApproachToGuidance"
 import PeopleBehindExcelencia from "./PeopleBehindExcelencia"
-import StudentsAndFamilies from "./StudentsAndFamilies"
-import WhatStudyingAbroadMeans from "./WhatStudyingAbroadMeans"
+// import StudentsAndFamilies from "./StudentsAndFamilies"
+// import WhatStudyingAbroadMeans from "./WhatStudyingAbroadMeans"
 import WhyWeWorkWithStudents from "./WhyWeWorkWithStudents"
 
 const AboutUsMain = () => {
   return (
-    <>
+    <div className="">
       <AboutHero />
       <WhyWeWorkWithStudents />
-      <WhatStudyingAbroadMeans />
-      <VisionMissionSection />
       <AboutSection />
-      <HowWeGuideStudents />
-      <OurApproachToGuidance />
+      {/* <WhatStudyingAbroadMeans /> */}
+      <VisionMissionSection />
+      {/* <HowWeGuideStudents /> */}
+      {/* <OurApproachToGuidance /> */}
       <ExcelenciaExperience />
       <GlobalEducationPersonalAttention />
       <PeopleBehindExcelencia />
-      <StudentsAndFamilies />
-      <ConversationSection />
-    </>
+      {/* <StudentsAndFamilies /> */}
+      {/* <ConversationSection /> */}
+    </div>
   )
 }
 

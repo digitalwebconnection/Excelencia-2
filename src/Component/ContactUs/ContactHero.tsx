@@ -93,14 +93,14 @@ export default function ContactHero() {
             index={4}
             country="India"
             address="Elco Arcade, D Wing, Office No. 45, First Floor, Bandra West, Mumbai 400050"
-            tag="Headquarters"
+            tag="Regional Hub"
           />
 
           <LocationCard
             index={5}
             country="UAE"
             address="Building A1, Dubai Digital Park, Dubai Silicon Oasis, United Arab Emirates"
-            tag="Regional Hub"
+            tag="Headquarters"
           />
 
         </div>

@@ -1,5 +1,5 @@
 
-import  { useState } from 'react';
+import { useState } from 'react';
 import { Mail, Phone, MapPin, Plus, Minus, Building2 } from 'lucide-react';
 
 const QuietInvitationContactForm = () => {
@@ -12,24 +12,24 @@ const QuietInvitationContactForm = () => {
     message: "",
   });
 
-const offices = [
-  {
-    id: 1,
-    title: "India Office",
-    address:
-      "Elco Arcade, D Wing, Office No. 45, First Floor, Near Almeida Park, Bandra West, Mumbai 400050",
-    email: "queries@excelenciaint.com",
-    phone: "+91 97697 87211",
-  },
-  {
-    id: 2,
-    title: "UAE Office",
-    address:
-      "Building A1, Dubai Digital Park, Dubai Silicon Oasis, United Arab Emirates",
-    email: "queries@excelenciaint.com",
-    phone: "+91 97697 87211",
-  },
-];
+  const offices = [
+    {
+      id: 1,
+      title: "India Office",
+      address:
+        "Elco Arcade, D Wing, Office No. 45, First Floor, Near Almeida Park, Bandra West, Mumbai 400050",
+      email: "queries@excelenciaint.com",
+      phone: "+91 97697 87211",
+    },
+    {
+      id: 2,
+      title: "UAE Office",
+      address:
+        "Building A1, Dubai Digital Park, Dubai Silicon Oasis, United Arab Emirates",
+      email: "queries@excelenciaint.com",
+      phone: "+91 97697 87211",
+    },
+  ];
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -37,51 +37,51 @@ const offices = [
 
   return (
     <section className="relative  z-1 w-full flex flex-col lg:flex-row overflow-hidden font-sans">
-      
+
       {/* LEFT SIDE: Red Diagonal Shape & Form */}
       <div className="relative w-full lg:w-[55%] bg-blue-950 p-8 md:p-6 lg:p-15    max-w-7xl mx-auto z-10 lg:clip-path-right">
         {/* Background Overlay Image (The people working) */}
-        <div 
+        <div
           className="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-multiply"
           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1600880212319-4627a58c882c?auto=format&fit=crop&q=80')` }}
         />
-        
+
         <div className="relative z-20 max-w-xl">
           <p className="text-white font-bold tracking-widest text-xs mb-4 uppercase flex items-center gap-2">
             Contact Us <span className="h-px w-10 bg-white/50"></span>
           </p>
-          
+
           <div className="mb-10">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">It All Begins With A Conversation</h2>
+            <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#c1972d] mb-6">It All Begins With A Conversation</h2>
             <div className="text-white/90 space-y-1 text-lg leading-relaxed font-light">
-                <p>There is not one student who comes through our doors without a dream.</p>
-                <p>Our duty is to steer that dream in the right direction.</p>
-                <p>We celebrate the offer letter, the visa approval, and every student who takes that leap of faith
-towards a global future.</p>
-                <p className="font-bold mt-2 text-white">When students succeed, families feel secure, and dreams become reality.</p>
+              <p>There is not one student who comes through our doors without a dream.</p>
+              <p>Our duty is to steer that dream in the right direction.</p>
+              <p>We celebrate the offer letter, the visa approval, and every student who takes that leap of faith
+                towards a global future.</p>
+              <p className="font-bold mt-2 text-white">When students succeed, families feel secure, and dreams become reality.</p>
             </div>
           </div>
 
           <form className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input 
-                type="text" name="name" placeholder="Full Name" 
+              <input
+                type="text" name="name" placeholder="Full Name"
                 onChange={handleChange}
-                className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800 placeholder:text-gray-400" 
+                className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800 placeholder:text-gray-400"
               />
-              <input 
-                type="email" name="email" placeholder="Email Address" 
+              <input
+                type="email" name="email" placeholder="Email Address"
                 onChange={handleChange}
-                className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800 placeholder:text-gray-400" 
+                className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800 placeholder:text-gray-400"
               />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input 
-                type="text" name="phone" placeholder="Phone" 
+              <input
+                type="text" name="phone" placeholder="Phone"
                 onChange={handleChange}
-                className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800 placeholder:text-gray-400" 
+                className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800 placeholder:text-gray-400"
               />
-              <select 
+              <select
                 name="visaType"
                 onChange={handleChange}
                 className="bg-white p-4 rounded-2xl outline-none w-full text-gray-500 appearance-none bg-[url('https://cdn0.iconfinder.com/data/icons/ios-7-icons/50/chevron_down-512.png')] bg-size-[12px] bg-position-[right_1rem_center] bg-no-repeat"
@@ -91,14 +91,14 @@ towards a global future.</p>
                 <option>Student</option>
               </select>
             </div>
-            <textarea 
-                name="message" 
-                placeholder="Tell us what you’re exploring"  
-                onChange={handleChange}
-                rows={3}
-                className="bg-white rounded-2xl p-4 outline-none w-full text-gray-800 placeholder:text-gray-400"
+            <textarea
+              name="message"
+              placeholder="Tell us what you’re exploring"
+              onChange={handleChange}
+              rows={3}
+              className="bg-white rounded-2xl p-4 outline-none w-full text-gray-800 placeholder:text-gray-400"
             ></textarea>
-            
+
             <button className="bg-linear-to-r from-[#c1972d]  to-blue-950 rounded-2xl text-white font-bold py-4 px-10 hover:bg-black transition-colors uppercase tracking-widest text-sm">
               Begin With a Conversation
             </button>
@@ -109,71 +109,71 @@ towards a global future.</p>
       {/* RIGHT SIDE: Map Background & Office Info */}
       <div className="relative w-full lg:w-[45%] min-h-112.5 bg-gray-100 flex items-center justify-center lg:justify-end lg:pr-20">
         {/* Map Image Background */}
-        <div 
+        <div
           className="absolute inset-0 grayscale contrast-75 opacity-60 bg-cover bg-center"
           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80')` }}
         />
-        
-    {/* Office Accordion Card */}
-<div className="relative w-[90%] md:w-80 bg-white shadow-2xl z-30 animate-fadeIn">
-  <div className="p-6 flex justify-between items-center border-b">
-    <h3 className="text-xl font-bold flex items-center gap-2 text-slate-900">
-      Track Offices
-    </h3>
-    <Building2 className="text-[#d91e36]" size={28} />
-  </div>
 
-  <div className="divide-y divide-gray-100">
-    {offices.map((office) => (
-      <div key={office.id}>
-        <button
-          onClick={() => setOpenOffice(office.id)}
-          className="w-full p-4 flex justify-between items-center font-bold text-slate-800 hover:bg-slate-50 transition-colors text-sm"
-        >
-          {office.title}
-          {openOffice === office.id ? (
-            <Minus size={16} className="text-gray-400" />
-          ) : (
-            <Plus size={16} className="text-[#d91e36]" />
-          )}
-        </button>
-
-        {openOffice === office.id && office.address && (
-          <div className="p-5 pt-0 space-y-4 text-xs text-slate-500 transition-all">
-
-            {/* Location */}
-            <div className="flex gap-3">
-              <MapPin size={16} className="text-[#d91e36] shrink-0" />
-              <p>
-                <span className="font-semibold text-slate-700">Location :</span>{" "}
-                {office.address}
-              </p>
-            </div>
-
-            {/* Email */}
-            <div className="flex gap-3">
-              <Mail size={16} className="text-[#d91e36] shrink-0" />
-              <p>
-                <span className="font-semibold text-slate-700">Email Us :</span>{" "}
-                {office.email}
-              </p>
-            </div>
-
-            {/* Phone */}
-            <div className="flex gap-3">
-              <Phone size={16} className="text-[#d91e36] shrink-0" />
-              <p>
-                <span className="font-semibold text-slate-700">Phone :</span>{" "}
-                {office.phone}
-              </p>
-            </div>
-
+        {/* Office Accordion Card */}
+        <div className="relative w-[90%] md:w-80 bg-white shadow-2xl z-30 animate-fadeIn">
+          <div className="p-6 flex justify-between items-center border-b">
+            <h3 className="text-xl font-bold flex items-center gap-2 text-slate-900">
+              Track Offices
+            </h3>
+            <Building2 className="text-[#d91e36]" size={28} />
           </div>
-        )}
-      </div>
-    ))}
-  </div>
-</div>
+
+          <div className="divide-y divide-gray-100">
+            {offices.map((office) => (
+              <div key={office.id}>
+                <button
+                  onClick={() => setOpenOffice(office.id)}
+                  className="w-full p-4 flex justify-between items-center font-bold text-slate-800 hover:bg-slate-50 transition-colors text-sm"
+                >
+                  {office.title}
+                  {openOffice === office.id ? (
+                    <Minus size={16} className="text-gray-400" />
+                  ) : (
+                    <Plus size={16} className="text-[#d91e36]" />
+                  )}
+                </button>
+
+                {openOffice === office.id && office.address && (
+                  <div className="p-5 pt-0 space-y-4 text-xs text-slate-500 transition-all">
+
+                    {/* Location */}
+                    <div className="flex gap-3">
+                      <MapPin size={16} className="text-[#d91e36] shrink-0" />
+                      <p>
+                        <span className="font-semibold text-slate-700">Location :</span>{" "}
+                        {office.address}
+                      </p>
+                    </div>
+
+                    {/* Email */}
+                    <div className="flex gap-3">
+                      <Mail size={16} className="text-[#d91e36] shrink-0" />
+                      <p>
+                        <span className="font-semibold text-slate-700">Email Us :</span>{" "}
+                        {office.email}
+                      </p>
+                    </div>
+
+                    {/* Phone */}
+                    <div className="flex gap-3">
+                      <Phone size={16} className="text-[#d91e36] shrink-0" />
+                      <p>
+                        <span className="font-semibold text-slate-700">Phone :</span>{" "}
+                        {office.phone}
+                      </p>
+                    </div>
+
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       <style >{`

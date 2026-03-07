@@ -1,114 +1,174 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  X,
+  ArrowRight,
+  GraduationCap,
+  Users,
+  ShieldCheck,
+  Globe,
+  Compass,
+  Rocket,
+} from "lucide-react";
 
-const sections = [
-  {
-    title: "Life-Changing Global Education Journey",
-    content:
-      "At Excelencia International, we understand that studying abroad is not just a journey of  enrollment; it’s a life-changing experience that influences one's profession, advances  confidence, and introduces one to global doors of opportunity. Our goal is to offer expert advice  and guidance to students who wish to pursue further education in other countries, and as one of  the top student visa consultants in Mumbai, Maharashtra, India, we are committed to  helping you decide on the best course and university options. We realize selecting a country,  course, and university can be difficult, but with our transparent and ethical guidance, we will  help you to navigate your way through the process.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFuwjTasqsp7rCGGKt_J98NxviiZsz0nep6A&s",
-  },
-  {
-    title: "Personalized & Ethical Counseling",
-    content:
-      "We are inspired by the notion that every student is entitled to reliable advice and ethical guidance. We're not an ordinary agency that does admissions and never looks back. Our  expert counselors assess students’ profiles, their career aspirations, as well as their personal &  financial constraints, to help them make an informed decision and send them abroad, selecting the right course/university while bearing in mind the future compliance. Students may be planning to study in the UK, USA, Canada, Australia, Europe, and other prominent sites of education all over the world; we provide customized guidance matching their aspirations.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdutl9GMSm6VNxjV0BM8zmLzesQBliVzQ6sw&s",
-  },
-  {
-    title: "Complete Study Abroad Support",
-    content:
-      "As a study abroad consultancy in Bandra, Mumbai, we offer full assistance towards career counseling, country and university selection, application guidance, Statement of Purpose (SOP) assistance, documentation support, education loan assistance, scholarship advice, and visa processing for students. Our visa professionals are well-versed with the prevailing immigration regulations and global education trends to ensure that our students have a higher probability of success. From the very first counseling session to the day when students fly overseas, we continue to partner with them in their journey.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpBd0-dDdM7r4_OuZ6j9yiuNuaWsEWVXgOQg&s",
-  },
-  {
-    title: "Transparency & Trust at Every Step",
-    content:
-      "The real difference at Excelencia International is our dedication to being ethical and transparent. We help students make the right choices—even if it means discouraging options that might not be a good fit. We provide counseling with no pressure, manipulation, or unrealistic claims. We place emphasis on transparency so students and their parents are comfortable and informed at every stage.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF7drSyH3M1HgqQ8fQr8zH1_mxUWTKjO3C8Q&s",
-  },
-  {
-    title: "Trusted Partner for Global Success",
-    content:
-      "For years, we have been assisting students in getting admissions at the most sought-after institutes and coming up with positive student visas. We’re committed to be the most trusted student visa consultants in India, offering individual services, ethical guidance, and long-term mentoring. At Excelencia International, the proof of success lies not only in admission numbers and visas but also in those who flourish globally and create sustainable international careers.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcXT_VAyJKReyGEdvbAfsyKq4a13CWqYdmBA&s",
-  },
-   {
-    title: "Turning Study Abroad Dreams into Reality",
-    content:
-      "Excelencia International is an overseas education and immigration consultancy committed to helping students and young professionals turn their global ambitions into reality. Since our founding, we have evolved from a focused study-abroad advisory into a trusted partner for international academic and immigration journeys.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Mvjscnm2MFa3nvDgViTsQXhQGUYi1vOB-Q&s",
-  },
-   {
-    title: "End-to-End Student Visa Guidance",
-    content:
-      "We deliver tailored support from initial counseling to successful visa approvals. At Excelencia International, we believe that every student deserves strategic guidance, transparent processes, and dedicated assistance, and we work relentlessly to provide just that at every step of your international education journey.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkWLZGCWOFmETf28SMZaOVwnuVIZYy-T1G6g&s",
-  },
-];
+const sections =
+  [
+    {
+      title: "Life-Changing Global Education Journey",
+      content: "At Excelencia International, we understand that studying abroad is not just a journey of enrollment; it’s a life-changing experience that influences one's profession, advances confidence, and introduces one to global doors of opportunity. Our goal is to offer expert advice and guidance to students who wish to pursue further education in other countries, and as one of the top student visa consultants in Mumbai, Maharashtra, India, we are committed to helping you decide on the best course and university options. We realize selecting a country, course, and university can be difficult, but with our transparent and ethical guidance, we will help you to navigate your way through the process.", image: "https://images.squarespace-cdn.com/content/v1/669a7885a3da757c38bcbb55/dcaa2199-6652-4f5b-abb4-ff339ab9e5cb/EdtoChange+New+LOGO.PNG",
+      icon: <Globe className="w-6 h-6" />,
+    },
+    {
+      title: "Personalized & Ethical Counseling",
+      content: "We are inspired by the notion that every student is entitled to reliable advice and ethical guidance. We're not an ordinary agency that does admissions and never looks back. Our expert counselors assess students’ profiles, their career aspirations, as well as their personal & financial constraints, to help them make an informed decision and send them abroad, selecting the right course/university while bearing in mind the future compliance. Students may be planning to study in the UK, USA, Canada, Australia, Europe, and other prominent sites of education all over the world; we provide customized guidance matching their aspirations.",
+      image: "https://www.berxi.com/wp-content/uploads/2024/05/two-therapists-discussing-ethical-standards-in-mental-health-counseling.jpg?w=643",
+      icon: <Users className="w-6 h-6" />,
+    },
+    {
+      title: "Complete Study Abroad Support",
+      content: "As a study abroad consultancy in Bandra, Mumbai, we offer full assistance towards career counseling, country and university selection, application guidance, Statement of Purpose (SOP) assistance, documentation support, education loan assistance, scholarship advice, and visa processing for students. Our visa professionals are well-versed with the prevailing immigration regulations and global education trends to ensure that our students have a higher probability of success. From the very first counseling session to the day when students fly overseas, we continue to partner with them in their journey.",
+      image: "https://image.cdn.uscholars.in/media/About_us_page/about_us_temp_1.png",
+      icon: <Compass className="w-6 h-6" />,
+    },
+    {
+      title: "Transparency & Trust at Every Step",
+      content: "The real difference at Excelencia International is our dedication to being ethical and transparent. We help students make the right choices—even if it means discouraging options that might not be a good fit. We provide counseling with no pressure, manipulation, or unrealistic claims. We place emphasis on transparency so students and their parents are comfortable and informed at every stage.",
+      image: "https://thumbs.dreamstime.com/b/trust-openness-to-transparency-trust-94364972.jpg",
+      icon: <ShieldCheck className="w-6 h-6" />,
+    },
+    {
+      title: "Trusted Partner for Global Success",
+      content: "For years, we have been assisting students in getting admissions at the most sought-after institutes and coming up with positive student visas. We’re committed to being the most trusted student visa consultants in India, offering individual services, ethical guidance, and long-term mentoring. At Excelencia International, the proof of success lies not only in admission numbers and visas but also in those who flourish globally and create sustainable international careers.",
+      image: "https://t3.ftcdn.net/jpg/16/71/82/58/360_F_1671825852_fEf0P7PmDobzc6djRip7EB1ME0JOqHNM.jpg",
+      icon: <GraduationCap className="w-6 h-6" />,
+    },
+    {
+      title: "Turning Study Abroad Dreams into Reality",
+      content: "Excelencia International is an overseas education and immigration consultancy committed to helping students and young professionals turn their global ambitions into reality. Since our founding, we have evolved from a focused study-abroad advisory into a trusted partner for international academic and immigration journeys.",
+      image: "https://dreamsinternational.co.in/wp-content/uploads/2025/07/study-abroad.webp",
+      icon: <Rocket className="w-6 h-6" />,
+    },
+    {
+      title: "End-to-End Student Visa Guidance",
+      content: "We deliver tailored support from initial counseling to successful visa approvals. At Excelencia International, we believe that every student deserves strategic guidance, transparent processes, and dedicated assistance, and we work relentlessly to provide just that at every step of your international education journey.",
+      image: "https://www.ramaoverseas.in/_next/image?url=%2Fblog%2Fvisa-consultant-ahmedabad-ghaziabad-delhi.webp&w=3840&q=75",
+      icon: <ArrowRight className="w-6 h-6" />,
+    },
+  ];
 
-const AboutSection = () => {
+export default function AboutSection() {
+  const [selected, setSelected] = useState<(typeof sections)[0] | null>(null);
+
   return (
-    <div className="bg-white py-16 px-6 md:px-0 overflow-hidden">
-      <div className="max-w-7xl mx-auto space-y-24">
-        {sections.map((section, index) => (
-          <motion.div
-            key={index}
-            // Logic to determine entry direction based on index
-            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="grid md:grid-cols-2 gap-12 items-center"
-          >
-            {/* Image Container with Hover Effect */}
+    <section className="bg-slate-50 py-14 px-6 font-sans">
+      <div className="max-w-7xl mx-auto">
+
+        {/* Header */}
+        <div className="max-w-2xl mb-16">
+          <h2 className="text-sm font-bold tracking-widest text-[#c1972d] uppercase mb-3">
+            Excellence Defined
+          </h2>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+            Why Choose Excelencia?
+          </h1>
+          <div className="h-1.5 w-20 bg-[#c1972d] mt-6 rounded-full"></div>
+        </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sections.map((item, index) => (
             <motion.div
-              className={`${index % 2 !== 0 ? "md:order-2" : "md:order-1"}`}
-              whileHover={{ scale: 1.03 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              key={index}
+              layoutId={`card-${item.title}`}
+              onClick={() => setSelected(item)}
+              whileHover={{ y: -5 }}
+              className="group cursor-pointer bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
             >
-              <div className="relative group">
-                {/* Decorative background element */}
-                <div className="absolute -inset-2 bg-blue-100 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>                
-                <img
-                  src={`${section.image}?auto=format&fit=crop&w=800&q=80`}
-                  alt={section.title}
-                  className="relative rounded-2xl shadow-2xl w-full h-80 md:h-96 object-cover transform transition duration-500"
-                />
+              <div className="absolute top-0 right-0 w-24 h-24 bg-linear-to-r from-[#c1972d]/20 to-blue-950/20 rounded-bl-full group-hover:bg-[#c1972d]/50" />
+
+              <div className="bg-slate-900 text-white w-12 h-12 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#c1972d] transition-colors">
+                {item.icon}
+              </div>
+
+              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#c1972d] transition-colors">
+                {item.title}
+              </h3>
+
+              <p className="text-slate-500 line-clamp-2 text-sm leading-relaxed mb-6">
+                {item.content}
+              </p>
+
+              <div className="flex items-center text-sm font-bold text-[#c1972d]">
+                Explore Details
+                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-2" />
               </div>
             </motion.div>
+          ))}
+        </div>
 
-            {/* Text Content with Staggered Fade-in */}
-            <div className={`${index % 2 !== 0 ? "md:order-1" : "md:order-2"}`}>
-              <motion.h2 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-tight"
-              >
-                {section.title}
-              </motion.h2>
-              
+        {/* Popup */}
+        <AnimatePresence>
+          {selected && (
+            <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
+
+              {/* Overlay */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setSelected(null)}
+                className="absolute inset-0 bg-slate-900/60 backdrop-blur-md"
+              />
+
+              {/* Modal */}
+              <motion.div
+                layoutId={`card-${selected.title}`}
+                className="bg-white rounded-[2.5rem] w-full max-w-6xl h-162.5 overflow-hidden shadow-2xl relative z-10 grid md:grid-cols-2"
               >
-                <p className="text-gray-600 text-lg leading-relaxed border-l-4 border-[#c1972d] pl-4">
-                  {section.content}
-                </p>
+                {/* Close */}
+                <button
+                  onClick={() => setSelected(null)}
+                  className="absolute top-6 right-6 z-20 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-transform hover:rotate-90"
+                >
+                  <X className="w-6 h-6 text-slate-900" />
+                </button>
+
+                {/* Image */}
+                <div className="relative h-full">
+                  <img
+                    src={selected.image}
+                    alt={selected.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent md:bg-linear-to-r" />
+                </div>
+
+                {/* Content */}
+                <div className="px-5 py-5 flex flex-col justify-center bg-white overflow-y-auto">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#c1972d]/10 text-[#c1972d] mb-6">
+                    {selected.icon}
+                  </div>
+
+                  <h3 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 leading-tight">
+                    {selected.title}
+                  </h3>
+
+                  <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                    {selected.content}
+                  </p>
+
+                  <button
+                    onClick={() => setSelected(null)}
+                    className="w-full md:w-max bg-linear-to-r from-[#c1972d] to-blue-950 text-white font-bold px-10 py-4 rounded-2xl  transition-all transform active:scale-95 shadow-lg shadow-slate-200"
+                  >
+                    Back to Overview
+                  </button>
+                </div>
               </motion.div>
             </div>
-          </motion.div>
-        ))}
+          )}
+        </AnimatePresence>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default AboutSection;
+}

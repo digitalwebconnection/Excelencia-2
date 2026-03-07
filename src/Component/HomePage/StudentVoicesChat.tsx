@@ -89,11 +89,11 @@ export default function AutoRotatingStudentVoices() {
 
         {/* Section Header */}
         <div className="text-center mb-16">
-          <motion.p className="uppercase tracking-widest text-blue-600 font-bold text-xs mb-3">
+          <motion.p className="uppercase tracking-widest text-[#c1972d] font-bold text-xs mb-3">
             Student Voices
           </motion.p>
-          <motion.h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-            Real stories. Real trust.
+          <motion.h2 className="text-3xl md:text-4xl font-bold text-blue-950">
+            Real stories. <span className=" text-[#c1972d]">Real trust.</span> 
           </motion.h2>
         </div>
 
