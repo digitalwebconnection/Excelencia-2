@@ -54,10 +54,10 @@ const students = [
   },
   {
     id: 8,
-    name: "jinisha jain",
+    name: "Rhythm Benara",
     location: "New Zealand",
-    quote: "I applied for my Australia student visa through Excelencia International, and the experience was excellent.The team was professional, supportive, and guided me at every step. His timely advice, patience, and clear communication made the entire journey smooth and stress-free. Thank you for being such a reliable and knowledgeable guide",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQG7gd1MZKZFxQ/profile-displayphoto-shrink_200_200/B56ZdIXG.6G0AY-/0/1749265708996?e=2147483647&v=beta&t=p7xk08hipnV6dBT5yt2u4fwwHj2rdHTxrMU4yDjc_CI",
+    quote: "Honestly the best decision I made! I was so stressed about applications and visas, but they handled everything smoothly. The team is super friendly and explains every small detail. Totally worth it!",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpLDrlH7EhfzSjEBgUWC4oNUHoflg2Yu4bCQ&s",
   }
 ];
 

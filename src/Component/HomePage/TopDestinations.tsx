@@ -49,7 +49,7 @@ export default function CountrySlider() {
 
       {/* Heading */}
       <div className="max-w-7xl mx-auto px-6 mb-14 text-center">
-        <p className="text-blue-600 font-bold tracking-widest mb-3 uppercase text-sm">
+        <p className="text-blue-950 font-bold tracking-widest mb-3 uppercase text-sm">
           The World is Your Campus
         </p>
 
