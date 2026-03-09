@@ -1,46 +1,80 @@
-"use client";
-
 import { ArrowUpRight } from "lucide-react";
 
 const destinations = [
-  { name: "UK", listings: "Knowledge Capital", image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200" },
-  { name: "USA", listings: "Academic Excellence", image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=1200" },
-  { name: "UAE", listings: "Innovation Hub", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200" },
-  { name: "France", listings: "Cultural Excellence", image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200" },
-  { name: "Italy", listings: "Heritage & Design", image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1200" },
-  { name: "Germany", listings: "Engineering Powerhouse", image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200" },
-  { name: "Spain", listings: "Vibrant Learning", image: "https://img.freepik.com/free-photo/dawn-view-toledo_1398-2077.jpg?semt=ais_hybrid&w=740&q=80" },
- { 
-  name: "New Zealand", 
-  listings: "World-Class Education", 
-  image: "https://www.newzealand.com/assets/Tourism-NZ/Auckland/img-1536065871-6217-4403-p-10D1D0BD-B88E-AAB3-AE3F2E903EF65717-2544003__aWxvdmVrZWxseQo_CropResizeWzE5MDAsMTAwMCw3NSwianBnIl0.jpg" 
-},
+  {
+    name: "UK",
+    listings: "Knowledge Capital",
+    image: "https://img.freepik.com/free-photo/big-ben-westminster-bridge-sunset-london-uk_268835-1395.jpg"
+  },
+  {
+    name: "USA",
+    listings: "Academic Excellence",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJuGnv3pcKMcmYi7qfMMyyM1BRwEe_Axli1Q&s"
+  },
+  {
+    name: "UAE",
+    listings: "Innovation Hub",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200"
+  },
+  {
+    name: "France",
+    listings: "Cultural Excellence",
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200"
+  },
+  {
+    name: "Italy",
+    listings: "Heritage & Design",
+    image: "https://img.freepik.com/premium-photo/grand-canal-venice-evening-italy_483040-1138.jpg?semt=ais_rp_50_assets&w=740&q=80"
+  },
+  {
+    name: "Germany",
+    listings: "Engineering Powerhouse",
+    image: "https://t3.ftcdn.net/jpg/00/84/15/38/360_F_84153835_k3tFP45bb2TVC9t4N84fpAo41cbNKzyv.jpg"
+  },
+  {
+    name: "Spain",
+    listings: "Vibrant Learning",
+    image: "https://img.freepik.com/free-photo/dawn-view-toledo_1398-2077.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    name: "New Zealand",
+    listings: "World-Class Education",
+    image: "https://www.newzealand.com/assets/Tourism-NZ/Auckland/img-1536065871-6217-4403-p-10D1D0BD-B88E-AAB3-AE3F2E903EF65717-2544003__aWxvdmVrZWxseQo_CropResizeWzE5MDAsMTAwMCw3NSwianBnIl0.jpg"
+  },
 
-{ 
-  name: "Malta", 
-  listings: "Mediterranean Learning Hub", 
-  image: "https://media.istockphoto.com/id/1487116739/photo/view-of-saint-julian-malta.jpg?s=612x612&w=0&k=20&c=6oNCD-Da8gJOd9Vhe8q7ahHTWNQr8EVJUqOb2OrgAU0=" 
-},
+  {
+    name: "Malta",
+    listings: "Mediterranean Learning Hub",
+    image: "https://media.istockphoto.com/id/1487116739/photo/view-of-saint-julian-malta.jpg?s=612x612&w=0&k=20&c=6oNCD-Da8gJOd9Vhe8q7ahHTWNQr8EVJUqOb2OrgAU0="
+  },
 
-{ 
-  name: "Latvia", 
-  listings: "Gateway to European Education", 
-  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEHOsWE62erqzj4Ac3oCTjrTvcJqd-JwiZbA&s" 
-},
+  {
+    name: "Latvia",
+    listings: "Gateway to European Education",
+    image: "https://www.state.gov/wp-content/uploads/2018/11/Latvia-2107x1406.jpg"
+  },
 
-{ 
-  name: "Lithuania", 
-  listings: "Affordable European Studies", 
-  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1MVB62m8CjpKaZJcqfhFcgcFKpJEuDak0kQ&s" 
-},
+  {
+    name: "Lithuania",
+    listings: "Affordable European Studies",
+    image: "https://ychef.files.bbci.co.uk/2000x1123/p0g1ppj1.jpeg"
+  },
 
-{ 
-  name: "Austria", 
-  listings: "Tradition Meets Innovation", 
-  image: "https://assets.vogue.com/photos/5aa18ec50ec45c7da912b925/master/w_2560%2Cc_limit/00-story-image-non-skiing-guide-to-tyrol-austria.jpg" 
-},
-  { name: "Canada", listings: "Quality of Life", image: "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1200" },
-  { name: "Australia", listings: "Global Opportunities", image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=1200" },
+  {
+    name: "Austria",
+    listings: "Tradition Meets Innovation",
+    image: "https://assets.vogue.com/photos/5aa18ec50ec45c7da912b925/master/w_2560%2Cc_limit/00-story-image-non-skiing-guide-to-tyrol-austria.jpg"
+  },
+  {
+    name: "Canada",
+    listings: "Quality of Life",
+    image: "https://i.pinimg.com/474x/64/cd/80/64cd80a9db00bade744a188a42143003.jpg"
+  },
+  {
+    name: "Australia",
+    listings: "Global Opportunities",
+    image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=1200"
+  },
 ];
 
 export default function CountrySlider() {
@@ -54,7 +88,7 @@ export default function CountrySlider() {
         </p>
 
         <h2 className="text-3xl md:text-4xl font-serif font-extrabold text-[#c1972d]">
-          Choose the Right Country. 
+          Choose the Right Country.
           <span className="text-blue-950">Choose the Right Future.</span>
         </h2>
       </div>
