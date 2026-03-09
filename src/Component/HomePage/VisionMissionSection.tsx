@@ -4,7 +4,7 @@ import { Globe, Target, ShieldCheck, Shield, Users, Zap } from "lucide-react";
 export default function VisionMissionSection() {
   return (
     <>
-      <section className="grid md:grid-cols-2">
+      <section className="grid md:grid-cols-2 overflow-hidden">
 
         {/* ================= VISION ================= */}
 
@@ -12,28 +12,41 @@ export default function VisionMissionSection() {
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="relative bg-white text-blue-950 flex  px-10 md:px-22 py-5"
+          whileHover={{ y: -6 }}
+          transition={{ duration: 0.6 }}
+          className="relative bg-white text-blue-950 flex px-10 md:px-22 py-8  shadow-amber-600 shadow-2xl transition-all"
         >
           <div className="max-w-xl">
 
-            <span className="text-sm tracking-[0.35em] uppercase font-bold text-[#c1972d]">
+            <span className="text-sm tracking-[0.35em] uppercase font-bold text-[#c1972d] drop-shadow-sm">
               Excelencia International
             </span>
 
             <div className="flex items-center gap-4 mt-6 mb-6">
-              <Globe size={34} className="text-blue-700" />
-              <h2 className="text-4xl md:text-5xl font-serif font-bold">
+
+              {/* Floating Icon */}
+              <motion.div
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 3, repeat: Infinity }}
+              >
+                <Globe size={34} className="text-blue-700 drop-shadow-lg" />
+              </motion.div>
+
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-blue-950 drop-shadow-md">
                 Our Vision
               </h2>
+
             </div>
 
-            <p className="text-lg leading-relaxed text-slate-700">
-              At Excelencia International, our vision is to be a globally recognized leader in international education and immigration services. 
-              We strive to simplify the complexities of studying abroad so that students can embark on their academic journeys with clarity and confidence. 
-              We envision a future where every student, regardless of background, has access to quality guidance, seamless processes, and the support they need to thrive in world-class universities and secure international opportunities.
+            <p className="text-lg leading-relaxed text-slate-700 drop-shadow-sm">
+              At Excelencia International, our vision is to be a globally recognized leader in international education and immigration services.
+              We strive to simplify the complexities of studying abroad so that students can embark on their academic journeys with clarity and confidence.
+              We envision a future where every student, regardless of background, has access to quality guidance, seamless processes, and the support they need
+              to thrive in world-class universities and secure international opportunities.
             </p>
 
-            <div className="mt-10 w-24 h-0.75 bg-blue-700"></div>
+            <div className="mt-10 w-24 h-0.75 bg-linear-to-r from-blue-700 to-[#c1972d] shadow-md"></div>
+
           </div>
         </motion.div>
 
@@ -44,60 +57,76 @@ export default function VisionMissionSection() {
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="relative bg-blue-950 text-white flex items-center px-7 md:px-15 py-10"
+          whileHover={{ y: -6 }}
+          transition={{ duration: 0.6 }}
+          className="relative bg-blue-950 text-white flex items-center px-7 md:px-15 py-10 shadow-2xl shadow-black hover:shadow-2xl"
         >
-          <div className="max-w-xl">
+
+          {/* background glow */}
+          <div className="absolute inset-0 bg-linear-to-br from-blue-950 via-blue-900 to-blue-950 opacity-80"></div>
+
+          <div className="relative max-w-xl">
 
             <div className="flex items-center gap-4 mb-6">
-              <Target size={34} className="text-[#c1972d]" />
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#c1972d]">
+
+              <motion.div
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 3, repeat: Infinity }}
+              >
+                <Target size={34} className="text-[#c1972d] drop-shadow-xl" />
+              </motion.div>
+
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#c1972d] drop-shadow-lg">
                 Our Mission
               </h2>
+
             </div>
 
-            <p className="text-lg text-white/80 mb-8">
-              Our mission at Excelencia International is to empower every student with personalized, ethical, and professional support as they pursue educational and career goals overseas.
+            <p className="text-lg text-white/90 mb-8 drop-shadow-sm">
+              Our mission at Excelencia International is to empower every student with personalized,
+              ethical, and professional support as they pursue educational and career goals overseas.
             </p>
 
             <div className="space-y-5">
 
-              <div className="flex gap-4 items-start">
-                <div className="w-8 h-8 bg-[#c1972d] text-black rounded-full flex items-center justify-center font-bold">
+              <div className="flex gap-4 items-start group">
+                <div className="w-8 h-8 bg-[#c1972d] text-black rounded-full flex items-center justify-center font-bold shadow-lg group-hover:scale-110 transition">
                   1
                 </div>
-                <p className="text-white/90">
+                <p className="text-white/90 group-hover:text-white transition">
                   Providing accurate and transparent guidance through every stage of admissions and immigration.
                 </p>
               </div>
 
-              <div className="flex gap-4 items-start">
-                <div className="w-8 h-8 bg-[#c1972d] text-black rounded-full flex items-center justify-center font-bold">
+              <div className="flex gap-4 items-start group">
+                <div className="w-8 h-8 bg-[#c1972d] text-black rounded-full flex items-center justify-center font-bold shadow-lg group-hover:scale-110 transition">
                   2
                 </div>
-                <p className="text-white/90">
+                <p className="text-white/90 group-hover:text-white transition">
                   Helping students make informed decisions about countries, universities, and visa pathways.
                 </p>
               </div>
 
-              <div className="flex gap-4 items-start">
-                <div className="w-8 h-8 bg-[#c1972d] text-black rounded-full flex items-center justify-center font-bold">
+              <div className="flex gap-4 items-start group">
+                <div className="w-8 h-8 bg-[#c1972d] text-black rounded-full flex items-center justify-center font-bold shadow-lg group-hover:scale-110 transition">
                   3
                 </div>
-                <p className="text-white/90">
+                <p className="text-white/90 group-hover:text-white transition">
                   Delivering exceptional service rooted in integrity, expertise, and commitment.
                 </p>
               </div>
 
             </div>
 
-            <div className="flex gap-3 pt-10 mt-10 border-t border-white/10">
-              <ShieldCheck className="text-[#c1972d]" />
-              <p className="italic text-white/70">
+            <div className="flex gap-3 pt-10 mt-10 border-t border-white/20">
+              <ShieldCheck className="text-[#c1972d] drop-shadow-md" />
+              <p className="italic text-white/80 drop-shadow-sm">
                 Turning global education dreams into real opportunities.
               </p>
             </div>
 
           </div>
+
         </motion.div>
 
       </section>
@@ -178,9 +207,7 @@ export function CoreValuesSection() {
 
                   {/* Content */}
                   <div className={`max-w-5xl ${isLeft ? "text-left" : "text-left md:ml-auto ps-6"}`}>
-                    <span className="text-[#c1972d] font-bold text-sm tracking-[0.2em] uppercase mb-2 block">
-                      Value 0{index + 1}
-                    </span>
+
                     <h3 className="text-3xl font-bold text-slate-900 mb-2 font-serif ">
                       {value.title}
                     </h3>
