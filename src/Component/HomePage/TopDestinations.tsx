@@ -4,76 +4,76 @@ const destinations = [
   {
     name: "UK",
     listings: "Knowledge Capital",
-    image: "https://img.freepik.com/free-photo/big-ben-westminster-bridge-sunset-london-uk_268835-1395.jpg"
+    image: "https://thumbs.dreamstime.com/b/london-uk-flag-architecture-background-ben-big-brexit-bridge-britain-british-campaign-capital-city-clock-country-decision-160699984.jpg"
   },
   {
     name: "USA",
     listings: "Academic Excellence",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJuGnv3pcKMcmYi7qfMMyyM1BRwEe_Axli1Q&s"
+    image: "https://www.shutterstock.com/image-photo/american-flag-on-perfect-pole-600nw-2272801609.jpg"
   },
   {
     name: "UAE",
     listings: "Innovation Hub",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200"
+    image: "https://img.freepik.com/premium-photo/18-january-2023-dubai-uae-scenic-view-dubai-skyline-with-skyscraper-buildings-national-flag-sightseeing-travel-destinations-arab-emirates_984126-306.jpg?semt=ais_hybrid&w=740&q=80"
   },
   {
     name: "France",
     listings: "Cultural Excellence",
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200"
+    image: "https://i.pinimg.com/736x/5b/a5/19/5ba519d0c9563fd8ba119f7882f1207a.jpg"
   },
   {
     name: "Italy",
     listings: "Heritage & Design",
-    image: "https://img.freepik.com/premium-photo/grand-canal-venice-evening-italy_483040-1138.jpg?semt=ais_rp_50_assets&w=740&q=80"
+    image: "https://c.stocksy.com/a/2NRH00/z9/4156792.jpg"
   },
   {
     name: "Germany",
     listings: "Engineering Powerhouse",
-    image: "https://t3.ftcdn.net/jpg/00/84/15/38/360_F_84153835_k3tFP45bb2TVC9t4N84fpAo41cbNKzyv.jpg"
+    image: "https://img.freepik.com/premium-photo/scenic-view-german-village-with-flag-historic-church-by-river-generative-ai_437323-45844.jpg?semt=ais_rp_50_assets&w=740&q=80"
   },
   {
     name: "Spain",
     listings: "Vibrant Learning",
-    image: "https://img.freepik.com/free-photo/dawn-view-toledo_1398-2077.jpg?semt=ais_hybrid&w=740&q=80"
+    image: "https://img.freepik.com/premium-photo/panoramic-view-city-seville-from-observation-platform-tower-gold-torre-del-oro-spain_501530-8195.jpg?semt=ais_rp_progressive&w=740&q=80"
   },
   {
     name: "New Zealand",
     listings: "World-Class Education",
-    image: "https://www.newzealand.com/assets/Tourism-NZ/Auckland/img-1536065871-6217-4403-p-10D1D0BD-B88E-AAB3-AE3F2E903EF65717-2544003__aWxvdmVrZWxseQo_CropResizeWzE5MDAsMTAwMCw3NSwianBnIl0.jpg"
+    image: "https://cdn.mappr.co/wp-content/uploads/2024/01/new-zealand-flag-wellington.jpg"
   },
 
   {
     name: "Malta",
     listings: "Mediterranean Learning Hub",
-    image: "https://media.istockphoto.com/id/1487116739/photo/view-of-saint-julian-malta.jpg?s=612x612&w=0&k=20&c=6oNCD-Da8gJOd9Vhe8q7ahHTWNQr8EVJUqOb2OrgAU0="
+    image: "https://thumbs.dreamstime.com/b/image-depicts-maltese-flag-waving-against-sunset-backdrop-valletta-malta-flag-features-white-red-design-388458275.jpg"
   },
 
   {
     name: "Latvia",
     listings: "Gateway to European Education",
-    image: "https://www.state.gov/wp-content/uploads/2018/11/Latvia-2107x1406.jpg"
+    image: "https://latvianwanderer.wordpress.com/wp-content/uploads/2018/02/ab-2.jpg?w=1000"
   },
 
   {
     name: "Lithuania",
     listings: "Affordable European Studies",
-    image: "https://ychef.files.bbci.co.uk/2000x1123/p0g1ppj1.jpeg"
+    image: "https://img.freepik.com/premium-photo/flag-vilnius-city-lithuania_134785-15548.jpg"
   },
 
   {
     name: "Austria",
     listings: "Tradition Meets Innovation",
-    image: "https://assets.vogue.com/photos/5aa18ec50ec45c7da912b925/master/w_2560%2Cc_limit/00-story-image-non-skiing-guide-to-tyrol-austria.jpg"
+    image: "https://images.unsplash.com/photo-1566234258349-77b600954d84?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXVzdHJpYSUyMGZsYWd8ZW58MHx8MHx8fDA%3D"
   },
   {
     name: "Canada",
     listings: "Quality of Life",
-    image: "https://i.pinimg.com/474x/64/cd/80/64cd80a9db00bade744a188a42143003.jpg"
+    image: "https://media.istockphoto.com/id/1368242984/photo/canada-flag-waving-in-ottawa.jpg?s=612x612&w=0&k=20&c=6xztoco_fpx0MD6kntgO5KaN5PLhOqtW4pI1MbG9kXw="
   },
   {
     name: "Australia",
     listings: "Global Opportunities",
-    image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=1200"
+    image: "https://media.istockphoto.com/id/509448415/photo/australian-flag-flying-above-city-hall.jpg?s=612x612&w=0&k=20&c=sW7z9-KqSKlVExRzaFW7bBjGyTL0X6wPHISnjzbEYGU="
   },
 ];
 
@@ -111,7 +111,7 @@ export default function CountrySlider() {
                 className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
               />
 
-              <div className="absolute inset-0 bg-linear-to-t from-black/90 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
 
               <div className="absolute bottom-0 p-6 w-full">
 

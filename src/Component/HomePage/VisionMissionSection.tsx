@@ -7,7 +7,7 @@ export default function VisionMissionSection() {
       <section className="grid md:grid-cols-2 overflow-hidden">
 
         {/* ================= VISION ================= */}
-
+    
         <motion.div
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}

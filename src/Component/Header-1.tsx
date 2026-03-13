@@ -14,31 +14,31 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const destinations = [
-    "UK",
-    "UAE",
-    "Europe",
-    "Ireland",
-    "Australia",
-    "United States of America",
-    "Canada",
-    "New Zealand",
-  ];
+  // const destinations = [
+  //   "UK",
+  //   "UAE",
+  //   "Europe",
+  //   "Ireland",
+  //   "Australia",
+  //   "United States of America",
+  //   "Canada",
+  //   "New Zealand",
+  // ];
 
-  const updates = ["News", "Blogs", "Awards", "Updates"];
+  // const updates = ["News", "Blogs", "Awards", "Updates"];
 
-  const services = [
-    "Profile Evaluation",
-    "Country, Course, University shortlisting",
-    "Documentation",
-    "Admission Assistance",
-    "Interview",
-    "Finance support",
-    "Career Guidance",
-    "Student Visa",
-    "Visitor Visa",
-    "Pre and Post arrival services",
-  ];
+  // const services = [
+  //   "Profile Evaluation",
+  //   "Country, Course, University shortlisting",
+  //   "Documentation",
+  //   "Admission Assistance",
+  //   "Interview",
+  //   "Finance support",
+  //   "Career Guidance",
+  //   "Student Visa",
+  //   "Visitor Visa",
+  //   "Pre and Post arrival services",
+  // ];
 
   return (
     <header className="w-full fixed font-serif top-0 z-50">
@@ -63,25 +63,70 @@ const Header = () => {
             />
           </NavLink>
 
+{/* NAV LINKS */}
+<ul className="hidden lg:flex items-center gap-8 text-black font-medium">
+
+  {/* Home */}
+  <li>
+    <NavLink to="/" className="hover:text-[#c1972d]">
+      Home
+    </NavLink>
+  </li>
+
+  {/* About */}
+  <li>
+    <NavLink to="/about" className="hover:text-[#c1972d]">
+      About Us
+    </NavLink>
+  </li>
+
+  {/* Destination (Disabled) */}
+  <li className="relative group opacity-50 cursor-not-allowed">
+    <span>Destination</span>
+  </li>
+
+  {/* Collaborate (Disabled) */}
+  <li className="opacity-50 cursor-not-allowed">
+    <span>Collaborate with us</span>
+  </li>
+
+  {/* Updates (Disabled) */}
+  <li className="relative group opacity-50 cursor-not-allowed">
+    <span>Updates</span>
+  </li>
+
+  {/* Services (Disabled) */}
+  <li className="relative group opacity-50 cursor-not-allowed">
+    <span>Services</span>
+  </li>
+
+  {/* Contact */}
+  <li>
+    <NavLink to="/contact" className="hover:text-[#c1972d]">
+      Contact Us
+    </NavLink>
+  </li>
+
+</ul>
           {/* NAV LINKS */}
-          <ul className="hidden lg:flex items-center gap-8 text-black font-medium">
+          {/* <ul className="hidden lg:flex items-center gap-8 text-black font-medium"> */}
 
             {/* Home */}
-            <li>
+            {/* <li>
               <NavLink to="/" className="hover:text-[#c1972d]">
                 Home
               </NavLink>
-            </li>
+            </li> */}
 
             {/* About */}
-            <li>
+            {/* <li>
               <NavLink to="/about" className="hover:text-[#c1972d]">
                 About Us
               </NavLink>
-            </li>
+            </li> */}
 
             {/* Destination Dropdown */}
-            <li className="relative group">
+            {/* <li className="relative group">
               <span className="cursor-pointer hover:text-[#c1972d]">
                 Destination
               </span>
@@ -99,17 +144,17 @@ const Header = () => {
                   </li>
                 ))}
               </ul>
-            </li>
+            </li> */}
 
             {/* Collaborate */}
-            <li>
+            {/* <li>
               <NavLink to="/collaborate" className="hover:text-[#c1972d]">
                 Collaborate with us
               </NavLink>
-            </li>
+            </li> */}
 
             {/* Updates Dropdown */}
-            <li className="relative group">
+            {/* <li className="relative group">
               <span className="cursor-pointer hover:text-[#c1972d]">
                 Updates
               </span>
@@ -125,10 +170,10 @@ const Header = () => {
                   </li>
                 ))}
               </ul>
-            </li>
+            </li> */}
 
             {/* Services Dropdown */}
-            <li className="relative group">
+            {/* <li className="relative group">
               <span className="cursor-pointer hover:text-[#c1972d]">
                 Services
               </span>
@@ -146,16 +191,16 @@ const Header = () => {
                   </li>
                 ))}
               </ul>
-            </li>
+            </li> */}
 
             {/* Contact */}
-            <li>
+            {/* <li>
               <NavLink to="/contact" className="hover:text-[#c1972d]">
                 Contact Us
               </NavLink>
-            </li>
+            </li> */}
 
-          </ul>
+          {/* </ul> */}
         </div>
       </nav>
     </header>

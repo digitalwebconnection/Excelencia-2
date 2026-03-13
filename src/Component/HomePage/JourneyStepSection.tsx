@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import allfleg from "../../assets/allfleg.jpg"
 
 export default function JourneyStepSection() {
   const steps = [
@@ -111,9 +112,9 @@ export default function JourneyStepSection() {
             className="relative w-full h-100 lg:h-137.5"
           >
             <img
-              src="https://themexriver.com/wp/imigrat/wp-content/uploads/2023/05/flag.png"
+              src={allfleg}
               alt="Countries We Offer"
-              className="w-full h-full object-contain drop-shadow-2xl"
+              className="w-full h-full object-contain "
             />
           </motion.div>
         </motion.div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Briefcase } from "lucide-react";
-import video from "../../assets/newvideo.mp4";
+import video from "../../assets/herovideo.mp4";
 
 const slides = [
   { title: "We guide. We don’t push." },
