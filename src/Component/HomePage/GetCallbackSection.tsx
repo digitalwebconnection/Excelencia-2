@@ -1,15 +1,14 @@
-
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Plus, Minus, Building2 } from 'lucide-react';
 
 const QuietInvitationContactForm = () => {
-  const [openOffice, setOpenOffice] = useState<number | string>(1);
-  const [formData, setFormData] = useState({
+  const [openOffice, setOpenOffice] = useState(1);
+  const [result, setResult] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const [errors, setErrors] = useState({
     name: "",
-    email: "",
     phone: "",
-    visaType: "Visa Type",
-    message: "",
   });
 
   const offices = [
@@ -31,16 +30,87 @@ const QuietInvitationContactForm = () => {
     },
   ];
 
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  interface Web3FormsResponse {
+    success: boolean;
+  }
+
+  // ✅ VALIDATION FUNCTION
+  const validate = (formData: FormData) => {
+    let newErrors = { name: "", phone: "" };
+
+    const name = formData.get("name") as string;
+    const phone = formData.get("phone") as string;
+
+    if (!name || name.trim().length < 3) {
+      newErrors.name = "Enter a valid name (min 3 characters)";
+    } else if (!/^[A-Za-z\s]+$/.test(name)) {
+      newErrors.name = "Name should not contain numbers or special characters";
+    }
+
+    if (!phone) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^[6-9]\d{9}$/.test(phone)) {
+      newErrors.phone = "Enter a valid 10-digit Indian number";
+    }
+
+    setErrors(newErrors);
+    return !newErrors.name && !newErrors.phone;
+  };
+
+  // ✅ UPDATED SUBMIT FUNCTION WITH AUTO-CLEAR
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    
+    // Capture the form element reference immediately
+    const formElement = event.currentTarget;
+    const formData = new FormData(formElement);
+
+    if (!validate(formData)) return;
+
+    setLoading(true);
+    setResult("Sending...");
+
+    formData.append("access_key", "99f8361f-e5e4-493d-ae0a-6f3acd3d4274");
+    formData.append("subject", "New Visa Inquiry Lead");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data: Web3FormsResponse = await response.json();
+
+      if (data.success) {
+        setResult("✅ Message sent successfully!");
+        
+        // 1. Reset the physical HTML form fields
+        formElement.reset(); 
+        
+        // 2. Clear any validation error states
+        setErrors({ name: "", phone: "" });
+
+        // 3. Clear the "Success" message automatically after 5 seconds
+        setTimeout(() => {
+          setResult("");
+        }, 5000);
+
+      } else {
+        setResult("❌ Something went wrong. Try again.");
+      }
+    } catch (error) {
+      setResult("❌ Network error. Please check your connection.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <section className="relative  z-1 w-full flex flex-col lg:flex-row overflow-hidden font-sans">
+    <section className="relative z-1 w-full flex flex-col lg:flex-row overflow-hidden font-sans">
 
-      {/* LEFT SIDE: Red Diagonal Shape & Form */}
-      <div className="relative w-full lg:w-[55%] bg-blue-950 p-8 md:p-6 lg:p-15    max-w-7xl mx-auto z-10 lg:clip-path-right">
-        {/* Background Overlay Image (The people working) */}
+      {/* LEFT SIDE */}
+      <div className="relative w-full lg:w-[55%] bg-blue-950 p-8 md:p-6 lg:p-15 max-w-7xl mx-auto z-10">
+
         <div
           className="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-multiply"
           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1600880212319-4627a58c882c?auto=format&fit=crop&q=80')` }}
@@ -51,76 +121,97 @@ const QuietInvitationContactForm = () => {
             Contact Us <span className="h-px w-10 bg-white/50"></span>
           </p>
 
-          <div className="mb-10">
-            <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#c1972d] mb-6">It All Begins With A Conversation</h2>
-            <div className="text-white/90 space-y-1 text-lg leading-relaxed font-light">
-              <p>There is not one student who comes through our doors without a dream.</p>
-              <p>Our duty is to steer that dream in the right direction.</p>
-              <p>We celebrate the offer letter, the visa approval, and every student who takes that leap of faith
-                towards a global future.</p>
-              <p className="font-bold mt-2 text-white">When students succeed, families feel secure, and dreams become reality.</p>
-            </div>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#c1972d] mb-6">
+            It All Begins With A Conversation
+          </h2>
 
-          <form className="space-y-4">
+          <form onSubmit={onSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800"
+                />
+                {errors.name && (
+                  <p className="text-red-400 text-xs mt-1">{errors.name}</p>
+                )}
+              </div>
+
               <input
-                type="text" name="name" placeholder="Full Name"
-                onChange={handleChange}
-                className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800 placeholder:text-gray-400"
-              />
-              <input
-                type="email" name="email" placeholder="Email Address"
-                onChange={handleChange}
-                className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800 placeholder:text-gray-400"
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+                className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800"
               />
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input
-                type="text" name="phone" placeholder="Phone"
-                onChange={handleChange}
-                className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800 placeholder:text-gray-400"
-              />
+              <div>
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Phone"
+                  maxLength={10}
+                  onInput={(e) => {
+                    e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, '');
+                  }}
+                  className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800"
+                />
+                {errors.phone && (
+                  <p className="text-red-400 text-xs mt-1">{errors.phone}</p>
+                )}
+              </div>
+
               <select
                 name="visaType"
-                onChange={handleChange}
-                className="bg-white p-4 rounded-2xl outline-none w-full text-gray-500 appearance-none bg-[url('https://cdn0.iconfinder.com/data/icons/ios-7-icons/50/chevron_down-512.png')] bg-size-[12px] bg-position-[right_1rem_center] bg-no-repeat"
+                required
+                className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800"
               >
-                <option>Visa Type</option>
-                <option>Business</option>
-                <option>Student</option>
+                <option value="">Visa Type</option>
+                <option value="Business">Business</option>
+                <option value="Student">Student</option>
               </select>
             </div>
+
             <textarea
               name="message"
               placeholder="Tell us what you’re exploring"
-              onChange={handleChange}
+              required
               rows={3}
-              className="bg-white rounded-2xl p-4 outline-none w-full text-gray-800 placeholder:text-gray-400"
-            ></textarea>
+              className="bg-white rounded-2xl p-4 outline-none w-full text-gray-800"
+            />
 
-            <button className="bg-linear-to-r from-[#c1972d]  to-blue-950 rounded-2xl text-white font-bold py-4 px-10 hover:bg-black transition-colors uppercase tracking-widest text-sm">
-              Begin With a Conversation
+            <button
+              type="submit"
+              disabled={loading}
+              className="bg-linear-to-r from-[#c1972d] to-blue-950 rounded-2xl text-white font-bold py-4 px-10 uppercase tracking-widest text-sm hover:opacity-90 transition-opacity disabled:opacity-50"
+            >
+              {loading ? "Sending..." : "Begin With a Conversation"}
             </button>
+
+            {result && (
+              <p className={`text-sm mt-2 font-medium ${result.includes('✅') ? 'text-green-400' : 'text-red-400'}`}>
+                {result}
+              </p>
+            )}
           </form>
         </div>
       </div>
 
-      {/* RIGHT SIDE: Map Background & Office Info */}
+      {/* RIGHT SIDE */}
       <div className="relative w-full lg:w-[45%] min-h-112.5 bg-gray-100 flex items-center justify-center lg:justify-end lg:pr-20">
-        {/* Map Image Background */}
         <div
           className="absolute inset-0 grayscale contrast-75 opacity-60 bg-cover bg-center"
           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80')` }}
         />
 
-        {/* Office Accordion Card */}
-        <div className="relative w-[90%] md:w-80 bg-white shadow-2xl z-30 animate-fadeIn">
+        <div className="relative w-[90%] md:w-80 bg-white shadow-2xl z-30">
           <div className="p-6 flex justify-between items-center border-b">
-            <h3 className="text-xl font-bold flex items-center gap-2 text-slate-900">
-              Track Offices
-            </h3>
-            <Building2 className="text-[#d91e36]" size={28} />
+            <h3 className="text-xl font-bold">Track Offices</h3>
+            <Building2 className="text-[#c1972d]" size={28} />
           </div>
 
           <div className="divide-y divide-gray-100">
@@ -128,46 +219,26 @@ const QuietInvitationContactForm = () => {
               <div key={office.id}>
                 <button
                   onClick={() => setOpenOffice(office.id)}
-                  className="w-full p-4 flex justify-between items-center font-bold text-slate-800 hover:bg-slate-50 transition-colors text-sm"
+                  className="w-full p-4 flex justify-between items-center font-bold text-sm text-left"
                 >
                   {office.title}
-                  {openOffice === office.id ? (
-                    <Minus size={16} className="text-gray-400" />
-                  ) : (
-                    <Plus size={16} className="text-[#d91e36]" />
-                  )}
+                  {openOffice === office.id ? <Minus size={16}/> : <Plus size={16}/>}
                 </button>
 
-                {openOffice === office.id && office.address && (
-                  <div className="p-5 pt-0 space-y-4 text-xs text-slate-500 transition-all">
-
-                    {/* Location */}
+                {openOffice === office.id && (
+                  <div className="p-5 pt-0 space-y-4 text-xs text-slate-500">
                     <div className="flex gap-3">
-                      <MapPin size={16} className="text-[#d91e36] shrink-0" />
-                      <p>
-                        <span className="font-semibold text-slate-700">Location :</span>{" "}
-                        {office.address}
-                      </p>
+                      <MapPin size={16} className="shrink-0 text-[#c1972d]" />
+                      <p>{office.address}</p>
                     </div>
-
-                    {/* Email */}
                     <div className="flex gap-3">
-                      <Mail size={16} className="text-[#d91e36] shrink-0" />
-                      <p>
-                        <span className="font-semibold text-slate-700">Email Us :</span>{" "}
-                        {office.email}
-                      </p>
+                      <Mail size={16} className="shrink-0 text-[#c1972d]" />
+                      <p>{office.email}</p>
                     </div>
-
-                    {/* Phone */}
                     <div className="flex gap-3">
-                      <Phone size={16} className="text-[#d91e36] shrink-0" />
-                      <p>
-                        <span className="font-semibold text-slate-700">Phone :</span>{" "}
-                        {office.phone}
-                      </p>
+                      <Phone size={16} className="shrink-0 text-[#c1972d]" />
+                      <p>{office.phone}</p>
                     </div>
-
                   </div>
                 )}
               </div>
@@ -175,21 +246,6 @@ const QuietInvitationContactForm = () => {
           </div>
         </div>
       </div>
-
-      <style >{`
-        @media (min-width: 1024px) {
-          .clip-path-right {
-            clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-          }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
     </section>
   );
 };
