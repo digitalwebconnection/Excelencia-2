@@ -43,18 +43,16 @@ const Header = () => {
   return (
     <header className="w-full fixed font-serif top-0 z-50">
       <nav
-        className={`bg-white shadow-md transition-all duration-300 ${
-          scrolled ? "py-4" : "py-6"
-        }`}
+        className={`bg-white shadow-md transition-all duration-300 ${scrolled ? "py-4" : "py-6"
+          }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
-          
+
           {/* LOGO */}
           <NavLink
             to="/"
-            className={`flex items-center transition-all duration-300 ${
-              scrolled ? "h-6 w-62" : "h-8 w-74"
-            }`}
+            className={`flex items-center transition-all duration-300 ${scrolled ? "h-6 w-62" : "h-8 w-74"
+              }`}
           >
             <img
               src={logo}
@@ -63,70 +61,70 @@ const Header = () => {
             />
           </NavLink>
 
-{/* NAV LINKS */}
-<ul className="hidden lg:flex items-center gap-8 text-black font-medium">
+          {/* NAV LINKS */}
+          <ul className="hidden lg:flex items-center gap-8 text-black font-medium">
 
-  {/* Home */}
-  <li>
-    <NavLink to="/" className="hover:text-[#c1972d]">
-      Home
-    </NavLink>
-  </li>
+            {/* Home */}
+            <li>
+              <NavLink to="/" className="hover:text-[#c1972d]">
+                Home
+              </NavLink>
+            </li>
 
-  {/* About */}
-  <li>
-    <NavLink to="/about" className="hover:text-[#c1972d]">
-      About Us
-    </NavLink>
-  </li>
+            {/* About */}
+            <li>
+              <NavLink to="/about" className="hover:text-[#c1972d]">
+                About Us
+              </NavLink>
+            </li>
 
-  {/* Destination (Disabled) */}
-  <li className="relative group opacity-50 cursor-not-allowed">
-    <span>Destination</span>
-  </li>
+            {/* Destination (Disabled) */}
+            <li className="relative group opacity-50 cursor-not-allowed">
+              <span>Destination</span>
+            </li>
 
-  {/* Collaborate (Disabled) */}
-  <li className="opacity-50 cursor-not-allowed">
-    <span>Collaborate with us</span>
-  </li>
+            {/* Collaborate (Disabled) */}
+            <li className="opacity-50 cursor-not-allowed">
+              <span>Collaborate with us</span>
+            </li>
 
-  {/* Updates (Disabled) */}
-  <li className="relative group opacity-50 cursor-not-allowed">
-    <span>Updates</span>
-  </li>
+            {/* Updates (Disabled) */}
+            <li className="relative group opacity-50 cursor-not-allowed">
+              <span>Updates</span>
+            </li>
 
-  {/* Services (Disabled) */}
-  <li className="relative group opacity-50 cursor-not-allowed">
-    <span>Services</span>
-  </li>
+            {/* Services (Disabled) */}
+            <li className="relative group opacity-50 cursor-not-allowed">
+              <span>Services</span>
+            </li>
 
-  {/* Contact */}
-  <li>
-    <NavLink to="/contact" className="hover:text-[#c1972d]">
-      Contact Us
-    </NavLink>
-  </li>
+            {/* Contact */}
+            <li>
+              <NavLink to="/contact" className="hover:text-[#c1972d]">
+                Contact Us
+              </NavLink>
+            </li>
 
-</ul>
+          </ul>
           {/* NAV LINKS */}
           {/* <ul className="hidden lg:flex items-center gap-8 text-black font-medium"> */}
 
-            {/* Home */}
-            {/* <li>
+          {/* Home */}
+          {/* <li>
               <NavLink to="/" className="hover:text-[#c1972d]">
                 Home
               </NavLink>
             </li> */}
 
-            {/* About */}
-            {/* <li>
+          {/* About */}
+          {/* <li>
               <NavLink to="/about" className="hover:text-[#c1972d]">
                 About Us
               </NavLink>
             </li> */}
 
-            {/* Destination Dropdown */}
-            {/* <li className="relative group">
+          {/* Destination Dropdown */}
+          {/* <li className="relative group">
               <span className="cursor-pointer hover:text-[#c1972d]">
                 Destination
               </span>
@@ -146,15 +144,15 @@ const Header = () => {
               </ul>
             </li> */}
 
-            {/* Collaborate */}
-            {/* <li>
+          {/* Collaborate */}
+          {/* <li>
               <NavLink to="/collaborate" className="hover:text-[#c1972d]">
                 Collaborate with us
               </NavLink>
             </li> */}
 
-            {/* Updates Dropdown */}
-            {/* <li className="relative group">
+          {/* Updates Dropdown */}
+          {/* <li className="relative group">
               <span className="cursor-pointer hover:text-[#c1972d]">
                 Updates
               </span>
@@ -172,8 +170,8 @@ const Header = () => {
               </ul>
             </li> */}
 
-            {/* Services Dropdown */}
-            {/* <li className="relative group">
+          {/* Services Dropdown */}
+          {/* <li className="relative group">
               <span className="cursor-pointer hover:text-[#c1972d]">
                 Services
               </span>
@@ -193,8 +191,8 @@ const Header = () => {
               </ul>
             </li> */}
 
-            {/* Contact */}
-            {/* <li>
+          {/* Contact */}
+          {/* <li>
               <NavLink to="/contact" className="hover:text-[#c1972d]">
                 Contact Us
               </NavLink>

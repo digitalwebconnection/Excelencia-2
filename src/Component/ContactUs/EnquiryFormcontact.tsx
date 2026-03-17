@@ -79,11 +79,11 @@ export default function ExcelenciFormWhite() {
                             <Globe size={20} />
                         </div>
                         <p className="uppercase tracking-[3px] text-sm text-[#c1972d] font-bold">
-                            Excelenci International
+                            Excelencia International
                         </p>
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl font-serif font-extrabold leading-tight tracking-tight text-slate-950">
+                    <h2 className="text-4xl md:text-5xl font-serif font-extrabold leading-tight tracking-tight text-blue-950">
                         Your Blueprint for <span className="text-[#c1972d]"> Global Success</span>
                     </h2>
 
@@ -160,7 +160,7 @@ export default function ExcelenciFormWhite() {
                                 <span className="w-8 h-0.5 bg-[#c1972d]">
                                 </span> Knowledge Hub
                             </motion.div>
-                            <h2 className="text-4xl md:text-5xl font-black font-serif text-slate-900 leading-tight">                    Latest <span className="text-[#c1972d]">Insights &</span> Updates </h2>
+                            <h2 className="text-4xl md:text-5xl font-black font-serif text-blue-950 leading-tight">                    Latest <span className="text-[#c1972d]">Insights &</span> Updates </h2>
                         </div>
                         <button className="hidden bg-linear-to-r from-[#c1972d] to-blue-950 md:flex items-center gap-2 px-6 py-3 rounded-full border border-slate-200 text-white font-semibold transition-colors"> View All News <ArrowUpRight size={18} />
                         </button>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import { Check, Phone } from "lucide-react"
+import image from "../../assets/aboute.jpg"
 
 export default function GlobalEducationPersonalAttention() {
   return (
@@ -18,7 +19,7 @@ export default function GlobalEducationPersonalAttention() {
             {/* Main Image with specific curved border design */}
             <div className="relative z-10 rounded-t-full rounded-b-[50px] overflow-hidden border-12 border-white shadow-2xl">
               <img
-                src="https://bracketweb.com/treck-html/main-html/assets/images/resources/about-two-img-1.jpg"
+                src={image}
                 alt="Student Guidance"
                 className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -39,7 +40,7 @@ export default function GlobalEducationPersonalAttention() {
             >
               <div className="relative">
                 <h4 className="text-5xl font-extrabold text-blue-950 leading-none">
-                  28
+                 30+
                 </h4>
                 {/* Decorative lines next to number */}
                 <div className="absolute -top-2 -right-2 space-y-1">
@@ -69,7 +70,7 @@ export default function GlobalEducationPersonalAttention() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-[1.1] text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-[1.1] text-[#c1972d]">
             Decades of Insight.  <br />
             <span className="text-blue-950">Not Just Experience.</span>
           </h2>

@@ -15,13 +15,14 @@ const sections =
   [
     {
       title: "Life-Changing Global Education Journey",
-      content: "At Excelencia International, we understand that studying abroad is not just a journey of enrollment; it’s a life-changing experience that influences one's profession, advances confidence, and introduces one to global doors of opportunity. Our goal is to offer expert advice and guidance to students who wish to pursue further education in other countries, and as one of the top student visa consultants in Mumbai, Maharashtra, India, we are committed to helping you decide on the best course and university options. We realize selecting a country, course, and university can be difficult, but with our transparent and ethical guidance, we will help you to navigate your way through the process.", image: "https://images.squarespace-cdn.com/content/v1/669a7885a3da757c38bcbb55/dcaa2199-6652-4f5b-abb4-ff339ab9e5cb/EdtoChange+New+LOGO.PNG",
+      content: "At Excelencia International, we understand that studying abroad is not just a journey of enrollment; it’s a life-changing experience that influences one's profession, advances confidence, and introduces one to global doors of opportunity. Our goal is to offer expert advice and guidance to students who wish to pursue further education in other countries, and as one of the top student visa consultants in Mumbai, Maharashtra, India, we are committed to helping you decide on the best course and university options. We realize selecting a country, course, and university can be difficult, but with our transparent and ethical guidance, we will help you to navigate your way through the process.",
+       image: "https://img.freepik.com/free-vector/global-education-student-exchange-isometric-composition-with-conceptual-image-earth-with-connections-academic-hat-vector-illustration_1284-76498.jpg?semt=ais_rp_progressive&w=740&q=80",
       icon: <Globe className="w-6 h-6" />,
     },
     {
       title: "Personalized & Ethical Counseling",
       content: "We are inspired by the notion that every student is entitled to reliable advice and ethical guidance. We're not an ordinary agency that does admissions and never looks back. Our expert counselors assess students’ profiles, their career aspirations, as well as their personal & financial constraints, to help them make an informed decision and send them abroad, selecting the right course/university while bearing in mind the future compliance. Students may be planning to study in the UK, USA, Canada, Australia, Europe, and other prominent sites of education all over the world; we provide customized guidance matching their aspirations.",
-      image: "https://www.berxi.com/wp-content/uploads/2024/05/two-therapists-discussing-ethical-standards-in-mental-health-counseling.jpg?w=643",
+      image: "https://media.easy-peasy.ai/99057590-b5e2-4dc5-a433-c317e20c4a0a/b49a93e8-341e-417a-b46d-1e6d8082d24b.png",
       icon: <Users className="w-6 h-6" />,
     },
     {
@@ -51,7 +52,7 @@ const sections =
     {
       title: "End-to-End Student Visa Guidance",
       content: "We deliver tailored support from initial counseling to successful visa approvals. At Excelencia International, we believe that every student deserves strategic guidance, transparent processes, and dedicated assistance, and we work relentlessly to provide just that at every step of your international education journey.",
-      image: "https://www.ramaoverseas.in/_next/image?url=%2Fblog%2Fvisa-consultant-ahmedabad-ghaziabad-delhi.webp&w=3840&q=75",
+      image: "https://www.shrichandimmigration.in/wp-content/uploads/2026/01/v-1.png",
       icon: <ArrowRight className="w-6 h-6" />,
     },
   ];
@@ -134,7 +135,7 @@ export default function AboutSection() {
                 </button>
 
                 {/* Image */}
-                <div className="relative h-full">
+                <div className="relative shadow-black shadow-2xl h-full">
                   <img
                     src={selected.image}
                     alt={selected.title}

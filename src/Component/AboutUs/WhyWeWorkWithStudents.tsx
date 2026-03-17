@@ -100,11 +100,7 @@ We work behind the scenes — refining SOPs, correcting documentation, preparing
                 desc: "Expanding Opportunities Worldwide",
                 icon: Globe
               },
-              {
-                title: "Global Reach-",
-                desc: "Expanding Opportunities Worldwide",
-                icon: Globe
-              }
+              
             ].map((item, i) => (
               <div key={i} className="flex gap-3 items-center">
                 <div className="bg-blue-100 p-2 rounded-lg">

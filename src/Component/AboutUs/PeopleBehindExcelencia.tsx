@@ -1,5 +1,8 @@
 import { motion } from "framer-motion"
 import { Instagram, Linkedin, Facebook } from "lucide-react"
+import imranji from "../../assets/imranji.png"
+import taranjit from "../../assets/taranjit.png"
+
 
 const leaders = [
     {
@@ -7,8 +10,7 @@ const leaders = [
         role: "CEO, Excelencia International",
         description:
             "Leads Excelencia with a focus on clarity, trust, and helping students take confident steps toward international education.",
-        image:
-            "https://media.licdn.com/dms/image/v2/D4D03AQG60aQfLxVFnw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1670563469313?e=2147483647&v=beta&t=mBLI8Fg6CJLNp_3qWg3YeTosuUlZK9uwm-CVffoXJKA",
+        image:imranji,
         instagram: "#",
         linkedin: "#",
         facebook: "#",
@@ -26,8 +28,7 @@ Being reputable in his helpfulness and with a team mindset of strong leadership,
         role: "Managing Partner, Excelencia International",
         description:
             "Works closely on student guidance and operations to ensure every journey is smooth and structured.",
-        image:
-            "https://media.licdn.com/dms/image/v2/C4D03AQGrgeJDI-Nr2w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1650800143542?e=2147483647&v=beta&t=JADpAoVxqksHZJjDfTDHpbz1Bbow1GPbyRTRiAlSbak",
+        image:taranjit,
         instagram: "#",
         linkedin: "#",
         facebook: "#",
@@ -48,7 +49,7 @@ function LeaderCard({ person, index }: any) {
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: index * 0.2 }}
-            className="group relative h-185 perspective-distant"
+            className="group relative h-195 perspective-distant"
         >
 
             <div className="relative h-full w-full duration-700 transform-3d group-hover:transform-[rotateY(180deg)]">
@@ -89,7 +90,7 @@ function LeaderCard({ person, index }: any) {
 
                 {/* BACK */}
 
-                <div className="absolute inset-0 bg-blue-950 text-white rounded-[2.5rem] p-6 overflow-y-auto transform-[rotateY(180deg)] backface-hidden">
+                <div className="absolute inset-0 bg-white text-blue-950 rounded-[2.5rem] p-6 overflow-y-auto transform-[rotateY(180deg)] backface-hidden">
 
                     <h3 className="text-2xl font-black mb-1">
                         {person.name}
@@ -98,7 +99,26 @@ function LeaderCard({ person, index }: any) {
                     <p className="text-sm text-[#c1972d] font-bold mb-4">
                         {person.role}
                     </p>
-                    {/* Social Icons */}
+              
+              {/* Quotes */}
+
+                    <div className="space-y-3 mb-6">
+                        {person.quotes.map((q: string, i: number) => (
+                            <div
+                                key={i}
+                                className="italic text-md border-l-4 border-[#c1972d] pl-3"
+                            >
+                                "{q}"
+                            </div>
+                        ))}
+                    </div>
+                    <p className="text-sm leading-relaxed text-blue-950 whitespace-pre-line mb-6">
+                        {person.details}
+                    </p>
+
+                    
+
+      {/* Social Icons */}
 
                     <div className="flex gap-4">
 
@@ -127,24 +147,6 @@ function LeaderCard({ person, index }: any) {
                         </a>
 
                     </div>
-                    <p className="text-sm leading-relaxed text-gray-200 whitespace-pre-line mb-6">
-                        {person.details}
-                    </p>
-
-                    {/* Quotes */}
-
-                    <div className="space-y-3 mb-6">
-                        {person.quotes.map((q: string, i: number) => (
-                            <div
-                                key={i}
-                                className="italic text-sm border-l-4 border-[#c1972d] pl-3"
-                            >
-                                "{q}"
-                            </div>
-                        ))}
-                    </div>
-
-
 
                 </div>
 
@@ -174,7 +176,7 @@ export default function PeopleBehindExcelencia() {
 
                     <h2 className="text-5xl md:text-7xl font-black text-blue-950 tracking-tighter mb-6">
                         The People <br className="hidden md:block" />
-                        <span className="text-[#c1972d] italic">
+                        <span className="text-[#c1972d] i">
                             Behind Excelencia
                         </span>
                     </h2>
