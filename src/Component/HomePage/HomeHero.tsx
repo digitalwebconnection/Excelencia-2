@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, Briefcase } from "lucide-react";
-import video from "../../assets/herovideo.mp4";
+// import { MapPin, Briefcase } from "lucide-react";
+import video from "../../assets/newvideo.mp4";
 
 const slides = [
   { title: "We guide. We don’t push." },
@@ -103,7 +103,7 @@ export default function HeroWithVideoAndSearchForm() {
             </div>
 
             {/* SEARCH BAR */}
-            <motion.div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl bg-white rounded-full shadow-2xl px-6 py-5 z-20 flex flex-wrap lg:flex-nowrap items-center gap-6">
+            {/* <motion.div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl bg-white rounded-full shadow-2xl px-6 py-5 z-20 flex flex-wrap lg:flex-nowrap items-center gap-6">
               <div className="flex items-center gap-3 flex-1 min-w-45">
                 <MapPin className="text-blue-950 w-5 h-5" />
                 <div>
@@ -127,7 +127,7 @@ export default function HeroWithVideoAndSearchForm() {
               <button className="ml-auto bg-linear-to-r from-[#c1972d] to-blue-950 text-white px-8 py-4 rounded-full font-semibold">
                 Submit
               </button>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         )}
 

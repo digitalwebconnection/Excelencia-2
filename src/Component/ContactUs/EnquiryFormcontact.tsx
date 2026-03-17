@@ -48,41 +48,47 @@ export default function ExcelenciFormWhite() {
     // ✅ FIXED SUBMIT HANDLER
     const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        
-        // Capture form reference immediately to prevent issues with async timing
-        const form = event.currentTarget; 
+
+        const form = event.currentTarget;
         const formData = new FormData(form);
 
         setLoading(true);
         setResult("Sending...");
 
+        // 🔥 REQUIRED (Fix spam + delivery)
         formData.append("access_key", "99f8361f-e5e4-493d-ae0a-6f3acd3d4274");
         formData.append("subject", "New Consultation Request - White Form");
+        formData.append("from_name", "Excelencia Immigration");
+        formData.append("replyto", formData.get("email") as string);
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
-                body: formData
+                headers: {
+                    Accept: "application/json", // ✅ VERY IMPORTANT (fix network + spam issues)
+                },
+                body: formData,
             });
 
             const data = await response.json();
 
-            if (data.success) {
+            if (response.ok && data.success) {
                 setResult("✅ Enquiry submitted successfully!");
-                
-                // ✅ This is the critical fix: Using the captured form constant
-                form.reset(); 
-                
-                // Clear success message after 5 seconds to keep UI clean
-                setTimeout(() => setResult(""), 5000);
+                form.reset();
+
+                setTimeout(() => setResult(""), 4000);
             } else {
-                setResult("❌ Error submitting form. Try again.");
+                setResult("❌ Submission failed. Try again.");
+                setTimeout(() => setResult(""), 4000);
             }
+
         } catch (error) {
+            console.error(error);
             setResult("❌ Network error. Please try later.");
-        } finally {
-            setLoading(false);
+            setTimeout(() => setResult(""), 4000);
         }
+
+        setLoading(false);
     };
 
     const containerVariants = {
@@ -146,6 +152,9 @@ export default function ExcelenciFormWhite() {
                     whileInView="show"
                     className="lg:col-span-7 p-10 md:p-4"
                 >
+                    <input type="hidden" name="from_name" value="Excelencia Website" />
+                    <input type="hidden" name="subject" value="New Consultation Request" /> 
+
                     <motion.div variants={itemVariants} className="mb-5">
                         <h3 className="text-4xl font-bold font-serif text-[#c1972d] mb-2">
                             Request a Consultation
@@ -157,12 +166,12 @@ export default function ExcelenciFormWhite() {
 
                     <div className="grid md:grid-cols-2 gap-x-6 gap-y-6">
                         <FormInput name="name" variants={itemVariants} type="text" placeholder="Full Name" required />
-                        <FormInput 
-                            name="phone" 
-                            variants={itemVariants} 
-                            type="tel" 
-                            placeholder="Contact Number" 
-                            required 
+                        <FormInput
+                            name="phone"
+                            variants={itemVariants}
+                            type="tel"
+                            placeholder="Contact Number"
+                            required
                             pattern="[6-9][0-9]{9}"
                             title="Please enter a valid 10-digit Indian phone number"
                         />
@@ -191,7 +200,7 @@ export default function ExcelenciFormWhite() {
                             {loading ? "Processing..." : "Submit Your Enquiry"}
                             <Send size={18} />
                         </motion.button>
-                        
+
                         {result && (
                             <p className={`mt-4 font-medium ${result.includes('✅') ? 'text-green-600' : 'text-red-500'}`}>
                                 {result}
@@ -235,7 +244,7 @@ export default function ExcelenciFormWhite() {
     );
 }
 
-function FormInput({ variants, name, ...props }: { variants: any; name: string; [key: string]: any }) {
+function FormInput({ variants, name, ...props }: { variants: any; name: string;[key: string]: any }) {
     return (
         <motion.div variants={variants}>
             <input

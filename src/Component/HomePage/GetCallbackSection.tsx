@@ -34,7 +34,7 @@ const QuietInvitationContactForm = () => {
     success: boolean;
   }
 
-  // ✅ VALIDATION FUNCTION
+  // ✅ VALIDATION
   const validate = (formData: FormData) => {
     let newErrors = { name: "", phone: "" };
 
@@ -42,26 +42,25 @@ const QuietInvitationContactForm = () => {
     const phone = formData.get("phone") as string;
 
     if (!name || name.trim().length < 3) {
-      newErrors.name = "Enter a valid name (min 3 characters)";
+      newErrors.name = "Enter valid name (min 3 characters)";
     } else if (!/^[A-Za-z\s]+$/.test(name)) {
-      newErrors.name = "Name should not contain numbers or special characters";
+      newErrors.name = "Only letters allowed";
     }
 
     if (!phone) {
-      newErrors.phone = "Phone number is required";
+      newErrors.phone = "Phone required";
     } else if (!/^[6-9]\d{9}$/.test(phone)) {
-      newErrors.phone = "Enter a valid 10-digit Indian number";
+      newErrors.phone = "Enter valid 10-digit number";
     }
 
     setErrors(newErrors);
     return !newErrors.name && !newErrors.phone;
   };
 
-  // ✅ UPDATED SUBMIT FUNCTION WITH AUTO-CLEAR
+  // ✅ SUBMIT
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    
-    // Capture the form element reference immediately
+
     const formElement = event.currentTarget;
     const formData = new FormData(formElement);
 
@@ -70,55 +69,53 @@ const QuietInvitationContactForm = () => {
     setLoading(true);
     setResult("Sending...");
 
+    // 🔥 IMPORTANT (Spam + Email Fix)
     formData.append("access_key", "99f8361f-e5e4-493d-ae0a-6f3acd3d4274");
     formData.append("subject", "New Visa Inquiry Lead");
+    formData.append("from_name", "Excelencia Immigration");
+    formData.append("replyto", formData.get("email") as string);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
+        headers: {
+          Accept: "application/json", // ✅ FIX NETWORK ERROR
+        },
         body: formData,
       });
 
       const data: Web3FormsResponse = await response.json();
 
-      if (data.success) {
+      if (response.ok && data.success) {
         setResult("✅ Message sent successfully!");
-        
-        // 1. Reset the physical HTML form fields
-        formElement.reset(); 
-        
-        // 2. Clear any validation error states
+        formElement.reset();
         setErrors({ name: "", phone: "" });
 
-        // 3. Clear the "Success" message automatically after 5 seconds
-        setTimeout(() => {
-          setResult("");
-        }, 5000);
-
+        setTimeout(() => setResult(""), 3000);
       } else {
-        setResult("❌ Something went wrong. Try again.");
+        setResult("❌ Submission failed. Try again.");
+        setTimeout(() => setResult(""), 3000);
       }
+
     } catch (error) {
-      setResult("❌ Network error. Please check your connection.");
-    } finally {
-      setLoading(false);
+      console.error(error);
+      setResult("❌ Network error. Check connection.");
+      setTimeout(() => setResult(""), 3000);
     }
+
+    setLoading(false);
   };
 
   return (
     <section className="relative z-1 w-full flex flex-col lg:flex-row overflow-hidden font-sans">
 
-      {/* LEFT SIDE */}
-      <div className="relative w-full lg:w-[55%] bg-blue-950 p-8 md:p-6 lg:p-15 max-w-7xl mx-auto z-10">
-
-        <div
-          className="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-multiply"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1600880212319-4627a58c882c?auto=format&fit=crop&q=80')` }}
-        />
+      {/* LEFT */}
+      <div className="relative w-full lg:w-[55%] bg-blue-950 p-8 md:p-6 lg:p-15 max-w-7xl mx-auto">
 
         <div className="relative z-20 max-w-xl">
-          <p className="text-white font-bold tracking-widest text-xs mb-4 uppercase flex items-center gap-2">
-            Contact Us <span className="h-px w-10 bg-white/50"></span>
+
+          <p className="text-white font-bold text-xs mb-4 uppercase">
+            Contact Us
           </p>
 
           <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#c1972d] mb-6">
@@ -126,17 +123,20 @@ const QuietInvitationContactForm = () => {
           </h2>
 
           <form onSubmit={onSubmit} className="space-y-4">
+
+            {/* HIDDEN (Spam Fix) */}
+            <input type="hidden" name="from_name" value="Excelencia Website" />
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
               <div>
                 <input
                   type="text"
                   name="name"
                   placeholder="Full Name"
-                  className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800"
+                  className="bg-white p-4 rounded-2xl w-full"
                 />
-                {errors.name && (
-                  <p className="text-red-400 text-xs mt-1">{errors.name}</p>
-                )}
+                {errors.name && <p className="text-red-400 text-xs">{errors.name}</p>}
               </div>
 
               <input
@@ -144,11 +144,12 @@ const QuietInvitationContactForm = () => {
                 name="email"
                 placeholder="Email Address"
                 required
-                className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800"
+                className="bg-white p-4 rounded-2xl w-full"
               />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
               <div>
                 <input
                   type="text"
@@ -158,18 +159,12 @@ const QuietInvitationContactForm = () => {
                   onInput={(e) => {
                     e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, '');
                   }}
-                  className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800"
+                  className="bg-white p-4 rounded-2xl w-full"
                 />
-                {errors.phone && (
-                  <p className="text-red-400 text-xs mt-1">{errors.phone}</p>
-                )}
+                {errors.phone && <p className="text-red-400 text-xs">{errors.phone}</p>}
               </div>
 
-              <select
-                name="visaType"
-                required
-                className="bg-white p-4 rounded-2xl outline-none w-full text-gray-800"
-              >
+              <select name="visaType" required className="bg-white p-4 rounded-2xl w-full">
                 <option value="">Visa Type</option>
                 <option value="Business">Business</option>
                 <option value="Student">Student</option>
@@ -181,27 +176,29 @@ const QuietInvitationContactForm = () => {
               placeholder="Tell us what you’re exploring"
               required
               rows={3}
-              className="bg-white rounded-2xl p-4 outline-none w-full text-gray-800"
+              className="bg-white p-4 rounded-2xl w-full"
             />
 
             <button
               type="submit"
               disabled={loading}
-              className="bg-linear-to-r from-[#c1972d] to-blue-950 rounded-2xl text-white font-bold py-4 px-10 uppercase tracking-widest text-sm hover:opacity-90 transition-opacity disabled:opacity-50"
+              className="bg-linear-to-r from-[#c1972d] to-blue-950 text-white py-4 px-10 rounded-2xl"
             >
               {loading ? "Sending..." : "Begin With a Conversation"}
             </button>
 
             {result && (
-              <p className={`text-sm mt-2 font-medium ${result.includes('✅') ? 'text-green-400' : 'text-red-400'}`}>
+              <p className={`text-sm ${result.includes("✅") ? "text-green-400" : "text-red-400"}`}>
                 {result}
               </p>
             )}
+
           </form>
         </div>
       </div>
 
-      {/* RIGHT SIDE */}
+      {/* RIGHT */}
+       {/* RIGHT SIDE */}
       <div className="relative w-full lg:w-[45%] min-h-112.5 bg-gray-100 flex items-center justify-center lg:justify-end lg:pr-20">
         <div
           className="absolute inset-0 grayscale contrast-75 opacity-60 bg-cover bg-center"
