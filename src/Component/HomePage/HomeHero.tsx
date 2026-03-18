@@ -45,7 +45,6 @@ export default function HeroWithVideoAndSearchForm() {
               src={video}
               autoPlay
               muted
-               loop
               playsInline
               onEnded={handleVideoEnd}
               className="w-full h-full object-cover absolute top-0 left-0   "
