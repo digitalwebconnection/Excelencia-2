@@ -61,12 +61,12 @@ export default function OurWayOfCounseling() {
             WHY EXCELENCIA INTERNATIONAL
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-serif  font-black tracking-tight text-[#c1972d] leading-tight">
+          <h2 className="text-3xl md:text-5xl font-serif  font-black tracking-tight text-[#c1972d] leading-tight">
             Not Just Admissions.
             <span className="text-blue-950"> Life Decisions.</span>
           </h2>
 
-          <p className="mt-6 text-lg md:text-xl text-slate-700 font-medium max-w-7xl mx-auto">
+          <p className="mt-6 text-md md:text-xl text-slate-700 font-medium max-w-7xl mx-auto">
        We also believe that each student’s path is unique and deserves individual attention on our part, founded on honesty and accountability.
           </p>
         </motion.div>

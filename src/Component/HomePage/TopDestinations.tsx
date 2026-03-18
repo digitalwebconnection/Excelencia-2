@@ -79,7 +79,7 @@ const destinations = [
 
 export default function CountrySlider() {
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section className="py-10 bg-white overflow-hidden">
 
       {/* Heading */}
       <div className="max-w-7xl mx-auto px-6 mb-14 text-center">

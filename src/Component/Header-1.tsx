@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import logo from "../assets/image1.png";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,32 +15,6 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // const destinations = [
-  //   "UK",
-  //   "UAE",
-  //   "Europe",
-  //   "Ireland",
-  //   "Australia",
-  //   "United States of America",
-  //   "Canada",
-  //   "New Zealand",
-  // ];
-
-  // const updates = ["News", "Blogs", "Awards", "Updates"];
-
-  // const services = [
-  //   "Profile Evaluation",
-  //   "Country, Course, University shortlisting",
-  //   "Documentation",
-  //   "Admission Assistance",
-  //   "Interview",
-  //   "Finance support",
-  //   "Career Guidance",
-  //   "Student Visa",
-  //   "Visitor Visa",
-  //   "Pre and Post arrival services",
-  // ];
 
   return (
     <header className="w-full fixed font-serif top-0 z-50">
@@ -51,154 +27,75 @@ const Header = () => {
           {/* LOGO */}
           <NavLink
             to="/"
-            className={`flex items-center transition-all duration-300 ${scrolled ? "h-6 w-62" : "h-8 w-74"
+            className={`flex items-center transition-all duration-300 ${scrolled ? "h-6 w-40" : "h-8 w-52"
               }`}
           >
-            <img
-              src={logo}
-              alt="Logo"
-              className="w-full object-contain"
-            />
+            <img src={logo} alt="Logo" className="w-full object-contain" />
           </NavLink>
 
-          {/* NAV LINKS */}
+          {/* DESKTOP MENU */}
           <ul className="hidden lg:flex items-center gap-8 text-black font-medium">
+            <li><NavLink to="/" className="hover:text-[#c1972d]">Home</NavLink></li>
+            <li><NavLink to="/about" className="hover:text-[#c1972d]">About Us</NavLink></li>
 
-            {/* Home */}
-            <li>
-              <NavLink to="/" className="hover:text-[#c1972d]">
-                Home
-              </NavLink>
+            <li className="opacity-50 cursor-not-allowed">Destination</li>
+            <li className="opacity-50 cursor-not-allowed">Collaborate</li>
+            <li className="opacity-50 cursor-not-allowed">Updates</li>
+            <li className="opacity-50 cursor-not-allowed">Services</li>
+
+            <li><NavLink to="/contact" className="hover:text-[#c1972d]">Contact</NavLink></li>
+          </ul>
+
+          {/* MOBILE MENU BUTTON */}
+          <button
+            className="lg:hidden text-black"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+
+        {/* OVERLAY */}
+        <div
+          className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity duration-300 ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+            }`}
+          onClick={() => setMenuOpen(false)}
+        />
+
+        {/* MOBILE SLIDER MENU */}
+        <div
+          className={`fixed top-0 left-0 h-full w-[80%] max-w-sm bg-white z-50 shadow-xl transform transition-transform duration-500 ease-in-out ${menuOpen ? "translate-x-0" : "-translate-x-full"
+            } rounded-r-3xl`}
+        >
+          {/* HEADER */}
+          <div className="flex items-center justify-between p-5 border-b">
+            <img src={logo} alt="Logo" className="h-8" />
+            <button onClick={() => setMenuOpen(false)}>
+              <X size={26} />
+            </button>
+          </div>
+
+          {/* MENU ITEMS */}
+          <ul className="flex flex-col gap-6 p-6 text-black font-medium">
+
+            <li onClick={() => setMenuOpen(false)}>
+              <NavLink to="/" className="hover:text-[#c1972d]">Home</NavLink>
             </li>
 
-            {/* About */}
-            <li>
-              <NavLink to="/about" className="hover:text-[#c1972d]">
-                About Us
-              </NavLink>
+            <li onClick={() => setMenuOpen(false)}>
+              <NavLink to="/about" className="hover:text-[#c1972d]">About Us</NavLink>
             </li>
 
-            {/* Destination (Disabled) */}
-            <li className="relative group opacity-50 cursor-not-allowed">
-              <span>Destination</span>
-            </li>
+            <li className="opacity-50">Destination</li>
+            <li className="opacity-50">Collaborate</li>
+            <li className="opacity-50">Updates</li>
+            <li className="opacity-50">Services</li>
 
-            {/* Collaborate (Disabled) */}
-            <li className="opacity-50 cursor-not-allowed">
-              <span>Collaborate with us</span>
-            </li>
-
-            {/* Updates (Disabled) */}
-            <li className="relative group opacity-50 cursor-not-allowed">
-              <span>Updates</span>
-            </li>
-
-            {/* Services (Disabled) */}
-            <li className="relative group opacity-50 cursor-not-allowed">
-              <span>Services</span>
-            </li>
-
-            {/* Contact */}
-            <li>
-              <NavLink to="/contact" className="hover:text-[#c1972d]">
-                Contact Us
-              </NavLink>
+            <li onClick={() => setMenuOpen(false)}>
+              <NavLink to="/contact" className="hover:text-[#c1972d]">Contact</NavLink>
             </li>
 
           </ul>
-          {/* NAV LINKS */}
-          {/* <ul className="hidden lg:flex items-center gap-8 text-black font-medium"> */}
-
-          {/* Home */}
-          {/* <li>
-              <NavLink to="/" className="hover:text-[#c1972d]">
-                Home
-              </NavLink>
-            </li> */}
-
-          {/* About */}
-          {/* <li>
-              <NavLink to="/about" className="hover:text-[#c1972d]">
-                About Us
-              </NavLink>
-            </li> */}
-
-          {/* Destination Dropdown */}
-          {/* <li className="relative group">
-              <span className="cursor-pointer hover:text-[#c1972d]">
-                Destination
-              </span>
-              <ul className="absolute left-0 top-8 bg-white shadow-lg rounded-md w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                {destinations.map((country, index) => (
-                  <li key={index}>
-                    <NavLink
-                      to={`/destination/${country
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}`}
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      {country}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </li> */}
-
-          {/* Collaborate */}
-          {/* <li>
-              <NavLink to="/collaborate" className="hover:text-[#c1972d]">
-                Collaborate with us
-              </NavLink>
-            </li> */}
-
-          {/* Updates Dropdown */}
-          {/* <li className="relative group">
-              <span className="cursor-pointer hover:text-[#c1972d]">
-                Updates
-              </span>
-              <ul className="absolute left-0 top-8 bg-white shadow-lg rounded-md w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                {updates.map((item, index) => (
-                  <li key={index}>
-                    <NavLink
-                      to={`/updates/${item.toLowerCase()}`}
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      {item}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </li> */}
-
-          {/* Services Dropdown */}
-          {/* <li className="relative group">
-              <span className="cursor-pointer hover:text-[#c1972d]">
-                Services
-              </span>
-              <ul className="absolute left-0 top-8 bg-white shadow-lg rounded-md w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 max-h-96 overflow-y-auto">
-                {services.map((service, index) => (
-                  <li key={index}>
-                    <NavLink
-                      to={`/services/${service
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}`}
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      {service}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </li> */}
-
-          {/* Contact */}
-          {/* <li>
-              <NavLink to="/contact" className="hover:text-[#c1972d]">
-                Contact Us
-              </NavLink>
-            </li> */}
-
-          {/* </ul> */}
         </div>
       </nav>
     </header>

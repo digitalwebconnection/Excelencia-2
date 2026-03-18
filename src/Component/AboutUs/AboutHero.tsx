@@ -64,7 +64,7 @@ export default function AboutHero() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-20 max-w-7xl mx-auto px-6 py-18 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 py-5 md:py-18 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
         {/* LEFT CONTENT */}
         <AnimatePresence mode="wait">
@@ -77,13 +77,13 @@ export default function AboutHero() {
             className="text-white max-w-xl"
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1 mb-6
+            <div className="inline-flex items-center gap-2 px-4 py-1 mb-4 md:mb-6
               rounded-full bg-white/10 backdrop-blur text-sm tracking-wide border border-white/20">
               {slides[active].tag}
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight">
+            <h1 className="text-3xl md:text-5xl xl:text-6xl font-extrabold leading-tight">
               {slides[active].title}
               <span className="block text-[#c1972d]">
                 {slides[active].highlight}
@@ -91,18 +91,18 @@ export default function AboutHero() {
             </h1>
 
             {/* Description */}
-            <p className="mt-6 text-lg text-blue-100/90 leading-relaxed">
+            <p className="mt-2 md:mt-6 text-md md:text-lg text-blue-100/90 leading-relaxed">
               {slides[active].desc}
             </p>
 
             {/* CTA */}
-            <div className="mt-10 flex flex-wrap gap-4">
-              <button className="px-7 py-3 rounded-full bg-[#c1972d] text-[#ffffff]
+            <div className="mt-5 md:mt-10 flex flex-wrap gap-4">
+              <button className="px-3 md:px-7 py-1 md:py-3 rounded-full bg-[#c1972d] text-[#ffffff]
                 font-semibold hover:scale-105 transition shadow-lg">
                 Apply Now →
               </button>
 
-              <button className="px-7 py-3 rounded-full border border-white/30
+              <button className="px-3 md:px-7 py-1 md:py-3 rounded-full border border-white/30
                 text-white hover:bg-white/10 transition backdrop-blur-sm">
                 Free Consultation
               </button>
@@ -124,12 +124,12 @@ export default function AboutHero() {
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="relative rounded-3xl bg-white/5 backdrop-blur-md
-              border border-white/10 p-6 shadow-2xl"
+              border border-white/10 p-3 md:p-6 shadow-2xl"
             >
               <img
                 src={slides[active].image}
                 alt="Student"
-                className="w-65 md:w-[320px] drop-shadow-2xl"
+                className="w-65 rounded-3xl  md:w-[320px] drop-shadow-2xl"
               />
 
               <div className="absolute -top-4 -right-4 px-4 py-2

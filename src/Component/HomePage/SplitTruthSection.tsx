@@ -30,7 +30,7 @@ export default function SplitTruthSection() {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white">
             Honest Guidance.
             <span className="text-[#c1972d]"> No Hidden Agendas.</span>
           </h2>
@@ -53,13 +53,13 @@ export default function SplitTruthSection() {
             whileInView={{ opacity: 1, x: 0 }}
             className="bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-md"
           >
-            <h3 className="text-[#c1972d] text-2xl font-bold mb-8">
+            <h3 className="text-[#c1972d] text-xl md:text-2xl font-bold mb-8">
               What We Do
             </h3>
 
             <ul className="space-y-6">
               {whatWeDo.map((item, i) => (
-                <li key={i} className="flex items-start gap-4 text-white text-lg">
+                <li key={i} className="flex items-start gap-4 text-white text-md md:text-lg">
                   <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
                     <Check className="text-green-400 w-5 h-5" />
                   </div>
@@ -75,13 +75,13 @@ export default function SplitTruthSection() {
             whileInView={{ opacity: 1, x: 0 }}
             className="bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-md"
           >
-            <h3 className="text-red-400 text-2xl font-bold mb-8">
+            <h3 className="text-red-400 text-xl md:text-2xl font-bold mb-8">
               What We Don't Do
             </h3>
 
             <ul className="space-y-6">
               {whatWeDont.map((item, i) => (
-                <li key={i} className="flex items-start gap-4 text-white text-lg">
+                <li key={i} className="flex items-start gap-4 text-white text-md md:text-lg">
                   <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center">
                     <X className="text-red-400 w-5 h-5" />
                   </div>
@@ -97,9 +97,9 @@ export default function SplitTruthSection() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="mt-20 text-center"
+          className="mt-10 text-center"
         >
-          <div className="inline-block px-10 py-4 rounded-full bg-linear-to-r from-[#c1972d] to-blue-950 text-white font-semibold text-lg shadow-xl">
+          <div className="inline-block px-10 py-4 rounded-full bg-linear-to-r from-[#c1972d] to-blue-950 text-white font-semibold text-md md:text-lg shadow-xl">
             Our role is to help students choose wisely — not quickly.
           </div>
         </motion.div>

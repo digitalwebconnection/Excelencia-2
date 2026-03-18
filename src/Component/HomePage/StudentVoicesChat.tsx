@@ -93,53 +93,69 @@ export default function AutoRotatingStudentVoices() {
             Student Voices
           </motion.p>
           <motion.h2 className="text-3xl md:text-4xl font-bold text-blue-950">
-            Real stories. <span className=" text-[#c1972d]">Real trust.</span> 
+            Real stories. <span className=" text-[#c1972d]">Real trust.</span>
           </motion.h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* Left: Faces (Showing only 4 at a time with animation) */}
-          <div className="flex flex-wrap justify-center gap-6 lg:gap-8 min-h-30">
+          <div className="flex  sm:flex-wrap justify-start sm:justify-center gap-4 sm:gap-6 px-2 sm:px-0 ">
             <AnimatePresence mode="popLayout">
               {visibleStudents.map((student, i) => (
                 <motion.button
                   key={student.id}
                   layout
-                  initial={{ opacity: 0, scale: 0.8 }}
+                  initial={{ opacity: 0, scale: 0.85 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.5 }}
-                  transition={{ duration: 0.5 }}
-                  onClick={() => setCurrentIndex(students.findIndex(s => s.id === student.id))}
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                  className="relative group focus:outline-none"
+                  exit={{ opacity: 0, scale: 0.6 }}
+                  transition={{ duration: 0.4 }}
+                  onClick={() =>
+                    setCurrentIndex(students.findIndex((s) => s.id === student.id))
+                  }
+                  className="relative group shrink-0 focus:outline-none"
                 >
-                  {/* Progress Ring - Only shows on the FIRST visible face (the active one) */}
-                  {i === 0 && !isHovered && (
-                    <svg className="absolute -inset-2 w-[calc(100%+16px)] h-[calc(100%+16px)] -rotate-90">
+                  {/* Progress Ring */}
+                  {i === 0 && (
+                    <svg className="absolute -inset-1 sm:-inset-2 w-[calc(100%+8px)] sm:w-[calc(100%+16px)] h-[calc(100%+8px)] sm:h-[calc(100%+16px)] -rotate-90">
                       <motion.circle
-                        cx="50%" cy="50%" r="48%"
+                        cx="50%"
+                        cy="50%"
+                        r="48%"
                         stroke="currentColor"
                         strokeWidth="2"
                         fill="transparent"
                         className="text-blue-600"
                         initial={{ pathLength: 0 }}
                         animate={{ pathLength: 1 }}
-                        transition={{ duration: AUTO_PLAY_INTERVAL / 1000, ease: "linear" }}
+                        transition={{
+                          duration: AUTO_PLAY_INTERVAL / 1000,
+                          ease: "linear",
+                        }}
                       />
                     </svg>
                   )}
 
                   <motion.div
                     animate={{
-                      scale: i === 0 ? 1.1 : 1,
+                      scale: i === 0 ? 1.05 : 0.95,
                       filter: i === 0 ? "grayscale(0%)" : "grayscale(100%)",
                     }}
-                    className={`relative w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-2 transition-all
-                      ${i === 0 ? "border-transparent" : "border-slate-100 opacity-60 group-hover:opacity-100"}`}
+                    className={`relative 
+            w-14 h-14 
+            sm:w-20 sm:h-20 
+            md:w-24 md:h-24 
+            rounded-full overflow-hidden border-2 transition-all
+            ${i === 0
+                        ? "border-blue-500 shadow-md"
+                        : "border-slate-200 opacity-70"
+                      }`}
                   >
-                    <img src={student.image} alt={student.name} className="w-full h-full object-cover" />
+                    <img
+                      src={student.image}
+                      alt={student.name}
+                      className="w-full h-full object-cover"
+                    />
                   </motion.div>
                 </motion.button>
               ))}
@@ -161,7 +177,7 @@ export default function AutoRotatingStudentVoices() {
                 transition={{ duration: 0.5 }}
               >
                 <span className="text-6xl text-blue-100 font-serif leading-none block h-8">“</span>
-                <h3 className="text-xl md:text-2xl font-medium text-slate-800 italic leading-tight">
+                <h3 className="text-md md:text-2xl font-medium text-slate-800 italic leading-tight">
                   {students[currentIndex % students.length].quote}
                 </h3>
                 <div className="mt-4">

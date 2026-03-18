@@ -32,13 +32,13 @@ export default function VisionMissionSection() {
                 <Globe size={34} className="text-blue-700 drop-shadow-lg" />
               </motion.div>
 
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-blue-950 drop-shadow-md">
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-blue-950 drop-shadow-md">
                 Our Vision
               </h2>
 
             </div>
 
-            <p className="text-lg leading-relaxed text-slate-700 drop-shadow-sm">
+            <p className="text-md md:text-lg leading-relaxed text-slate-700 drop-shadow-sm">
               At Excelencia International, our vision is to be a globally recognized leader in international education and immigration services.
               We strive to simplify the complexities of studying abroad so that students can embark on their academic journeys with clarity and confidence.
               We envision a future where every student, regardless of background, has access to quality guidance, seamless processes, and the support they need
@@ -76,13 +76,13 @@ export default function VisionMissionSection() {
                 <Target size={34} className="text-[#c1972d] drop-shadow-xl" />
               </motion.div>
 
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#c1972d] drop-shadow-lg">
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#c1972d] drop-shadow-lg">
                 Our Mission
               </h2>
 
             </div>
 
-            <p className="text-lg text-white/90 mb-8 drop-shadow-sm">
+            <p className="text-md    md:text-lg text-white/90 mb-8 drop-shadow-sm">
               Our mission at Excelencia International is to empower every student with personalized,
               ethical, and professional support as they pursue educational and career goals overseas.
             </p>
@@ -118,7 +118,7 @@ export default function VisionMissionSection() {
 
             </div>
 
-            <div className="flex gap-3 pt-10 mt-10 border-t border-white/20">
+            <div className="flex gap-3 pt-5 md:pt-10 mt-10 border-t border-white/20">
               <ShieldCheck className="text-[#c1972d] drop-shadow-md" />
               <p className="italic text-white/80 drop-shadow-sm">
                 Turning global education dreams into real opportunities.
@@ -170,17 +170,17 @@ export function CoreValuesSection() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-serif font-bold text-slate-900"
+            className="text-3xl md:text-5xl font-serif font-bold text-slate-900"
           >
             Our <span className="text-[#c1972d]">Core Values</span>
           </motion.h2>
-          <p className="mt-6 max-w-5xl mx-auto text-slate-700">
+          <p className="mt-6 max-w-5xl text-md md:text-lg mx-auto text-slate-700">
             At the heart of <b>Excelencia International</b> lie four core values that define how we serve our clients and operate as an organization.
           </p>
         </div>
 
         {/* Value Cards */}
-        <div className="space-y-14 max-w-7xl mx-auto">
+        <div className="space-y-7 md:space-y-14 max-w-7xl mx-auto">
           {values.map((value, index) => {
             const isLeft = index % 2 === 0;
 
@@ -194,12 +194,12 @@ export function CoreValuesSection() {
                 className={`relative flex w-full ${isLeft ? "justify-start" : "justify-end"}`}
               >
                 {/* The Card */}
-                <div className="relative w-full md:w-[90%] bg-white p-10 md:p-8 rounded-2xl shadow-xl shadow-slate-200 border border-slate-900/40">
+                <div className="relative w-full md:w-[90%] bg-white p-6 md:p-8 rounded-2xl shadow-xl shadow-slate-200 border border-slate-900/40">
 
                   {/* Floating Icon Holder */}
                   <div
-                    className={`absolute top-1/2 -translate-y-1/2 w-20 h-20 md:w-34 md:h-34 bg-linear-to-r from-[#c1972d]  to-blue-950 text-white rounded-full shadow-lg flex items-center justify-center border-8 border-[#f7f3e6] transition-transform duration-500 group-hover:scale-110 z-20
-                      ${isLeft ? "-right-10 md:-right-18" : "-left-10 md:-left-18"}
+                    className={`absolute top-1/2 -translate-y-1/2 w-17 h-17 md:w-34 md:h-34 bg-linear-to-r from-[#c1972d]  to-blue-950 text-white rounded-full shadow-lg flex items-center justify-center border-8 border-[#f7f3e6] transition-transform duration-500 group-hover:scale-110 z-20
+                      ${isLeft ? "-right-8 md:-right-18" : "-left-8 md:-left-18"}
                     `}
                   >
                     <value.icon size={102} strokeWidth={1.5} />
@@ -208,10 +208,10 @@ export function CoreValuesSection() {
                   {/* Content */}
                   <div className={`max-w-5xl ${isLeft ? "text-left" : "text-left md:ml-auto ps-6"}`}>
 
-                    <h3 className="text-3xl font-bold text-slate-900 mb-2 font-serif ">
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2 font-serif ">
                       {value.title}
                     </h3>
-                    <p className="text-slate-600 text-lg leading-relaxed">
+                    <p className="text-slate-600 text-md md:text-lg leading-relaxed">
                       {value.desc}
                     </p>
                   </div>

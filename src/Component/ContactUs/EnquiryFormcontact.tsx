@@ -124,15 +124,15 @@ export default function ExcelenciFormWhite() {
                         </p>
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl font-serif font-extrabold leading-tight tracking-tight text-blue-950">
+                    <h2 className="text-3xl md:text-5xl font-serif font-extrabold leading-tight tracking-tight text-blue-950">
                         Your Blueprint for <span className="text-[#c1972d]"> Global Success</span>
                     </h2>
 
-                    <p className="text-slate-600 text-lg leading-relaxed max-w-md">
+                    <p className="text-slate-600 text-md md:text-lg leading-relaxed max-w-md">
                         Expert consultation tailored for study, work, and permanent residency visas.
                     </p>
 
-                    <div className="border-t border-slate-100 pt-6 mt-8 space-y-4 text-sm text-slate-600">
+                    <div className="border-t border-slate-100 md:pt-6 mt-8 space-y-4 text-sm text-slate-600">
                         <p className="flex items-center gap-2">
                             <Target className="text-[#c1972d]" size={16} />
                             100% Case Assessment
@@ -150,13 +150,13 @@ export default function ExcelenciFormWhite() {
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="show"
-                    className="lg:col-span-7 p-10 md:p-4"
+                    className="lg:col-span-7 p-2 md:p-4"
                 >
                     <input type="hidden" name="from_name" value="Excelencia Website" />
                     <input type="hidden" name="subject" value="New Consultation Request" /> 
 
                     <motion.div variants={itemVariants} className="mb-5">
-                        <h3 className="text-4xl font-bold font-serif text-[#c1972d] mb-2">
+                        <h3 className="text-3xl md:text-4xl font-bold font-serif text-[#c1972d] mb-2">
                             Request a Consultation
                         </h3>
                         <p className="text-slate-600">
@@ -211,7 +211,7 @@ export default function ExcelenciFormWhite() {
             </div>
 
             {/* UPDATES SECTION */}
-            <section className="bg-white border-t border-black/20 mt-10 py-14 px-6">
+            <section className="bg-white border-t border-black/20 mt-10 py-14 ">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
                         <div className="max-w-2xl">
@@ -221,7 +221,7 @@ export default function ExcelenciFormWhite() {
                                 className="flex items-center gap-2 text-[#c1972d] font-bold tracking-widest uppercase text-xs mb-3" >
                                 <span className="w-8 h-0.5 bg-[#c1972d]"></span> Knowledge Hub
                             </motion.div>
-                            <h2 className="text-4xl md:text-5xl font-black font-serif text-blue-950 leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-black font-serif text-blue-950 leading-tight">
                                 Latest <span className="text-[#c1972d]">Insights &</span> Updates
                             </h2>
                         </div>
@@ -230,7 +230,7 @@ export default function ExcelenciFormWhite() {
                         </button>
                     </div>
 
-                    <div className="grid lg:grid-cols-12 gap-6">
+                    <div className="grid lg:grid-cols-12 gap-2 md:gap-6">
                         <FeaturedCard item={updates[activeIndex]} />
                         <div className="lg:col-span-6 grid sm:grid-cols-2 gap-6">
                             {updates.map((item, idx) => (
@@ -264,12 +264,12 @@ function FeaturedCard({ item }: { item: any }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-6 group relative bg-slate-900 rounded-[2.5rem] p-10 overflow-hidden flex flex-col justify-end min-h-112"
+            className="lg:col-span-6 group relative bg-slate-900 rounded-[2.5rem] p-4 md:p-10 overflow-hidden flex flex-col justify-end md:min-h-112 min-h-90 "
         >
             <div className="relative z-10">
                 <span className="bg-[#c1972d] text-white text-[10px] px-4 py-1 rounded-full">{item.category}</span>
-                <h3 className="text-3xl font-bold text-white mt-6 mb-4">{item.title}</h3>
-                <p className="text-slate-400 text-lg mb-8 max-w-md">{item.desc}</p>
+                <h3 className= "text-2xl md:text-3xl font-bold text-white mt-2 md:mt-6 mb-4">{item.title}</h3>
+                <p className="text-slate-400 text-md md:text-lg mb-8 max-w-md">{item.desc}</p>
                 <div className="flex justify-between border-t border-white/10 pt-6">
                     <span className="text-slate-500 text-sm">{item.date}</span>
                     <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
@@ -287,10 +287,10 @@ function SecondaryCard({ item, index }: { item: any; index: number }) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="group bg-slate-100 border border-[#c1972d] p-8 rounded-4xl hover:shadow-xl transition"
+            className="group bg-slate-100 border border-[#c1972d] p-4 md:p-8 rounded-4xl hover:shadow-xl transition"
         >
             <div className="text-[#c1972d] mb-6 p-3 bg-white w-fit rounded-2xl shadow-sm">{item.icon}</div>
-            <h3 className="text-xl font-bold text-[#c1972d] leading-snug">{item.title}</h3>
+            <h3 className="text-lg md:text-xl font-bold text-[#c1972d] leading-snug">{item.title}</h3>
             <p className="text-slate-500 text-sm mt-4">{item.desc}</p>
             <div className="mt-6 flex justify-between text-xs uppercase">
                 <span className="text-slate-400">{item.date}</span>

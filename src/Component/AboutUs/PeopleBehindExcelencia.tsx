@@ -43,55 +43,57 @@ To him, the key to sustainable growth is found in the close relationships, pract
     }
 ]
 
+import { useState } from "react";
+
+
 function LeaderCard({ person, index }: any) {
+    const [flipped, setFlipped] = useState(false);
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: index * 0.2 }}
-            className="group relative h-195 perspective-distant"
+            className="group relative h-140 md:h-195 perspective-distant"
+            onClick={() => setFlipped(!flipped)} // 👈 mobile click flip
         >
-
-            <div className="relative h-full w-full duration-700 transform-3d group-hover:transform-[rotateY(180deg)]">
-
+            <div
+                className={`
+                    relative h-125 md:h-full w-full duration-700 transform-3d
+                    ${flipped ? "rotate-y-180" : ""}
+                    md:group-hover:rotate-y-180
+                `}
+            >
                 {/* FRONT */}
-
                 <div className="absolute inset-0 bg-white rounded-[2.5rem] p-4 shadow-xl backface-hidden">
-
-                    <div className="relative h-135 rounded-3xl overflow-hidden">
-
+                    
+                    <div className="relative h-80 md:h-135 rounded-3xl overflow-hidden">
                         <img
                             src={person.image}
                             alt={person.name}
                             className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                         />
-
                         <div className="absolute inset-0 bg-linear-to-t from-[#1a2b3b]/80 to-transparent" />
-
                     </div>
 
                     <div className="px-5 py-5 text-[#1a2b3b]">
-
-                        <h3 className="text-2xl font-black mb-1">
+                        <h3 className="text-xl md:text-2xl font-black mb-1">
                             {person.name}
                         </h3>
 
-                        <p className="text-sm font-bold uppercase tracking-widest mb-3">
+                        <p className="text-xs md:text-sm font-bold uppercase tracking-widest mb-3">
                             {person.role}
                         </p>
 
-                        <p className="text-sm text-gray-600">
+                        <p className="text-xs md:text-sm text-gray-600">
                             {person.description}
                         </p>
-
                     </div>
-
                 </div>
 
                 {/* BACK */}
-
-                <div className="absolute inset-0 bg-white text-blue-950 rounded-[2.5rem] p-6 overflow-y-auto transform-[rotateY(180deg)] backface-hidden">
-
+                <div className="absolute inset-0 bg-white text-blue-950 rounded-[2.5rem] p-6 overflow-y-auto rotate-y-180 backface-hidden">
+                    
                     <h3 className="text-2xl font-black mb-1">
                         {person.name}
                     </h3>
@@ -99,9 +101,8 @@ function LeaderCard({ person, index }: any) {
                     <p className="text-sm text-[#c1972d] font-bold mb-4">
                         {person.role}
                     </p>
-              
-              {/* Quotes */}
 
+                    {/* Quotes */}
                     <div className="space-y-3 mb-6">
                         {person.quotes.map((q: string, i: number) => (
                             <div
@@ -112,55 +113,42 @@ function LeaderCard({ person, index }: any) {
                             </div>
                         ))}
                     </div>
+
                     <p className="text-sm leading-relaxed text-blue-950 whitespace-pre-line mb-6">
                         {person.details}
                     </p>
 
-                    
-
-      {/* Social Icons */}
-
+                    {/* Social Icons */}
                     <div className="flex gap-4">
-
-                        <a
-                            href={person.instagram}
-                            target="_blank"
-                            className="p-3 rounded-full bg-pink-500/20 hover:bg-pink-500 transition"
-                        >
-                            <Instagram size={18} />
+                        <a href={person.instagram} target="_blank">
+                            <div className="p-3 rounded-full bg-pink-500/20 hover:bg-pink-500 transition">
+                                <Instagram size={18} />
+                            </div>
                         </a>
 
-                        <a
-                            href={person.linkedin}
-                            target="_blank"
-                            className="p-3 rounded-full bg-blue-500/20 hover:bg-blue-500 transition"
-                        >
-                            <Linkedin size={18} />
+                        <a href={person.linkedin} target="_blank">
+                            <div className="p-3 rounded-full bg-blue-500/20 hover:bg-blue-500 transition">
+                                <Linkedin size={18} />
+                            </div>
                         </a>
 
-                        <a
-                            href={person.facebook}
-                            target="_blank"
-                            className="p-3 rounded-full bg-blue-500/20 hover:bg-blue-700 transition"
-                        >
-                            <Facebook size={18} />
+                        <a href={person.facebook} target="_blank">
+                            <div className="p-3 rounded-full bg-blue-500/20 hover:bg-blue-700 transition">
+                                <Facebook size={18} />
+                            </div>
                         </a>
-
                     </div>
-
                 </div>
-
             </div>
-
         </motion.div>
-    )
+    );
 }
 
 export default function PeopleBehindExcelencia() {
 
     return (
 
-        <section className="py-20 bg-[#fcfcfc]">
+        <section className="py-10 md:py-20 bg-[#fcfcfc]">
 
             <div className="max-w-7xl mx-auto px-6">
 
@@ -174,14 +162,14 @@ export default function PeopleBehindExcelencia() {
                         </span>
                     </div>
 
-                    <h2 className="text-5xl md:text-7xl font-black text-blue-950 tracking-tighter mb-6">
+                    <h2 className="text-4xl md:text-7xl font-black text-blue-950 tracking-tighter mb-6">
                         The People <br className="hidden md:block" />
                         <span className="text-[#c1972d] i">
                             Behind Excelencia
                         </span>
                     </h2>
 
-                    <p className="max-w-7xl mx-auto text-lg font-medium leading-relaxed">
+                    <p className="max-w-7xl mx-auto text-md md:text-lg font-medium leading-relaxed">
                         Bridging the gap between local ambition and global opportunity through structured leadership and empathetic guidance.
                     </p>
 
@@ -189,7 +177,7 @@ export default function PeopleBehindExcelencia() {
 
                 {/* Cards */}
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2  md:gap-12">
                     {leaders.map((person, index) => (
                         <LeaderCard
                             key={index}

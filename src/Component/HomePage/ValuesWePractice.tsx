@@ -43,10 +43,10 @@ const StudentJourney = () => {
       <div className="max-w-7xl mx-auto">
         
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-serif md:text-5xl font-bold text-[#c1972d] tracking-tight">
+          <h2 className="text-3xl font-serif md:text-5xl font-bold text-[#c1972d] tracking-tight">
             Our <span className="text-blue-950">Process</span>
           </h2>
-          <p className="mt-4 text-gray-500 text-lg max-w-xl mx-auto">
+          <p className="mt-4 text-gray-500 text-sm md:text-lg max-w-xl mx-auto">
             A seamless, step-by-step guide to your international success.
           </p>
         </div>

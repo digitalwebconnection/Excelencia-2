@@ -61,15 +61,15 @@ export default function AboutSection() {
   const [selected, setSelected] = useState<(typeof sections)[0] | null>(null);
 
   return (
-    <section className="bg-slate-50 py-14 px-6 font-sans">
+    <section className="bg-slate-50 py-7 md:py-14 px-6 font-sans">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl md-10 md:mb-16">
           <h2 className="text-sm font-bold tracking-widest text-[#c1972d] uppercase mb-3">
             Excellence Defined
           </h2>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight">
             Why Choose Excelencia?
           </h1>
           <div className="h-1.5 w-20 bg-[#c1972d] mt-6 rounded-full"></div>

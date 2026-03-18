@@ -42,7 +42,7 @@ export default function ParentsPeaceOfMind() {
             For Parents, With Care
           </p>
 
-          <h2 className="text-4xl font-bold text-[#c1972d] mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#c1972d] mb-6 leading-tight">
             Because trust matters as much as dreams.
           </h2>
 

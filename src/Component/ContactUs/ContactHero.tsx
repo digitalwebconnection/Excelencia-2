@@ -46,7 +46,7 @@ export default function ContactHero() {
             initial="hidden"
             animate="visible"
             variants={fadeIn}
-            className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6"
+            className="text-3xl md:text-7xl font-extrabold tracking-tight mb-6"
           >
             Let’s build something{" "}
             <span className="text-[#c1972d]">together.</span>
@@ -57,7 +57,7 @@ export default function ContactHero() {
             initial="hidden"
             animate="visible"
             variants={fadeIn}
-            className="text-lg text-slate-300 leading-relaxed"
+            className="text-md md:text-lg text-slate-300 leading-relaxed"
           >
             Whether you're in Mumbai or Dubai, our global team is ready to provide
             the guidance and technical solutions your business deserves.
@@ -120,7 +120,7 @@ function ContactMethodCard({ icon, label, value, href }: ContactMethodProps) {
   return (
     <a
       href={href}
-      className="flex items-center gap-5 p-8 rounded-2xl bg-black/30  backdrop-blur-md border border-white/10 hover:border-[#c1972d]/50 hover:bg-white/10 transition-all group"
+      className="flex items-center gap-5 p-4 md:p-8 rounded-2xl bg-black/30  backdrop-blur-md border border-white/10 hover:border-[#c1972d]/50 hover:bg-white/10 transition-all group"
     >
       <div className="p-3 rounded-xl bg-[#c1972d]/10 text-[#c1972d] group-hover:scale-110 transition-transform">
         {icon}
@@ -157,7 +157,7 @@ function LocationCard({ country, address, tag, index }: LocationCardProps) {
       initial="hidden"
       animate="visible"
       variants={fadeIn}
-      className="relative group overflow-hidden rounded-3xl bg-black/30 backdrop-blur-md border border-white/10 p-6 hover:border-[#c1972d]/60 transition-colors"
+      className="relative group overflow-hidden rounded-3xl bg-black/30 backdrop-blur-md border border-white/10 p-4 md:p-6 hover:border-[#c1972d]/60 transition-colors"
     >
       <div className="relative z-10">
 

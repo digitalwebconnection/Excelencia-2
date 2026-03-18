@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Check, Phone } from "lucide-react"
+import { Check} from "lucide-react"
 import image from "../../assets/aboute.jpg"
 
 export default function GlobalEducationPersonalAttention() {
@@ -39,7 +39,7 @@ export default function GlobalEducationPersonalAttention() {
               className="absolute bottom-10 -left-8 z-20 bg-white shadow-2xl rounded-2xl p-6 flex items-center gap-4 border-l-4 border-blue-950"
             >
               <div className="relative">
-                <h4 className="text-5xl font-extrabold text-blue-950 leading-none">
+                <h4 className="text-3xl md:text-5xl font-extrabold text-blue-950 leading-none">
                  30+
                 </h4>
                 {/* Decorative lines next to number */}
@@ -70,32 +70,32 @@ export default function GlobalEducationPersonalAttention() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-[1.1] text-[#c1972d]">
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-6 leading-[1.1] text-[#c1972d]">
             Decades of Insight.  <br />
             <span className="text-blue-950">Not Just Experience.</span>
           </h2>
 
           {/* Description */}
-          <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+          <p className="text-gray-600 text-md md:text-lg mb-8 leading-relaxed">
             With years of hands-on visa advisory experience, we’ve seen policies change, requirements tighten, and trends evolve. That experience allows us to anticipate challenges before they arise — not react after rejection.
           </p>
 
           {/* Feature List (Icon circles from image_f255f9) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+          <div className="grid grid-cols-2 gap-6 mb-10">
             <div className="flex items-center gap-4 group">
-              <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-950 transition-colors duration-300 shadow-sm">
-                <Check className="w-5 h-5 text-blue-950 group-hover:text-white" />
+              <div className="md:w-12 w-9 md:h-12 h-9 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-950 transition-colors duration-300 shadow-sm">
+                <Check className="w-5 h-5  text-blue-950 group-hover:text-white" />
               </div>
-              <p className="font-bold text-gray-800 text-sm">
+              <p className="font-bold text-gray-800 text-xs md:text-sm">
                 We don’t guess <br /> outcomes.
               </p>
             </div>
 
             <div className="flex items-center gap-4 group">
-              <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-950 transition-colors duration-300 shadow-sm">
+              <div className="md:w-12 w-9 md:h-12 h-9 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-950 transition-colors duration-300 shadow-sm">
                 <Check className="w-5 h-5 text-blue-950 group-hover:text-white" />
               </div>
-              <p className="font-bold text-gray-800 text-sm">
+              <p className="font-bold text-gray-800 text-xs md:text-sm">
                 We prepare for <br /> them.
               </p>
             </div>
@@ -125,20 +125,11 @@ export default function GlobalEducationPersonalAttention() {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 rounded-lg text-white font-black text-sm uppercase tracking-widest bg-linear-to-r from-[#c1972d] to-blue-950 hover:bg-blue-950 transition-all duration-300 shadow-lg shadow-red-600/20"
+              className="px-10 py-5 rounded-lg text-white font-black text-sm uppercase tracking-widest bg-linear-to-r from-[#c1972d] to-blue-950 hover:bg-blue-950 transition-all duration-300 shadow-lg shadow-[#c1972d]/20"
             >
               Discover More
             </motion.button>
 
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-full border-2 border-gray-100 flex items-center justify-center shadow-sm bg-white  transition-colors">
-                <Phone className="w-6 h-6 text-blue-950" />
-              </div>
-              <div>
-                <p className="text-xs text-gray-400 font-bold uppercase tracking-widest">Have Question?</p>
-                <p className="text-xl font-black text-gray-900">+91 8800 9850</p>
-              </div>
-            </div>
           </div>
         </motion.div>
 

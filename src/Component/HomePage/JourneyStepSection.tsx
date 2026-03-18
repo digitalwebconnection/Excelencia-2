@@ -14,11 +14,11 @@ export default function JourneyStepSection() {
   ];
 
   return (
-    <section className="relative w-full bg-white overflow-hidden py-20">
+    <section className="relative w-full bg-white overflow-hidden py-10">
       {/* Background Decorative Element */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-0 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-0 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         {/* LEFT CONTENT */}
         <div className="relative z-10">
@@ -33,11 +33,11 @@ export default function JourneyStepSection() {
               Begin With Clarity
             </p>
 
-            <h2 className="text-4xl md:text-5xl font-serif font-black text-blue-950 leading-[1.1] mb-6">
+            <h2 className="text-3xl md:text-5xl font-serif font-black text-blue-950 leading-[1.1] mb-6">
               Before You Cross Borders, <span className="text-[#c1972d]"> You Cross Doubt.</span>
             </h2>
 
-            <p className="text-slate-600 leading-relaxed max-w-xl mb-6 text-lg">
+            <p className="text-slate-600 leading-relaxed max-w-xl mb-6 text-md md:text-lg">
               Every student stands at the edge of uncertainty.
               Our role isn’t to push you forward — it’s to make sure you’re ready.
             </p>

@@ -36,7 +36,7 @@ export default function StudentVisionSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.9 }}
-            className="text-4xl  md:text-5xl font-serif font-semibold text-white leading-tight"
+            className="text-3xl  md:text-5xl font-serif font-semibold text-white leading-tight"
           >
             Your Dream Deserves  <br />
             <span className="text-[#c1972d]">Honest Guidance.</span>
@@ -53,7 +53,7 @@ export default function StudentVisionSection() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-gray-100 text-lg md:text-xl leading-relaxed space-y-6"
+              className="text-gray-100 text-md md:text-xl leading-relaxed space-y-6"
             >
               <p>
                 Deciding to study abroad may be one of the most beneficial and life-changing decisions a student ever makes.

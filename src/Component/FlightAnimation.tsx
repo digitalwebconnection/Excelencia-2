@@ -75,7 +75,7 @@ const FullPageLoader = () => {
 
 
                         </motion.div>
-                        <div className=" text-blue-950 text-6xl  font-serif mt-5 font-bold">
+                        <div className=" text-blue-950 text-4xl text-center md:text-6xl  font-serif mt-5 font-bold">
                             Welcome to Excelencia international
                         </div>
                     </motion.div>

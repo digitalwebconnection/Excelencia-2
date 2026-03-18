@@ -58,7 +58,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export default function ExcelenciaExperience() {
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="relative py-10 md:py-24 bg-white overflow-hidden">
       {/* Background Subtle Gradient Blobs */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50 -z-10" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#c1972d]/10 rounded-full blur-3xl opacity-30 -z-10" />
@@ -79,7 +79,7 @@ export default function ExcelenciaExperience() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-black text-[#1a2b3b] text-center  tracking-tighter"
+            className="text-3xl md:text-6xl font-black text-[#1a2b3b] text-center  tracking-tighter"
           >
             The <span className="text-[#c1972d] relative">
               Excelencia
@@ -116,7 +116,7 @@ function StatCard({ item, index }: { item: typeof stats[0], index: number }) {
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
       className={`
-        relative px-8 py-16 text-center group
+        relative px-4 md:px-8 py-5 md:py-16 text-center group
         border-gray-100 
         md:border-r border-b lg:border-b-0 last:border-r-0
         hover:bg-linear-to-r from-[#c1972d] to-blue-950 duration-500
@@ -152,7 +152,7 @@ function StatCard({ item, index }: { item: typeof stats[0], index: number }) {
         <h4 className="text-md font-bold text-[#1a2b3b] group-hover:text-[#ffffff] mb-3 uppercase tracking-wider transition-colors duration-500">
           {item.title}
         </h4>
-        <p className="text-gray-500 text-sm leading-relaxed max-w-50 mx-auto group-hover:text-white transition-colors duration-500">
+        <p className="text-gray-500 text-sm leading-relaxed max-w-80 mx-auto group-hover:text-white transition-colors duration-500">
           {item.desc}
         </p>
       </div>

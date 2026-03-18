@@ -118,7 +118,7 @@ const QuietInvitationContactForm = () => {
             Contact Us
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#c1972d] mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#c1972d] mb-6">
             It All Begins With A Conversation
           </h2>
 
