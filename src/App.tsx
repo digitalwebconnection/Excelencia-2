@@ -8,6 +8,7 @@ import AboutUsMain from "./Component/AboutUs/AboutUsMain";
 import ContactUsMain from "./Component/ContactUs/ContactUsMain";
 import FlightAnimation from "./Component/FlightAnimation";
 import UkMain from "./Component/Destination/uk/UkMain";
+import ServicesMain from "./Component/Services/ServicesMain";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<HomeMain />} />
           <Route path="/about" element={<AboutUsMain/>} />
           <Route path="/contact" element={<ContactUsMain/>} />
+          <Route path="/Services" element={<ServicesMain/>}/>
           <Route path="/destination/Uk" element={<UkMain/>}/>
         </Routes>
       </main>

@@ -1,0 +1,193 @@
+.roadmap-section {
+  position: relative;
+  width: 100%;
+  background-color: #f8fafc;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+
+
+.roadmap-header {
+  text-align: center;
+
+}
+
+.roadmap-header h2 {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #132644;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+}
+
+
+
+.roadmap-header p {
+  color: #64748b;
+  margin-top: 8px;
+}
+
+.roadmap-visual-area {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+/* Road Styles */
+.road-svg-element {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.road-path-bg {
+  fill: none;
+  stroke: #475569;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.road-path-dashed {
+  fill: none;
+  stroke: white;
+  stroke-width: 0.4;
+  stroke-dasharray: 2, 2;
+  stroke-linecap: round;
+}
+
+/* Student Icon */
+.student-mover {
+  position: absolute;
+  z-index: 50;
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+}
+
+.student-icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.student-circle {
+  background-color: white;
+  padding: 8px;
+  border-radius: 9999px;
+  border: 2px solid #c1972d;
+  color: #c1972d;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.student-shadow {
+  width: 16px;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+  margin-top: 4px;
+  filter: blur(1px);
+}
+
+/* Step Nodes */
+.step-node {
+  position: absolute;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
+.step-pin {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 4px solid white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.step-id-text {
+  color: white;
+  font-weight: 900;
+  font-size: 0.75rem;
+}
+
+.step-node.active {
+  z-index: 20;
+}
+
+.step-node.active .step-pin {
+  transform: scale(1.1);
+}
+
+/* Card Styling */
+.step-card {
+  position: absolute;
+  width: 150px;
+  background-color: white;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px #c1972d;
+  border-left: 4px solid;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pos-top {
+  bottom: 48px;
+}
+
+.pos-bottom {
+  top: 48px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.card-icon {
+  padding: 4px;
+  background-color: #f1f5f9;
+  border-radius: 4px;
+}
+
+.step-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.25;
+}
+
+/* Plane Takeoff */
+.takeoff-container {
+
+  position: absolute;
+  z-index: 60;
+  color: #c1972d;
+}
+
+.plane-trail {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  height: 2px;
+  width: 80px;
+  background: linear-gradient(to left, #c1972d, transparent);
+  transform: translateY(-50%);
+  opacity: 0.5;
+}

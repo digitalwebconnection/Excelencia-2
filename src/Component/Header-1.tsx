@@ -41,7 +41,8 @@ const Header = () => {
             <li className="opacity-50 cursor-not-allowed">Destination</li>
             <li className="opacity-50 cursor-not-allowed">Collaborate</li>
             <li className="opacity-50 cursor-not-allowed">Updates</li>
-            <li className="opacity-50 cursor-not-allowed">Services</li>
+            <li><NavLink to="/Services" className="hover:text-[#c1972d]">Services</NavLink></li>
+
 
             <li><NavLink to="/contact" className="hover:text-[#c1972d]">Contact</NavLink></li>
           </ul>
@@ -89,7 +90,9 @@ const Header = () => {
             <li className="opacity-50">Destination</li>
             <li className="opacity-50">Collaborate</li>
             <li className="opacity-50">Updates</li>
-            <li className="opacity-50">Services</li>
+            <li onClick={() => setMenuOpen(false)}>
+              <NavLink to="/Services" className="hover:text-[#c1972d]">Services</NavLink>
+            </li>
 
             <li onClick={() => setMenuOpen(false)}>
               <NavLink to="/contact" className="hover:text-[#c1972d]">Contact</NavLink>
