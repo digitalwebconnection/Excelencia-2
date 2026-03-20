@@ -58,7 +58,7 @@ export default function AgencyAwards() {
         >
           <div className="flex items-center gap-2 mb-6">
             <div className="h-0.5 w-12 bg-[#c1972d]" />
-            <p className="text-xs tracking-[0.3em] text-gray-400 uppercase font-bold">
+            <p className="text-xs tracking-[0.3em] text-gray-400   font-bold">
               They Trust Us
             </p>
           </div>
@@ -108,7 +108,7 @@ export default function AgencyAwards() {
                 transition-all duration-500 shadow-2xl
               "
             >
-              <span className="text-[10px] tracking-widest text-gray-500 uppercase mb-6 font-bold">
+              <span className="text-[10px] tracking-widest text-gray-500   mb-6 font-bold">
                 {award.year} Award
               </span>
 
@@ -130,7 +130,7 @@ export default function AgencyAwards() {
               <h4 className="text-lg font-bold text-center mb-2">
                 {award.title}
               </h4>
-              <p className="text-[10px] text-gray-400 uppercase tracking-tight">
+              <p className="text-[10px] text-gray-400   tracking-tight">
                 {award.subtitle}
               </p>
             </motion.div>

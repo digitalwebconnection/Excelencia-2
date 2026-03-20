@@ -57,7 +57,7 @@ export default function OurWayOfCounseling() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <p className="uppercase tracking-[0.35em] text-blue-950 font-bold text-md mb-4">
+          <p className="  tracking-[0.35em] text-blue-950 font-bold text-md mb-4">
             WHY EXCELENCIA INTERNATIONAL
           </p>
 

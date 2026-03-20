@@ -38,7 +38,7 @@ export default function ParentsPeaceOfMind() {
 
         {/* RIGHT — CONTENT */}
         <div>
-          <p className="text-sm uppercase tracking-widest text-blue-950 font-semibold mb-4">
+          <p className="text-sm   tracking-widest text-blue-950 font-semibold mb-4">
             For Parents, With Care
           </p>
 

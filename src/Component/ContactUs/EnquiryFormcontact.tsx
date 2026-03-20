@@ -119,7 +119,7 @@ export default function ExcelenciFormWhite() {
                         <div className="w-10 h-10 rounded-full bg-[#c1972d]/10 flex items-center justify-center text-[#c1972d]">
                             <Globe size={20} />
                         </div>
-                        <p className="uppercase tracking-[3px] text-sm text-[#c1972d] font-bold">
+                        <p className="  tracking-[3px] text-sm text-[#c1972d] font-bold">
                             Excelencia International
                         </p>
                     </div>
@@ -218,7 +218,7 @@ export default function ExcelenciFormWhite() {
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
-                                className="flex items-center gap-2 text-[#c1972d] font-bold tracking-widest uppercase text-xs mb-3" >
+                                className="flex items-center gap-2 text-[#c1972d] font-bold tracking-widest   text-xs mb-3" >
                                 <span className="w-8 h-0.5 bg-[#c1972d]"></span> Knowledge Hub
                             </motion.div>
                             <h2 className="text-3xl md:text-5xl font-black font-serif text-blue-950 leading-tight">
@@ -292,7 +292,7 @@ function SecondaryCard({ item, index }: { item: any; index: number }) {
             <div className="text-[#c1972d] mb-6 p-3 bg-white w-fit rounded-2xl shadow-sm">{item.icon}</div>
             <h3 className="text-lg md:text-xl font-bold text-[#c1972d] leading-snug">{item.title}</h3>
             <p className="text-slate-500 text-sm mt-4">{item.desc}</p>
-            <div className="mt-6 flex justify-between text-xs uppercase">
+            <div className="mt-6 flex justify-between text-xs  ">
                 <span className="text-slate-400">{item.date}</span>
                 <span className="flex items-center gap-1">Read <ArrowUpRight size={14} /></span>
             </div>

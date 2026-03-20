@@ -71,7 +71,7 @@ export default function ExcelenciaExperience() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="px-4 py-1 rounded-full bg-blue-50 text-blue-950 text-xs font-bold tracking-widest uppercase mb-4 border border-blue-100"
+            className="px-4 py-1 rounded-full bg-blue-50 text-blue-950 text-xs font-bold tracking-widest   mb-4 border border-blue-100"
           >
             Did You Know
           </motion.div>
@@ -149,7 +149,7 @@ function StatCard({ item, index }: { item: typeof stats[0], index: number }) {
 
       {/* Text Content */}
       <div className="relative z-10">
-        <h4 className="text-md font-bold text-[#1a2b3b] group-hover:text-[#ffffff] mb-3 uppercase tracking-wider transition-colors duration-500">
+        <h4 className="text-md font-bold text-[#1a2b3b] group-hover:text-[#ffffff] mb-3   tracking-wider transition-colors duration-500">
           {item.title}
         </h4>
         <p className="text-gray-500 text-sm leading-relaxed max-w-80 mx-auto group-hover:text-white transition-colors duration-500">

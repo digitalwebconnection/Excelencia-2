@@ -67,7 +67,7 @@ const KineticTuition: React.FC = () => {
             <motion.p 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-[#c1972d] font-bold tracking-[0.4em] uppercase text-[10px] mb-4"
+              className="text-[#c1972d] font-bold tracking-[0.4em]   text-[10px] mb-4"
             >
               Academic Session 2026 / 2027
             </motion.p>
@@ -136,7 +136,7 @@ const KineticTuition: React.FC = () => {
               >
                 <div className="mb-8 inline-flex items-center gap-3">
                   <span className="h-px w-8 bg-[#c1972d]"></span>
-                  <span className="text-[#c1972d] text-[10px] font-black uppercase tracking-[0.3em]">Estimated Range</span>
+                  <span className="text-[#c1972d] text-[10px] font-black   tracking-[0.3em]">Estimated Range</span>
                 </div>
                 
                 <div className="text-6xl md:text-8xl font-black text-blue-950 tracking-tighter mb-6 leading-none">
@@ -155,7 +155,7 @@ const KineticTuition: React.FC = () => {
                 <motion.button
                   whileHover={{ scale: 1.02, backgroundColor: "#c1972d" }}
                   whileTap={{ scale: 0.98 }}
-                  className="mt-12 px-12 py-3 bg-linear-to-r from-[#c1972d] to-blue-950 rounded-full     text-white font-bold text-xs uppercase tracking-[0.3em] transition-colors duration-300 flex items-center gap-4 mx-auto lg:mx-0"
+                  className="mt-12 px-12 py-3 bg-linear-to-r from-[#c1972d] to-blue-950 rounded-full     text-white font-bold text-xs   tracking-[0.3em] transition-colors duration-300 flex items-center gap-4 mx-auto lg:mx-0"
                 >
                   View Details
                   <span className="text-lg">→</span>
@@ -168,7 +168,7 @@ const KineticTuition: React.FC = () => {
       
       {/* Bottom Status bar */}
       <div className="absolute bottom-12 left-12 right-12 flex justify-between items-center opacity-30">
-        <div className="text-[10px] font-bold tracking-[0.2em] uppercase text-blue-950">
+        <div className="text-[10px] font-bold tracking-[0.2em]   text-blue-950">
           UK Higher Education System
         </div>
         <div className="flex gap-2">

@@ -27,7 +27,7 @@ export default function StudentVisionSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-sm w-55 tracking-widest bg-[#c1972d] px-5 py-1 rounded-2xl text-white uppercase mb-4"
+            className="text-sm w-55 tracking-widest bg-[#c1972d] px-5 py-1 rounded-2xl text-white   mb-4"
           >
             How We See Students
           </motion.h2>

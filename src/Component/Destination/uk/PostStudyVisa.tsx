@@ -28,7 +28,7 @@ const PostStudyVisa = () => {
                         </div>
                         <div>
                             <p className="text-blue-950 font-black text-2xl">Graduate Route</p>
-                            <p className="text-gray-400 text-sm font-bold tracking-widest uppercase italic">No Job Offer Required</p>
+                            <p className="text-gray-400 text-sm font-bold tracking-widest   italic">No Job Offer Required</p>
                         </div>
                     </div>
 
@@ -46,7 +46,7 @@ const PostStudyVisa = () => {
                                 <span className="text-6xl font-black text-blue-950/10 group-hover:text-blue-950 transition-colors">02</span>
                                 <div>
                                     <h4 className="text-2xl font-black text-blue-950">Bachelor's / Master's</h4>
-                                    <p className="text-gray-400 font-bold text-xs uppercase tracking-widest mt-1">24 Months Unrestricted Access</p>
+                                    <p className="text-gray-400 font-bold text-xs   tracking-widest mt-1">24 Months Unrestricted Access</p>
                                 </div>
                             </div>
                             <ArrowUpRight className="text-[#c1972d] opacity-0 group-hover:opacity-100 transition-all" />
@@ -61,7 +61,7 @@ const PostStudyVisa = () => {
                                 <span className="text-6xl font-black text-blue-950/10 group-hover:text-blue-950 transition-colors">03</span>
                                 <div>
                                     <h4 className="text-2xl font-black text-blue-950">Doctoral / PhD</h4>
-                                    <p className="text-gray-400 font-bold text-xs uppercase tracking-widest mt-1">36 Months Specialized Permit</p>
+                                    <p className="text-gray-400 font-bold text-xs   tracking-widest mt-1">36 Months Specialized Permit</p>
                                 </div>
                             </div>
                             <ArrowUpRight className="text-[#c1972d] opacity-0 group-hover:opacity-100 transition-all" />
@@ -69,7 +69,7 @@ const PostStudyVisa = () => {
                     </div>
 
                     <div className="mt-10 flex flex-wrap gap-8">
-                        <button className="bg-linear-to-r from-[#c1972d] to-blue-950 text-white px-10 py-5 rounded-full font-black text-sm uppercase tracking-widest hover:bg-[#c1972d] transition-all transform hover:scale-105 shadow-2xl">
+                        <button className="bg-linear-to-r from-[#c1972d] to-blue-950 text-white px-10 py-5 rounded-full font-black text-sm   tracking-widest hover:bg-[#c1972d] transition-all transform hover:scale-105 shadow-2xl">
                             Initiate Application
                         </button>
                         <div className="flex items-center gap-3">
@@ -80,7 +80,7 @@ const PostStudyVisa = () => {
                                     </div>
                                 ))}
                             </div>
-                            <p className="text-gray-400 text-[10px] font-bold uppercase tracking-widest">
+                            <p className="text-gray-400 text-[10px] font-bold   tracking-widest">
                                 <span className="text-blue-950 font-black">5000+</span> Students Processed
                             </p>
                         </div>
@@ -106,7 +106,7 @@ const PostStudyVisa = () => {
                         className="flex items-center gap-3 mb-6"
                     >
                         <div className="w-12 h-px bg-[#c1972d]" />
-                        <span className="text-[#c1972d] font-bold tracking-[0.4em] text-xs uppercase">Elite Status</span>
+                        <span className="text-[#c1972d] font-bold tracking-[0.4em] text-xs  ">Elite Status</span>
                     </motion.div>
                     <h2 className="text-white text-6xl lg:text-8xl font-black leading-[0.85] tracking-tighter">
                         THE <br /> <span className="text-transparent bg-clip-text bg-linear-to-b from-[#c1972d] to-[#e5c167]">FUTURE</span> <br /> GATEWAY.

@@ -60,7 +60,7 @@ const WhyStudyUK = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-[0.2em] text-[#c1972d] uppercase bg-[#c1972d]/10 rounded-lg">
+            <div className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-[0.2em] text-[#c1972d]   bg-[#c1972d]/10 rounded-lg">
               Why the UK?
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-blue-950 leading-tight mb-6">

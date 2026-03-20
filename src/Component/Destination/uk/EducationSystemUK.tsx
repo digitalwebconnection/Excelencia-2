@@ -100,7 +100,7 @@ const EducationSystemUK = () => {
                   </div>
                 </div>
 
-                <div className="text-xs font-bold text-[#c1972d] mb-2 uppercase tracking-widest group-hover:text-amber-300">
+                <div className="text-xs font-bold text-[#c1972d] mb-2   tracking-widest group-hover:text-amber-300">
                   {item.duration}
                 </div>
                 

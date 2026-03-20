@@ -66,7 +66,7 @@ export default function AboutSection() {
 
         {/* Header */}
         <div className="max-w-2xl md-10 md:mb-16">
-          <h2 className="text-sm font-bold tracking-widest text-[#c1972d] uppercase mb-3">
+          <h2 className="text-sm font-bold tracking-widest text-[#c1972d]   mb-3">
             Excellence Defined
           </h2>
           <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight">

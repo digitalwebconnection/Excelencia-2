@@ -28,7 +28,7 @@ export default function JourneyStepSection() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <p className="uppercase tracking-[0.2em] text-blue-950 text-sm font-bold mb-4 flex items-center gap-2">
+            <p className="  tracking-[0.2em] text-blue-950 text-sm font-bold mb-4 flex items-center gap-2">
               <span className="w-8 h-px bg-blue-950"></span>
               Begin With Clarity
             </p>

@@ -46,7 +46,7 @@ const EnglishRequirements = () => {
           <h2 className="text-white text-4xl md:text-5xl font-black tracking-tight">
             English Language Requirements
           </h2>
-          <p className="text-[#c1972d] text-xs tracking-[0.3em] uppercase mt-4">
+          <p className="text-[#c1972d] text-xs tracking-[0.3em]   mt-4">
             Hover to View Details
           </p>
         </div>
@@ -106,7 +106,7 @@ const EnglishRequirements = () => {
                     <p className="text-5xl font-black text-[#c1972d] tracking-tight">
                       {req.score}
                     </p>
-                    <p className="text-white/70 text-xs uppercase tracking-widest mt-3">
+                    <p className="text-white/70 text-xs   tracking-widest mt-3">
                       IELTS Score
                     </p>
                   </div>

@@ -85,7 +85,7 @@ export default function ImmigrationHeroSection() {
 
           {/* Name & Designation */}
           <div className="absolute top-0 left-0 lg:-top-6 lg:left-4 z-20">
-            <p className="relative font-serif uppercase tracking-widest text-white text-lg md:text-xl font-semibold">
+            <p className="relative font-serif   tracking-widest text-white text-lg md:text-xl font-semibold">
               TARANJIT SINGH —
               <span className="text-[#c1972d] ml-2">
                 Managing Director

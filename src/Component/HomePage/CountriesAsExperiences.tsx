@@ -39,7 +39,7 @@ export default function CountriesAsExperiences() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-14 items-center">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <p className="uppercase tracking-[0.2em] text-xs text-slate-500 font-bold">
+              <p className="  tracking-[0.2em] text-xs text-slate-500 font-bold">
                 Countries as Experiences
               </p>
             </div>
@@ -89,7 +89,7 @@ export default function CountriesAsExperiences() {
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center text-white">
                   <Globe2 className="mb-4 opacity-0 group-hover:opacity-100 transition-all duration-500 scale-50 group-hover:scale-100" size={32} />
 
-                  <h3 className="text-xl font-black uppercase tracking-tight mb-2">
+                  <h3 className="text-xl font-black   tracking-tight mb-2">
                     {item.title}
                   </h3>
 

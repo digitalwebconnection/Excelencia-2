@@ -101,7 +101,7 @@ const Scholarships = () => {
                 {/* Updated Header Section */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                     <div className="max-w-2xl">
-                        <span className="text-[#c1972d] font-bold text-xs tracking-[0.2em] uppercase">
+                        <span className="text-[#c1972d] font-bold text-xs tracking-[0.2em]  ">
                             International Funding
                         </span>
                         <h2 className="text-5xl font-black text-white mt-2 leading-tight">

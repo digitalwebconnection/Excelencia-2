@@ -57,7 +57,7 @@ const WhyChooseUs = () => {
               className="flex items-center gap-3 mb-4"
             >
               <span className="h-px w-8 bg-[#c1972d]" />
-              <span className="text-[#c1972d] font-bold tracking-widest text-xs uppercase">Your Success Story</span>
+              <span className="text-[#c1972d] font-bold tracking-widest text-xs  ">Your Success Story</span>
             </motion.div>
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}

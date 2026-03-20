@@ -62,7 +62,7 @@ export default function WhyGuidanceMatters() {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-gray-900">Trusted Guidance</p>
-                  <p className="text-[10px] text-gray-500 uppercase tracking-wider">Global Student Network</p>
+                  <p className="text-[10px] text-gray-500   tracking-wider">Global Student Network</p>
                 </div>
               </motion.div>
 
@@ -83,7 +83,7 @@ export default function WhyGuidanceMatters() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <span className="text-blue-950 bg-[#c1972d] px-7 rounded-2xl py-1 font-bold tracking-[0.2em] uppercase text-sm md:text-md border-l-4 border-[#c1972d] pl-3">
+            <span className="text-blue-950 bg-[#c1972d] px-7 rounded-2xl py-1 font-bold tracking-[0.2em]   text-sm md:text-md border-l-4 border-[#c1972d] pl-3">
               Education Beyond Borders
             </span>
 

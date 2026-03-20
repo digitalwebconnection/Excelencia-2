@@ -30,7 +30,7 @@ const UniversityLogoScroll = () => {
     <section className="bg-white max-w-7xl mx-auto py-16 border-y border-blue-950/10 overflow-hidden">
 
       <div className=" px-6 mb-10">
-        <h3 className="text-blue-950 font-semibold uppercase tracking-widest text-xl text-center">
+        <h3 className="text-blue-950 font-semibold   tracking-widest text-xl text-center">
           Partnering with{" "}
           <span className="text-[#c1972d]">World-Class</span> Institutions
         </h3>

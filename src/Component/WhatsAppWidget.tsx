@@ -75,7 +75,7 @@ export default function WhatsAppWidget() {
                 </div>
                 <div>
                   <p className="font-bold text-sm leading-tight">Excelencia International</p>
-                  <p className="text-[10px] opacity-80 uppercase tracking-wider">Online | Expert Support</p>
+                  <p className="text-[10px] opacity-80   tracking-wider">Online | Expert Support</p>
                 </div>
               </div>
               <button onClick={() => setOpen(false)} className="hover:bg-black/10 p-1 rounded-full transition-colors">

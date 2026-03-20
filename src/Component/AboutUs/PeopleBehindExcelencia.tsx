@@ -81,7 +81,7 @@ function LeaderCard({ person, index }: any) {
                             {person.name}
                         </h3>
 
-                        <p className="text-xs md:text-sm font-bold uppercase tracking-widest mb-3">
+                        <p className="text-xs md:text-sm font-bold   tracking-widest mb-3">
                             {person.role}
                         </p>
 
@@ -157,7 +157,7 @@ export default function PeopleBehindExcelencia() {
                 <div className="text-center mb-6">
 
                     <div className="inline-block px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-6">
-                        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-900">
+                        <span className="text-[10px] font-black   tracking-[0.3em] text-blue-900">
                             Our Architects
                         </span>
                     </div>

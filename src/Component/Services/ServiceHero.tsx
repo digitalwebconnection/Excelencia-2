@@ -26,7 +26,7 @@ export default function ImmigrationHero() {
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#c1972d]/10 border border-[#c1972d]/30 text-[#c1972d] text-sm font-bold uppercase tracking-wide"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#c1972d]/10 border border-[#c1972d]/30 text-[#c1972d] text-sm font-bold  tracking-wide"
             >
               <Star className="w-4 h-4 fill-[#c1972d]" />
               98% Visa Success Rate in 2025
@@ -115,7 +115,7 @@ export default function ImmigrationHero() {
                 <Plane className="w-6 h-6 text-[#c1972d]" />
               </div>
               <div>
-                <p className="text-[10px] text-slate-400 font-bold uppercase">Visa Status</p>
+                <p className="text-[10px] text-slate-400 font-bold  ">Visa Status</p>
                 <p className="text-sm font-bold text-slate-800 italic">Approved: Canada 🇨🇦</p>
               </div>
             </motion.div>
@@ -130,7 +130,7 @@ export default function ImmigrationHero() {
                 <GraduationCap className="w-6 h-6 text-[#c1972d]" />
               </div>
               <div>
-                <p className="text-[10px] text-slate-400 font-bold uppercase">Enrollment</p>
+                <p className="text-[10px] text-slate-400 font-bold  ">Enrollment</p>
                 <p className="text-sm font-bold text-slate-800 italic">800+ Partner Unis</p>
               </div>
             </motion.div>

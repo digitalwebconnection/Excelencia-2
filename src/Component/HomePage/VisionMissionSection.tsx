@@ -18,7 +18,7 @@ export default function VisionMissionSection() {
         >
           <div className="max-w-xl">
 
-            <span className="text-sm tracking-[0.35em] uppercase font-bold text-[#c1972d] drop-shadow-sm">
+            <span className="text-sm tracking-[0.35em]   font-bold text-[#c1972d] drop-shadow-sm">
               Excelencia International
             </span>
 

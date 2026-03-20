@@ -40,7 +40,7 @@ const   StudyAbroadJourney = () => {
           
           {/* Left Side: Sticky Content */}
           <div className="lg:w-1/3 lg:sticky lg:top-24">
-            <span className="inline-block px-4 py-1 rounded-full bg-[#c1972d]/10 text-[#c1972d] text-sm font-bold uppercase tracking-widest mb-4">
+            <span className="inline-block px-4 py-1 rounded-full bg-[#c1972d]/10 text-[#c1972d] text-sm font-bold   tracking-widest mb-4">
               Our Services
             </span>
             <h2 className="text-blue-950 font-serif text-3xl md:text-5xl font-black leading-tight mb-6">

@@ -75,7 +75,7 @@ const IntakeSection = () => {
               <h3 className="text-blue-950 text-2xl font-bold mb-1">
                 {item.season}
               </h3>
-              <p className="text-[#c1972d] font-semibold tracking-wide text-sm uppercase mb-4">
+              <p className="text-[#c1972d] font-semibold tracking-wide text-sm   mb-4">
                 {item.type}
               </p>
               

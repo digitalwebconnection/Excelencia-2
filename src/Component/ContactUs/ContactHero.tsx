@@ -36,7 +36,7 @@ export default function ContactHero() {
             initial="hidden"
             animate="visible"
             variants={fadeIn}
-            className="inline-block  px-4 py-1.5 mb-4 text-xs font-semibold tracking-widest uppercase bg-[#c1972d]/10 border border-[#c1972d]/30 text-[#c1972d] rounded-full"
+            className="inline-block  px-4 py-1.5 mb-4 text-xs font-semibold tracking-widest   bg-[#c1972d]/10 border border-[#c1972d]/30 text-[#c1972d] rounded-full"
           >
             Get In Touch
           </motion.span>
@@ -166,7 +166,7 @@ function LocationCard({ country, address, tag, index }: LocationCardProps) {
             <MapPin size={24} />
           </div>
 
-          <span className="text-[10px] uppercase tracking-widest font-bold text-[#c1972d] bg-[#c1972d]/10 px-3 py-1 rounded-full">
+          <span className="text-[10px]   tracking-widest font-bold text-[#c1972d] bg-[#c1972d]/10 px-3 py-1 rounded-full">
             {tag}
           </span>
         </div>

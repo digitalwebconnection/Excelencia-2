@@ -19,7 +19,7 @@ const UKStudyHero = () => {
           {/* Admissions Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
             <span className="flex h-2 w-2 rounded-full bg-[#c1972d] animate-pulse"></span>
-            <span className="text-xs md:text-sm font-medium text-slate-300 tracking-wider uppercase">
+            <span className="text-xs md:text-sm font-medium text-slate-300 tracking-wider  ">
               2025–26 Admissions Open
             </span>
           </div>
@@ -69,19 +69,19 @@ const UKStudyHero = () => {
           <div className="mt-16 pt-8 border-t border-white/10 grid grid-cols-3 gap-8 max-w-lg">
             <div>
               <div className="text-2xl font-bold text-white">160+</div>
-              <div className="text-xs uppercase tracking-widest text-slate-500">
+              <div className="text-xs   tracking-widest text-slate-500">
                 Universities
               </div>
             </div>
             <div>
               <div className="text-2xl font-bold text-white">98%</div>
-              <div className="text-xs uppercase tracking-widest text-slate-500">
+              <div className="text-xs   tracking-widest text-slate-500">
                 Visa Success
               </div>
             </div>
             <div>
               <div className="text-2xl font-bold text-white">£2k–5k</div>
-              <div className="text-xs uppercase tracking-widest text-slate-500">
+              <div className="text-xs   tracking-widest text-slate-500">
                 Scholarships
               </div>
             </div>

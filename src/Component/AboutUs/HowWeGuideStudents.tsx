@@ -68,7 +68,7 @@ export default function HowWeGuideStudents() {
           <motion.p 
             initial={{ opacity: 0, letterSpacing: "0.1em" }}
             whileInView={{ opacity: 1, letterSpacing: "0.2em" }}
-            className="text-center text-xs text-gray-500 uppercase font-bold"
+            className="text-center text-xs text-gray-500   font-bold"
           >
             How We Guide Students
           </motion.p>
@@ -130,7 +130,7 @@ export default function HowWeGuideStudents() {
 
                 {/* Content with Hover Text Shift */}
                 <div className=" transition-transform duration-300 group-hover:-translate-y-1.25">
-                  <span className="text-blue-950 font-black text-xs uppercase tracking-widest bg-blue-50 px-2 py-1 rounded">
+                  <span className="text-blue-950 font-black text-xs   tracking-widest bg-blue-50 px-2 py-1 rounded">
                     {item.step}
                   </span>
                   <h3 className="text-xl font-bold mt-3 mb-3 text-[#1e293b] leading-tight min-h-12 flex items-center justify-center group-hover:text-blue-950 transition-colors">

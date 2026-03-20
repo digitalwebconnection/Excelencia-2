@@ -48,7 +48,7 @@ export default function GlobalEducationPersonalAttention() {
                     <div className="w-4 h-1 bg-blue-950 rotate-45" />
                 </div>
               </div>
-              <p className="text-xs font-bold text-gray-800 uppercase tracking-tighter leading-tight">
+              <p className="text-xs font-bold text-gray-800   tracking-tighter leading-tight">
                 Years of <br /> Experience
               </p>
             </motion.div>
@@ -64,7 +64,7 @@ export default function GlobalEducationPersonalAttention() {
           {/* Section Subtitle with Decorative Line */}
           <div className="flex items-center gap-3 mb-4">
             <div className="h-0.5 w-10 bg-blue-950" />
-            <p className="text-xs tracking-[0.3em] uppercase text-gray-900 font-bold">
+            <p className="text-xs tracking-[0.3em]   text-gray-900 font-bold">
               Experience That Anticipates
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function GlobalEducationPersonalAttention() {
           {/* Progress Bar (Matching image_f255f9) */}
           <div className="mb-10 p-6 bg-gray-50 rounded-2xl border border-gray-100">
             <div className="flex justify-between items-end mb-3">
-              <span className="text-sm font-black text-gray-900 uppercase tracking-wider">Satisfaction Rate</span>
+              <span className="text-sm font-black text-gray-900   tracking-wider">Satisfaction Rate</span>
               <span className="text-sm font-black text-blue-950">90%</span>
             </div>
             <div className="w-full h-2.5 bg-gray-200 rounded-full overflow-hidden">
@@ -125,7 +125,7 @@ export default function GlobalEducationPersonalAttention() {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 rounded-lg text-white font-black text-sm uppercase tracking-widest bg-linear-to-r from-[#c1972d] to-blue-950 hover:bg-blue-950 transition-all duration-300 shadow-lg shadow-[#c1972d]/20"
+              className="px-10 py-5 rounded-lg text-white font-black text-sm   tracking-widest bg-linear-to-r from-[#c1972d] to-blue-950 hover:bg-blue-950 transition-all duration-300 shadow-lg shadow-[#c1972d]/20"
             >
               Discover More
             </motion.button>

@@ -81,7 +81,7 @@ export default function WhyWeWorkWithStudents() {
             About Our Consultancy
           </span>
 
-          <h2 className="text-3xl md:text-5xl text-[#c1972d] font-extrabold leading-tight mb-6 uppercase">
+          <h2 className="text-3xl md:text-5xl text-[#c1972d] font-extrabold leading-tight mb-6  ">
             Every Approval Letter <span className="text-blue-950"> Has A Journey Behind It</span>
           </h2>
 

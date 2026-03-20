@@ -34,7 +34,7 @@ const Accommodation = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[#c1972d] font-semibold tracking-widest uppercase text-sm"
+            className="text-[#c1972d] font-semibold tracking-widest   text-sm"
           >
             Your Home Abroad
           </motion.span>

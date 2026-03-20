@@ -114,7 +114,7 @@ const QuietInvitationContactForm = () => {
 
         <div className="relative z-20 max-w-xl">
 
-          <p className="text-white font-bold text-xs mb-4 uppercase">
+          <p className="text-white font-bold text-xs mb-4  ">
             Contact Us
           </p>
 

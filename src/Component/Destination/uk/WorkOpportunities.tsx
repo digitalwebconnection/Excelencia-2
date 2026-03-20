@@ -43,7 +43,7 @@ const WorkOpportunities = () => {
           >
             <motion.div variants={itemVariants} className="flex items-center gap-3 mb-6">
               <span className="w-12 h-0.5 bg-[#c1972d]"></span>
-              <span className="text-[#c1972d] font-bold tracking-[0.3em] text-xs uppercase">Career & Balance</span>
+              <span className="text-[#c1972d] font-bold tracking-[0.3em] text-xs  ">Career & Balance</span>
             </motion.div>
             
             <motion.h2 variants={itemVariants} className="text-5xl md:text-6xl font-black text-blue-950 leading-[1.1] mb-8">
@@ -84,7 +84,7 @@ const WorkOpportunities = () => {
                   Maximum weekly allowance during academic sessions to ensure study focus.
                 </p>
               </div>
-              <div className="mt-8 flex items-center gap-2 text-blue-950 font-bold text-xs uppercase tracking-widest">
+              <div className="mt-8 flex items-center gap-2 text-blue-950 font-bold text-xs   tracking-widest">
                 <Info size={14} className="text-[#c1972d]" /> Strictly Monitored
               </div>
             </motion.div>
@@ -104,7 +104,7 @@ const WorkOpportunities = () => {
                   Work unlimited hours during official university breaks and summer periods.
                 </p>
               </div>
-              <div className="mt-8 group cursor-pointer flex items-center gap-2 text-[#c1972d] font-bold text-xs uppercase tracking-widest">
+              <div className="mt-8 group cursor-pointer flex items-center gap-2 text-[#c1972d] font-bold text-xs   tracking-widest">
                 Check Dates <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </div>
             </motion.div>

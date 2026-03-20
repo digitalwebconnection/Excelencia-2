@@ -25,7 +25,7 @@ export default function EducationTurningPoint() {
                   <div className="h-4 w-0.75 bg-white/30 rounded-full" />
                   <div className="h-4 w-0.75 bg-white rounded-full" />
                 </div>
-                <span className="text-xs font-bold uppercase tracking-[0.2em]">
+                <span className="text-xs font-bold   tracking-[0.2em]">
                   15+ Years of Proven Expertise
                 </span>
               </div>
@@ -48,7 +48,7 @@ export default function EducationTurningPoint() {
                 <motion.button
 
                   whileTap={{ scale: 0.98 }}
-                  className="bg-white text-blue-950 px-10 py-4 rounded-full font-bold transition-all shadow-xl flex items-center gap-2 text-sm uppercase tracking-wider"
+                  className="bg-white text-blue-950 px-10 py-4 rounded-full font-bold transition-all shadow-xl flex items-center gap-2 text-sm   tracking-wider"
                 >
                   Explore Study Abroad
                   <ArrowUpRight size={18} />
@@ -59,7 +59,7 @@ export default function EducationTurningPoint() {
                     <Phone className="text-white fill-white" size={22} />
                   </div>
                   <div>
-                    <p className="text-[10px] text-white/70 uppercase font-bold tracking-widest">Questions?</p>
+                    <p className="text-[10px] text-white/70   font-bold tracking-widest">Questions?</p>
                     <p className="text-lg font-bold text-white tracking-tight">+91 97697 87211</p>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ export default function EducationTurningPoint() {
                 </div>
                 <div>
 
-                  <p className="text-xs font-black text-gray-900 uppercase tracking-tighter">Imran, Director</p>
+                  <p className="text-xs font-black text-gray-900   tracking-tighter">Imran, Director</p>
                 </div>
               </motion.div>
 

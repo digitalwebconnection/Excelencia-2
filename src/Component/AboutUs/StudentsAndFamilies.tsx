@@ -69,7 +69,7 @@ export default function EnhancedAudiences() {
             viewport={{ once: true }}
             className="max-w-2xl"
           >
-            <h2 className="text-sm font-bold tracking-[0.2em] uppercase text-blue-900/60 mb-4 flex items-center gap-2">
+            <h2 className="text-sm font-bold tracking-[0.2em]   text-blue-900/60 mb-4 flex items-center gap-2">
               <span className="w-8 h-px bg-blue-950/30"></span>
               Partners in Success
             </h2>
@@ -122,7 +122,7 @@ export default function EnhancedAudiences() {
 
               {/* Content Container */}
               <div className="absolute inset-x-0 bottom-0 p-8 transition-transform duration-500 translate-y-6 group-hover:translate-y-0">
-                <p className="text-blue-950 text-xs font-bold uppercase tracking-widest mb-2">
+                <p className="text-blue-950 text-xs font-bold   tracking-widest mb-2">
                   {item.subtitle}
                 </p>
                 <h4 className="text-2xl font-bold text-white mb-3">

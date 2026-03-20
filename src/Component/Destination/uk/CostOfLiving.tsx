@@ -79,7 +79,7 @@ const GeographicLens: React.FC = () => {
                           {smoothProgress.get() < 0.5 ? livingData[0].icon : livingData[1].icon}
                        </motion.div>
                     </AnimatePresence>
-                    <div className="mt-4 text-blue-950 font-black text-3xl tracking-tighter uppercase">
+                    <div className="mt-4 text-blue-950 font-black text-3xl tracking-tighter  ">
                        UK Living
                     </div>
                  </motion.div>
@@ -96,7 +96,7 @@ const GeographicLens: React.FC = () => {
             
             {/* Section 1: London */}
             <motion.div style={{ opacity: opacityLondon }} className="absolute inset-0">
-              <span className="text-[#c1972d] font-bold tracking-[0.3em] uppercase text-xs">Geography Alpha</span>
+              <span className="text-[#c1972d] font-bold tracking-[0.3em]   text-xs">Geography Alpha</span>
               <h2 className="text-blue-950 text-7xl font-light mt-2 mb-6 tracking-tighter  font-serif">
                 {livingData[0].city}
               </h2>
@@ -108,7 +108,7 @@ const GeographicLens: React.FC = () => {
 
             {/* Section 2: Regional */}
             <motion.div style={{ opacity: opacityRegions }} className="absolute inset-0">
-              <span className="text-blue-950/40 font-bold tracking-[0.3em] uppercase text-xs">Geography Beta</span>
+              <span className="text-blue-950/40 font-bold tracking-[0.3em]   text-xs">Geography Beta</span>
               <h2 className="text-blue-950 text-7xl font-light mt-2 mb-6 tracking-tighter  font-serif">
                 {livingData[1].city}
               </h2>
@@ -123,14 +123,14 @@ const GeographicLens: React.FC = () => {
 
         {/* Scroll Progress Indicator (Bottom) */}
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-10">
-          <div className="text-[10px] uppercase tracking-[0.4em] font-bold text-blue-950/20">London</div>
+          <div className="text-[10px]   tracking-[0.4em] font-bold text-blue-950/20">London</div>
           <div className="w-48 h-px bg-blue-950/10 relative">
              <motion.div 
               style={{ width: useTransform(smoothProgress, [0, 1], ["0%", "100%"]) }}
               className="absolute h-full bg-[#c1972d]" 
              />
           </div>
-          <div className="text-[10px] uppercase tracking-[0.4em] font-bold text-blue-950/20">Regions</div>
+          <div className="text-[10px]   tracking-[0.4em] font-bold text-blue-950/20">Regions</div>
         </div>
       </div>
     </div>

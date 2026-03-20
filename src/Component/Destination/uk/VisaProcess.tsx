@@ -56,7 +56,7 @@ const VisaPremium = () => {
           >
             <div className="flex items-center gap-4 mb-4">
               <span className="h-px w-12 bg-[#c1972d]" />
-              <span className="text-[#c1972d] font-bold tracking-[0.3em] uppercase text-xs">2026 Academic Protocol</span>
+              <span className="text-[#c1972d] font-bold tracking-[0.3em]   text-xs">2026 Academic Protocol</span>
             </div>
             
             <h2 className="text-7xl font-black text-blue-950 leading-[0.9] mb-5">
@@ -72,7 +72,7 @@ const VisaPremium = () => {
             <div className="p-6 bg-linear-to-r from-[#c1972d] to-blue-950 rounded-[2.5rem] text-white relative overflow-hidden group">
               <div className="relative z-10 flex items-center justify-between">
                 <div>
-                  <p className="text-blue-950 text-xs font-bold uppercase tracking-widest mb-1">Processing Time</p>
+                  <p className="text-blue-950 text-xs font-bold   tracking-widest mb-1">Processing Time</p>
                   <p className="text-3xl font-bold">3 – 4 Weeks</p>
                 </div>
                 <Navigation className="text-[#c1972d] group-hover:rotate-45 transition-transform duration-500" size={40} />
@@ -108,7 +108,7 @@ const VisaPremium = () => {
                   </div>
                   
                   <div>
-                    <span className={`text-[10px] font-black uppercase tracking-widest transition-colors ${
+                    <span className={`text-[10px] font-black   tracking-widest transition-colors ${
                       hoveredIndex === idx ? 'text-[#c1972d]' : 'text-slate-400'
                     }`}>
                       {step.label}
