@@ -1,83 +1,284 @@
 
-import { Landmark, ShieldCheck, Globe, BadgeCheck, Lightbulb } from 'lucide-react';
+import { Landmark, ShieldCheck, Globe, BadgeCheck, Lightbulb, TrendingUp } from 'lucide-react';
+import { easeOut, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-const FinanceEditorialSection = () => {
-    return (
-        <div className=" py-10 px-4 sm:px-6 lg:px-8 font-sans">
-            <div className="max-w-7xl mx-auto">
+const FinanceSupportSection = () => {
+  const [headerRef, headerInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [timelineRef, timelineInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [conclusionRef, conclusionInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
-                {/* Header - Mumbai Mention */}
-                <div className="text-center mb-6">
-                    <h2 className="text-5xl font-black text-blue-950 mb-4 tracking-tight">
-                        Finance <span className='text-[#c1972d]'> Support</span>
-                    </h2>
-                    <div className="h-1.5 w-24 bg-blue-950 mx-auto rounded-full"></div>
-                </div>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  };
 
-                <div className="grid gap-8">
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: easeOut },
+    },
+  };
+  return (
+    <div className="bg-linear-to-br from-slate-50 to-blue-50 py-10 px-6 lg:px-6 font-sans">
+      <div className="max-w-7xl mx-auto">
+        {/* Header Section */}
+        <motion.div
+          ref={headerRef}
+          initial={{ opacity: 0, y: -30 }}
+          animate={headerInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-10"
+        >
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={headerInView ? { scale: 1 } : {}}
+            transition={{ delay: 0.3, duration: 0.5, type: "spring", stiffness: 200 }}
+            className="inline-flex items-center gap-3 bg-blue-950 text-[#c1972d] px-6 py-2 rounded-full mb-2"
+          >
+            <TrendingUp size={20} />
+            <span className="text-sm font-bold tracking-widest">FINANCE SUPPORT</span>
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={headerInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            className="text-3xl md:text-5xl font-black text-blue-950 leading-tight mb-2"
+          >
+            Financial Guidance for
+            <span className="text-[#c1972d] block">Your Global Journey</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={headerInView ? { opacity: 1 } : {}}
+            transition={{ delay: 0.7, duration: 0.6 }}
+            className="text-xl text-slate-600 max-w-7xl mx-auto leading-relaxed"
+          >
+            Navigate the financial aspects of studying abroad with confidence. Our expert team provides comprehensive support to make international education accessible and stress-free.
+          </motion.p>
+        </motion.div>
 
-                    {/* Paragraph 1 - Full Text */}
-                    <div className="bg-white p-8 md:p-10 rounded-4xl shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-center">
-                        <div className="shrink-0 w-16 h-16 bg-blue-50 text-[#c1972d] rounded-2xl flex items-center justify-center">
-                            <Landmark size={32} />
-                        </div>
-                        <p className="text-xl text-slate-700 leading-relaxed font-medium">
-                            Cost is one of the primary worries students and parents have when it comes to international education. Our Education Finance Support at Excelencia International in Mumbai, Maharashtra, clarifies your tuition fees, living expenses, and funding options so you start your study abroad experience on the right track!
-                        </p>
-                    </div>
+        {/* Timeline Design */}
+        <motion.div
+          ref={timelineRef}
+          variants={containerVariants}
+          initial="hidden"
+          animate={timelineInView ? "visible" : "hidden"}
+          className="relative"
+        >
+          {/* Timeline Line */}
+          <motion.div
+            initial={{ scaleY: 0 }}
+            animate={timelineInView ? { scaleY: 1 } : {}}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-blue-950 to-[#c1972d] transform md:-translate-x-0.5 origin-top"
+          ></motion.div>
 
-                    {/* Paragraph 2 - Full Text */}
-                    <div className="bg-blue-950 p-8 md:p-10 rounded-4xl shadow-xl text-white flex flex-col md:flex-row gap-8 items-center">
-                        <div className="shrink-0 w-16 h-16 bg-[#c1972d] text-white rounded-2xl flex items-center justify-center">
-                            <ShieldCheck size={32} />
-                        </div>
-                        <p className="text-lg leading-relaxed opacity-95">
-                            Studying the curriculum overseas will demand some financial planning, covering tuition deposits, accommodation fees, visa charges, insurance and travel costs. Our experts guide families through how the entire financial framework works, and assist them with a realistic budget plan.
-                        </p>
-                    </div>
+          <div className="space-y-5">
+            {/* Step 1 */}
+            <motion.div variants={itemVariants} className="relative flex flex-col md:flex-row items-center md:items-start gap-8">
+              <div className="md:w-1/2 md:pr-8 md:text-right order-2 md:order-1">
+                <motion.div
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="bg-white p-4 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100"
+                >
+                  <div className="flex items-center gap-4 mb-4 md:justify-end">
+                    <motion.div
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-12 h-12 bg-blue-50 text-[#c1972d] rounded-2xl flex items-center justify-center"
+                    >
+                      <Landmark size={24} />
+                    </motion.div>
+                    <h3 className="text-2xl font-bold text-blue-950">Cost Clarity</h3>
+                  </div>
+                  <p className="text-slate-700 leading-relaxed">
+                    Cost is one of the primary worries students and parents have when it comes to international education. Our Education Finance Support at Excelencia International in Mumbai, Maharashtra, clarifies your tuition fees, living expenses, and funding options so you start your study abroad experience on the right track!
+                  </p>
+                </motion.div>
+              </div>
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={timelineInView ? { scale: 1 } : {}}
+                transition={{ delay: 0.5, duration: 0.4, type: "spring" }}
+                className="absolute left-6 md:left-1/2 w-4 h-4 bg-[#c1972d] rounded-full border-4 border-white shadow-lg transform md:-translate-x-2 order-1 md:order-2"
+              ></motion.div>
+              <div className="md:w-1/2 md:pl-12 order-3"></div>
+            </motion.div>
 
-                    {/* Paragraph 3 - Full Text */}
-                    <div className="bg-white p-8 md:p-10 rounded-4xl shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-center">
-                        <div className="shrink-0 w-16 h-16 bg-blue-50 text-[#c1972d] rounded-2xl flex items-center justify-center">
-                            <BadgeCheck size={32} />
-                        </div>
-                        <p className="text-lg text-slate-700 leading-relaxed">
-                            Assistance in education loan advice, scholarship info, sponsorship documents, and financial affidavit. To avoid delays or refusals, our team helps ensure that financial documents comply with both embassy and university standards.
-                        </p>
-                    </div>
+            {/* Step 2 */}
+            <motion.div variants={itemVariants} className="relative flex flex-col md:flex-row items-center md:items-start gap-8">
+              <div className="md:w-1/2 md:pr-8 order-2"></div>
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={timelineInView ? { scale: 1 } : {}}
+                transition={{ delay: 0.8, duration: 0.4, type: "spring" }}
+                className="absolute left-6 md:left-1/2 w-4 h-4 bg-[#c1972d] rounded-full border-4 border-white shadow-xl transform md:-translate-x-2 order-1"
+              ></motion.div>
+              <div className="md:w-1/2 md:pl-8 order-3">
+                <motion.div
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="bg-linear-to-r from-blue-950 to-[#c1972d] p-4 rounded-3xl shadow-lg text-white"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <motion.div
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-12 h-12 bg-[#c1972d] text-white rounded-2xl flex items-center justify-center"
+                    >
+                      <ShieldCheck size={24} />
+                    </motion.div>
+                    <h3 className="text-2xl font-bold">Budget Planning</h3>
+                  </div>
+                  <p className="leading-relaxed opacity-95">
+                    Studying the curriculum overseas will demand some financial planning, covering tuition deposits, accommodation fees, visa charges, insurance and travel costs. Our experts guide families through how the entire financial framework works, and assist them with a realistic budget plan.
+                  </p>
+                </motion.div>
+              </div>
+            </motion.div>
 
-                    {/* Paragraph 4 - Full Text */}
-                    <div className="bg-blue-950 p-8 md:p-10 rounded-4xl shadow-2xl text-white flex flex-col md:flex-row gap-8 items-center">
-                        <div className="shrink-0 w-16 h-16 bg-[#c1972d]     text-white rounded-2xl flex items-center justify-center">
-                            <Globe size={32} />
-                        </div>
-                        <p className="text-lg leading-relaxed text-slate-300">
-                            Being one of the top student visa consultants in Bandra, we have all the latest updates regarding individual countries like the UK, USA, Canada, and Australia when it comes to visa and its financial requirements. We help students understand how to maintain accurate bank statements, what GIC (if applicable) is required, and how to prepare strong financial proof.
-                        </p>
-                    </div>
+            {/* Step 3 */}
+            <motion.div variants={itemVariants} className="relative flex flex-col md:flex-row items-center md:items-start gap-8">
+              <div className="md:w-1/2 md:pr-8 md:text-right order-2 md:order-1">
+                <motion.div
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="bg-white p-4 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100"
+                >
+                  <div className="flex items-center gap-4 mb-4 md:justify-end">
+                    <motion.div
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-12 h-12 bg-blue-50 text-[#c1972d] rounded-2xl flex items-center justify-center"
+                    >
+                      <BadgeCheck size={24} />
+                    </motion.div>
+                    <h3 className="text-2xl font-bold text-blue-950">Loan & Scholarship Support</h3>
+                  </div>
+                  <p className="text-slate-700 leading-relaxed">
+                    Assistance in education loan advice, scholarship info, sponsorship documents, and financial affidavit. To avoid delays or refusals, our team helps ensure that financial documents comply with both embassy and university standards.
+                  </p>
+                </motion.div>
+              </div>
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={timelineInView ? { scale: 1 } : {}}
+                transition={{ delay: 1.1, duration: 0.4, type: "spring" }}
+                className="absolute left-6 md:left-1/2 w-4 h-4 bg-[#c1972d] rounded-full border-4 border-white shadow-lg transform md:-translate-x-2 order-1 md:order-2"
+              ></motion.div>
+              <div className="md:w-1/2 md:pl-12 order-3"></div>
+            </motion.div>
 
-                    {/* Paragraph 5 - Full Text */}
-                    <div className="bg-white p-8 md:p-10 rounded-4xl shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-center">
-                        <div className="shrink-0 w-16 h-16 bg-blue-50 text-[#c1972d] rounded-2xl flex items-center justify-center">
-                            <Lightbulb size={32} />
-                        </div>
-                        <p className="text-lg text-slate-700 leading-relaxed italic">
-                            We believe in a simple and tangible approach. Funding options are clearly explained so families can decide about funding without stress or confusion. Well, students get ready for their visa approval because of the proper financial preparation, and it also provides confidence and security to the student before traveling.
-                        </p>
-                    </div>
+            {/* Step 4 */}
+            <motion.div variants={itemVariants} className="relative flex flex-col md:flex-row items-center md:items-start gap-8">
+              <div className="md:w-1/2 md:pr-8 order-2"></div>
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={timelineInView ? { scale: 1 } : {}}
+                transition={{ delay: 1.4, duration: 0.4, type: "spring" }}
+                className="absolute left-6 md:left-1/2 w-4 h-4 bg-[#c1972d] rounded-full border-4 border-white shadow-xl transform md:-translate-x-2 order-1"
+              ></motion.div>
+              <div className="md:w-1/2 md:pl-8 order-3">
+                <motion.div
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="bg-linear-to-r from-blue-950 to-[#c1972d] p-4 rounded-3xl shadow-lg text-white"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <motion.div
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-12 h-12 bg-[#c1972d] text-white rounded-2xl flex items-center justify-center"
+                    >
+                      <Globe size={24} />
+                    </motion.div>
+                    <h3 className="text-2xl font-bold">Country-Specific Guidance</h3>
+                  </div>
+                  <p className="leading-relaxed opacity-95">
+                    Being one of the top student visa consultants in Bandra, we have all the latest updates regarding individual countries like the UK, USA, Canada, and Australia when it comes to visa and its financial requirements. We help students understand how to maintain accurate bank statements, what GIC (if applicable) is required, and how to prepare strong financial proof.
+                  </p>
+                </motion.div>
+              </div>
+            </motion.div>
 
-                    {/* Paragraph 6 - Full Text Conclusion */}
-                    <div className="mt-8  text-center">
+            {/* Step 5 */}
+            <motion.div variants={itemVariants} className="relative flex flex-col md:flex-row items-center md:items-start gap-8">
+              <div className="md:w-1/2 md:pr-8 md:text-right order-2 md:order-1">
+                <motion.div
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="bg-white p-4 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100"
+                >
+                  <div className="flex items-center gap-4 mb-4 md:justify-end">
+                    <motion.div
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-12 h-12 bg-blue-50 text-[#c1972d] rounded-2xl flex items-center justify-center"
+                    >
+                      <Lightbulb size={24} />
+                    </motion.div>
+                    <h3 className="text-2xl font-bold text-blue-950">Stress-Free Approach</h3>
+                  </div>
+                  <p className="text-slate-700 leading-relaxed italic">
+                    We believe in a simple and tangible approach. Funding options are clearly explained so families can decide about funding without stress or confusion. Well, students get ready for their visa approval because of the proper financial preparation, and it also provides confidence and security to the student before traveling.
+                  </p>
+                </motion.div>
+              </div>
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={timelineInView ? { scale: 1 } : {}}
+                transition={{ delay: 1.7, duration: 0.4, type: "spring" }}
+                className="absolute left-6 md:left-1/2 w-4 h-4 bg-[#c1972d] rounded-full border-4 border-white shadow-lg transform md:-translate-x-2 order-1 md:order-2"
+              ></motion.div>
+              <div className="md:w-1/2 md:pl-12 order-3"></div>
+            </motion.div>
+          </div>
+        </motion.div>
 
-                        <p className="text-2xl md:text-3xl font-bold text-blue-950 leading-tight max-w-7xl mx-auto">
-                            With proper strategic planning, right financial decisions equipped with expert counsel, International study becomes a realistic investment towards viable global futures.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    );
+        {/* Conclusion */}
+        <motion.div
+          ref={conclusionRef}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={conclusionInView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mt-20 text-center"
+        >
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className="bg-linear-to-r from-blue-950 to-[#c1972d] p-8 rounded-3xl text-white shadow-2xl"
+          >
+            <motion.h3
+              initial={{ y: 20, opacity: 0 }}
+              animate={conclusionInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="text-3xl md:text-4xl font-bold mb-6"
+            >
+              Strategic Financial Planning for Global Futures
+            </motion.h3>
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              animate={conclusionInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-md leading-relaxed opacity-95 max-w-5xl mx-auto"
+            >
+              With proper strategic planning, right financial decisions equipped with expert counsel, International study becomes a realistic investment towards viable global futures.
+            </motion.p>
+          </motion.div>
+        </motion.div>
+      </div>
+    </div>
+  );
 };
 
-export default FinanceEditorialSection;
+export default FinanceSupportSection;
