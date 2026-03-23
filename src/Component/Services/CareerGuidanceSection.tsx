@@ -74,12 +74,13 @@ const CareerGuidanceSection = () => {
 
               {/* Paragraph 4 - Full Text */}
               <div className="group bg-white p-10 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all border border-slate-100 border-t-4 border-t-blue-950">
-                <div className="absolute top-0 right-0 p-4 opacity-10">
-                  <Award size={120} className="text-[#c1972d]" />
-                </div>
-                <p className="text-slate-700 leading-loose relative z-10">
+                <div className="flex items-start gap-6  ">
+                  <Award size={32} className="text-[#c1972d] shrink-0" />
+
+                <p className="text-slate-700 leading-loose ">
                   We are among the top study abroad consultancy in Mumbai, Bandra that aims to make not students, but global citizens for a better world. Before the students leave India, they know which specialisation to choose, what their job prospects would look like, and how they can carve out their professional journey even when they are with us through our career counselling.
                 </p>
+                </div>
               </div>
             </div>
           </div>
