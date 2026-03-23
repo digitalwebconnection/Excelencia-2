@@ -11,9 +11,9 @@ export default function StudentVisaAssistance() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-gray-50  p-8 md:p-0  transition"
+          className=" p-8 md:p-0  transition"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-8">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-blue-950 mb-8">
             Student Visa <span className="text-[#c1972d]">  Assistance</span>
           </h2>
 

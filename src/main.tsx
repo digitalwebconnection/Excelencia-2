@@ -1,13 +1,27 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import "./index.css";
+import { HelmetProvider } from "react-helmet-async";
+      
+import "./index.css"; // This is CSS file
+
 import App from "./App";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
+    {/* StrictMode is a tool for highlighting potential problems in development */}
+
     <BrowserRouter>
-      <App />
+      {/* Enables client-side routing */}
+
+      <HelmetProvider>
+        {/* Enables dynamic SEO tags */}
+
+        <App />
+        {/* Main app component */}
+
+      </HelmetProvider>
     </BrowserRouter>
+
   </StrictMode>
 );

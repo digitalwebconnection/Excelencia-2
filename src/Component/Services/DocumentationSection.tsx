@@ -52,7 +52,7 @@ const DocumentationCards = () => {
     return (
         <section
             ref={sectionRef}
-            className="bg-white py-16 md:py-24 px-6 md:px-12 lg:px-20"
+            className="bg-white py-10 md:pb-14 px-6 md:px-12 lg:px-10"
         >
             <div className="max-w-7xl mx-auto">
                 {/* Heading */}
@@ -71,7 +71,7 @@ const DocumentationCards = () => {
 
                 {/* Intro Content */}
                 <div
-                    className={`max-w-7xl mx-auto text-center mb-16 transition-all duration-1000 delay-200 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                    className={`max-w-7xl mx-auto text-center mb-10 transition-all duration-1000 delay-200 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
                 >
                     <p className="text-gray-600 leading-relaxed mb-4">
@@ -113,7 +113,7 @@ const DocumentationCards = () => {
 
                 {/* Highlight Section */}
                 <div
-                    className={`mt-20 max-w-7xl mx-auto text-white bg-[#c1972d] border border-[#c1972d]/30 rounded-2xl p-8 text-center transition-all duration-1000 delay-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                    className={`mt-10 max-w-7xl mx-auto text-white bg-[#c1972d] border border-[#c1972d]/30 rounded-2xl p-8 text-center transition-all duration-1000 delay-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
                 >
                     <h3 className="text-xl md:text-2xl font-semibold  mb-4">

@@ -3,7 +3,7 @@ import { Quote, } from 'lucide-react';
 
 const InterviewDetailSection = () => {
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section className="py-10 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Top Header - Location & Branding */}
@@ -15,10 +15,7 @@ const InterviewDetailSection = () => {
               <span className="text-[#c1972d]">Student Visa Interview Preparation</span>
             </h2>
           </div>
-          <div className="bg-blue-50 p-4 rounded-xl border-l-4 border-[#c1972d]">
-            <p className="text-slate-700 font-medium">Leading Study Abroad Consultants</p>
-            <p className="text-sm text-slate-500">Increasing Visa Success Rates Daily</p>
-          </div>
+       
         </div>
 
 

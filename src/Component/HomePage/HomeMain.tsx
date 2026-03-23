@@ -14,10 +14,16 @@ import TrustPanel from "./TrustPanel"
 import ValuesWePractice from "./ValuesWePractice"
 import WhyGuidanceMatters from "./WhyGuidanceMatters"
 import StudyAbroadServices from "./StudyAbroadServices"
+import { Helmet } from "react-helmet-async"
 
 const HomeMain = () => {
   return (
     <>
+      <Helmet>
+        <title>Top Student Visa Consultants in Mumbai for Study Abroad | Excelencia </title>
+        <meta name="description" content="Looking for student visa consultants in Mumbai? Get expert help for study abroad, admissions, visa processing & documentation with trusted consultants." />
+      </Helmet>
+
       <HeroSection />
       <TopDestinations />
       <WhyGuidanceMatters />
@@ -26,7 +32,7 @@ const HomeMain = () => {
       <StudentVisionSection />
       <ValuesWePractice />
       <JourneyStepSection />
-      <StudyAbroadServices/>
+      <StudyAbroadServices />
       {/* <TrustQuietMomentsSection /> */}
       {/* <CountriesAsExperiences /> */}
       {/* <HowWeDefineSuccess /> */}

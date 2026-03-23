@@ -6,8 +6,6 @@
   font-family: sans-serif;
 }
 
-
-
 .roadmap-header {
   text-align: center;
 
@@ -159,7 +157,6 @@
   font-size: 10px;
   font-weight: 700;
   color: #94a3b8;
-  text-transform:  ;
   letter-spacing: 0.05em;
 }
 
@@ -187,4 +184,135 @@
   background: linear-gradient(to left, #c1972d, transparent);
   transform: translateY(-50%);
   opacity: 0.5;
+}
+
+
+
+/* =========================
+   TABLET VIEW (768px - 1024px)
+========================= */
+@media (max-width: 1024px) {
+
+  .roadmap-visual-area {
+    height: 400px;
+  }
+
+  .step-card {
+    width: 130px;
+    padding: 10px;
+  }
+
+  .card-title {
+    font-size: 0.75rem;
+  }
+
+  .step-pin {
+    width: 34px;
+    height: 34px;
+  }
+
+  .student-circle {
+    padding: 6px;
+  }
+
+  .takeoff-container svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+/* =========================
+   MOBILE VIEW (Below 768px)
+========================= */
+@media (max-width: 768px) {
+
+  .roadmap-visual-area {
+    height: 320px;
+  }
+
+  .roadmap-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .roadmap-header p {
+    font-size: 0.85rem;
+  }
+
+  /* Smaller pins */
+  .step-pin {
+    width: 28px;
+    height: 28px;
+    border-width: 3px;
+  }
+
+  .step-id-text {
+    font-size: 0.6rem;
+  }
+
+  /* Cards smaller */
+  .step-card {
+    width: 110px;
+    padding: 8px;
+  }
+
+  .card-title {
+    font-size: 0.7rem;
+  }
+
+  /* Reduce icon */
+  .card-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Student */
+  .student-circle {
+    padding: 5px;
+  }
+
+  .student-circle svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Plane */
+  .takeoff-container svg {
+    width: 50px;
+    height: 50px;
+  }
+
+}
+
+
+/* =========================
+   EXTRA SMALL (Below 480px)
+========================= */
+@media (max-width: 480px) {
+
+  .roadmap-visual-area {
+    height: 280px;
+  }
+
+  /* Hide cards to avoid overlap */
+  .step-card {
+    display: none;
+  }
+
+  /* Only show active card (optional better UX) */
+  .step-node.active .step-card {
+    display: block;
+    width: 140px;
+    position: absolute;
+    top: 50px;
+  }
+
+  .roadmap-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .roadmap-header p {
+    font-size: 0.75rem;
+  }
+
 }

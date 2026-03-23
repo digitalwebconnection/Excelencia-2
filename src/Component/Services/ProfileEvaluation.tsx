@@ -2,13 +2,9 @@ import { CheckCircle, Globe, MapPin, Target, Zap, ArrowRight } from 'lucide-reac
 
 const ProfileEvaluation = () => {
     return (
-        <section className="relative py-24 px-6 md:px-12 lg:px-20 bg-[#fafafa] overflow-hidden">
+        <section className="relative max-w-7xl mx-auto py-14 px-6 md:px-12 lg:px-0  overflow-hidden">
 
-            {/* Dynamic Background Blurs */}
-            <div className="absolute top-0 left-0 w-125 h-125 bg-blue-900/5 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
-            <div className="absolute bottom-0 right-0 w-100 h-100 bg-[#c1972d]/10 rounded-full blur-[100px] translate-x-1/4 translate-y-1/4" />
-
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6 items-start">
+            <div className=" grid lg:grid-cols-2 gap-6 items-start">
 
                 {/* Left Side: The Philosophy (Sticky) */}
                 <div className="lg:sticky lg:top-24 space-y-8">
@@ -37,6 +33,16 @@ const ProfileEvaluation = () => {
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
                         </div>
+                    </div>
+                    {/* Highlighted LANDING Success Box */}
+                    <div className="mt-5 bg-linear-to-r from-blue-950 to-[#c1972d] p-6 rounded-4xl text-white relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#c1972d]/20 rounded-full blur-3xl -mr-10 -mt-10" />
+                        <h4 className="text-2xl font-bold mb-4 flex items-center gap-3">
+                            <CheckCircle className="text-[#c1972d]" />
+                            End-to-End Success
+                        </h4>
+                        <p className=" leading-relaxed text-sm">
+                            With a well-defined breakdown of the student's profile, we drive this approach right from scratch till the time the student successfully lands in one of our partner universities. </p>
                     </div>
                 </div>
 
@@ -75,18 +81,8 @@ const ProfileEvaluation = () => {
                         </p>
                     </div>
                 </div>
+            </div>
 
-            </div>
-            {/* Highlighted LANDING Success Box */}
-            <div className="bg-linear-to-r from-blue-950 to-[#c1972d] p-6 rounded-4xl text-white relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#c1972d]/20 rounded-full blur-3xl -mr-10 -mt-10" />
-                <h4 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                    <CheckCircle className="text-[#c1972d]" />
-                    End-to-End Success
-                </h4>
-                <p className=" leading-relaxed text-sm">
-                    With a well-defined breakdown of the student's profile, we drive this approach right from scratch till the time the student successfully lands in one of our partner universities. </p>
-            </div>
 
         </section>
     );

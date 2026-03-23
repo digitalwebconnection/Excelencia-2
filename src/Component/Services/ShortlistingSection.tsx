@@ -36,7 +36,7 @@ export default function ShortlistingSection() {
     ];
 
     return (
-        <section className="w-full bg-white py-20 px-4 md:px-10 overflow-hidden">
+        <section className="w-full bg-white py-10 px-4 md:px-10 overflow-hidden">
             <div className="max-w-7xl mx-auto text-center">
                 {/* Badge Animation */}
                 <motion.div
@@ -143,7 +143,7 @@ export default function ShortlistingSection() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.5 }}
-                    className="mt-16 p-8 rounded-2xl text-center bg-gray-50 border border-gray-100"
+                    className="mt-10 p-8 rounded-2xl text-center"
                 >
                     <p className="text-blue-950 text-lg md:text-xl max-w-6xl mx-auto italic font-medium">
                         "Through our personal shortlisting service, students can benefit from a guided selection process and apply with confidence. The right course and university can change everything about your future, and we make sure you pick wisely."

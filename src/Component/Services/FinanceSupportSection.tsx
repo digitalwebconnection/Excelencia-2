@@ -3,7 +3,7 @@ import { Landmark, ShieldCheck, Globe, BadgeCheck, Lightbulb } from 'lucide-reac
 
 const FinanceEditorialSection = () => {
     return (
-        <div className="bg-slate-50 py-10 px-4 sm:px-6 lg:px-8 font-sans">
+        <div className=" py-10 px-4 sm:px-6 lg:px-8 font-sans">
             <div className="max-w-7xl mx-auto">
 
                 {/* Header - Mumbai Mention */}

@@ -9,11 +9,11 @@ import {
 
 const AdmissionService = () => {
     return (
-        <div className=" bg-slate-50 pb-10 px-6">
+        <div className="  pb-10 px-6">
             <div className="max-w-7xl mx-auto">
 
                 {/* Header Section */}
-                <header className="mb-16 text-center">
+                <header className="mb-10 text-center">
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-bold mb-4">
                         <Building2 size={16} /> EXCELENCIA INTERNATIONAL
                     </div>
@@ -45,7 +45,7 @@ const AdmissionService = () => {
                             <CheckCircle size={20} />
                         </div>
                         <div className=" space-y-4">
-                            <p className="text-lg font-semibold text-blue-950">
+                            <p className="text-lg text-slate-700 ">
                             Once students receive offer letters, we help them with offer acceptance, the tuition fee payment, document submission, unconditional offer, sponsorship letter, visa application, travel arrangement & enrollment confirmation. We help our students to understand conditional and unconditional offers so that they fulfill all the requirements in a timely manner.
                             </p>
                         </div>
