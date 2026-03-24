@@ -63,14 +63,14 @@ const VisitorVisaSection = () => {
           </div>
 
           {/* Paragraph 5 - Conclusion */}
-          <div className="relative bg-blue-950 text-white p-4 md:p-6 rounded-2xl text-center overflow-hidden">
+          <div className="relative bg-linear-to-r from-blue-950 to-[#c1972d] text-white p-4 md:p-6 rounded-2xl text-center overflow-hidden">
             {/* Background Accent */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#c1972d] opacity-20 rounded-full blur-3xl -mr-16 -mt-16"></div>
 
             <p className="text-xl md:text-2xl font-light leading-snug max-w-7xl mx-auto relative z-10">
               We want to make the visa application process as hassle free as possible, so that families can be safe in the knowledge they are doing this part of their reunion right. With good preparation and documentation, parents can travel to their children and join them in their global achievements.
             </p>
-            <button className="mt-8 bg-linear-to-r from-[#c1972d] to-blue-950 text-white font-black px-12 py-4 rounded-full transition-all   tracking-widest text-sm">
+            <button className="mt-8 bg-linear-to-r from-blue-950 to-[#c1972d] text-white font-black px-20 py-4 rounded-full transition-all   tracking-widest text-sm">
               Start Your Reunion
             </button>
           </div>

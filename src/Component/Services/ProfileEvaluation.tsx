@@ -28,7 +28,7 @@ const ProfileEvaluation = () => {
                                 <MapPin className="w-4 h-4 text-[#c1972d]" />
                                 Mumbai • Bandra • Maharashtra
                             </div>
-                            <button className="group w-fit flex items-center gap-4 bg-blue-950 text-white px-8 py-4 rounded-full font-bold hover:bg-[#c1972d] transition-all duration-300 shadow-xl shadow-blue-950/10">
+                            <button className="group w-fit flex items-center gap-4 bg-linear-to-r from-blue-950 to-[#c1972d] text-white px-8 py-4 rounded-full font-bold  transition-all duration-300 shadow-xl shadow-blue-950/10">
                                 Start Your Evaluation
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>

@@ -89,7 +89,7 @@ export default function ShortlistingSection() {
                                         y: -5,
                                         boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
                                     }}
-                                    className="group bg-blue-950 p-6 rounded-xl border-b-4 border-transparent hover:border-[#c1972d] transition-all duration-300 shadow-xl cursor-default"
+                                    className="group bg-linear-to-r from-blue-950 to-[#c1972d] p-6 rounded-xl border-b-4 border-transparent hover:border-[#c1972d] transition-all duration-300 shadow-xl cursor-default"
                                 >
                                     <item.icon
                                         style={{ color: accentGold }}

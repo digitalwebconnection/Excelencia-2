@@ -67,7 +67,7 @@ export default function OurWayOfCounseling() {
           </h2>
 
           <p className="mt-6 text-md md:text-xl text-slate-700 font-medium max-w-7xl mx-auto">
-       We also believe that each student’s path is unique and deserves individual attention on our part, founded on honesty and accountability.
+          We also believe that each student’s path is unique and deserves individual attention on our part, founded on honesty and accountability.
           </p>
         </motion.div>
 

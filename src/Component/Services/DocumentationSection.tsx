@@ -113,7 +113,7 @@ const DocumentationCards = () => {
 
                 {/* Highlight Section */}
                 <div
-                    className={`mt-10 max-w-7xl mx-auto text-white bg-[#c1972d] border border-[#c1972d]/30 rounded-2xl p-8 text-center transition-all duration-1000 delay-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                    className={`mt-10 max-w-7xl mx-auto text-white bg-linear-to-r from-blue-950 to-[#c1972d] border border-[#c1972d]/30 rounded-2xl p-8 text-center transition-all duration-1000 delay-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
                 >
                     <h3 className="text-xl md:text-2xl font-semibold  mb-4">

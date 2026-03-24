@@ -36,8 +36,8 @@ const PrePostArrivalSection = () => {
       title: 'Pre-Departure',
       subtitle: 'Preparation & Planning',
       icon: Plane,
-      color: 'from-blue-500 to-blue-600',
-      hoverColor: 'from-[#c1972d] to-blue-600',
+      color: 'from-blue-950 to-blue-950',
+      hoverColor: 'from-[#c1972d] to-blue-950',
       content: {
         overview: 'Our service goes way beyond getting your visa approved at Excelencia International. In Mumbai, our detailed Pre and Post-Arrival Services take care of students by ensuring that they are completely prepared to move and settle in their study destination.',
         services: [
@@ -57,8 +57,8 @@ const PrePostArrivalSection = () => {
       title: 'Airport & Arrival',
       subtitle: 'Smooth Landing Experience',
       icon: Home,
-      color: 'from-green-500 to-green-600',
-      hoverColor: 'from-[#c1972d] to-green-600',
+      color: 'from-blue-950 to-blue-950',
+      hoverColor: 'from-[#c1972d] to-blue-950',
       content: {
         overview: 'Moving to another country is not just about booking a flight. Students need to get accommodation, get travel guidelines, carry important documents, experience a foreign exchange, and experience a culture. Our pre-departure guidance sessions include travel packing checklists, airport procedures, health insurance requirements, accommodation options, and student support systems abroad.',
         services: [
@@ -78,8 +78,8 @@ const PrePostArrivalSection = () => {
       title: 'Settlement Support',
       subtitle: 'Building Your New Life',
       icon: Heart,
-      color: 'from-purple-500 to-purple-600',
-      hoverColor: 'from-[#c1972d] to-purple-600',
+      color: 'from-blue-950 to-blue-950',
+      hoverColor: 'from-[#c1972d] to-blue-950',
       content: {
         overview: 'We go beyond by providing advice on forex services, SIM cards, banking setup, and local transportation info so that you feel at home. For many students, studying abroad is the first time they’re living on their own — and our mentorship ensures they can make that transition seamlessly.',
         services: [
@@ -99,8 +99,8 @@ const PrePostArrivalSection = () => {
       title: 'Ongoing Mentorship',
       subtitle: 'Long-term Success',
       icon: GraduationCap,
-      color: 'from-orange-500 to-orange-600',
-      hoverColor: 'from-[#c1972d] to-orange-600',
+      color: 'from-blue-950 to-blue-950',
+      hoverColor: 'from-[#c1972d] to-blue-950',
       content: {
         overview: 'Once we arrive, we are still available to help with students if they encounter any academic challenges and/or difficulties acclimatizing or issues with housing. We at Excelencia International educate our students and provide them with long-term mentorship because we are not a short-term service company, but the best study abroad consultants in Mumbai and Bandra.',
         services: [
@@ -118,14 +118,14 @@ const PrePostArrivalSection = () => {
   ];
 
   return (
-    <div className="bg-linear-to-br from-slate-50 via-blue-50 to-indigo-50 py-20 px-6 lg:px-12 font-sans">
+    <div className=" px-6 lg:px-6  font-sans">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-5"
         >
           <motion.div
             initial={{ scale: 0 }}
@@ -140,7 +140,7 @@ const PrePostArrivalSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-3xl md:text-5xl font-black text-blue-950 leading-tight mb-8"
+            className="text-3xl md:text-5xl font-black text-blue-950 leading-tight mb-4"
           >
             Your Complete
             <span className="text-[#c1972d] block">Journey Companion</span>
@@ -149,7 +149,7 @@ const PrePostArrivalSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.6 }}
-            className="text-xl text-slate-600 max-w-7xl mx-auto leading-relaxed"
+            className="text-xl text-slate-950 max-w-7xl mx-auto leading-relaxed"
           >
             From preparation to success, we provide comprehensive support at every stage of your international education journey.
           </motion.p>
@@ -157,11 +157,8 @@ const PrePostArrivalSection = () => {
 
         {/* Interactive Tabs */}
         <div
-          className="mb-16"
-
+          className="mb-10"
         >
-
-
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {phases.map((phase, index) => {
               const Icon = phase.icon;
@@ -174,8 +171,8 @@ const PrePostArrivalSection = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className={`relative px-8 py-4 rounded-2xl font-bold transition-all duration-300 ${isActive
-                      ? 'bg-blue-950 text-white shadow-xl'
-                      : 'bg-white text-blue-950 hover:bg-blue-50 shadow-lg border border-slate-200'
+                    ? 'bg-blue-950 text-white shadow-xl'
+                    : 'bg-white text-blue-950 hover:bg-blue-50 shadow-lg border border-slate-200'
                     }`}
                 >
                   <div className="flex items-center gap-3">
@@ -209,7 +206,7 @@ const PrePostArrivalSection = () => {
             <div className="flex justify-center mb-8">
               <div className="w-64 h-1 bg-slate-200 rounded-full overflow-hidden">
                 <motion.div
-                  className="h-full bg-linear-to-r from-[#c1972d] to-blue-600 rounded-full"
+                  className="h-full bg-linear-to-r from-[#c1972d] to-blue-950 rounded-full"
                   style={{ width: `${progress}%` }}
                   transition={{ duration: 0.05 }}
                 />
@@ -225,7 +222,7 @@ const PrePostArrivalSection = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className=" p-12 "
+              className=" p-2 "
               onMouseEnter={() => setIsAutoPlaying(false)}
               onMouseLeave={() => setIsAutoPlaying(true)}
             >
@@ -252,11 +249,11 @@ const PrePostArrivalSection = () => {
                   </h3>
 
                   <div className="space-y-4 mb-8">
-                    <div className="flex items-center gap-3 text-slate-600">
+                    <div className="flex items-center gap-3 text-slate-950">
                       <Clock size={18} className="text-[#c1972d]" />
                       <span className="font-medium">{phases[activeTab].content.timeline}</span>
                     </div>
-                    <div className="flex items-center gap-3 text-slate-600">
+                    <div className="flex items-center gap-3 text-slate-950">
                       <Users size={18} className="text-[#c1972d]" />
                       <span className="font-medium">{phases[activeTab].content.support}</span>
                     </div>
@@ -265,7 +262,7 @@ const PrePostArrivalSection = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center gap-3 bg-blue-950 text-white px-8 py-4 rounded-2xl font-bold hover:bg-[#c1972d] transition-colors duration-300"
+                    className="inline-flex items-center gap-3  bg-linear-to-r from-blue-950 to-[#c1972d]  text-white px-8 py-4 rounded-2xl font-bold hover:bg-[#c1972d] transition-colors duration-300"
                   >
                     Learn More
                     <ArrowRight size={20} />
@@ -306,7 +303,7 @@ const PrePostArrivalSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="bg-linear-to-r from-blue-950 via-blue-900 to-indigo-900 p-8 rounded-3xl text-white text-center shadow-2xl"
+          className="bg-linear-to-r from-blue-950 to-[#c1972d] p-8 rounded-3xl text-white text-center shadow-2xl"
         >
           <motion.h3
             initial={{ y: 20, opacity: 0 }}
@@ -329,7 +326,7 @@ const PrePostArrivalSection = () => {
             transition={{ delay: 1.4, duration: 0.6 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block px-8 py-4 bg-[#c1972d] text-blue-950 font-bold text-lg rounded-full shadow-xl hover:bg-white hover:text-blue-950 transition-all duration-300"
+            className="inline-block px-15 py-4 bg-linear-to-r from-blue-950 to-[#c1972d] text-white font-bold text-lg rounded-full"
           >
             Get Started Today
           </motion.button>
