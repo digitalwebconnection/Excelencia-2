@@ -34,7 +34,7 @@ const AdmissionService = () => {
                             <Clock size={20} />
                         </div>
                         <div className="space-y-4">
-                            <p className="text-xl text-slate-700 leading-relaxed">
+                            <p className="text-lg text-slate-700 leading-relaxed">
                             At Excelencia International, we recognize that the process of applying to international universities is one of the key components in any student’s study abroad journey. It’s a time-intensive process with deadlines to adhere to, documents to complete, and always be in contact with universities. Our Foreign Education Consultancy in Mumbai, Bandra has been devised to ensure that this process is smooth, organized, and not cumbersome. Because of this, you stand a greater chance of receiving an offer from multiple universities. We assign expert counselors at every step of the university application process with an experience base covering all stages. Then, based on the international admission format, we go ahead to design well-drafted applications once the country, course, and university shortlisting is done. All academic papers, SOPs, LORs, resumes, and visa forms are reviewed meticulously before being forwarded to the university. From submission to updating universities portal and off-course follow-ups, we take care of all application process for our students. Our staff diligently keeps track of deadlines for applications and intake dates so that your chance is never missed by you. We also provide students and parents with timely updates to answer questions and reduce anxiety.</p>
                         </div>
                     </div>
@@ -56,7 +56,7 @@ const AdmissionService = () => {
                         <div className="absolute -left-10.25 md:-left-21 bg-[#c1972d] text-white p-2 rounded-full shadow-lg">
                             <FileText size={20} />
                         </div>
-                        <div className="space-y-4 text-slate-700">
+                        <div className="space-y-4 text-lg text-slate-700">
                             <p>We are the best study abroad consultants in Mumbai. Ease your tension by tackling all application-related problems so that none of these problems blocks your way to admission. Equipped with professional admissions advisory and personalized attention, students can now step onto their lifelong dream of studying abroad and bring a successful global career one day near.</p>
                         </div>
                     </div>

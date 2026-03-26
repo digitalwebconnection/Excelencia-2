@@ -33,12 +33,12 @@ const STEPS: Step[] = [
     { id: "10", title: "Pre- and Post-Arrival Services", icon: <PlaneTakeoff size={18} />, color: "#260466" },
 ];
 
-const ROAD_PATH = "M 0 55 C 9 85 15 95 20 85 S 10 40 25 45 S 55 75 55 55 S 60 15 80 35 S 22 65 255 100 25";
+const ROAD_PATH = "M 0 55 C 9 85 15 95 20 85 S 10 40 25 45 S 55 75 55 55 S 60 15 80 35 S 22 65 255 100 ";
 
 const getPosition = (index: number): Point => {
     // Added coordinates for all 10 steps to prevent crashes
     const coords: Point[] = [
-        { x: 0, y: 55 },   // 01
+        { x: 1.5, y: 55 },   // 01
         { x: 18, y: 89 },  // 02
         { x: 18, y: 52 },  // 03
         { x: 28, y: 44 },  // 04
@@ -47,7 +47,7 @@ const getPosition = (index: number): Point => {
         { x: 60, y: 26 },  // 07
         { x: 80, y: 30 },  // 08
         { x: 82, y: 45 },  // 09
-        { x: 94, y: 69 },  // 10
+        { x: 90, y: 67 },  // 10
     ];
     return coords[index] || coords[0];
 };
@@ -101,7 +101,7 @@ export default function Roadmap() {
 
     return (
         <section className="roadmap-section py-10">
-            <div className="roadmap-container-main max-w-7xl mx-auto">
+            <div className="roadmap-container-main ">
 
                 <div className="roadmap-header">
                     <h2>Our <span className="text-[#c1972d]">Services</span></h2>
@@ -109,20 +109,40 @@ export default function Roadmap() {
                 </div>
 
                 <div className="roadmap-visual-area">
-                    {/* SVG ROAD */}
                     <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="road-svg-element">
-                        <path d={ROAD_PATH} className="road-path-bg" stroke="#374151"
+
+                        <defs>
+                            <filter id="roadShadow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feDropShadow
+                                    dx="0"
+                                    dy="4"
+                                    stdDeviation="6"
+                                    floodColor="#000000"
+                                    floodOpacity="0.4"
+                                />
+                            </filter>
+                        </defs>
+
+                        <path
+                            d={ROAD_PATH}
+                            className="road-path-bg"
+                            stroke="#374151"
                             strokeWidth="35"
                             fill="none"
                             strokeLinecap="round"
+                            filter="url(#roadShadow)"   // 👈 APPLY SHADOW HERE
                         />
-                        <path d={ROAD_PATH} className="road-path-dashed" stroke="white"
+
+                        <path
+                            d={ROAD_PATH}
+                            className="road-path-dashed"
+                            stroke="white"
                             strokeWidth="4"
                             fill="none"
                             strokeDasharray="12 10"
-                            strokeLinecap="round" />
+                            strokeLinecap="round"
+                        />
                     </svg>
-
                     {/* STUDENT ICON */}
                     <motion.div
                         className="student-mover"
@@ -154,7 +174,7 @@ export default function Roadmap() {
                                 key={step.id}
                                 className={`step-node ${isActive ? 'active' : ''}`}
                                 style={{ left: `${pos.x}%`, top: `${pos.y}%` }}
-                               
+
                             >
                                 <div
                                     className="step-pin"
@@ -166,7 +186,7 @@ export default function Roadmap() {
                                 <motion.div
                                     className={`step-card ${isTop ? 'pos-bottom' : 'pos-top'}`}
                                     style={{ borderLeftColor: step.color }}
-                                     transition={{ duration: 2.2, ease: "easeOut" }}
+                                    transition={{ duration: 2.2, ease: "easeOut" }}
                                     animate={{
                                         opacity: isActive ? 1 : 0,
                                         scale: isActive ? 1 : 0.8,

@@ -27,9 +27,9 @@ const DocumentationCards = () => {
             desc: "Expert review and guidance to craft a powerful SOP.",
             icon: "📝",
         },
-        {
+         {
             title: "Letters of Recommendation",
-            desc: "Structured LORs that strengthen your profile credibility.",
+           desc: "Structured LORs that strengthen your profile credibility.",
             icon: "📄",
         },
         {
@@ -55,7 +55,9 @@ const DocumentationCards = () => {
             className="bg-white py-10 md:pb-14 px-6 md:px-12 lg:px-10"
         >
             <div className="max-w-7xl mx-auto">
+
                 {/* Heading */}
+                
                 <div
                     className={`text-center mb-4 transition-all duration-1000 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
@@ -65,24 +67,15 @@ const DocumentationCards = () => {
                         <span className="text-[#c1972d]">Gets You Approved</span>
                     </h2>
                     <p className="mt-4 text-gray-600 max-w-7xl mx-auto text-base md:text-lg">
-                        The personal statement is one of the most determining documents for getting into a university; thus, it has to be one of those that also require students to have a visa. Our Study Abroad Document Verification Services in Mumbai help every consultation to be of a global standard and add value to your application.
+                        The personal statement is one of the most determining documents for getting into a university; thus, it has to be one of those that also require students to have a visa. Our Study Abroad Document Verification Services in Mumbai help every consultation to be of a global standard and add value to your application.    Incomplete or ill-prepared documents delay many students or lead to visa denials. Here at Excelencia International, we remove that risk with our expert document guidance.
+                        Our professionals make certain that your statement of purpose conveys all of your objectives, plans, and actual reasons to study. An excellent SOP is pivotal for both admission and visa success.
+                  
                     </p>
                 </div>
 
-                {/* Intro Content */}
-                <div
-                    className={`max-w-7xl mx-auto text-center mb-10 transition-all duration-1000 delay-200 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                        }`}
-                >
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                        Incomplete or ill-prepared documents delay many students or lead to visa denials. Here at Excelencia International, we remove that risk with our expert document guidance.
-                    </p>
-                    <p className="text-gray-600 leading-relaxed">
-                        Our professionals make certain that your statement of purpose conveys all of your objectives, plans, and actual reasons to study. An excellent SOP is pivotal for both admission and visa success.
-                    </p>
-                </div>
 
                 {/* Cards Showcase */}
+
                 <div
                     className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-1000 delay-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
@@ -112,8 +105,9 @@ const DocumentationCards = () => {
                 </div>
 
                 {/* Highlight Section */}
+
                 <div
-                    className={`mt-10 max-w-7xl mx-auto text-white bg-linear-to-r from-blue-950 to-[#c1972d] border border-[#c1972d]/30 rounded-2xl p-8 text-center transition-all duration-1000 delay-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                    className={`mt-10 max-w-7xl mx-auto text-white  bg-linear-to-r from-[#c1972d]  to-blue-950 border border-[#c1972d]/30 rounded-2xl p-8 text-center transition-all duration-1000 delay-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                         }`}
                 >
                     <h3 className="text-xl md:text-2xl font-semibold  mb-4">
@@ -132,7 +126,6 @@ const DocumentationCards = () => {
                         </p>
                     </div>
                 </div>
-
 
             </div>
         </section>

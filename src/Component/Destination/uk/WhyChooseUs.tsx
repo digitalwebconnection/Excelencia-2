@@ -67,7 +67,7 @@ const WhyChooseUs = () => {
               className="text-4xl md:text-5xl font-black text-blue-950 leading-tight"
             >
               Why Choose Us for <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-950 to-[#c1972d]">
+              <span className="text-transparent bg-clip-text  bg-linear-to-r from-[#c1972d]  to-blue-950">
                 UK Admission?
               </span>
             </motion.h2>

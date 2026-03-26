@@ -9,10 +9,10 @@ const ProfileEvaluation = () => {
                 {/* Left Side: The Philosophy (Sticky) */}
                 <div className="lg:sticky lg:top-24 space-y-8">
                     <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-950 text-white text-[10px] font-bold   tracking-[0.2em] mb-6">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-950 text-white text-md font-bold   tracking-[0.2em] mb-6">
                             Excelencia International
                         </div>
-                        <h2 className="text-5xl md:text-6xl font-extrabold text-blue-950 leading-[1.1] tracking-tight">
+                        <h2 className="text-3xl md:text-5xl font-extrabold text-blue-950 leading-[1.1] tracking-tight">
                             Profile
                             <span className="text-[#c1972d]"> Evaluation</span>
                         </h2>
@@ -28,14 +28,14 @@ const ProfileEvaluation = () => {
                                 <MapPin className="w-4 h-4 text-[#c1972d]" />
                                 Mumbai • Bandra • Maharashtra
                             </div>
-                            <button className="group w-fit flex items-center gap-4 bg-linear-to-r from-blue-950 to-[#c1972d] text-white px-8 py-4 rounded-full font-bold  transition-all duration-300 shadow-xl shadow-blue-950/10">
+                            <button className="group w-fit flex items-center gap-4  bg-linear-to-r from-[#c1972d]  to-blue-950 text-white px-8 py-4 rounded-full font-bold  transition-all duration-300 shadow-xl shadow-blue-950/10">
                                 Start Your Evaluation
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
                         </div>
                     </div>
                     {/* Highlighted LANDING Success Box */}
-                    <div className="mt-5 bg-linear-to-r from-blue-950 to-[#c1972d] p-6 rounded-4xl text-white relative overflow-hidden group">
+                    <div className="mt-5  bg-linear-to-r from-[#c1972d]  to-blue-950 p-6 rounded-4xl text-white relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#c1972d]/20 rounded-full blur-3xl -mr-10 -mt-10" />
                         <h4 className="text-2xl font-bold mb-4 flex items-center gap-3">
                             <CheckCircle className="text-[#c1972d]" />

@@ -118,7 +118,7 @@ const PrePostArrivalSection = () => {
   ];
 
   return (
-    <div className=" px-6 lg:px-6  font-sans">
+    <div className="  font-sans">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -262,7 +262,7 @@ const PrePostArrivalSection = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center gap-3  bg-linear-to-r from-blue-950 to-[#c1972d]  text-white px-8 py-4 rounded-2xl font-bold hover:bg-[#c1972d] transition-colors duration-300"
+                    className="inline-flex items-center gap-3   bg-linear-to-r from-[#c1972d]  to-blue-950  text-white px-8 py-4 rounded-2xl font-bold hover:bg-[#c1972d] transition-colors duration-300"
                   >
                     Learn More
                     <ArrowRight size={20} />
@@ -299,11 +299,13 @@ const PrePostArrivalSection = () => {
         </div>
 
         {/* Call to Action */}
-        <motion.div
+       
+      </div>
+       <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="bg-linear-to-r from-blue-950 to-[#c1972d] p-8 rounded-3xl text-white text-center shadow-2xl"
+          className=" bg-linear-to-r from-[#c1972d]  to-blue-950 p-6 text-white text-center shadow-2xl"
         >
           <motion.h3
             initial={{ y: 20, opacity: 0 }}
@@ -317,7 +319,7 @@ const PrePostArrivalSection = () => {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.6 }}
-            className="text-xl leading-relaxed opacity-95 max-w-6xl mx-auto mb-8"
+            className="text-xl leading-relaxed opacity-95 max-w-7xl mx-auto mb-8"
           >
             We are committed to making sure students arrive at their destination safely and flourish within the new context. Because real success is more than just leaving home — it’s reflecting, evolving, and prospering across the world. </motion.p>
           <motion.button
@@ -326,12 +328,11 @@ const PrePostArrivalSection = () => {
             transition={{ delay: 1.4, duration: 0.6 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block px-15 py-4 bg-linear-to-r from-blue-950 to-[#c1972d] text-white font-bold text-lg rounded-full"
+            className="inline-block px-20 py-4  bg-linear-to-r from-[#c1972d]  to-blue-950 text-white font-bold text-lg rounded-full"
           >
             Get Started Today
           </motion.button>
         </motion.div>
-      </div>
     </div>
   );
 };

@@ -43,9 +43,9 @@ export default function ShortlistingSection() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="inline-block px-4 py-1 rounded-full bg-blue-50 border border-blue-100 mb-4"
+                    className="inline-block px-8 py-1 rounded-full bg-blue-50 border border-blue-100 mb-2"
                 >
-                    <span className="text-blue-950 text-sm font-bold tracking-wide  ">
+                    <span className="text-blue-950 text-lg font-bold tracking-wide  ">
                         Expert Guidance
                     </span>
                 </motion.div>
@@ -54,7 +54,7 @@ export default function ShortlistingSection() {
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-4xl pb-10 md:text-5xl font-extrabold text-blue-950 leading-tight"
+                    className="text-3xl pb-10 md:text-5xl font-extrabold text-blue-950 leading-tight"
                 >
 
                     Country, Course, University
@@ -89,15 +89,15 @@ export default function ShortlistingSection() {
                                         y: -5,
                                         boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
                                     }}
-                                    className="group bg-linear-to-r from-blue-950 to-[#c1972d] p-6 rounded-xl border-b-4 border-transparent hover:border-[#c1972d] transition-all duration-300 shadow-xl cursor-default"
+                                    className="group  hover:bg-linear-to-r from-[#c1972d]  to-blue-950 p-6 rounded-xl border-b-4 border-transparent hover:border-[#c1972d] transition-all duration-300 shadow-xl cursor-default"
                                 >
                                     <item.icon
-                                        style={{ color: accentGold }}
-                                        className="mb-4 group-hover:rotate-12 transition-transform duration-300"
+                                     
+                                        className="mb-4 text-[#c1972d] group-hover:text-blue-950 group-hover:rotate-12 transition-transform duration-300"
                                         size={32}
                                     />
-                                    <h4 className="font-bold text-white text-lg">{item.title}</h4>
-                                    <p className="text-blue-200/70 text-sm mt-2 leading-snug">{item.desc}</p>
+                                    <h4 className="font-bold group-hover:text-white text-lg">{item.title}</h4>
+                                    <p className="group-hover:text-blue-200/70 text-sm mt-2 leading-snug">{item.desc}</p>
                                 </motion.div>
                             ))}
                         </motion.div>

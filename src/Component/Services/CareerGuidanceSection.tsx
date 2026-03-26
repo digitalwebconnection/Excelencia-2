@@ -1,18 +1,57 @@
 import { Compass, BarChart4, Globe2, Lightbulb, MapPin, Award } from 'lucide-react';
 
+const countries = ["UK", "USA", "CANADA", "AUSTRALIA", "GERMANY", "FRANCE", "IRELAND"];
+
 const CareerGuidanceSection = () => {
   return (
     <div className="bg-white font-sans text-slate-900 selection:bg-[#c1972d]/30">
       {/* Top Header Bar */}
-      <div className="bg-blue-950 py-4 px-6 border-b border-[#c1972d]/30">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2 text-[#c1972d]">
+      <style>
+        {`
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 20s linear infinite;
+          }
+          .marquee-container:hover .animate-marquee {
+            animation-play-state: paused;
+          }
+        `}
+      </style>
+
+      <div className="bg-blue-950 py-2 px-6 border-b border-[#c1972d]/30 overflow-hidden">
+        <div className="max-w-7xl mx-auto flex items-center gap-12">
+
+          {/* Static Location Label */}
+          <div className="flex items-center gap-2 text-[#c1972d] bg-blue-950 z-10 pr-6 shrink-0">
             <MapPin size={16} />
-            <span className="text-[10px] font-bold tracking-[0.2em]  ">Bandra, Mumbai Center</span>
+            <span className="text-lg font-bold tracking-[0.2em] whitespace-nowrap">
+              Destinations
+            </span>
           </div>
-          <div className="hidden md:flex gap-6 text-white/60 text-[10px] font-bold tracking-widest  ">
-            <span>UK</span> <span>USA</span> <span>Canada</span> <span>Australia</span>
+
+          {/* Running Belt (Marquee) */}
+          <div className="relative flex overflow-hidden marquee-container mask-gradient">
+            <div className="animate-marquee flex gap-12 items-center">
+              {/* First Set of Items */}
+              {countries.map((country, index) => (
+                <span key={`1-${index}`} className="text-white/60 text-md font-bold tracking-widest whitespace-nowrap">
+                  {country}
+                </span>
+              ))}
+              {/* Duplicate Set for Seamless Loop */}
+              {countries.map((country, index) => (
+                <span key={`2-${index}`} className="text-white/60 text-md font-bold tracking-widest whitespace-nowrap">
+                  {country}
+                </span>
+              ))}
+            </div>
           </div>
+
         </div>
       </div>
 
@@ -22,27 +61,28 @@ const CareerGuidanceSection = () => {
 
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-16 items-start">
-            
+
             {/* Left Column: Visual & Core Title */}
             <div className="lg:col-span-5 space-y-8">
-              <div className="inline-block p-3 bg-blue-950 rounded-2xl shadow-xl">
-                <Compass className="text-[#c1972d] w-10 h-10" />
+              <div className=' flex gap-10  items-centerF'>
+                <div className="inline-block p-3 bg-blue-950 rounded-2xl shadow-xl">
+                  <Compass className="text-[#c1972d] w-10 h-10" />
+                </div>
+                <h2 className="text-3xl md:text-5xl font-black text-blue-950 leading-[0.9] tracking-tighter">
+                  Career
+                  <span className="text-[#c1972d]"> Guidance</span>
+                </h2>
               </div>
-              <h2 className="text-5xl md:text-6xl font-black text-blue-950 leading-[0.9] tracking-tighter">
-                Career
-                <span className="text-[#c1972d]"> Guidance</span>
-              </h2>
-              
               {/* Paragraph 1 - Full Text */}
               <div className="relative pl-8 border-l-4 border-[#c1972d]">
-                <p className="text-xl text-slate-700 leading-relaxed font-medium">
+                <p className="text-xl text-slate-700 leading-relaxed ">
                   The relevance of course selection, though not solely based on interest, is critical to career growth and employability both nationally and globally. This is where, at Excelencia International, our Career Guidance for Study Abroad in Mumbai gives you the right direction for your educational demands according to international job prospects and opportunities.
                 </p>
               </div>
-              
+
               {/* ROI Badge */}
-              <div className="bg-linear-to-r from-blue-950 to-[#c1972d]  p-6 rounded-3xl text-white flex items-center gap-6 shadow-2xl border-b-4 border-[#c1972d]">
-                <BarChart4 size={40} className="text-[#c1972d] shrink-0" />
+              <div className=" bg-linear-to-r from-[#c1972d]  to-blue-950  p-6 rounded-3xl text-white flex items-center gap-6 shadow-2xl border-b-4 border-[#c1972d]">
+                <BarChart4 size={40} className="text-blue-950 shrink-0" />
                 <p className="text-sm font-bold   tracking-widest leading-relaxed">
                   High Return on Investment & Career Security
                 </p>
@@ -51,7 +91,7 @@ const CareerGuidanceSection = () => {
 
             {/* Right Column: Detailed Narrative */}
             <div className="lg:col-span-7 space-y-12">
-              
+
               {/* Paragraph 2 - Full Text */}
               <div className="group bg-white p-10 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all border border-slate-100 border-t-4 border-t-blue-950">
                 <div className="flex items-start gap-6">
@@ -77,9 +117,9 @@ const CareerGuidanceSection = () => {
                 <div className="flex items-start gap-6  ">
                   <Award size={32} className="text-[#c1972d] shrink-0" />
 
-                <p className="text-slate-700 leading-loose ">
-                  We are among the top study abroad consultancy in Mumbai, Bandra that aims to make not students, but global citizens for a better world. Before the students leave India, they know which specialisation to choose, what their job prospects would look like, and how they can carve out their professional journey even when they are with us through our career counselling.
-                </p>
+                  <p className="text-slate-700 leading-loose ">
+                    We are among the top study abroad consultancy in Mumbai, Bandra that aims to make not students, but global citizens for a better world. Before the students leave India, they know which specialisation to choose, what their job prospects would look like, and how they can carve out their professional journey even when they are with us through our career counselling.
+                  </p>
                 </div>
               </div>
             </div>

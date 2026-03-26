@@ -42,8 +42,6 @@ const Header = () => {
             <li className="opacity-50 cursor-not-allowed">Collaborate</li>
             <li className="opacity-50 cursor-not-allowed">Updates</li>
             <li><NavLink to="/Services" className="hover:text-[#c1972d]">Services</NavLink></li>
-
-
             <li><NavLink to="/contact" className="hover:text-[#c1972d]">Contact</NavLink></li>
           </ul>
 

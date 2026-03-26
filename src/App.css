@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body{
+  max-width: 1440px;
+}
+
 
 .clip-path-star {
   clip-path: polygon(
