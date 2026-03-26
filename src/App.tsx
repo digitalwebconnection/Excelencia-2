@@ -11,6 +11,7 @@ import ContactUsMain from "./Component/ContactUs/ContactUsMain";
 import FlightAnimation from "./Component/FlightAnimation";
 // import UkMain from "./Component/Destination/uk/UkMain";
 import ServicesMain from "./Component/Services/ServicesMain";
+import ScrollToTop from "./Component/ScrollToTop";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       </main>
 
       <Footer />{/* This Is Footr  */}
+      <ScrollToTop />
 
       <WhatsAppWidget />{/* This is WhatsApp Integraction  */}
     </>
