@@ -1,6 +1,6 @@
 import { Compass, BarChart4, Globe2, Lightbulb, MapPin, Award } from 'lucide-react';
 
-const countries = ["UK", "USA", "CANADA", "AUSTRALIA", "GERMANY", "FRANCE", "IRELAND"];
+const countries = ["Profile Evaluation", "Country, Course, University shortlisting", "Documentation", "Admission Assistance", "Interview Preparation", "Finance Support", "Career Guidance","Student Visa Assistance", "Visitor Visa Assistance","Pre- and Post-Arrival Services" ];
 
 const CareerGuidanceSection = () => {
   return (
@@ -30,7 +30,7 @@ const CareerGuidanceSection = () => {
           <div className="flex items-center gap-2 text-[#c1972d] bg-blue-950 z-10 pr-6 shrink-0">
             <MapPin size={16} />
             <span className="text-lg font-bold tracking-[0.2em] whitespace-nowrap">
-              Destinations
+              Our Services 
             </span>
           </div>
 

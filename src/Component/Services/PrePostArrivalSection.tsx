@@ -131,7 +131,7 @@ const PrePostArrivalSection = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.3, duration: 0.5, type: "spring" }}
-            className="inline-flex items-center gap-3 bg-blue-950 text-[#c1972d] px-6 py-2 rounded-full mb-4 shadow-lg"
+            className="inline-flex items-center gap-3 bg-[#c1972d] text-white px-6 py-2 rounded-full mb-4 shadow-lg"
           >
             <MapPin size={20} />
             <span className="text-sm font-bold uppercase tracking-widest">PRE & POST ARRIVAL Services</span>
@@ -170,7 +170,7 @@ const PrePostArrivalSection = () => {
                   onClick={() => setActiveTab(index)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`relative px-8 py-4 rounded-2xl font-bold transition-all duration-300 ${isActive
+                  className={`relative px-10 py-4 rounded-2xl font-bold transition-all duration-300 ${isActive
                     ? 'bg-blue-950 text-white shadow-xl'
                     : 'bg-white text-blue-950 hover:bg-blue-50 shadow-lg border border-slate-200'
                     }`}
@@ -220,7 +220,7 @@ const PrePostArrivalSection = () => {
               key={activeTab}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              exit={{ opacity: 0, y: -20 }}     
               transition={{ duration: 0.5 }}
               className=" p-2 "
               onMouseEnter={() => setIsAutoPlaying(false)}
@@ -244,7 +244,7 @@ const PrePostArrivalSection = () => {
                     );
                   })()}
 
-                  <h3 className="text-xl font-bold text-blue-950 mb-6">
+                  <h3 className="text-xl  text-blue-950 mb-6">
                     {phases[activeTab].content.overview}
                   </h3>
 

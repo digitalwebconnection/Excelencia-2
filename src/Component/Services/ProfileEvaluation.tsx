@@ -38,11 +38,12 @@ const ProfileEvaluation = () => {
                     <div className="mt-5  bg-linear-to-r from-[#c1972d]  to-blue-950 p-6 rounded-4xl text-white relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#c1972d]/20 rounded-full blur-3xl -mr-10 -mt-10" />
                         <h4 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                            <CheckCircle className="text-[#c1972d]" />
+                            <CheckCircle className="text-blue-950" />
                             End-to-End Success
                         </h4>
                         <p className=" leading-relaxed text-sm">
-                            With a well-defined breakdown of the student's profile, we drive this approach right from scratch till the time the student successfully lands in one of our partner universities. </p>
+                            With a well-defined breakdown of the student's profile, we drive this approach right from scratch till the time the student successfully lands in one of our partner universities.
+                        </p>
                     </div>
                 </div>
 
@@ -56,7 +57,8 @@ const ProfileEvaluation = () => {
                         </div>
                         <h3 className="text-xl font-bold text-blue-950 mb-4">Strategic Country Alignment</h3>
                         <p className="text-gray-500 leading-relaxed text-sm">
-                            We conduct a detailed evaluation of academic background, English skills, professional objectives, and financial/other circumstances in the context of the respective country requirements. Rather than promote general recommendations, we present students with a practical plan that’s tailored to their actual potential. "It helps reduce the incidence of futile applications and makes students apply to universities where they stand a good chance."</p>
+                            We conduct a detailed evaluation of academic background, English skills, professional objectives, and financial/other circumstances in the context of the respective country requirements. Rather than promote general recommendations, we present students with a practical plan that’s tailored to their actual potential. "It helps reduce the incidence of futile applications and makes students apply to universities where they stand a good chance."
+                        </p>
                     </div>
 
                     {/* Personalized Approach Card */}
@@ -81,8 +83,8 @@ const ProfileEvaluation = () => {
                         </p>
                     </div>
                 </div>
+                
             </div>
-
 
         </section>
     );

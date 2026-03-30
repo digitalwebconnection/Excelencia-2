@@ -14,7 +14,7 @@ const AdmissionService = () => {
 
                 {/* Header Section */}
                 <header className="mb-10 text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-bold mb-4">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#c1972d] text-white rounded-full text-sm font-bold mb-4">
                         <Building2 size={16} /> EXCELENCIA INTERNATIONAL
                     </div>
                     <h1 className="text-4xl md:text-5xl font-black text-blue-950 mb-6  tracking-tight">

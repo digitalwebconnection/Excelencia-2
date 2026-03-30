@@ -77,13 +77,13 @@ export default function ImmigrationHero() {
             {/* Trust Points */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-6 pt-4">
               <div className="flex items-center gap-2 text-slate-300 text-sm">
-                <CheckCircle className="w-4 h-4 text-[#c1972d]" /> Authorized Partner
+                <CheckCircle className="w-4 h-4 text-[#c1972d]" /> Student Visa
               </div>
               <div className="flex items-center gap-2 text-slate-300 text-sm">
-                <CheckCircle className="w-4 h-4 text-[#c1972d]" /> IELTS/PTE Coaching
+                <CheckCircle className="w-4 h-4 text-[#c1972d]" /> Free Education
               </div>
               <div className="flex items-center gap-2 text-slate-300 text-sm">
-                <CheckCircle className="w-4 h-4 text-[#c1972d]" /> Pre-Departure Support
+                <CheckCircle className="w-4 h-4 text-[#c1972d]" /> End-to-End Visa Support
               </div>
             </div>
           </div>

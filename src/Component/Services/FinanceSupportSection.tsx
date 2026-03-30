@@ -1,12 +1,12 @@
 
-import { Landmark, ShieldCheck, Globe, BadgeCheck, Lightbulb, TrendingUp } from 'lucide-react';
+import { Landmark, ShieldCheck, Globe, BadgeCheck, Lightbulb,ChartLine, TrendingUp } from 'lucide-react';
 import { easeOut, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const  FinanceSupportSection = () => {
+const FinanceSupportSection = () => {
   const [headerRef, headerInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [timelineRef, timelineInView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [conclusionRef, conclusionInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -42,7 +42,7 @@ const  FinanceSupportSection = () => {
             initial={{ scale: 0 }}
             animate={headerInView ? { scale: 1 } : {}}
             transition={{ delay: 0.3, duration: 0.5, type: "spring", stiffness: 200 }}
-            className="inline-flex items-center gap-3 bg-blue-950 text-[#c1972d] px-6 py-2 rounded-full mb-2"
+            className="inline-flex items-center gap-3 bg-[#c1972d] text-white px-6 py-2 rounded-full mb-2"
           >
             <TrendingUp size={20} />
             <span className="text-sm font-bold tracking-widest">FINANCE SUPPORT</span>
@@ -242,40 +242,43 @@ const  FinanceSupportSection = () => {
               ></motion.div>
               <div className="md:w-1/2 md:pl-12 order-3"></div>
             </motion.div>
+
+            {/* /* Step 6 */}
+            <motion.div variants={itemVariants} className="relative flex flex-col md:flex-row items-center md:items-start gap-8">
+              <div className="md:w-1/2 md:pr-8 order-2"></div>
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={timelineInView ? { scale: 1 } : {}}
+                transition={{ delay: 1.4, duration: 0.4, type: "spring" }}
+                className="absolute left-6 md:left-1/2 w-4 h-4 bg-[#c1972d] rounded-full border-4 border-white shadow-xl transform md:-translate-x-2 order-1"
+              ></motion.div>
+              <div className="md:w-1/2 md:pl-8 order-3">
+                <motion.div
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className=" hover:bg-linear-to-r from-[#c1972d]  to-blue-950 hover:text-white p-4 rounded-3xl shadow-lg "
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <motion.div
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-12 h-12 bg-blue-50  text-[#c1972d] rounded-2xl flex items-center justify-center"
+                    >
+                      <ChartLine size={24} />
+                    </motion.div>
+                    <h3 className="text-2xl font-bold">              Strategic Financial Planning for Global Futures</h3>
+                  </div>
+                  <p className="leading-relaxed opacity-95">
+                    With proper strategic planning, right financial decisions equipped with expert counsel, International study becomes a realistic investment towards viable global futures.
+                  </p>
+                </motion.div>
+              </div>
+            </motion.div>
+
           </div>
         </motion.div>
 
-        {/* Conclusion */}
-        <motion.div
-          ref={conclusionRef}
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={conclusionInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mt-20 text-center"
-        >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-            className=" bg-linear-to-r from-[#c1972d]  to-blue-950 p-8 rounded-3xl text-white shadow-2xl"
-          >
-            <motion.h3
-              initial={{ y: 20, opacity: 0 }}
-              animate={conclusionInView ? { y: 0, opacity: 1 } : {}}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-3xl md:text-4xl font-bold mb-6"
-            >
-              Strategic Financial Planning for Global Futures
-            </motion.h3>
-            <motion.p
-              initial={{ y: 20, opacity: 0 }}
-              animate={conclusionInView ? { y: 0, opacity: 1 } : {}}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-md leading-relaxed opacity-95 max-w-5xl mx-auto"
-            >
-              With proper strategic planning, right financial decisions equipped with expert counsel, International study becomes a realistic investment towards viable global futures.
-            </motion.p>
-          </motion.div>
-        </motion.div>
+
       </div>
     </div>
   );
