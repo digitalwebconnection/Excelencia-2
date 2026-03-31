@@ -220,7 +220,7 @@ const PrePostArrivalSection = () => {
               key={activeTab}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}     
+              exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
               className=" p-2 "
               onMouseEnter={() => setIsAutoPlaying(false)}
@@ -297,42 +297,42 @@ const PrePostArrivalSection = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-
-        {/* Call to Action */}
-       
       </div>
-       <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className=" bg-linear-to-r from-[#c1972d]  to-blue-950 p-6 text-white text-center shadow-2xl"
+      {/* Call to Action */}
+
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8, duration: 0.8 }}
+        className=" bg-linear-to-r from-[#c1972d]  to-blue-950 p-6 text-white text-center shadow-2xl"
+      >
+        <motion.h3
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1.0, duration: 0.6 }}
+          className="text-3xl md:text-4xl font-bold mb-6"
         >
-          <motion.h3
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.0, duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold mb-6"
-          >
-            Ready to Start Your Journey?
-          </motion.h3>
-          <motion.p
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.6 }}
-            className="text-xl leading-relaxed opacity-95 max-w-7xl mx-auto mb-8"
-          >
-            We are committed to making sure students arrive at their destination safely and flourish within the new context. Because real success is more than just leaving home — it’s reflecting, evolving, and prospering across the world. </motion.p>
-          <motion.button
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.4, duration: 0.6 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block px-20 py-4  bg-linear-to-r from-[#c1972d]  to-blue-950 text-white font-bold text-lg rounded-full"
-          >
-            Get Started Today
-          </motion.button>
-        </motion.div>
+          Ready to Start Your Journey?
+        </motion.h3>
+        <motion.p
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.6 }}
+          className="text-xl leading-relaxed opacity-95 max-w-7xl mx-auto mb-8"
+        >
+          We are committed to making sure students arrive at their destination safely and flourish within the new context. Because real success is more than just leaving home — it’s reflecting, evolving, and prospering across the world. </motion.p>
+        <motion.button
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1.4, duration: 0.6 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="inline-block px-20 py-4  bg-linear-to-r from-[#c1972d]  to-blue-950 text-white font-bold text-lg rounded-full"
+        >
+          Get Started Today
+        </motion.button>
+      </motion.div>
     </div>
   );
 };

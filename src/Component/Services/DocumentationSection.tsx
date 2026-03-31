@@ -71,23 +71,11 @@ const DocumentationSection = () => {
 
           <div className="border-l-4 border-[#c1972d] pl-4 text-gray-700">
             A well-prepared SOP, strong documentation, and error-free submission
-            significantly increase your chances of success.
+            significantly increase your chances of success.   We guide you through document sorting, reviewing, and final submission —
+          ensuring accuracy, clarity, and maximum impact for your application success.
           </div>
                 {/* Bottom Highlight */}
-      <div
-        className={`mt-16 max-w-4xl mx-auto text-center transition-all duration-1000 ${
-          visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <h3 className="text-xl md:text-2xl font-semibold mb-4">
-          A Strong SOP Can Change Everything
-        </h3>
-
-        <p className="text-gray-600 leading-relaxed">
-          We guide you through document sorting, reviewing, and final submission —
-          ensuring accuracy, clarity, and maximum impact for your application success.
-        </p>
-      </div>
+     
         </div>
 
         {/* RIGHT FEATURES */}
