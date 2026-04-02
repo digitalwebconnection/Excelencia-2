@@ -12,6 +12,7 @@ import FlightAnimation from "./Component/FlightAnimation";
 // import UkMain from "./Component/Destination/uk/UkMain";
 import ServicesMain from "./Component/Services/ServicesMain";
 import ScrollToTop from "./Component/ScrollToTop";
+import DestinationPage from "./Component/Destination/DestinationPage";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
           <Route path="/" element={<HomeMain />} /> {/* Home page and path is  / */}
           <Route path="/about" element={<AboutUsMain />} />{/* About us page and path is /about  */}
           <Route path="/Services" element={<ServicesMain />} />{/*  Service page and path is /Services */}
-          {/* <Route path="/destination/Uk" element={<UkMain />} /> */}
+           <Route path="/destination/:country" element={<DestinationPage />} />
           <Route path="/contact" element={<ContactUsMain />} />{/* Contact page and path is /contact  */}
 
         </Routes>

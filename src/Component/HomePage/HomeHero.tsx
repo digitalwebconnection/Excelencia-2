@@ -29,8 +29,8 @@ export default function HeroWithVideoAndSearchForm() {
   }, [stage]);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden ">
-      <AnimatePresence mode="wait">
+    <section className="relative w-full h-screen mt-1 overflow-hidden ">
+      <AnimatePresence mode="wait" >
         {/* ================= STAGE 0: VIDEO INTRO ================= */}
         {stage === 0 && (
           <motion.div
@@ -39,7 +39,7 @@ export default function HeroWithVideoAndSearchForm() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
-            className="absolute inset-0"
+            className="absolute  inset-0"
           >
             <video
               src={video}
