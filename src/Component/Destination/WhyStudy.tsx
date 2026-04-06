@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { X } from "lucide-react";
+"use client";
+import { motion } from "framer-motion";
 
 interface Point {
   title: string;
@@ -18,89 +18,126 @@ interface SectionProps {
 
 const icons = ["🎓", "⏱️", "💼", "🌍", "🤝", "🏙️"];
 
-const WhyStudy = ({ data }: SectionProps) => {
-  const [selected, setSelected] = useState<Point | null>(null);
+// Variants for the container to stagger children
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
 
+// Variants for text elements
+const itemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+};
+
+const WhyStudy = ({ data }: SectionProps) => {
   return (
-    <section className="py-10 bg-linear-to-b from-white via-blue-50/30 to-white">
+    <section className="py-20 bg-linear-to-b from-white via-blue-50/40 to-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}
-        <div className="text-center  mb-16">
-          <h2 className="text-3xl max-w-3xl mx-auto md:text-5xl font-bold text-gray-900 mb-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 max-w-3xl mx-auto">
             {data.title}
           </h2>
-
           {data.intro && (
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-lg max-w-6xl mx-auto">
               {data.intro}
             </p>
           )}
-        </div>
+        </motion.div>
 
-        {/* CARDS */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* CONTENT */}
+        <div className="space-y-14">
           {data.points.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              onClick={() => setSelected(item)}
-              className="cursor-pointer group bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 border border-gray-100 hover:-translate-y-1"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              className="grid md:grid-cols-2 gap-12 items-center"
             >
-              {/* ICON */}
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-[#c1972d] text-2xl mb-4 group-hover:scale-110 transition">
-                {icons[index]}
+
+              {/* IMAGE CONTAINER */}
+              <motion.div
+                className={`relative ${index % 2 !== 0 ? "md:order-2" : ""}`}
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <div className="rounded-3xl overflow-hidden shadow-2xl group relative">
+                  <motion.img
+                    initial={{ scale: 1.2 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 1.2 }}
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-80 object-cover"
+                  />
+                  {/* Overlay Gradient */}
+                  <div className="absolute inset-0 bg-blue-900/5 group-hover:bg-transparent transition-colors duration-500" />
+                </div>
+
+                {/* FLOATING ICON */}
+                <motion.div
+                  animate={{
+                    y: [0, -10, 0],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute -top-5 -left-4 bg-[#c1972d] text-white w-14 h-14 flex items-center justify-center text-xl rounded-xl shadow-lg z-10"
+                >
+                  {icons[index]}
+                </motion.div>
+              </motion.div>
+
+              {/* TEXT CONTENT */}
+              <div className={index % 2 !== 0 ? "md:pr-10" : "md:pl-10"}>
+                <motion.h3
+                  variants={itemVariants}
+                  className="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
+                >
+                  {item.title}
+                </motion.h3>
+
+                <motion.p
+                  variants={itemVariants}
+                  className="text-[#c1972d]  mb-4 font-semibold uppercase tracking-wide text-sm"
+                >
+                  {item.description}
+                </motion.p>
+
+                <motion.p
+                  variants={itemVariants}
+                  className="text-gray-600 leading-relaxed whitespace-pre-line text-lg"
+                >
+                  {item.full}
+                </motion.p>
+
+                {/* Visual accent line */}
+                <motion.div
+                  variants={itemVariants}
+                  className="h-1 w-12 bg-[#c1972d] mt-6 rounded-full"
+                />
               </div>
-
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                {item.title}
-              </h3>
-
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {item.description}
-              </p>
-
-              <p className="text-[#c1972d] text-sm mt-3 font-medium">
-               Open Details →
-              </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-
-      {/* MODAL */}
-      {selected && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4">
-
-          <div className="bg-white max-w-4xl w-full rounded-2xl overflow-hidden shadow-2xl relative animate-fadeIn">
-
-            {/* CLOSE BUTTON */}
-            <button
-              onClick={() => setSelected(null)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-white"
-            >
-              <X />
-            </button>
-
-            {/* IMAGE */}
-            <img
-              src={selected.image}
-              alt={selected.title}
-              className="w-full h-96 object-cover"
-            />
-
-            {/* CONTENT */}
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-3">
-                {selected.title}
-              </h3>
-
-              <p className="text-gray-600 whitespace-pre-line">
-                {selected.full}
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };

@@ -1,67 +1,117 @@
-interface HeroProps {
+"use client";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+/* TYPES */
+export interface HeroProps {
   data: {
     title: string;
     subtitle: string;
     description?: string;
     image?: string;
+    backgroundImages?: string[];
     ctaText?: string;
   };
 }
 
 const Hero = ({ data }: HeroProps) => {
-  return (
-    <section className="bg-white py-10">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+  const [currentBg, setCurrentBg] = useState(0);
 
-        {/* LEFT CONTENT */}
-        <div>
-          <p className="text-[#c1972d] font-semibold mb-3 uppercase text-sm tracking-wide">
+  const images = data.backgroundImages || [];
+
+  useEffect(() => {
+    if (!images.length) return;
+
+    const interval = setInterval(() => {
+      setCurrentBg((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [images]);
+
+  return (
+    <section className="relative h-[85vh] flex items-center overflow-hidden">
+
+      {/* 🔥 BACKGROUND SLIDER WITH FADE */}
+      <AnimatePresence>
+        {images.length > 0 && (
+          <motion.div
+            key={currentBg}
+            className="absolute inset-0"
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2 }}
+            style={{
+              backgroundImage: `url(${images[currentBg]})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* 🌑 PREMIUM OVERLAY */}
+      <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/80 to-black/30 " />
+
+      {/* CONTENT */}
+      <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center text-white">
+
+        {/* LEFT */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <p className="text-[#c1972d] font-semibold mb-3 uppercase text-sm tracking-widest">
             {data.subtitle}
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
             {data.title}
           </h1>
 
           {data.description && (
-            <p className="text-gray-600 text-lg mb-6">
+            <p className="text-gray-200 text-lg mb-8 max-w-lg">
               {data.description}
             </p>
           )}
 
           {/* CTA */}
           <div className="flex flex-wrap gap-4">
-            <button className="bg-linear-to-r from-[#c1972d]  to-blue-950 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow">
+            <button className="bg-linear-to-r from-[#c1972d] to-blue-950 px-7 py-3 rounded-xl font-semibold shadow-xl hover:scale-110 hover:shadow-2xl transition duration-300">
               {data.ctaText || "Get Started"}
             </button>
 
-            <button className="border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+            <button className="border border-white/50 backdrop-blur-md px-7 py-3 rounded-xl font-semibold hover:bg-white hover:text-black transition">
               View Courses
             </button>
           </div>
 
-          {/* Trust line */}
-          <p className="text-sm text-gray-400 mt-6">
+          <p className="text-sm text-gray-300 mt-6">
             Trusted by 10,000+ students worldwide
           </p>
-        </div>
+        </motion.div>
 
-        {/* RIGHT IMAGE CARD */}
-        <div className="relative">
-          <div className="rounded-2xl overflow-hidden shadow-xl">
-            <img
-              src={data.image}
-              alt={data.title}
-              className="w-full h-90 object-cover"
-            />
-          </div>
-
-          {/* Floating Card */}
-          <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
+        {/* RIGHT IMAGE */}
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9 }}
+          className="relative"
+        >
+          
+          {/* FLOATING CARD */}
+          {/* <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-md p-5 rounded-2xl shadow-2xl text-black"
+          >
             <p className="text-sm text-gray-500">Visa Success Rate</p>
-            <h3 className="text-xl font-bold text-[#c1972d]">95%</h3>
-          </div>
-        </div>
+            <h3 className="text-2xl font-bold text-[#c1972d]">95%</h3>
+          </motion.div> */}
+        </motion.div>
       </div>
     </section>
   );

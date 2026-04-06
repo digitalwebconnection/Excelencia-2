@@ -7,8 +7,12 @@ const destinationsData = {
       subtitle: "The Complete Student Guide",
       description:
         "World-class education, global exposure, and strong career opportunities.",
-      image:
-        "https://edwisefoundation.com/wp-content/uploads/2021/06/study-in-uk.png.webp", // UK/London vibe
+      backgroundImages: [
+        "https://djn2oq6v2lacp.cloudfront.net/wp-content/uploads/2022/06/United-Kingdom.jpg",
+        "https://pic.uhomes.com/onlineblog/cdn/uploads/2025/04/20250402094844581.jpg",
+        "https://images.pexels.com/photos/3071145/pexels-photo-3071145.jpeg?cs=srgb&dl=pexels-georgmp4-3071145.jpg&fm=jpg",
+      ],
+
       ctaText: "Book Free Consultation",
     },
 
@@ -127,15 +131,16 @@ const destinationsData = {
 
       list: [
         "Valid Passport",
-        "Confirmation of Acceptance for Studies (CAS)",
+        "Passport-size Photographs",
         "Academic Transcripts and Certificates",
         "English Language Test Score (IELTS/PTE/Duolingo if required)",
         "Statement of Purpose (SOP)",
-        "Financial Documents (Bank Statements, Loan Sanction Letter if applicable)",
-        "Tuberculosis (TB) Test Report (if required)",
+        "Confirmation of Acceptance for Studies (CAS)",
         "Visa Application Form",
+        "Tuberculosis (TB) Test Report (if required)",
+        "Financial Documents (Bank Statements, Loan Sanction Letter if applicable)",
         "Immigration Health Surcharge (IHS) Payment",
-        "Passport-size Photographs",
+
       ],
     },
 
@@ -195,7 +200,7 @@ const destinationsData = {
         },
       ],
     },
-    
+
   },
 };
 

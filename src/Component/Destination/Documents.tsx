@@ -48,15 +48,18 @@ const cardVariants = {
 const Documents = ({ data }: ListSectionProps) => {
     const [completed, setCompleted] = useState<number[]>([]);
     const [step, setStep] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
 
-    // 🔥 ODD-EVEN WAVE ANIMATION LOOP
+    // 🔥 SEQUENTIAL AUTO ANIMATION
     useEffect(() => {
+        if (isPaused) return;
+
         const interval = setInterval(() => {
-            setStep((prev) => prev + 1);
-        }, 2000); // speed control
+            setStep((prev) => (prev + 1) % data.list.length);
+        }, 1500);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [isPaused, data.list.length]);
 
     const toggleComplete = (i: number) => {
         setCompleted((prev) =>
@@ -68,9 +71,7 @@ const Documents = ({ data }: ListSectionProps) => {
     const progress = Math.round((completed.length / total) * 100);
 
     return (
-        <section className="relative py-12  overflow-hidden font-sans">
-            {/* BACKGROUND GLOW */}
-
+        <section className="relative py-12 overflow-hidden font-sans">
             <div className="max-w-7xl mx-auto px-6">
                 {/* HEADER */}
                 <div className="max-w-2xl mx-auto text-center">
@@ -134,12 +135,16 @@ const Documents = ({ data }: ListSectionProps) => {
                 className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto"
             >
                 {data.list.map((item, i) => {
-                    const isOptional = item.toLowerCase().includes("if required");
+                    const isOptional = item
+                        .toLowerCase()
+                        .includes("if required");
                     const isDone = completed.includes(i);
-                    const title = item.replace("(if required)", "").trim();
+                    const title = item
+                        .replace("(if required)", "")
+                        .trim();
 
-                    // 🔥 WAVE LOGIC
-                    const isActive = (i + step) % 2 === 0;
+                    // 🎯 SEQUENTIAL ACTIVE CARD
+                    const isActive = i === step;
 
                     return (
                         <motion.div
@@ -148,33 +153,39 @@ const Documents = ({ data }: ListSectionProps) => {
                             animate={
                                 isActive
                                     ? {
-                                        y: -12,
-                                        scale: 1.05,
+                                        y: -16,
+                                        scale: 1.08,
+                                        opacity: 1,
                                         boxShadow:
-                                            "0 20px 40px rgba(37,99,235,0.15)",
+                                            "0 10px 20px black",
                                     }
                                     : {
                                         y: 0,
-                                        scale: 1,
-                                        boxShadow: "0 0px 0px rgba(0,0,0,0)",
+                                        scale: 0.96,
+                                        opacity: 0.6,
+                                        boxShadow:
+                                            "0 0px 0px #c1972d",
                                     }
                             }
                             whileHover={{
-                                y: -14,
-                                scale: 1.08,
+                                y: -18,
+                                scale: 1.01,
+                                opacity: 1,
                                 boxShadow:
-                                    "0 25px 50px rgba(37,99,235,0.25)",
+                                    "0 20px 20px #c1972d",
                             }}
                             transition={{ duration: 0.5 }}
                             className={`relative cursor-pointer group rounded-3xl p-8 border transition-all duration-500 ${isDone
-                                ? "bg-white text-black"
-                                : isActive
-                                    ? "bg-linear-to-r from-[#c1972d] to-blue-950 text-white border-transparent shadow-xl"
-                                    : "bg-white/80 border-slate-200 hover:border-blue-200"
+                                    ? "bg-white text-black"
+                                    : isActive
+                                        ? "bg-white border-transparent"
+                                        : "bg-white/80 border-blue-950/50 hover:border-[#c1972d]"
                                 }`}
                             onClick={() => toggleComplete(i)}
+                            onMouseEnter={() => setIsPaused(true)}
+                            onMouseLeave={() => setIsPaused(false)}
                         >
-                            {/* 🔥 ACTIVE GLOW */}
+                            {/* ACTIVE GLOW */}
                             {isActive && (
                                 <div className="absolute inset-0 rounded-3xl border-2 border-blue-400/40 animate-pulse pointer-events-none" />
                             )}
@@ -183,8 +194,8 @@ const Documents = ({ data }: ListSectionProps) => {
                             <div className="mb-6 relative">
                                 <div
                                     className={`w-16 h-16 rounded-2xl flex items-center justify-center ${isDone
-                                        ? "bg-white text-black"
-                                        : "bg-blue-50 text-blue-600"
+                                            ? "bg-white text-black"
+                                            : "bg-blue-50 text-blue-600"
                                         }`}
                                 >
                                     {getIcon(item)}
@@ -212,11 +223,11 @@ const Documents = ({ data }: ListSectionProps) => {
                             </h3>
 
                             {/* STATUS */}
-                            <div className="flex justify-between   mt-6 pt-4 border-t text-xs">
+                            <div className="flex justify-between mt-6 pt-4 border-t text-xs">
                                 <span
                                     className={`px-3 py-1 rounded-full ${isOptional
-                                        ? "bg-yellow-100 text-yellow-700"
-                                        : "bg-green-100 text-green-700"
+                                            ? "bg-yellow-100 text-yellow-700"
+                                            : "bg-green-100 text-green-700"
                                         }`}
                                 >
                                     {isOptional ? "Optional" : "Mandatory"}
