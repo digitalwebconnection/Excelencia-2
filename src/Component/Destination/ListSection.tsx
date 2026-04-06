@@ -1,69 +1,92 @@
-import { CalendarDays, Clock, MapPin } from "lucide-react";
+import { CalendarDays, Snowflake, Sun, Leaf } from "lucide-react";
+
+interface IntakeItem {
+  name: string;
+  tag: string;
+  description: string;
+  icon: "fall" | "winter" | "spring";
+}
 
 interface IntakeSectionProps {
   data: {
     title: string;
-    list: string[];
+    list: IntakeItem[];
   };
 }
 
+// 🎨 ICON MAPPING
+const getIcon = (type: string) => {
+  switch (type) {
+    case "fall":
+      return <Leaf size={26} />;
+    case "winter":
+      return <Snowflake size={26} />;
+    case "spring":
+      return <Sun size={26} />;
+    default:
+      return <CalendarDays size={26} />;
+  }
+};
+
 const IntakeSection = ({ data }: IntakeSectionProps) => {
   return (
-    <section className="bg-white pb-10 px-6">
+    <section className="bg-white pb-12 px-6">
       <div className="max-w-5xl mx-auto">
-        {/* Header with Icon */}
-        <div className=" items-center text-center gap-4 mb-12">
-
+        
+        {/* HEADER */}
+        <div className="text-center mb-12">
           <h2 className="text-5xl font-bold text-slate-900 tracking-tight">
             {data.title}
           </h2>
-          <p className="mt-2 text-center text-slate-400 text-sm font-medium">
-            Application deadlines usually fall 3-4 months prior to these dates.
+          <p className="mt-3 text-slate-400 text-sm font-medium">
+            Application deadlines usually fall 3–4 months prior to intake.
           </p>
         </div>
 
+        {/* LIST */}
         <div className="grid gap-8">
           {data.list.map((item, i) => {
-            // Splitting the string to style the "Intake Name" differently
-            const [month, description] = item.split(" – ");
-
             return (
               <div
                 key={i}
-                className="group relative flex flex-col md:flex-row md:items-center gap-6 p-8 rounded-3xl border border-slate-500/20 bg-slate-200/50 hover:bg-blue-950 hover:shadow-2xl shadow-black shado-xl hover:shadow-indigo-100/50 transition-all duration-300"
+                className="group relative flex flex-col md:flex-row md:items-center gap-6 p-8 rounded-3xl border border-slate-200 bg-slate-50 hover:bg-blue-950 hover:shadow-2xl transition-all duration-300"
               >
-                {/* Visual "Step" Counter */}
-                <div className="shrink-0 w-14 h-14 rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-black shadow-sm group-hover:bg-[#c1972d] group-hover:text-white group-hover:border-[#c1972d] transition-all duration-300">
-                  <CalendarDays size={28} />
+                {/* ICON */}
+                <div className="shrink-0 w-14 h-14 rounded-2xl bg-white border flex items-center justify-center text-blue-600 shadow-sm group-hover:bg-[#c1972d] group-hover:text-white transition-all duration-300">
+                  {getIcon(item.icon)}
                 </div>
 
-                <div className="grow ">
+                {/* CONTENT */}
+                <div className="grow">
                   <div className="flex flex-wrap items-center gap-3 mb-2">
+                    
+                    {/* Intake Name */}
                     <h3 className="text-2xl font-bold text-slate-800 group-hover:text-white">
-                      {month}
+                      {item.name}
                     </h3>
+
+                    {/* Tag */}
+                    <span className="px-3 py-1 text-xs rounded-full bg-blue-100 text-blue-700 font-semibold group-hover:bg-white/20 group-hover:text-white">
+                      {item.tag}
+                    </span>
                   </div>
 
-                  <div className="flex items-start gap-2 text-slate-600 italic">
-                    <Clock size={18} className="mt-1 shrink-0 text-slate-400 group-hover:text-white" />
-                    <p className="text-lg leading-relaxed group-hover:text-white">
-                      {description}
-                    </p>
-                  </div>
+                  {/* Description */}
+                  <p className="text-lg text-slate-600 leading-relaxed group-hover:text-white">
+                    {item.description}
+                  </p>
                 </div>
 
-                {/* Subtle Decorative Arrow for desktop */}
-                <div className="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity translate-x-4 group-hover:translate-x-0 duration-300">
-                  <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
-                    <MapPin size={20} />
+                {/* RIGHT ICON (HOVER EFFECT) */}
+                <div className="hidden md:block opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-4 group-hover:translate-x-0">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white">
+                    <CalendarDays size={20} />
                   </div>
                 </div>
               </div>
             );
           })}
         </div>
-          
-        {/* Footer Note */}
 
       </div>
     </section>
@@ -71,4 +94,3 @@ const IntakeSection = ({ data }: IntakeSectionProps) => {
 };
 
 export default IntakeSection;
-

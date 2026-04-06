@@ -96,11 +96,11 @@ const CourseSection = ({ data }: CourseSectionProps) => {
                 {/* BACK SIDE */}
                 <div className="absolute inset-0 bg-linear-to-r from-[#c1972d] to-blue-950 text-white rounded-3xl p-6 shadow-xl transform-[rotateY(180deg)]  backface-hidden overflow-y-auto">
 
-                  <h3 className="text-3xl font-bold mb-3">
+                  <h3 className="text-2xl font-bold mb-3">
                     {course.title}
                   </h3>
 
-                  <p className="text-sm leading-relaxed opacity-90">
+                  <p className="text-sm leading-relaxed  translate-x-1 translate-y-1">
                     {course.full}
                   </p>
 

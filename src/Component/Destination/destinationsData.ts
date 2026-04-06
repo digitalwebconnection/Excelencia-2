@@ -143,13 +143,30 @@ const destinationsData = {
 
       ],
     },
-
     intakes: {
       title: "UK Intakes",
       list: [
-        "September Intake – Most popular with maximum course availability",
-        "January Intake – Limited courses but a good alternative",
-        "May Intake – Available in selective universities",
+        {
+          name: "September Intake",
+          tag: "Fall Intake",
+          description:
+            "Primary intake with maximum course and university options. Ideal for most students.",
+          icon: "fall" as const,
+        },
+        {
+          name: "January Intake",
+          tag: "Winter Intake",
+          description:
+            "Second major intake with limited courses. Great backup if you missed September.",
+          icon: "winter" as const,
+        },
+        {
+          name: "May Intake",
+          tag: "Spring Intake",
+          description:
+            "Least popular intake with very limited universities and programs available.",
+          icon: "spring" as const,
+        },
       ],
     },
 
