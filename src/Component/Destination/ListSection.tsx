@@ -14,7 +14,7 @@ interface IntakeSectionProps {
   };
 }
 
-// 🎨 ICON MAPPING
+// 🎨 ICON MAPPING  
 const getIcon = (type: string) => {
   switch (type) {
     case "fall":
@@ -32,10 +32,10 @@ const IntakeSection = ({ data }: IntakeSectionProps) => {
   return (
     <section className="bg-white pb-12 px-6">
       <div className="max-w-5xl mx-auto">
-        
+
         {/* HEADER */}
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-slate-900 tracking-tight">
+          <h2 className="text-5xl font-bold text-blue-950 tracking-tight">
             {data.title}
           </h2>
           <p className="mt-3 text-slate-400 text-sm font-medium">
@@ -52,21 +52,21 @@ const IntakeSection = ({ data }: IntakeSectionProps) => {
                 className="group relative flex flex-col md:flex-row md:items-center gap-6 p-8 rounded-3xl border border-slate-200 bg-slate-50 hover:bg-blue-950 hover:shadow-2xl transition-all duration-300"
               >
                 {/* ICON */}
-                <div className="shrink-0 w-14 h-14 rounded-2xl bg-white border flex items-center justify-center text-blue-600 shadow-sm group-hover:bg-[#c1972d] group-hover:text-white transition-all duration-300">
+                <div className="shrink-0 w-14 h-14 rounded-2xl bg-white border flex items-center justify-center text-[#c1972d] shadow-sm group-hover:bg-[#c1972d] group-hover:text-white transition-all duration-300">
                   {getIcon(item.icon)}
                 </div>
 
                 {/* CONTENT */}
                 <div className="grow">
                   <div className="flex flex-wrap items-center gap-3 mb-2">
-                    
+
                     {/* Intake Name */}
                     <h3 className="text-2xl font-bold text-slate-800 group-hover:text-white">
                       {item.name}
                     </h3>
 
                     {/* Tag */}
-                    <span className="px-3 py-1 text-xs rounded-full bg-blue-100 text-blue-700 font-semibold group-hover:bg-white/20 group-hover:text-white">
+                    <span className="px-3 py-1 text-xs rounded-full bg-blue-100 text-blue-950 font-semibold group-hover:bg-white/20 group-hover:text-white">
                       {item.tag}
                     </span>
                   </div>

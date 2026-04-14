@@ -22,6 +22,26 @@ const Footer = () => {
     // { name: "Blog", path: "/blog" },
     { name: "Contact Us", path: "/contact" },
   ];
+  const socialLinks = [
+    {
+      icon: Facebook,
+      url: "https://www.facebook.com/profile.php?id=61574612612766",
+    },
+    {
+      icon: Instagram,
+      url: "https://www.instagram.com/excelencia_international?igsh=YnQzZWh6ZWRndnJh",
+    },
+    {
+      icon: Linkedin,
+      url: "https://www.linkedin.com/company/excelencia-international01/",
+    },
+    {
+      icon: Youtube,
+      url: "https://www.youtube.com/@ExcelenciaInternational",
+    },
+  ];
+
+
 
   // ✅ Services with Paths
   const services = [
@@ -131,16 +151,22 @@ const Footer = () => {
 
           {/* SOCIAL ICONS */}
           <div className="flex gap-4 mt-5">
-            {[Facebook, Instagram, Linkedin, Youtube].map((Icon, i) => (
-              <div
-                key={i}
-                className="bg-linear-to-r from-[#c1972d] to-blue-950 p-[1.5px] rounded-full hover:from-blue-950 hover:to-[#c1972d] transition"
-              >
-                <div className="w-9 h-9 flex items-center justify-center rounded-full bg-white text-[#0b1f3a] hover:bg-[#c1972d] transition cursor-pointer">
-                  <Icon size={18} />
-                </div>
-              </div>
-            ))}
+            {socialLinks.map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <a
+                  key={i}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-linear-to-r from-[#c1972d] to-blue-950 p-[1.5px] rounded-full hover:from-blue-950 hover:to-[#c1972d] transition"
+                >
+                  <div className="w-9 h-9 flex items-center justify-center rounded-full bg-white text-[#0b1f3a] hover:bg-[#c1972d] hover:text-white transition cursor-pointer">
+                    <Icon size={18} />
+                  </div>
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -52,7 +52,7 @@ const Hero = ({ data }: HeroProps) => {
       </AnimatePresence>
 
       {/* 🌑 PREMIUM OVERLAY */}
-      <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/80 to-black/30 " />
+      <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/50 to-black/10 " />
 
       {/* CONTENT */}
       <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center text-white">

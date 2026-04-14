@@ -26,7 +26,7 @@ const EducationSection = ({ data }: SectionProps) => {
       setActiveIndex((prev) =>
         prev === data.sections.length - 1 ? 0 : prev + 1
       );
-    }, 4000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [data.sections.length]);
@@ -40,7 +40,7 @@ const EducationSection = ({ data }: SectionProps) => {
           Education System
         </p>
 
-        <h2 className="text-4xl md:text-5xl font-bold max-w-2xl mx-auto text-gray-900 mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold max-w-2xl mx-auto text-blue-950 mb-4">
           {data.title}
         </h2>
 

@@ -39,7 +39,7 @@ const CourseSection = ({ data }: CourseSectionProps) => {
 
         {/* HEADER */}
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl  max-w-2xl mx-auto font-extrabold ">
+          <h2 className="text-3xl md:text-5xl text-blue-950  max-w-2xl mx-auto font-extrabold ">
             {data.title}
           </h2>
           <div className="w-24 h-1 bg-linear-to-r from-[#c1972d] to-blue-950 mx-auto mt-4 rounded-full" />

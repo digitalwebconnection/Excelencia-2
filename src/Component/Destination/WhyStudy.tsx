@@ -48,7 +48,7 @@ const WhyStudy = ({ data }: SectionProps) => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold text-blue-950 mb-4 max-w-3xl mx-auto">
             {data.title}
           </h2>
           {data.intro && (
@@ -99,7 +99,7 @@ const WhyStudy = ({ data }: SectionProps) => {
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute -top-5 -left-4 bg-[#c1972d] text-white w-14 h-14 flex items-center justify-center text-xl rounded-xl shadow-lg z-10"
+                  className="absolute -top-5 -left-4 bg-blue-950 text-white w-14 h-14 flex items-center justify-center text-xl rounded-xl shadow-lg z-10"
                 >
                   {icons[index]}
                 </motion.div>

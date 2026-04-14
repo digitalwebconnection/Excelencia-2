@@ -130,21 +130,51 @@ const destinationsData = {
       subtitle: "Prepare these essential documents before applying",
 
       list: [
-        "Valid Passport",
-        "Passport-size Photographs",
-        "Academic Transcripts and Certificates",
-        "English Language Test Score (IELTS/PTE/Duolingo if required)",
-        "Statement of Purpose (SOP)",
-        "Confirmation of Acceptance for Studies (CAS)",
-        "Visa Application Form",
-        "Tuberculosis (TB) Test Report (if required)",
-        "Financial Documents (Bank Statements, Loan Sanction Letter if applicable)",
-        "Immigration Health Surcharge (IHS) Payment",
-
-      ],
+        {
+          text: "Valid Passport",
+          image: "https://wpblogassets.paytm.com/paytmblog/uploads/2024/07/Blog_Generic_How-to-Apply-for-Reissue-of-Passport-in-India_-800x500.jpg"
+        },
+        {
+          text: "Passport-size Photographs",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVYvpjX18ruFGDe9WBIGtBImKchCPCzkN9cw&s"
+        },
+        {
+          text: "Academic Transcripts and Certificates",
+          image: "https://ik.imagekit.io/upgrad1/abroad-images/imageCompo/images/Designer_min1GOJKG.png"
+        },
+        {
+          text: "English Language Test Score (IELTS/PTE/Duolingo if required)",
+          image: "https://images.ctfassets.net/unrdeg6se4ke/7oxp19aszqUwQDGLnE02DH/7b761c9823b047a786b02d41e960ba33/IELTS.jpg?&fm=webp&w=500"
+        },
+        {
+          text: "Statement of Purpose (SOP)",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbJttWgjYRS5GmbtJsK936wrW_IBEA12qapA&s"
+        },
+        {
+          text: "Confirmation of Acceptance for Studies (CAS)",
+          image: "https://www.jeduka.com/storage/newsletter/1617775970_How%20to%20get%20Confirmation%20of%20Acceptance%20for%20Studies%20(CAS).jpg"
+        },
+        {
+          text: "Visa Application Form",
+          image: "https://www.pdffiller.com/preview/456/435/456435057/large.png"
+        },
+        {
+          text: "Tuberculosis (TB) Test Report (if required)",
+          image: "https://www.pdffiller.com/preview/433/46/433046986/large.png"
+        },
+        {
+          text: "Financial Documents (Bank Statements, Loan Sanction Letter if applicable)",
+          image: "https://imgv2-2-f.scribdassets.com/img/document/656296234/original/1b367dff3d/1?v=1"
+        },
+        {
+          text: "Immigration Health Surcharge (IHS) Payment",
+          image: "https://discourse.tnvisaforum.org/uploads/default/original/2X/7/70605a7bea08c0fbb91facdcb4a4f12984d68b5f.png"
+        }
+      ]
     },
+
     intakes: {
-      title: "UK Intakes",
+      title: "Available Intakes in United Kingdom",
       list: [
         {
           name: "September Intake",
