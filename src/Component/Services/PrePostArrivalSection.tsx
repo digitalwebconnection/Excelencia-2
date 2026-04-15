@@ -226,7 +226,7 @@ const PrePostArrivalSection = () => {
               onMouseEnter={() => setIsAutoPlaying(false)}
               onMouseLeave={() => setIsAutoPlaying(true)}
             >
-              <div className="grid lg:grid-cols-2 gap-12">
+              <div className="grid text-justify lg:grid-cols-2 gap-12">
                 {/* Left Column - Overview */}
                 <div>
                   {(() => {

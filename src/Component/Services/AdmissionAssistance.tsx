@@ -26,7 +26,7 @@ const AdmissionService = () => {
                     </div>
                 </header>
 
-                <div className="relative border-l-2 border-blue-950 ml-4 md:ml-12 pl-8 md:pl-16 space-y-12">
+                <div className="relative text-justify border-l-2 border-blue-950 ml-4 md:ml-12 pl-8 md:pl-16 space-y-12">
 
                     {/* Step 1: The Recognition */}
                     <div className="relative">

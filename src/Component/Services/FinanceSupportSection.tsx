@@ -72,7 +72,7 @@ const FinanceSupportSection = () => {
           variants={containerVariants}
           initial="hidden"
           animate={timelineInView ? "visible" : "hidden"}
-          className="relative"
+          className="relative "
         >
           {/* Timeline Line */}
           <motion.div
@@ -82,9 +82,9 @@ const FinanceSupportSection = () => {
             className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-blue-950 to-[#c1972d] transform md:-translate-x-0.5 origin-top"
           ></motion.div>
 
-          <div className="space-y-5">
+          <div className="space-y-5 text-justify">
             {/* Step 1 */}
-            <motion.div variants={itemVariants} className="relative flex flex-col md:flex-row items-center md:items-start gap-8">
+            <motion.div variants={itemVariants} className="relative  flex flex-col md:flex-row items-center md:items-start gap-8">
               <div className="md:w-1/2 md:pr-8 md:text-right order-2 md:order-1">
                 <motion.div
                   whileHover={{ scale: 1.02, y: -5 }}
@@ -101,7 +101,7 @@ const FinanceSupportSection = () => {
                     </motion.div>
                     <h3 className="text-2xl font-bold ">Cost Clarity</h3>
                   </div>
-                  <p className=" leading-relaxed">
+                  <p className=" leading-relaxed text-justify">
                     Cost is one of the primary worries students and parents have when it comes to international education. Our Education Finance Support at Excelencia International in Mumbai, Maharashtra, clarifies your tuition fees, living expenses, and funding options so you start your study abroad experience on the right track!
                   </p>
                 </motion.div>
@@ -148,7 +148,7 @@ const FinanceSupportSection = () => {
             </motion.div>
 
             {/* Step 3 */}
-            <motion.div variants={itemVariants} className="relative flex flex-col md:flex-row items-center md:items-start gap-8">
+            <motion.div variants={itemVariants} className="relative  flex flex-col md:flex-row items-center md:items-start gap-8">
               <div className="md:w-1/2 md:pr-8 md:text-right order-2 md:order-1">
                 <motion.div
                   whileHover={{ scale: 1.02, y: -5 }}
@@ -165,7 +165,7 @@ const FinanceSupportSection = () => {
                     </motion.div>
                     <h3 className="text-2xl font-bold ">Loan & Scholarship Support</h3>
                   </div>
-                  <p className=" leading-relaxed">
+                  <p className=" leading-relaxed text-justify">
                     Assistance in education loan advice, scholarship info, sponsorship documents, and financial affidavit. To avoid delays or refusals, our team helps ensure that financial documents comply with both embassy and university standards.
                   </p>
                 </motion.div>
@@ -229,7 +229,7 @@ const FinanceSupportSection = () => {
                     </motion.div>
                     <h3 className="text-2xl font-bold ">Stress-Free Approach</h3>
                   </div>
-                  <p className=" leading-relaxed italic">
+                  <p className=" leading-relaxed text-justify ">
                     We believe in a simple and tangible approach. Funding options are clearly explained so families can decide about funding without stress or confusion. Well, students get ready for their visa approval because of the proper financial preparation, and it also provides confidence and security to the student before traveling.
                   </p>
                 </motion.div>

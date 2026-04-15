@@ -1,4 +1,4 @@
-"use client";
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -26,7 +26,7 @@ const EducationSection = ({ data }: SectionProps) => {
       setActiveIndex((prev) =>
         prev === data.sections.length - 1 ? 0 : prev + 1
       );
-    }, 6000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, [data.sections.length]);
@@ -44,7 +44,7 @@ const EducationSection = ({ data }: SectionProps) => {
           {data.title}
         </h2>
 
-        <p className="text-gray-600 text-lg max-w-6xl mx-auto">
+        <p className="text-gray-600  text-lg max-w-6xl mx-auto">
           {data.intro}
         </p>
       </div>
@@ -64,7 +64,7 @@ const EducationSection = ({ data }: SectionProps) => {
               {data.sections[activeIndex]?.title}
             </h3>
 
-            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+            <p className="text-gray-600 text-justify text-lg leading-relaxed mb-8">
               {data.sections[activeIndex]?.content}
             </p>
 

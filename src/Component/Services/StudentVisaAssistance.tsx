@@ -17,7 +17,7 @@ export default function StudentVisaAssistance() {
             Student Visa <span className="text-[#c1972d]">  Assistance</span>
           </h2>
 
-          <div className="space-y-6 text-gray-700 leading-relaxed text-lg md:text-base">
+          <div className="space-y-6 text-justify text-gray-700 leading-relaxed text-lg md:text-base">
             <p className="text-lg">
               One of the most pressing tasks before you can even think about studying abroad is getting your student visa. Excelencia International offers expert student visa assistance in Mumbai Bandra that helps students submit strong, accurate, well-prepared visa applications.
             </p>

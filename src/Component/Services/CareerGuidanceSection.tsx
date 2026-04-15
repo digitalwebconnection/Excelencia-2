@@ -75,7 +75,7 @@ const CareerGuidanceSection = () => {
               </div>
               {/* Paragraph 1 - Full Text */}
               <div className="relative pl-8 border-l-4 border-[#c1972d]">
-                <p className="text-xl text-slate-700 leading-relaxed ">
+                <p className="text-xl text-justify text-slate-700 leading-relaxed ">
                   The relevance of course selection, though not solely based on interest, is critical to career growth and employability both nationally and globally. This is where, at Excelencia International, our Career Guidance for Study Abroad in Mumbai gives you the right direction for your educational demands according to international job prospects and opportunities.
                 </p>
               </div>
@@ -90,7 +90,7 @@ const CareerGuidanceSection = () => {
             </div>
 
             {/* Right Column: Detailed Narrative */}
-            <div className="lg:col-span-7 space-y-12">
+            <div className="lg:col-span-7 text-justify space-y-12">
 
               {/* Paragraph 2 - Full Text */}
               <div className="group bg-white p-10 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all border border-slate-100 border-t-4 border-t-blue-950">

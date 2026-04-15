@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion,  easeOut } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 
 
 interface ListSectionProps {
@@ -62,7 +62,7 @@ const Documents = ({ data }: ListSectionProps) => {
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-5xl font-extrabold text-blue-950 mb-6"
+            className="text-3xl md:text-5xl font-bold text-blue-950 mb-6"
           >
             {data.title}
           </motion.h2>
@@ -86,71 +86,71 @@ const Documents = ({ data }: ListSectionProps) => {
         className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto mt-12"
       >
         {data.list.map((item, i) => {
-       
+
           const isActive = i === step;
 
           return (
-       <motion.div
-  key={i}
-  variants={cardVariants}
-  animate={
-    isActive
-      ? {
-          y: -8,
-          scale: 1.02,
-          opacity: 1,
-          boxShadow: "0 12px 30px rgba(0,0,0,0.2)",
-        }
-      : {
-          y: 0,
-          scale: 0.98,
-          opacity: 0.9,
-          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-        }
-  }
-  whileHover={{
-    y: -10,
-    scale: 1.03,
-    boxShadow: "0 20px 40px rgba(0,0,0,0.25)",
-  }}
-  transition={{
-    type: "spring",
-    stiffness: 120,
-    damping: 14,
-  }}
-  className="relative cursor-pointer group rounded-xl overflow-hidden border border-black/10 bg-white h-80 flex flex-col"
-  onClick={() => toggleComplete(i)}
-  onMouseEnter={() => setIsPaused(true)}
-  onMouseLeave={() => setIsPaused(false)}
->
+            <motion.div
+              key={i}
+              variants={cardVariants}
+              animate={
+                isActive
+                  ? {
+                    y: -8,
+                    scale: 1.02,
+                    opacity: 1,
+                    boxShadow: "0 12px 30px rgba(0,0,0,0.2)",
+                  }
+                  : {
+                    y: 0,
+                    scale: 0.98,
+                    opacity: 0.9,
+                    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                  }
+              }
+              whileHover={{
+                y: -10,
+                scale: 1.03,
+                boxShadow: "0 20px 40px rgba(0,0,0,0.25)",
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 14,
+              }}
+              className="relative cursor-pointer group rounded-xl overflow-hidden border border-black/10 bg-white h-80 flex flex-col"
+              onClick={() => toggleComplete(i)}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+            >
 
-  {/* 🔥 IMAGE (80%) */}
-  <div className="relative h-[80%] w-full overflow-hidden">
+              {/* 🔥 IMAGE (80%) */}
+              <div className="relative h-[80%] w-full overflow-hidden">
 
-    <img
-      src={item.image}
-      alt={item.text}
-      className="w-full h-full object-fill group-hover:scale-110 transition duration-500"
-    />
+                <img
+                  src={item.image}
+                  alt={item.text}
+                  className="w-full h-full object-fill group-hover:scale-110 transition duration-500"
+                />
 
-    {/* 🔥 SHADOW OVERLAY (BOTTOM FADE) */}
-    <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent opacity-80" />
+                {/* 🔥 SHADOW OVERLAY (BOTTOM FADE) */}
+                <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent opacity-80" />
 
-  </div>
+              </div>
 
-  {/* 🔥 DIVIDER */}
-  <div className="h-px w-full bg-black/50" />
+              {/* 🔥 DIVIDER */}
+              <div className="h-px w-full bg-black/50" />
 
-  {/* 🔥 CONTENT (20%) */}
-  <div className="h-[20%] flex items-center px-4 bg-white">
+              {/* 🔥 CONTENT (20%) */}
+              <div className="h-[20%] flex items-center px-4 bg-white">
 
-    <h3 className="font-semibold text-sm md:text-base text-slate-900 line-clamp-2">
-      {item.text}
-    </h3>
+                <h3 className="font-semibold text-sm md:text-base text-slate-900 line-clamp-2">
+                  {item.text}
+                </h3>
 
-  </div>
+              </div>
 
-</motion.div>
+            </motion.div>
           );
         })}
       </motion.div>

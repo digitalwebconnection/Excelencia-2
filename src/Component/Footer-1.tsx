@@ -67,7 +67,7 @@ const Footer = () => {
             />
           </Link>
 
-          <p className="text-black text-sm leading-relaxed">
+          <p className="text-black text-justify text-sm leading-relaxed">
             Excelencia International helps students achieve their global
             education dreams with trusted university partnerships and expert
             guidance.
@@ -125,7 +125,7 @@ const Footer = () => {
           </h4>
 
           <div className="space-y-3 text-black text-sm">
-            <p className="flex items-start gap-2 hover:text-[#c1972d]">
+            <p className="flex text-justify items-start gap-2 hover:text-[#c1972d]">
               <MapPin size={40} className="text-[#c1972d]" />
               Elco Arcade, D Wing, Office No. 45, First Floor, Near Almeida Park,
               Bandra West, Mumbai 400050

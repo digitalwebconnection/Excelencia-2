@@ -109,7 +109,7 @@ export default function ShortlistingSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="space-y-6">
+                        <div className="space-y-6 text-justify">
                             <p className="text-gray-700 text-lg leading-relaxed">
                                 Selecting the perfect place to study is one of the biggest decisions you will make throughout your life. With thousands of universities and programs on offer globally, it’s no wonder students become stressed. Explore the very best options with our Country, Course & University Shortlisting Service in Bandra, Mumbai, India.
                             </p>

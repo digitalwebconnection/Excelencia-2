@@ -17,7 +17,7 @@ const destinationsData = {
     },
 
     whyStudy: {
-      title: "Why Study in the United Kingdom?",
+      title: "Why Study in the United Kingdom?",      
       intro:
         "The United Kingdom is one of the most sought-after destinations offering world-class education and global career opportunities.",
       points: [

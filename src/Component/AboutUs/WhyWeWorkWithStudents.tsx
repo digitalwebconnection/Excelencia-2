@@ -85,7 +85,7 @@ export default function WhyWeWorkWithStudents() {
             Every Approval Letter <span className="text-blue-950"> Has A Journey Behind It</span>
           </h2>
 
-          <p className="text-gray-600  text-md md:text-lg mb-10 max-w-xl">
+          <p className="text-gray-600 text-justify  text-md md:text-lg mb-10 max-w-xl">
             What you see is a visa stamp.
             What we see is months of preparation, planning, clarity, and confidence.
 

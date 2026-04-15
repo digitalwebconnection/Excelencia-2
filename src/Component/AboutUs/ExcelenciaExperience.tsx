@@ -152,7 +152,7 @@ function StatCard({ item, index }: { item: typeof stats[0], index: number }) {
         <h4 className="text-md font-bold text-[#1a2b3b] group-hover:text-[#ffffff] mb-3   tracking-wider transition-colors duration-500">
           {item.title}
         </h4>
-        <p className="text-gray-500 text-sm leading-relaxed max-w-80 mx-auto group-hover:text-white transition-colors duration-500">
+        <p className="text-gray-500 text-justify text-sm leading-relaxed max-w-80 mx-auto group-hover:text-white transition-colors duration-500">
           {item.desc}
         </p>
       </div>

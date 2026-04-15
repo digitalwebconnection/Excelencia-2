@@ -53,7 +53,7 @@ export default function StudentVisionSection() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-gray-100 text-md md:text-xl leading-relaxed space-y-6"
+              className="text-gray-100 text-justify text-md md:text-xl leading-relaxed space-y-6"
             >
               <p>
                 Deciding to study abroad may be one of the most beneficial and life-changing decisions a student ever makes.

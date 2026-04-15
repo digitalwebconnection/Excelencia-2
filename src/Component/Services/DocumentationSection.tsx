@@ -64,12 +64,12 @@ const DocumentationSection = () => {
             <span className="text-[#c1972d]">Gets You Approved</span>
           </h2>
 
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+          <p className="text-gray-600 text-justify text-base md:text-lg leading-relaxed">
             Your documentation can make or break your admission and visa approval.
             We ensure every document meets global standards and strengthens your application.
           </p>
 
-          <div className="border-l-4 border-[#c1972d] pl-4 text-gray-700">
+          <div className="border-l-4 text-justify border-[#c1972d] pl-4 text-gray-700">
             A well-prepared SOP, strong documentation, and error-free submission
             significantly increase your chances of success.   We guide you through document sorting, reviewing, and final submission —
           ensuring accuracy, clarity, and maximum impact for your application success.

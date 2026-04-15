@@ -64,7 +64,7 @@ export default function AboutHero() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-20 max-w-7xl mx-auto px-6 py-5 md:py-18 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 py-5 md:py-18 grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
 
         {/* LEFT CONTENT */}
         <AnimatePresence mode="wait">
@@ -74,7 +74,7 @@ export default function AboutHero() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 30 }}
             transition={{ duration: 0.6 }}
-            className="text-white max-w-xl"
+            className="text-white  col-span-2  "
           >
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1 mb-4 md:mb-6
@@ -83,9 +83,9 @@ export default function AboutHero() {
             </div>
 
             {/* Heading */}
-            <h1 className="text-3xl md:text-5xl xl:text-6xl font-extrabold leading-tight">
+            <h1 className="text-3xl md:text-5xl  font-bold leading-tight">
               {slides[active].title}
-              <span className="block text-[#c1972d]">
+              <span className=" text-[#c1972d]">
                 {slides[active].highlight}
               </span>
             </h1>

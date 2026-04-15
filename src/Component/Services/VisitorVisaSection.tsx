@@ -28,7 +28,7 @@ const VisitorVisaSection = () => {
             </div>
           </div>
         </div>
-        <div className="grid gap-10 mt-10" >
+        <div className="grid text-justify gap-10 mt-10" >
           {/* Paragraph 2 & 3 - Documentation & Guidance (Side by Side) */}
           <div className="grid md:grid-cols-2 gap-8">
             <div className="hover:bg-linear-to-r from-[#c1972d]  to-blue-950 hover:text-white p-8 md:p-10  group rounded-2xl shadow-xl">

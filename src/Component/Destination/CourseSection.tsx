@@ -100,7 +100,7 @@ const CourseSection = ({ data }: CourseSectionProps) => {
                     {course.title}
                   </h3>
 
-                  <p className="text-sm leading-relaxed  translate-x-1 translate-y-1">
+                  <p className="text-sm leading-relaxed text-justify translate-x-1 translate-y-1">
                     {course.full}
                   </p>
 

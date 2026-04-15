@@ -99,7 +99,7 @@ export default function OurWayOfCounseling() {
               </h3>
 
               {/* Description */}
-              <p className="leading-relaxed text-center text-slate-600 transition-colors duration-700 group-hover:text-white text-sm">
+              <p className="leading-relaxed  text-center text-slate-600 transition-colors duration-700 group-hover:text-white text-sm">
                 {step.desc}
               </p>
             </motion.div>

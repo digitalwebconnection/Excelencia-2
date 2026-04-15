@@ -92,7 +92,7 @@ export default function WhyGuidanceMatters() {
               <span className="text-[#c1972d]">it’s an experience of a lifetime.</span>
             </h2>
             <div className="mt-6 space-y-6 text-gray-600 text-lg leading-relaxed max-w-xl">
-              <p>
+              <p className="text-justify">
                 It fosters independence, self-assuredness, international immersion, and career advancement
                 that stretch beyond the classroom. There are many academic, professional, and personal
                 benefits to studying in a new country.

@@ -1,4 +1,4 @@
-"use client";
+ 
 import { motion } from "framer-motion";
 
 interface Point {
@@ -109,21 +109,21 @@ const WhyStudy = ({ data }: SectionProps) => {
               <div className={index % 2 !== 0 ? "md:pr-10" : "md:pl-10"}>
                 <motion.h3
                   variants={itemVariants}
-                  className="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
+                  className="text-2xl md:text-3xl font-bold text-blue-950 mb-4"
                 >
                   {item.title}
                 </motion.h3>
 
                 <motion.p
                   variants={itemVariants}
-                  className="text-[#c1972d]  mb-4 font-semibold uppercase tracking-wide text-sm"
+                  className="text-[#c1972d]   mb-4 font-semibold uppercase tracking-wide text-sm"
                 >
                   {item.description}
                 </motion.p>
 
                 <motion.p
                   variants={itemVariants}
-                  className="text-gray-600 leading-relaxed whitespace-pre-line text-lg"
+                  className="text-gray-600 text-justify leading-relaxed whitespace-pre-line text-lg"
                 >
                   {item.full}
                 </motion.p>

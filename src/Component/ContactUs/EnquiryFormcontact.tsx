@@ -291,7 +291,7 @@ function SecondaryCard({ item, index }: { item: any; index: number }) {
         >
             <div className="text-[#c1972d] mb-6 p-3 bg-white w-fit rounded-2xl shadow-sm">{item.icon}</div>
             <h3 className="text-lg md:text-xl font-bold text-[#c1972d] leading-snug">{item.title}</h3>
-            <p className="text-slate-500 text-sm mt-4">{item.desc}</p>
+            <p className="text-slate-500 text-sm mt-4 text-justify">{item.desc}</p>
             <div className="mt-6 flex justify-between text-xs  ">
                 <span className="text-slate-400">{item.date}</span>
                 <span className="flex items-center gap-1">Read <ArrowUpRight size={14} /></span>

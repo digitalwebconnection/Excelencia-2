@@ -95,7 +95,7 @@ export default function AboutSection() {
                 {item.title}
               </h3>
 
-              <p className="text-slate-500 line-clamp-2 text-sm leading-relaxed mb-6">
+              <p className="text-slate-500 text-justify line-clamp-2 text-sm leading-relaxed mb-6">
                 {item.content}
               </p>
 

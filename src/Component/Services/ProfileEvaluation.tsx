@@ -18,7 +18,7 @@ const ProfileEvaluation = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-gray-600 text-lg leading-relaxed border-l-2 border-[#c1972d]/30 pl-8">
+                    <div className="space-y-6 text-justify text-gray-600 text-lg leading-relaxed border-l-2 border-[#c1972d]/30 pl-8">
                         <p>
                             At Excelencia International, the study abroad process starts with a comprehensive profile assessment that helps us to know each student beyond grades and certificates. Apprehensive students are not sure about their eligibility, admission, and the perfect direction across the border. Our professional-grade review process takes the confusion out and lets you know with certainty.
                         </p>
@@ -48,10 +48,10 @@ const ProfileEvaluation = () => {
                 </div>
 
                 {/* Right Side: The Value Stack */}
-                <div className="space-y-3">
+                <div className="space-y-3 text-justify">
 
                     {/* Detailed Review Card */}
-                    <div className="bg-white p-4 rounded-4xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 group hover:border-[#c1972d]/50 transition-all">
+                    <div className="bg-white p-4  rounded-4xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 group hover:border-[#c1972d]/50 transition-all">
                         <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-[#c1972d] group-hover:text-white transition-colors">
                             <Globe className="w-6 h-6 text-blue-950 group-hover:text-white" />
                         </div>

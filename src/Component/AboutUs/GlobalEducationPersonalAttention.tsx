@@ -76,7 +76,7 @@ export default function GlobalEducationPersonalAttention() {
           </h2>
 
           {/* Description */}
-          <p className="text-gray-600 text-md md:text-lg mb-8 leading-relaxed">
+          <p className="text-gray-600 text-justify text-md md:text-lg mb-8 leading-relaxed">
             With years of hands-on visa advisory experience, we’ve seen policies change, requirements tighten, and trends evolve. That experience allows us to anticipate challenges before they arise — not react after rejection.
           </p>
 

@@ -38,7 +38,7 @@ export default function VisionMissionSection() {
 
             </div>
 
-            <p className="text-md md:text-lg leading-relaxed text-slate-700 drop-shadow-sm">
+            <p className="text-md md:text-lg text-justify leading-relaxed text-slate-700 drop-shadow-sm">
               At Excelencia International, our vision is to be a globally recognized leader in international education and immigration services.
               We strive to simplify the complexities of studying abroad so that students can embark on their academic journeys with clarity and confidence.
               We envision a future where every student, regardless of background, has access to quality guidance, seamless processes, and the support they need
@@ -82,18 +82,18 @@ export default function VisionMissionSection() {
 
             </div>
 
-            <p className="text-md    md:text-lg text-white/90 mb-8 drop-shadow-sm">
+            <p className="text-md text-justify   md:text-lg text-white/90 mb-8 drop-shadow-sm">
               Our mission at Excelencia International is to empower every student with personalized,
               ethical, and professional support as they pursue educational and career goals overseas.
             </p>
 
-            <div className="space-y-5">
+            <div className="space-y-5 text-justify">
 
               <div className="flex gap-4 items-start group">
                 <div className="w-8 h-8 bg-[#c1972d] text-black rounded-full flex items-center justify-center font-bold shadow-lg group-hover:scale-110 transition">
                   1
                 </div>
-                <p className="text-white/90 group-hover:text-white transition">
+                <p className="text-white/90  group-hover:text-white transition">
                   Providing accurate and transparent guidance through every stage of admissions and immigration.
                 </p>
               </div>

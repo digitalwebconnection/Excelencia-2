@@ -1,4 +1,4 @@
-"use client";
+ 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -177,11 +177,11 @@ export default function AutoRotatingStudentVoices() {
                 transition={{ duration: 0.5 }}
               >
                 <span className="text-6xl text-blue-100 font-serif leading-none block h-8">“</span>
-                <h3 className="text-md md:text-2xl font-medium text-slate-800 italic leading-tight">
+                <h3 className="text-md text-justify md:text-2xl font-medium text-slate-800 italic leading-tight">
                   {students[currentIndex % students.length].quote}
                 </h3>
                 <div className="mt-4">
-                  <p className="text-lg font-bold text-slate-900">
+                  <p className="text-lg  font-bold text-slate-900">
                     — {students[currentIndex % students.length].name}
                   </p>
                   <p className="text-slate-500 text-sm tracking-wide  ">

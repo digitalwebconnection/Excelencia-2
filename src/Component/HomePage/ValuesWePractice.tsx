@@ -93,7 +93,7 @@ const StudentJourney = () => {
                 <h3 className="text-xl font-bold  mb-4 h-14 flex items-center justify-center">
                   {step.title}
                 </h3>
-                <p className=" text-sm leading-relaxed grow">
+                <p className="text-justify text-sm leading-relaxed grow">
                   {step.description}
                 </p>
                 

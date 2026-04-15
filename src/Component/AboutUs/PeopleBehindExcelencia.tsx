@@ -114,7 +114,7 @@ function LeaderCard({ person, index }: any) {
                         ))}
                     </div>
 
-                    <p className="text-sm leading-relaxed text-blue-950 whitespace-pre-line mb-6">
+                    <p className="text-sm text-justify leading-relaxed text-blue-950 whitespace-pre-line mb-6">
                         {person.details}
                     </p>
 
