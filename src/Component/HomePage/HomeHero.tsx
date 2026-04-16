@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 // import { MapPin, Briefcase } from "lucide-react";
-import video from "../../assets/newvideo.mp4";
+// import video from "../../assets/newvideo.mp4";
+import mv from "../../assets/m2.mp4"
 
 const slides = [
   { title: "We guide. We don’t push." },
@@ -42,12 +43,12 @@ export default function HeroWithVideoAndSearchForm() {
             className="absolute  inset-0"
           >
             <video
-              src={video}
+              src={mv}
               autoPlay
               muted
               playsInline
               onEnded={handleVideoEnd}
-              className="w-full h-full object-cover absolute top-0 left-0   "
+              className="w-full h-full object-fill absolute top-0 left-0   "
             />
             <div className="absolute inset-0 bg-black/0" />
           </motion.div>
