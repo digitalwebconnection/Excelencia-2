@@ -16,7 +16,24 @@ interface SectionProps {
   };
 }
 
-const icons = ["🎓", "⏱️", "💼", "🌍", "🤝", "🏙️"];
+import {
+  FaGraduationCap,
+  FaClock,
+  FaBriefcase,
+  FaGlobe,
+  FaHandshake,
+  FaCity
+} from "react-icons/fa";
+const icons = [
+  <FaGraduationCap className="text-white" />,
+  <FaClock className="text-white" />,
+  <FaBriefcase className="text-white" />,
+  <FaGlobe className="text-white" />,
+  <FaHandshake className="text-white" />,
+  <FaCity className="text-white" />,
+];
+
+// const icons = ["🎓", "⏱️", "💼", "🌍", "🤝", "🏙️"];
 
 // Variants for the container to stagger children
 const containerVariants = {
@@ -99,7 +116,7 @@ const WhyStudy = ({ data }: SectionProps) => {
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute -top-5 -left-4 bg-blue-950 text-white w-14 h-14 flex items-center justify-center text-xl rounded-xl shadow-lg z-10"
+                  className="absolute -top-5 -left-4 bg-blue-950 text-white w-14 h-14 flex items-center justify-center text-2xl rounded-xl shadow-lg z-10"
                 >
                   {icons[index]}
                 </motion.div>

@@ -17,58 +17,54 @@ const destinationsData = {
     },
 
     whyStudy: {
-      title: "Why Study in the United Kingdom?",      
-      intro:
-        "The United Kingdom is one of the most sought-after destinations offering world-class education and global career opportunities.",
-      points: [
-        {
-          title: "World-Class Universities",
-          description: "Top-ranked universities with global recognition.",
-          image: "https://images.unsplash.com/photo-1562774053-701939374585",
-          full:
-            "The United Kingdom (UK) is one of the most sought-after study destinations among international students who want world-class education, global exposure, and strong career opportunities. The UK is known for prestigious universities, academic excellence, and a multicultural environment. Students receive internationally recognized degrees that are valued worldwide.",
-        },
+      title: "Why Study in the United Kingdom?",
+  intro:
+    "The United Kingdom is one of the most sought-after destinations offering world-class education and global career opportunities.",
 
-        {
-          title: "Shorter Course Duration",
-          description: "3-year bachelor's & 1-year master's.",
-          image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
-          full:
-            "The UK offers shorter course durations compared to many other countries. Undergraduate programs typically last three years, and master's programs are usually completed in one year. This makes studying in the UK highly cost-effective in terms of tuition fees and overall living expenses.",
-        },
-
-        {
-          title: "Post-Study Work Visa",
-          description: "Stay & work after studies.",
-          image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
-          full:
-            "The UK provides a Graduate Route visa that allows students to stay and work after completing their studies. This significantly enhances career opportunities and provides valuable international work experience.",
-        },
-
-        {
-          title: "Global Career Exposure",
-          description: "Access global industries.",
-          image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
-          full:
-            "Students studying in the UK gain exposure to a global job market. They have access to some of the world's leading industries, including finance, technology, healthcare, engineering, and creative sectors.",
-        },
-
-        {
-          title: "Multicultural Environment",
-          description: "Study with global students.",
-          image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
-          full:
-            "The UK is culturally rich and offers a diverse student environment. Students from all over the world come together, creating a multicultural learning atmosphere and strong international networking opportunities.",
-        },
-
-        {
-          title: "Modern Lifestyle",
-          description: "Blend of tradition + innovation.",
-          image: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad",
-          full:
-            "From London to Manchester and Birmingham, students experience a unique blend of traditional heritage and modern innovation. Studying in the UK is not just about earning a degree — it’s about building a global future.",
-        },
-      ],
+  points: [
+    {
+      title: "World-Class Universities",
+      description: "Top-ranked universities with global recognition.",
+      icon: "graduation",
+      image: "https://images.unsplash.com/photo-1562774053-701939374585",
+      full: "The United Kingdom (UK) is one of the most sought-after study destinations..."
+    },
+    {
+      title: "Shorter Course Duration",
+      description: "3-year bachelor's & 1-year master's.",
+      icon: "clock",
+      image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
+      full: "The UK offers shorter course durations..."
+    },
+    {
+      title: "Post-Study Work Visa",
+      description: "Stay & work after studies.",
+      icon: "briefcase",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+      full: "The UK provides a Graduate Route visa..."
+    },
+    {
+      title: "Global Career Exposure",
+      description: "Access global industries.",
+      icon: "globe",
+      image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
+      full: "Students studying in the UK gain exposure..."
+    },
+    {
+      title: "Multicultural Environment",
+      description: "Study with global students.",
+      icon: "handshake",
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+      full: "The UK is culturally rich..."
+    },
+    {
+      title: "Modern Lifestyle",
+      description: "Blend of tradition + innovation.",
+      icon: "city",
+      image: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad",
+      full: "From London to Manchester..."
+    },
+  ],
     },
 
     educationSystem: {
@@ -132,11 +128,11 @@ const destinationsData = {
       list: [
         {
           text: "Valid Passport",
-          image: "https://wpblogassets.paytm.com/paytmblog/uploads/2024/07/Blog_Generic_How-to-Apply-for-Reissue-of-Passport-in-India_-800x500.jpg"
+          image: "https://images.news18.com/ibnlive/uploads/2025/08/1755687390_passport-8-2025-08-cb26082a9bf6261a10da577512d59c3b.jpg"
         },
         {
           text: "Passport-size Photographs",
-          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVYvpjX18ruFGDe9WBIGtBImKchCPCzkN9cw&s"
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr_p59jGf1NLSklTeJMnt3AlMx21ChXRlWGw&s"
         },
         {
           text: "Academic Transcripts and Certificates",
@@ -144,7 +140,7 @@ const destinationsData = {
         },
         {
           text: "English Language Test Score (IELTS/PTE/Duolingo if required)",
-          image: "https://images.ctfassets.net/unrdeg6se4ke/7oxp19aszqUwQDGLnE02DH/7b761c9823b047a786b02d41e960ba33/IELTS.jpg?&fm=webp&w=500"
+          image: "https://cdn.ieltstutorials.online/sitecontent/images/ielts-nalina-ranka.jpg"
         },
         {
           text: "Statement of Purpose (SOP)",
@@ -152,7 +148,7 @@ const destinationsData = {
         },
         {
           text: "Confirmation of Acceptance for Studies (CAS)",
-          image: "https://www.jeduka.com/storage/newsletter/1617775970_How%20to%20get%20Confirmation%20of%20Acceptance%20for%20Studies%20(CAS).jpg"
+          image: "https://www.iffcotokio.co.in/content/dam/iffcotokio/iffco-images/blogs/Passport.jpg"
         },
         {
           text: "Visa Application Form",
@@ -160,7 +156,7 @@ const destinationsData = {
         },
         {
           text: "Tuberculosis (TB) Test Report (if required)",
-          image: "https://www.pdffiller.com/preview/433/46/433046986/large.png"
+          image: "https://imgv2-2-f.scribdassets.com/img/document/875253070/original/d12cafa448/1?v=1"
         },
         {
           text: "Financial Documents (Bank Statements, Loan Sanction Letter if applicable)",
@@ -168,7 +164,7 @@ const destinationsData = {
         },
         {
           text: "Immigration Health Surcharge (IHS) Payment",
-          image: "https://discourse.tnvisaforum.org/uploads/default/original/2X/7/70605a7bea08c0fbb91facdcb4a4f12984d68b5f.png"
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhihNazmhXXVtcf9PrbBX48LYsm9Lqed0wmA&s"
         }
       ]
     },

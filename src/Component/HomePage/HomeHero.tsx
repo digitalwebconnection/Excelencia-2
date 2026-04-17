@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 // import { MapPin, Briefcase } from "lucide-react";
-// import video from "../../assets/newvideo.mp4";
-import mv from "../../assets/m2.mp4"
+import video from "../../assets/newvideo.mp4";
+// import mv from "../../assets/m2.mp4"
 
 const slides = [
   { title: "We guide. We don’t push." },
@@ -30,7 +30,7 @@ export default function HeroWithVideoAndSearchForm() {
   }, [stage]);
 
   return (
-    <section className="relative w-full h-screen mt-1 overflow-hidden ">
+    <section className="relative w-full h-screen  overflow-hidden ">
       <AnimatePresence mode="wait" >
         {/* ================= STAGE 0: VIDEO INTRO ================= */}
         {stage === 0 && (
@@ -43,7 +43,7 @@ export default function HeroWithVideoAndSearchForm() {
             className="absolute  inset-0"
           >
             <video
-              src={mv}
+              src={video}
               autoPlay
               muted
               playsInline
